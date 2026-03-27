@@ -500,66 +500,49 @@
     padding-left: 32px;
   }
 
-  /* ===== 产品发现 — 平行卡片网格 ===== */
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  /* ===== 产品发现 — 纵向列表 ===== */
+  .product-item {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
   }
 
-  .product-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 22px;
+  .product-item:last-child { border-bottom: none; }
+
+  .product-item .product-head {
     display: flex;
-    flex-direction: column;
-    transition: all var(--transition);
-    position: relative;
-    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
   }
 
-  .product-card:hover {
-    border-color: var(--accent);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
-
-  .product-card .product-head {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    gap: 12px;
-  }
-
-  .product-card .product-name {
-    font-size: 16px;
+  .product-item .product-name {
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-primary);
   }
 
-  .product-card .product-date-tag {
+  .product-item .product-date-tag {
     font-size: 11px;
     color: var(--text-muted);
-    white-space: nowrap;
     padding: 2px 8px;
     background: var(--tag-bg);
     border-radius: 4px;
-    flex-shrink: 0;
+    white-space: nowrap;
   }
 
-  .product-card .product-oneliner {
+  .product-item .product-oneliner {
     font-size: 14px;
-    font-weight: 500;
     color: var(--accent);
-    margin-bottom: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
     line-height: 1.5;
   }
 
-  .product-card .product-detail { margin-bottom: 10px; }
+  .product-item .product-detail {
+    margin-bottom: 10px;
+  }
 
-  .product-card .product-detail strong {
+  .product-item .product-detail strong {
     font-size: 12px;
     color: var(--text-muted);
     font-weight: 600;
@@ -567,24 +550,63 @@
     margin-bottom: 3px;
   }
 
-  .product-card .product-detail p {
+  .product-item .product-detail p {
     font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.7;
   }
 
-  .product-card .product-link {
+  .product-item .product-link {
     display: inline-flex;
     align-items: center;
     gap: 4px;
     font-size: 13px;
-    margin-top: auto;
-    padding-top: 12px;
     color: var(--accent);
     font-weight: 500;
   }
 
-  .product-card .product-link:hover { text-decoration: underline; }
+  .product-item .product-link:hover { text-decoration: underline; }
+
+  /* 折叠「具体怎么运作」 */
+  .how-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 0;
+    margin-bottom: 3px;
+    user-select: none;
+    transition: color var(--transition);
+    background: none;
+    border: none;
+    font-family: var(--font);
+  }
+
+  .how-toggle:hover {
+    color: var(--accent);
+  }
+
+  .how-toggle .toggle-arrow {
+    display: inline-block;
+    transition: transform var(--transition);
+    font-size: 10px;
+  }
+
+  .how-toggle.open .toggle-arrow {
+    transform: rotate(90deg);
+  }
+
+  .how-body {
+    display: none;
+    animation: fadeIn 0.25s ease;
+  }
+
+  .how-body.open {
+    display: block;
+  }
 
   /* OpenClaw 表格 */
   .table-wrap {
@@ -694,7 +716,6 @@
   /* ===== 响应式 ===== */
   @media (max-width: 900px) {
     .card-grid { grid-template-columns: repeat(2, 1fr); }
-    .product-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 640px) {
@@ -703,8 +724,7 @@
     .detail-header h2 { font-size: 21px; }
     .card-grid { grid-template-columns: 1fr; }
     .grid-card { aspect-ratio: auto; min-height: 180px; }
-    .product-grid { grid-template-columns: 1fr; }
-    .product-card { padding: 18px; }
+    .product-item { padding: 16px 18px; }
     .brief-item { flex-direction: column; gap: 4px; }
     .brief-item .brief-name { min-width: auto; }
     .detail-footer { flex-direction: column; gap: 12px; }
@@ -1256,22 +1276,26 @@ function renderDetail(report) {
     `;
   }
 
-  // 今日重点发现 — 平行卡片网格
+  // 今日重点发现 — 纵向列表（「具体怎么运作」可折叠）
   if (report.products && report.products.length) {
     html += `
       <div class="section">
         <div class="section-title" id="sec-products"><span class="emoji">🔥</span> 今日重点发现</div>
-        <div class="product-grid">
+        <div class="section-content">
           ${report.products.map(p => `
-            <div class="product-card">
+            <div class="product-item">
               <div class="product-head">
                 <span class="product-name">${p.name}</span>
                 <span class="product-date-tag">${p.launchDate}</span>
               </div>
               <div class="product-oneliner">${p.oneliner}</div>
               <div class="product-detail">
-                <strong>🔧 具体怎么运作</strong>
-                <p>${p.how}</p>
+                <button class="how-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                  <span class="toggle-arrow">▶</span> 🔧 具体怎么运作
+                </button>
+                <div class="how-body">
+                  <p>${p.how}</p>
+                </div>
               </div>
               <div class="product-detail">
                 <strong>💡 为什么值得关注</strong>

@@ -606,6 +606,18 @@
     white-space: nowrap;
   }
 
+  /* 时间列不换行 */
+  .info-table th:nth-child(2),
+  .info-table td:nth-child(2) {
+    white-space: nowrap;
+  }
+
+  /* 三列表格中时间是第二列 */
+  .info-table th:nth-child(3):last-child,
+  .info-table td:nth-child(3):last-child {
+    width: auto;
+  }
+
   /* 其他动态 */
   .brief-item {
     padding: 16px 24px;
@@ -787,7 +799,6 @@
     border-left: 2px solid transparent;
     transition: all var(--transition);
     line-height: 1.5;
-    user-select: none;
   }
 
   .detail-toc-group-title:hover {
@@ -802,26 +813,9 @@
     border-left-color: var(--accent);
   }
 
-  .detail-toc-group-title::after {
-    content: ' ▾';
-    font-size: 10px;
-    color: var(--text-muted);
-  }
-
-  .detail-toc-group.collapsed .detail-toc-group-title::after {
-    content: ' ▸';
-  }
-
   .detail-toc-sub {
     list-style: none;
     padding: 0;
-    overflow: hidden;
-    max-height: 100px;
-    transition: max-height 0.25s ease;
-  }
-
-  .detail-toc-group.collapsed .detail-toc-sub {
-    max-height: 0;
   }
 
   .detail-toc-sub .detail-toc-item {
@@ -939,7 +933,7 @@ const reports = [
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
   {
     date: "2026-03-27",
-    title: "2026.03.27 AI 产品趋势调研",
+    title: "AI Agent 从「军备竞赛」转向「生产级治理」",
     coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争，上下文记忆和垂直场景落地成为本周最清晰的产品主题。",
     tags: ["上下文记忆", "企业级Agent", "消费AI分发", "开源框架", "AI治理"],
     opportunities: [
@@ -1528,11 +1522,17 @@ function renderDetailToc(report) {
   html += '</ul>';
   toc.innerHTML = html;
 
-  // 分组标题点击：展开/折叠子项
+  // 分组标题点击：跳转到第一个 OpenClaw section
   toc.querySelectorAll('.detail-toc-group-title').forEach(groupTitle => {
     groupTitle.addEventListener('click', () => {
-      const group = groupTitle.closest('.detail-toc-group');
-      if (group) group.classList.toggle('collapsed');
+      const targets = groupTitle.dataset.targets;
+      if (targets) {
+        const firstId = targets.split(',')[0];
+        const target = document.getElementById(firstId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     });
   });
 

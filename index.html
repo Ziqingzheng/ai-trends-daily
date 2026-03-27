@@ -931,38 +931,6 @@ const reports = [
 
   // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
-  {
-    date: "2026-03-27",
-    title: "AI Agent 从「军备竞赛」转向「生产级治理」",
-    coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争，上下文记忆和垂直场景落地成为本周最清晰的产品主题。",
-    tags: ["上下文记忆", "企业级Agent", "消费AI分发", "开源框架", "AI治理"],
-    opportunities: [
-      {title: "上下文持久化是 Agent 的下一场交互革命", desc: "Littlebird（屏幕+会议）、WhatsApp AI（聊天上下文）、Gemini（记忆导入）都在做同一件事：让 AI 不再每次从零开始。这个方向用户感知最强、付费意愿最清晰，2026 年将是「AI 记忆」产品的元年。"},
-      {title: "企业 Agent 治理是真实付费赛道，窗口期已开", desc: "80% 企业报告 Agent 行为风险但仅 21% 有治理模型。JetBrains Central、Databricks Lakewatch 已入局，护城河在于深度嵌入企业工作流，而非通用安全工具。"},
-      {title: "开源 Agent 框架的垂直场景落地正在验证商业模式", desc: "Binance Ai Pro 基于 OpenClaw 做金融交易、微信 ClawBot/QClaw 代表大厂官方认可——开源框架做垂直 B2C 的可行性已验证，生态扩展路径清晰。"}
-    ],
-    products: [
-      {name: "Littlebird", oneliner: "读取你的屏幕和会议，构建「已知上下文」的 AI 助手", launchDate: "2026-03-24", how: "macOS 原生应用，实时读取屏幕上所有 App 的 structured content + 会议转录，通过聊天界面回答问题、起草文档、关联跨应用信息。内置 84% 用户满意度数据，Lenny Rachitsky 等顶级天使背书。", why: "解决 AI 助手「冷启动」问题——用户不需要 copy-paste 或写长 prompt。壁垒在操作系统级别的屏幕读取能力，一旦建立用户习惯替换成本极高。$11M 种子轮融资验证方向，这是「AI 记忆」产品方向最清晰的案例之一。", link: "https://techcrunch.com/2026/03/23/littlebird-raises-11m-to-capture-context-from-your-computer-so-you-can-query-your-data/"},
-      {name: "JetBrains Central", oneliner: "企业级 Agent 软件开发的治理与执行平台", launchDate: "2026-03-24", how: "三层架构：语义层（聚合代码库/架构/运行时知识）+ 执行层（连接代码库/知识库/CI/CD）+ 治理层（策略执行/身份管理/成本归属/可观测性）。支持 OpenAI/Anthropic/Google/Groq 模型，Q2 2026 开放 Early Access，Google Cloud、Anthropic、OpenAI 同时成为首批合作伙伴。", why: "90% 开发者用 AI 工具，72% 企业部署 Agent，但 80% 报告行为风险。JetBrains 定位为 Agentic AI 的 Kubernetes——单个 Agent 好用，但多 Agent 协作、企业级管控是真正瓶颈。$0 前期投入，Q2 EA 后按企业规模收费。", link: "https://blog.jetbrains.com/blog/2026/03/24/introducing-jetbrains-central-an-open-system-for-agentic-software-development/"},
-      {name: "WhatsApp AI Responses", oneliner: "Meta 将 AI 写作助手嵌入全球最大即时通讯应用", launchDate: "2026-03-26", how: "利用 Meta Private Processing AI 架构，消息内容不离开设备，不上传 Meta 服务器。AI 分析对话上下文，生成「Just Right」回复建议，用户选择后发送。", why: "AI 从「打字工具」升级为「对话助手」——用户不需要复制到 ChatGPT 就能获得上下文感知的回复。AI 分发的下一站不是新 App，而是已有亿级用户产品里的嵌入式功能。", link: "https://techcrunch.com/2026/03/26/whatsapp-can-now-draft-ai-generated-responses-based-on-your-conversations/"},
-      {name: "Claude Code Auto Mode", oneliner: "Anthropic 为 Claude Code 推出安全可控的 Auto Mode", launchDate: "2026-03-24", how: "Auto Mode 下 Agent 可自动执行多步骤任务流，仅在关键节点请求人类确认。结合 Dispatch for Cowork 分发任务给多个 Agent，配合 Claude Code Review 做自动代码审查。", why: "企业级 Agent 采用更看重可控性——出了问题能追责、能停下。Anthropic 押注「可控」而非「全能」，代表了一种市场分层：全能极客工具 vs 企业安全可控工具，两条路都会走出来。", link: "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"},
-      {name: "Dreamina Seedance 2.0", oneliner: "字节 AI 视频生成模型登陆 CapCut，全球扩张", launchDate: "2026-03-26", how: "用户通过提示词、图片或参考视频生成视频内容，CapCut 内嵌模型能力，支持剪辑、生成和音视频同步全流程。首批上线拉美市场。", why: "OpenAI Sora 同日关停，字节逆势扩张。AI 视频生成进入「落地为王」阶段，CapCut 的分发渠道是字节相对于 Sora 的核心优势。技术强不等于产品胜。", link: "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/"}
-    ],
-    openclawVendors: [
-      {name: "高德开放平台", vendor: "阿里", time: "2026-03-23", desc: "高德地图（阿里旗下）发布专用于 OpenClaw 的 LBS 技能包，让 AI Agent 可直接调用地理位置查询、路径规划、导航等能力，开发者分钟级搭建 LBS 应用。", link: "https://www.digitalphablet.com/ai/gaode-open-platform-launches-openclaw-skills-lbs-apps-built-in-minutes/"}
-    ],
-    openclawProducts: [
-      {name: "Binance Ai Pro", time: "2026-03-25", desc: "全球最大加密货币交易所 Binance 基于 OpenClaw 生态构建 AI Agent 交易平台，用户配置策略后 Agent 负责执行和常规交易操作，是 OpenClaw 生态首个金融垂直应用。", link: "https://dig.watch/updates/binance-ai-pro-brings-advanced-ai-to-trading"},
-      {name: "HeyBondi Claw", time: "2026-03-24", desc: "首款专为老年人（60 岁以上）打造的 OpenClaw 生态 AI 伴侣产品，具备本地数据存储、个性化语音交互和技能扩展能力，解决了老年人在 AI 使用中的隐私安全和操作复杂性问题，直接面向美国 8000 万老年人口。", link: "https://www.prnewswire.com/news-releases/heybondi-launches-first-ai-companion-built-on-openclaw-for-older-adults-302721893.html"},
-      {name: "Hitem3D（ClawHub Skill）", time: "2026-03-23", desc: "新加坡 Math Magic 公司的 Hitem3D 以 Skill 形式入驻 ClawHub，使 AI Agent 能够直接调用图像转 3D 生成能力，降低了 AI Agent 在 3D 内容创作领域的应用门槛。", link: "https://www.prnewswire.com/news-releases/hitem3d-becomes-callable-via-openclaw-skills-enabling-structured-image-to-3d-generation-302722082.html"}
-    ],
-    otherNews: [
-      {name: "OpenAI Sora 宣布关停", time: "2026-03-27", desc: "7 个月前高调发布，全面停运，30 天留存率仅 1%，60 天归零。与字节 Dreamina 扩张形成鲜明对比——技术强不等于产品胜，AI 产品成败最终由用户是否真正使用决定。36氪独家报道。", link: "https://36kr.com/p/3737580650823945"},
-      {name: "YC W26 Demo Day", time: "2026-03-26", desc: "190 家公司参与，AI 再次成为主流方向。Conntour 获 $7M 融资打造安保视频 AI 搜索引擎。", link: "https://techcrunch.com/2026/03/26/16-of-the-most-interesting-startups-from-yc-w26-demo-day/"},
-      {name: "Google Gemini 导入记忆功能", time: "2026-03-26", desc: "用户可将其他 AI 助手的个人信息迁移到 Gemini，AI 记忆可迁移时代开启。", link: "https://aitoolly.com/ai-news/article/2026-03-27-google-gemini-introduces-new-import-memory-and-chat-history-features-to-simplify-ai-migration"},
-      {name: "小米 Hunter Alpha 模型", time: "2026-03-26", desc: "小米自研 AI 模型登陆 OpenRouter，36氪报道，证实为小米 AI 路线图一部分。", link: "https://36kr.com/p/3729285037424265"}
-    ]
-  },
   // ══════════════════════════════════════════════════════════════════
 
   // 【模板示例 — 可直接复制后填写，填完后删除此注释】

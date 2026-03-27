@@ -650,6 +650,21 @@
 
   .empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
   .empty-state p { font-size: 15px; }
+
+/* ── 免责声明 footer ── */
+.site-disclaimer {
+  width: 100%;
+  padding: 20px 24px;
+  margin-top: 48px;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.site-disclaimer strong { color: rgba(255,255,255,0.45); }
+
 </style>
 </head>
 <body>
@@ -1324,5 +1339,12 @@ document.addEventListener('click', function(e) {
   }
 })();
 </script>
+
+<!-- ==================== 全局免责声明 ==================== -->
+<footer class="site-disclaimer">
+  🤖 本站内容由 AI 自动生成，仅供参考。<br>
+  所有信息均来源于公开渠道，经 AI 整理归纳，可能存在遗漏、偏差或时效性问题，<strong>不构成任何投资或商业建议</strong>。请以原始来源为准。
+</footer>
+
 </body>
 </html>

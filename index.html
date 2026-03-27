@@ -1253,15 +1253,9 @@ document.addEventListener('click', function(e) {
     showDetail(hash);
   }
 
-  // 注入免责声明
-  const bar = document.createElement('div');
-  bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,15,20,0.92);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.1);text-align:center;padding:8px 16px;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:0.03em;';
-  bar.textContent = '本站内容由 AI 自动生成，仅供参考，不构成任何投资或商业建议。';
-  document.body.appendChild(bar);
-  // 给页面底部留出空间
-  document.body.style.paddingBottom = '36px';
 })();
 </script>
 
+<p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.4);padding:24px 0 16px;margin:0;">本站内容由 AI 自动生成，仅供参考，不构成任何投资或商业建议。</p>
 </body>
 </html>

@@ -773,6 +773,62 @@
     border-left-color: var(--accent);
   }
 
+  /* 目录分组（OpenClaw 专题） */
+  .detail-toc-group {
+    margin: 0;
+  }
+
+  .detail-toc-group-title {
+    display: block;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all var(--transition);
+    line-height: 1.5;
+    user-select: none;
+  }
+
+  .detail-toc-group-title:hover {
+    color: var(--accent);
+    background: var(--accent-light);
+    border-left-color: var(--accent);
+  }
+
+  .detail-toc-group-title.active {
+    color: var(--accent);
+    font-weight: 600;
+    border-left-color: var(--accent);
+  }
+
+  .detail-toc-group-title::after {
+    content: ' ▾';
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  .detail-toc-group.collapsed .detail-toc-group-title::after {
+    content: ' ▸';
+  }
+
+  .detail-toc-sub {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height 0.25s ease;
+  }
+
+  .detail-toc-group.collapsed .detail-toc-sub {
+    max-height: 0;
+  }
+
+  .detail-toc-sub .detail-toc-item {
+    padding-left: 24px;
+    font-size: 12px;
+  }
+
   .detail-main {
     flex: 1;
     min-width: 0;
@@ -1444,12 +1500,41 @@ function renderDetailToc(report) {
     sections.push({ id: 'sec-other-news', emoji: '📰', label: '行业动态' });
   }
 
+  // 分离 OpenClaw 子项和普通项
+  const openclawIds = ['sec-vendors', 'sec-openclaw-products'];
+  const normalSections = sections.filter(s => !openclawIds.includes(s.id));
+  const openclawSections = sections.filter(s => openclawIds.includes(s.id));
+
   let html = '<div class="detail-toc-title">📑 目录</div><ul class="detail-toc-list">';
+
+  // 按原始顺序插入，遇到第一个 openclaw 项时插入整个分组
+  let openclawInserted = false;
   sections.forEach(s => {
-    html += `<li class="detail-toc-item" data-target="${s.id}">${s.emoji} ${s.label}</li>`;
+    if (openclawIds.includes(s.id)) {
+      if (!openclawInserted && openclawSections.length > 0) {
+        openclawInserted = true;
+        html += `<li class="detail-toc-group">`;
+        html += `<div class="detail-toc-group-title" data-targets="${openclawSections.map(o => o.id).join(',')}">🐾 OpenClaw 专题</div>`;
+        html += `<ul class="detail-toc-sub">`;
+        openclawSections.forEach(o => {
+          html += `<li class="detail-toc-item" data-target="${o.id}">${o.emoji} ${o.label}</li>`;
+        });
+        html += `</ul></li>`;
+      }
+    } else {
+      html += `<li class="detail-toc-item" data-target="${s.id}">${s.emoji} ${s.label}</li>`;
+    }
   });
   html += '</ul>';
   toc.innerHTML = html;
+
+  // 分组标题点击：展开/折叠子项
+  toc.querySelectorAll('.detail-toc-group-title').forEach(groupTitle => {
+    groupTitle.addEventListener('click', () => {
+      const group = groupTitle.closest('.detail-toc-group');
+      if (group) group.classList.toggle('collapsed');
+    });
+  });
 
   // 点击跳转
   toc.querySelectorAll('.detail-toc-item').forEach(item => {
@@ -1466,8 +1551,17 @@ function renderDetailToc(report) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         toc.querySelectorAll('.detail-toc-item').forEach(i => i.classList.remove('active'));
+        toc.querySelectorAll('.detail-toc-group-title').forEach(i => i.classList.remove('active'));
         const activeItem = toc.querySelector(`.detail-toc-item[data-target="${entry.target.id}"]`);
-        if (activeItem) activeItem.classList.add('active');
+        if (activeItem) {
+          activeItem.classList.add('active');
+          // 如果是 OpenClaw 子项，同时高亮分组标题
+          const parentGroup = activeItem.closest('.detail-toc-group');
+          if (parentGroup) {
+            const groupTitle = parentGroup.querySelector('.detail-toc-group-title');
+            if (groupTitle) groupTitle.classList.add('active');
+          }
+        }
       }
     });
   }, { rootMargin: '-20% 0px -60% 0px' });

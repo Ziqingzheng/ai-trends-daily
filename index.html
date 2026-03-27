@@ -401,12 +401,61 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    padding-right: 32px;
   }
 
   .section-title .emoji { font-size: 20px; }
 
   .section-title[id] {
     scroll-margin-top: 24px;
+  }
+
+  /* 折叠箭头 */
+  .section-title::after {
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--text-muted);
+    border-bottom: 2px solid var(--text-muted);
+    transition: transform 0.25s ease;
+  }
+
+  .section.collapsed .section-title::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .section:not(.collapsed) .section-title::after {
+    transform: translateY(-30%) rotate(45deg);
+  }
+
+  .section-title:hover {
+    color: var(--accent);
+  }
+
+  /* 折叠内容过渡 */
+  .section .section-content {
+    max-height: 5000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 1;
+  }
+
+  .section.collapsed .section-content {
+    max-height: 0;
+    opacity: 0;
+    border: none;
+  }
+
+  .section.collapsed {
+    margin-bottom: 12px;
   }
 
   .section-content {
@@ -1356,8 +1405,23 @@ function renderDetail(report) {
   // 渲染左侧目录
   renderDetailToc(report);
 
+  // 绑定折叠事件
+  bindSectionCollapse();
+
   // 底部导航
   renderFooterNav(report.date);
+}
+
+// 绑定大标题折叠/展开
+function bindSectionCollapse() {
+  document.querySelectorAll('#detail-content .section-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const section = title.closest('.section');
+      if (section) {
+        section.classList.toggle('collapsed');
+      }
+    });
+  });
 }
 
 // 渲染详情页左侧目录

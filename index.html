@@ -932,6 +932,38 @@ const reports = [
   // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
   {
+    date: "2026-03-27",
+    title: "2026.03.27 AI 产品趋势调研",
+    coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争，上下文记忆和垂直场景落地成为本周最清晰的产品主题。",
+    tags: ["上下文记忆", "企业级Agent", "消费AI分发", "开源框架", "AI治理"],
+    opportunities: [
+      {title: "上下文持久化是 Agent 的下一场交互革命", desc: "Littlebird（屏幕+会议记忆）、WhatsApp AI（聊天上下文）、Gemini（记忆迁移）都在做同一件事：让 AI 不再每次从零开始。这个方向用户感知最强、付费意愿最清晰，2026 年是「AI 记忆」产品元年。"},
+      {title: "企业 Agent 治理是真实付费赛道，窗口期已开", desc: "80% 企业报告 Agent 风险但仅 21% 有治理模型，JetBrains Central、Databricks Lakewatch 已入局。护城河在于深度嵌入工作流，不是通用安全工具。"},
+      {title: "开源 Agent 框架的垂直场景正在验证商业模式", desc: "Binance Ai Pro 基于 OpenClaw 做金融交易、微信 ClawBot 代表大厂认可，生态扩展路径已验证。"}
+    ],
+    products: [
+      {name: "Littlebird", oneliner: "屏幕+会议记忆的 AI 助手", launchDate: "2026-03-24", how: "macOS 原生应用，实时读取屏幕内容 + 会议转录，通过聊天界面回答问题、起草文档。Demo 显示 84% 用户满意度。", why: "壁垒在 macOS 级别的屏幕读取能力，用户习惯建立后替换成本极高。$11M 种子轮验证方向。", link: "https://techcrunch.com/2026/03/23/littlebird-raises-11m-to-capture-context-from-your-computer-so-you-can-query-your-data/"},
+      {name: "JetBrains Central", oneliner: "企业级 Agent 治理平台", launchDate: "2026-03-24", how: "三层架构——语义层（聚合代码知识）+ 执行层（连接 CI/CD）+ 治理层（身份/成本/可观测性）。支持 OpenAI/Anthropic/Google/Groq，Q2 开放 Early Access。", why: "定位 Agentic AI 的 Kubernetes，企业级多 Agent 管控几乎无竞争对手。按企业规模收费。", link: "https://blog.jetbrains.com/blog/2026/03/24/introducing-jetbrains-central-an-open-system-for-agentic-software-development/"},
+      {name: "WhatsApp AI Responses", oneliner: "20 亿用户的嵌入式 AI", launchDate: "2026-03-26", how: "Meta Private Processing AI，消息不离开设备。AI 分析对话上下文生成回复建议，用户选择后发送。", why: "AI 分发的下一站是已有亿级用户产品里的嵌入式功能，20 亿月活是最强分发渠道。", link: "https://techcrunch.com/2026/03/26/whatsapp-can-now-draft-ai-generated-responses-based-on-your-conversations/"},
+      {name: "Claude Code Auto Mode", oneliner: "Anthropic 的「可控」Agent 路线", launchDate: "2026-03-24", how: "Auto Mode 下 Agent 自动执行多步骤任务，关键节点请求人类确认。结合 Dispatch 分发任务给多个 Agent，做自动代码审查。", why: "代表市场分层——极客工具 vs 企业安全工具，Anthropic 押注后者，两条路都会走出来。", link: "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"},
+      {name: "Dreamina Seedance 2.0", oneliner: "字节 AI 视频登陆 CapCut", launchDate: "2026-03-26", how: "在 CapCut 里直接生成视频，支持剪辑、生成、音视频同步。首批上线拉美市场。", why: "技术强不等于产品胜，CapCut 分发渠道是字节的核心优势，AI 视频进入落地战。", link: "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/"}
+    ],
+    openclawVendors: [
+      {name: "高德开放平台（阿里）", vendor: "阿里", time: "2026-03-23", desc: "高德发布 OpenClaw LBS 技能包，让 AI Agent 可调用地图查询、路径规划、导航，开发者分钟级搭建 LBS 应用。", link: "https://www.digitalphablet.com/ai/gaode-open-platform-launches-openclaw-skills-lbs-apps-built-in-minutes/"}
+    ],
+    openclawProducts: [
+      {name: "Binance Ai Pro", time: "2026-03-25", desc: "Binance 基于 OpenClaw 构建 AI 交易 Agent，用户配置策略后 Agent 自动执行和常规操作，OpenClaw 生态首个金融垂直应用。", link: "https://dig.watch/updates/binance-ai-pro-brings-advanced-ai-to-trading"},
+      {name: "HeyBondi Claw", time: "2026-03-24", desc: "首款老年人（60岁+）OpenClaw AI 伴侣，本地数据存储、语音交互、隐私保护，面向美国 8000 万老年人口。", link: "https://www.prnewswire.com/news-releases/heybondi-launches-first-ai-companion-built-on-openclaw-for-older-adults-302721893.html"},
+      {name: "Hitem3D", time: "2026-03-23", desc: "新加坡公司，以 Skill 形式入驻 ClawHub，让 AI Agent 直接调用图像转 3D 生成能力。", link: "https://www.prnewswire.com/news-releases/hitem3d-becomes-callable-via-openclaw-skills-enabling-structured-image-to-3d-generation-302722082.html"}
+    ],
+    otherNews: [
+      {name: "OpenAI Sora 关停", time: "2026-03-27", desc: "上线7个月停运，30天留存率仅1%。与字节 Dreamina 扩张形成对比，技术强不等于产品胜。", link: "https://36kr.com/p/3737580650823945"},
+      {name: "YC W26 Demo Day", time: "2026-03-26", desc: "190家公司，Conntour 获 $7M 做安保视频 AI 搜索，General Catalyst 联合投资。", link: "https://techcrunch.com/2026/03/26/16-of-the-most-interesting-startups-from-yc-w26-demo-day/"},
+      {name: "Google Gemini 记忆迁移", time: "2026-03-26", desc: "支持从其他 AI 助手导入个人信息到 Gemini，AI 记忆可迁移时代开启。", link: "https://aitoolly.com/ai-news/article/2026-03-27-google-gemini-introduces-new-import-memory-and-chat-history-features-to-simplify-ai-migration"},
+      {name: "小米 Hunter Alpha", time: "2026-03-26", desc: "小米自研模型登陆 OpenRouter，36氪证实为小米 AI 路线一部分。", link: "https://36kr.com/p/3729285037424265"}
+    ]
+  },
+  {
     title: "AI Agent 从「军备竞赛」转向「生产级治理」",
     coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争，上下文记忆和垂直场景落地成为本周最清晰的产品主题。",
     tags: ["上下文记忆", "企业级Agent", "消费AI分发", "开源框架", "AI治理"],

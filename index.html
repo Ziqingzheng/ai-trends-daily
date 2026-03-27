@@ -405,6 +405,10 @@
 
   .section-title .emoji { font-size: 20px; }
 
+  .section-title[id] {
+    scroll-margin-top: 24px;
+  }
+
   .section-content {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -650,6 +654,91 @@
 
   .empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
   .empty-state p { font-size: 15px; }
+
+  /* ===== 作者署名 ===== */
+  .home-header .author {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== 免责声明 ===== */
+  .disclaimer {
+    text-align: center;
+    padding: 32px 0 0;
+    font-size: 11px;
+    color: #C8C8C8;
+    letter-spacing: 0.2px;
+  }
+
+  /* ===== 详情页左侧目录 ===== */
+  .detail-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .detail-toc {
+    position: sticky;
+    top: 24px;
+    width: 180px;
+    flex-shrink: 0;
+    padding: 16px 0;
+  }
+
+  .detail-toc-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+  }
+
+  .detail-toc-list {
+    list-style: none;
+  }
+
+  .detail-toc-item {
+    display: block;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all var(--transition);
+    line-height: 1.5;
+  }
+
+  .detail-toc-item:hover {
+    color: var(--accent);
+    background: var(--accent-light);
+    border-left-color: var(--accent);
+  }
+
+  .detail-toc-item.active {
+    color: var(--accent);
+    font-weight: 600;
+    border-left-color: var(--accent);
+  }
+
+  .detail-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* 详情页容器改宽以容纳目录 */
+  .container--with-toc {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 900px) {
+    .detail-toc { display: none; }
+    .detail-layout { display: block; }
+    .container--with-toc { max-width: 820px; }
+  }
 </style>
 </head>
 <body>
@@ -662,6 +751,7 @@
         <div class="logo-icon">📡</div>
       </div>
       <h1>AI 前沿趋势情报简报</h1>
+      <p class="author">by ziqingzheng</p>
       <p class="subtitle">每日追踪 AI 产品、Agent 生态与行业动态，<br>为团队提供高质量的趋势洞察与机会判断。</p>
       <span class="update-badge" id="last-update"></span>
     </div>
@@ -684,17 +774,26 @@
 
     <!-- 分页 -->
     <div class="pagination" id="pagination"></div>
+
+    <!-- 免责声明 -->
+    <p class="disclaimer">本站内容由 AI 辅助生成，仅供参考，不构成任何投资或商业建议。</p>
   </div>
 </div>
 
 <!-- ==================== 详情页 ==================== -->
 <div id="page-detail" class="page">
-  <div class="container container--narrow">
+  <div class="container container--with-toc">
     <div class="detail-nav">
       <button class="btn-back" onclick="showHome()">← 返回首页</button>
     </div>
-    <div id="detail-content"></div>
-    <div class="detail-footer" id="detail-footer"></div>
+    <div class="detail-layout">
+      <nav class="detail-toc" id="detail-toc"></nav>
+      <div class="detail-main">
+        <div id="detail-content"></div>
+        <div class="detail-footer" id="detail-footer"></div>
+        <p class="disclaimer">本站内容由 AI 辅助生成，仅供参考，不构成任何投资或商业建议。</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1134,7 +1233,7 @@ function renderDetail(report) {
   if (report.opportunities && report.opportunities.length) {
     html += `
       <div class="section">
-        <div class="section-title"><span class="emoji">🎯</span> 核心机会点</div>
+        <div class="section-title" id="sec-opportunities"><span class="emoji">🎯</span> 核心机会点</div>
         <div class="section-content">
           ${report.opportunities.map((o, i) => `
             <div class="opportunity-item">
@@ -1151,7 +1250,7 @@ function renderDetail(report) {
   if (report.products && report.products.length) {
     html += `
       <div class="section">
-        <div class="section-title"><span class="emoji">🔥</span> 今日重点发现</div>
+        <div class="section-title" id="sec-products"><span class="emoji">🔥</span> 今日重点发现</div>
         <div class="section-content">
           ${report.products.map(p => `
             <div class="product-card">
@@ -1180,7 +1279,7 @@ function renderDetail(report) {
   if (report.openclawVendors && report.openclawVendors.length) {
     html += `
       <div class="section">
-        <div class="section-title"><span class="emoji">🏗️</span> OpenClaw 专题 — 模型厂商动态</div>
+        <div class="section-title" id="sec-vendors"><span class="emoji">🏗️</span> OpenClaw 专题 — 模型厂商动态</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1206,7 +1305,7 @@ function renderDetail(report) {
   if (report.openclawProducts && report.openclawProducts.length) {
     html += `
       <div class="section">
-        <div class="section-title"><span class="emoji">🧩</span> OpenClaw 专题 — 产品案例</div>
+        <div class="section-title" id="sec-openclaw-products"><span class="emoji">🧩</span> OpenClaw 专题 — 产品案例</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1231,7 +1330,7 @@ function renderDetail(report) {
   if (report.otherNews && report.otherNews.length) {
     html += `
       <div class="section">
-        <div class="section-title"><span class="emoji">📰</span> 其他 AI 行业动态</div>
+        <div class="section-title" id="sec-other-news"><span class="emoji">📰</span> 其他 AI 行业动态</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1254,8 +1353,65 @@ function renderDetail(report) {
 
   container.innerHTML = html;
 
+  // 渲染左侧目录
+  renderDetailToc(report);
+
   // 底部导航
   renderFooterNav(report.date);
+}
+
+// 渲染详情页左侧目录
+function renderDetailToc(report) {
+  const toc = document.getElementById('detail-toc');
+  const sections = [];
+  if (report.opportunities && report.opportunities.length) {
+    sections.push({ id: 'sec-opportunities', emoji: '🎯', label: '核心机会点' });
+  }
+  if (report.products && report.products.length) {
+    sections.push({ id: 'sec-products', emoji: '🔥', label: '今日重点发现' });
+  }
+  if (report.openclawVendors && report.openclawVendors.length) {
+    sections.push({ id: 'sec-vendors', emoji: '🏗️', label: '厂商动态' });
+  }
+  if (report.openclawProducts && report.openclawProducts.length) {
+    sections.push({ id: 'sec-openclaw-products', emoji: '🧩', label: '产品案例' });
+  }
+  if (report.otherNews && report.otherNews.length) {
+    sections.push({ id: 'sec-other-news', emoji: '📰', label: '行业动态' });
+  }
+
+  let html = '<div class="detail-toc-title">📑 目录</div><ul class="detail-toc-list">';
+  sections.forEach(s => {
+    html += `<li class="detail-toc-item" data-target="${s.id}">${s.emoji} ${s.label}</li>`;
+  });
+  html += '</ul>';
+  toc.innerHTML = html;
+
+  // 点击跳转
+  toc.querySelectorAll('.detail-toc-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const target = document.getElementById(item.dataset.target);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // 滚动高亮当前 section
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        toc.querySelectorAll('.detail-toc-item').forEach(i => i.classList.remove('active'));
+        const activeItem = toc.querySelector(`.detail-toc-item[data-target="${entry.target.id}"]`);
+        if (activeItem) activeItem.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px' });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
 }
 
 function renderFooterNav(currentDate) {

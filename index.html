@@ -389,56 +389,6 @@
     border-left: 3px solid var(--accent);
   }
 
-  /* ===== 目录导航 ===== */
-  .toc {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 18px 24px;
-    margin-bottom: 32px;
-  }
-
-  .toc-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-  }
-
-  .toc-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .toc-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    background: var(--tag-bg);
-    border-radius: 20px;
-    font-size: 13px;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all var(--transition);
-    white-space: nowrap;
-    border: 1px solid transparent;
-  }
-
-  .toc-item:hover {
-    background: var(--accent-light);
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  .toc-item .toc-emoji {
-    font-size: 14px;
-  }
-
   /* ===== 内容模块 ===== */
   .section {
     margin-bottom: 36px;
@@ -451,7 +401,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    scroll-margin-top: 24px;
   }
 
   .section-title .emoji { font-size: 20px; }
@@ -500,72 +449,72 @@
     padding-left: 32px;
   }
 
-  /* ===== 产品发现 — 纵向列表 ===== */
-  .product-item {
-    padding: 20px 24px;
+  /* 产品发现卡片 */
+  .product-card {
+    padding: 24px;
     border-bottom: 1px solid var(--border);
   }
 
-  .product-item:last-child { border-bottom: none; }
+  .product-card:last-child { border-bottom: none; }
 
-  .product-item .product-head {
+  .product-card .product-head {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
     margin-bottom: 6px;
+    gap: 12px;
   }
 
-  .product-item .product-name {
-    font-size: 15px;
-    font-weight: 700;
+  .product-card .product-name {
+    font-size: 16px;
+    font-weight: 600;
     color: var(--text-primary);
   }
 
-  .product-item .product-date-tag {
-    font-size: 11px;
+  .product-card .product-date-tag {
+    font-size: 12px;
     color: var(--text-muted);
+    white-space: nowrap;
     padding: 2px 8px;
     background: var(--tag-bg);
     border-radius: 4px;
-    white-space: nowrap;
+    flex-shrink: 0;
   }
 
-  .product-item .product-oneliner {
-    font-size: 14px;
-    color: var(--accent);
+  .product-card .product-oneliner {
+    font-size: 15px;
     font-weight: 500;
+    color: var(--accent);
     margin-bottom: 10px;
     line-height: 1.5;
   }
 
-  .product-item .product-detail {
-    margin-bottom: 10px;
-  }
+  .product-card .product-detail { margin-bottom: 8px; }
 
-  .product-item .product-detail strong {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 3px;
-  }
-
-  .product-item .product-detail p {
+  .product-card .product-detail strong {
     font-size: 13px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .product-card .product-detail p {
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.7;
   }
 
-  .product-item .product-link {
+  .product-card .product-link {
     display: inline-flex;
     align-items: center;
     gap: 4px;
     font-size: 13px;
+    margin-top: 8px;
     color: var(--accent);
     font-weight: 500;
   }
 
-  .product-item .product-link:hover { text-decoration: underline; }
+  .product-card .product-link:hover { text-decoration: underline; }
 
   /* OpenClaw 表格 */
   .table-wrap {
@@ -683,13 +632,12 @@
     .detail-header h2 { font-size: 21px; }
     .card-grid { grid-template-columns: 1fr; }
     .grid-card { aspect-ratio: auto; min-height: 180px; }
-    .product-item { padding: 16px 18px; }
+    .product-card { padding: 18px; }
     .brief-item { flex-direction: column; gap: 4px; }
     .brief-item .brief-name { min-width: auto; }
     .detail-footer { flex-direction: column; gap: 12px; }
     .nav-btn { width: 100%; justify-content: center; }
     .filter-bar { gap: 8px; }
-    .toc-list { flex-direction: column; }
   }
 
   /* ===== 空状态 ===== */
@@ -1170,29 +1118,9 @@ function renderPagination(totalPages) {
   container.innerHTML = html;
 }
 
-// ===================================================================
-//  详情页渲染（含目录跳转 + 产品平行卡片）
-// ===================================================================
+// 详情页渲染
 function renderDetail(report) {
   const container = document.getElementById('detail-content');
-
-  // 收集存在的 section 用于生成目录
-  const sections = [];
-  if (report.opportunities && report.opportunities.length) {
-    sections.push({ id: 'sec-opportunities', emoji: '🎯', label: '核心机会点' });
-  }
-  if (report.products && report.products.length) {
-    sections.push({ id: 'sec-products', emoji: '🔥', label: '今日重点发现' });
-  }
-  if (report.openclawVendors && report.openclawVendors.length) {
-    sections.push({ id: 'sec-vendors', emoji: '🏗️', label: '模型厂商动态' });
-  }
-  if (report.openclawProducts && report.openclawProducts.length) {
-    sections.push({ id: 'sec-openclaw-products', emoji: '🧩', label: '产品案例' });
-  }
-  if (report.otherNews && report.otherNews.length) {
-    sections.push({ id: 'sec-other-news', emoji: '📰', label: '行业动态' });
-  }
 
   let html = `
     <div class="detail-header">
@@ -1202,27 +1130,11 @@ function renderDetail(report) {
     </div>
   `;
 
-  // 目录导航
-  if (sections.length > 1) {
-    html += `
-      <div class="toc">
-        <div class="toc-title">📑 目录导航</div>
-        <ul class="toc-list">
-          ${sections.map(s => `
-            <li class="toc-item" data-target="${s.id}">
-              <span class="toc-emoji">${s.emoji}</span>${s.label}
-            </li>
-          `).join('')}
-        </ul>
-      </div>
-    `;
-  }
-
   // 核心机会点
   if (report.opportunities && report.opportunities.length) {
     html += `
       <div class="section">
-        <div class="section-title" id="sec-opportunities"><span class="emoji">🎯</span> 核心机会点</div>
+        <div class="section-title"><span class="emoji">🎯</span> 核心机会点</div>
         <div class="section-content">
           ${report.opportunities.map((o, i) => `
             <div class="opportunity-item">
@@ -1235,14 +1147,14 @@ function renderDetail(report) {
     `;
   }
 
-  // 今日重点发现 — 纵向列表（「具体怎么运作」可折叠）
+  // 今日重点发现
   if (report.products && report.products.length) {
     html += `
       <div class="section">
-        <div class="section-title" id="sec-products"><span class="emoji">🔥</span> 今日重点发现</div>
+        <div class="section-title"><span class="emoji">🔥</span> 今日重点发现</div>
         <div class="section-content">
           ${report.products.map(p => `
-            <div class="product-item">
+            <div class="product-card">
               <div class="product-head">
                 <span class="product-name">${p.name}</span>
                 <span class="product-date-tag">${p.launchDate}</span>
@@ -1268,7 +1180,7 @@ function renderDetail(report) {
   if (report.openclawVendors && report.openclawVendors.length) {
     html += `
       <div class="section">
-        <div class="section-title" id="sec-vendors"><span class="emoji">🏗️</span> OpenClaw 专题 — 模型厂商动态</div>
+        <div class="section-title"><span class="emoji">🏗️</span> OpenClaw 专题 — 模型厂商动态</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1294,7 +1206,7 @@ function renderDetail(report) {
   if (report.openclawProducts && report.openclawProducts.length) {
     html += `
       <div class="section">
-        <div class="section-title" id="sec-openclaw-products"><span class="emoji">🧩</span> OpenClaw 专题 — 产品案例</div>
+        <div class="section-title"><span class="emoji">🧩</span> OpenClaw 专题 — 产品案例</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1319,7 +1231,7 @@ function renderDetail(report) {
   if (report.otherNews && report.otherNews.length) {
     html += `
       <div class="section">
-        <div class="section-title" id="sec-other-news"><span class="emoji">📰</span> 其他 AI 行业动态</div>
+        <div class="section-title"><span class="emoji">📰</span> 其他 AI 行业动态</div>
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
@@ -1341,17 +1253,6 @@ function renderDetail(report) {
   }
 
   container.innerHTML = html;
-
-  // 绑定目录跳转事件
-  container.querySelectorAll('.toc-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const targetId = item.dataset.target;
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
 
   // 底部导航
   renderFooterNav(report.date);

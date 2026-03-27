@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 前沿趋势情报简报</title>
+<style>
+  /* ===== 基础重置与全局样式 ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAFAF8;
+    --card-bg: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #5A5A5A;
+    --text-muted: #999;
+    --accent: #4A6CF7;
+    --accent-light: #EEF1FF;
+    --border: #EBEBEB;
+    --tag-bg: #F3F4F6;
+    --tag-text: #6B7280;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --max-w: 1080px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ===== 页面容器 ===== */
+  .page { display: none; animation: fadeIn 0.35s ease; }
+  .page.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .container--narrow {
+    max-width: 820px;
+  }
+
+  /* ===== 首页 ===== */
+  .home-header {
+    text-align: center;
+    margin-bottom: 36px;
+    padding-top: 20px;
+  }
+
+  .home-header .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .home-header .logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--accent), #7C5CFC);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 20px;
+  }
+
+  .home-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+  }
+
+  .home-header .subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-header .update-badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 4px 14px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+  }
+
+  /* ===== 筛选栏 ===== */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .filter-bar label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .filter-select {
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    font-size: 14px;
+    color: var(--text-primary);
+    font-family: var(--font);
+    cursor: pointer;
+    transition: border-color var(--transition);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+  }
+
+  .filter-select:hover, .filter-select:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+
+  .filter-reset {
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-family: var(--font);
+    transition: all var(--transition);
+  }
+
+  .filter-reset:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .filter-count {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-left: 4px;
+  }
+
+  /* ===== 网格卡片布局 ===== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .grid-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1 / 1;
+  }
+
+  .grid-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #7C5CFC);
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  .grid-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .grid-card:hover::before { opacity: 1; }
+
+  .grid-card .card-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .grid-card .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .grid-card .card-summary {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .grid-card .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .grid-card .card-arrow {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--tag-bg);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    transition: all var(--transition);
+  }
+
+  .grid-card:hover .card-arrow {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* ===== 分页 ===== */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 36px;
+  }
+
+  .page-btn {
+    min-width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: var(--font);
+    transition: all var(--transition);
+  }
+
+  .page-btn:hover:not(:disabled):not(.active) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .page-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .page-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .page-info {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 8px;
+  }
+
+  /* ===== 详情页 ===== */
+  .detail-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-top: 8px;
+  }
+
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: var(--font);
+  }
+
+  .btn-back:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .detail-header {
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail-header .detail-date {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .detail-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+
+  .detail-header .detail-summary {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding: 14px 18px;
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ===== 内容模块 ===== */
+  .section {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-title .emoji { font-size: 20px; }
+
+  .section-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  /* 机会点卡片 */
+  .opportunity-item {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .opportunity-item:last-child { border-bottom: none; }
+
+  .opportunity-item .opp-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  .opportunity-item .opp-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .opportunity-item .opp-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding-left: 32px;
+  }
+
+  /* 产品发现卡片 */
+  .product-card {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .product-card:last-child { border-bottom: none; }
+
+  .product-card .product-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    gap: 12px;
+  }
+
+  .product-card .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .product-card .product-date-tag {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding: 2px 8px;
+    background: var(--tag-bg);
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .product-card .product-oneliner {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .product-card .product-detail { margin-bottom: 8px; }
+
+  .product-card .product-detail strong {
+    font-size: 13px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .product-card .product-detail p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .product-card .product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    margin-top: 8px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .product-card .product-link:hover { text-decoration: underline; }
+
+  /* OpenClaw 表格 */
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .info-table th {
+    background: var(--tag-bg);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  .info-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .info-table tr:last-child td { border-bottom: none; }
+
+  .info-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  /* 其他动态 */
+  .brief-item {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .brief-item:last-child { border-bottom: none; }
+
+  .brief-item .brief-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+
+  .brief-item .brief-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .brief-item .brief-desc a {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  /* ===== 底部导航 ===== */
+  .detail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: var(--font);
+  }
+
+  .nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 900px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 24px 16px 60px; }
+    .home-header h1 { font-size: 22px; }
+    .detail-header h2 { font-size: 21px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .grid-card { aspect-ratio: auto; min-height: 180px; }
+    .product-card { padding: 18px; }
+    .brief-item { flex-direction: column; gap: 4px; }
+    .brief-item .brief-name { min-width: auto; }
+    .detail-footer { flex-direction: column; gap: 12px; }
+    .nav-btn { width: 100%; justify-content: center; }
+    .filter-bar { gap: 8px; }
+  }
+
+  /* ===== 空状态 ===== */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    grid-column: 1 / -1;
+  }
+
+  .empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
+  .empty-state p { font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- ==================== 首页 ==================== -->
+<div id="page-home" class="page active">
+  <div class="container">
+    <div class="home-header">
+      <div class="logo">
+        <div class="logo-icon">📡</div>
+      </div>
+      <h1>AI 前沿趋势情报简报</h1>
+      <p class="subtitle">每日追踪 AI 产品、Agent 生态与行业动态，<br>为团队提供高质量的趋势洞察与机会判断。</p>
+      <span class="update-badge" id="last-update"></span>
+    </div>
+
+    <!-- 筛选栏 -->
+    <div class="filter-bar">
+      <label>📅 筛选：</label>
+      <select class="filter-select" id="filter-year">
+        <option value="">全部年份</option>
+      </select>
+      <select class="filter-select" id="filter-month">
+        <option value="">全部月份</option>
+      </select>
+      <button class="filter-reset" id="filter-reset-btn">重置</button>
+      <span class="filter-count" id="filter-count"></span>
+    </div>
+
+    <!-- 网格卡片 -->
+    <div class="card-grid" id="card-grid"></div>
+
+    <!-- 分页 -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
+<!-- ==================== 详情页 ==================== -->
+<div id="page-detail" class="page">
+  <div class="container container--narrow">
+    <div class="detail-nav">
+      <button class="btn-back" onclick="showHome()">← 返回首页</button>
+    </div>
+    <div id="detail-content"></div>
+    <div class="detail-footer" id="detail-footer"></div>
+  </div>
+</div>
+
+<script>
+// ===================================================================
+//  数据层
+//  OpenClaw 每天在此数组【最前面】追加一条新记录，格式严格遵守下方模板。
+//  ⚠️  注意事项：
+//    1. 所有字符串值中，禁止使用英文双引号 "，请改用中文引号「」或『』
+//    2. date 格式必须为 "YYYY-MM-DD"（如 "2026-03-27"）
+//    3. 没有的字段（如 openclawVendors）可以传空数组 []，但字段本身不能省略
+//    4. 每条记录末尾加英文逗号 ,
+//
+//  ── 字段说明 ──────────────────────────────────────────────────────
+//  date          : 日报日期，格式 "YYYY-MM-DD"
+//  title         : 当天日报标题，一句话概括核心事件
+//  coreTrend     : 核心趋势，一句话，显示在首页卡片和详情页摘要
+//  tags          : 关键词标签数组，建议 3~5 个，用于首页展示
+//  opportunities : 核心机会点数组，每项包含 title（标题）和 desc（详细描述）
+//  products      : 今日重点发现数组，每项包含：
+//                    name       产品名称
+//                    oneliner   一句话说清楚
+//                    launchDate 上线/发布日期（如 「3月27日」）
+//                    how        具体怎么运作
+//                    why        为什么值得关注
+//                    link       来源链接 URL
+//  openclawVendors : OpenClaw 模型厂商动态数组，每项包含：
+//                    name   产品名、vendor 厂商、time 时间、desc 说明、link 链接
+//  openclawProducts: OpenClaw 产品案例数组，每项包含：
+//                    name 产品名、time 时间、desc 说明、link 链接
+//  otherNews       : 其他 AI 行业动态数组，每项包含：
+//                    name 产品/事件名、time 时间、desc 说明、link 链接
+// ===================================================================
+
+const reports = [
+
+  // ══════════════════════════════════════════════════════════════════
+  //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  // ══════════════════════════════════════════════════════════════════
+
+  // 【模板示例 — 可直接复制后填写，填完后删除此注释】
+  // {
+  //   date: "YYYY-MM-DD",
+  //   title: "日报标题",
+  //   coreTrend: "核心趋势一句话描述",
+  //   tags: ["标签1", "标签2", "标签3"],
+  //   opportunities: [
+  //     {
+  //       title: "机会点标题",
+  //       desc: "机会点详细描述"
+  //     }
+  //   ],
+  //   products: [
+  //     {
+  //       name: "产品名称",
+  //       oneliner: "一句话说清楚",
+  //       launchDate: "X月X日",
+  //       how: "具体怎么运作",
+  //       why: "为什么值得关注",
+  //       link: "https://..."
+  //     }
+  //   ],
+  //   openclawVendors: [
+  //     {
+  //       name: "产品名",
+  //       vendor: "厂商名",
+  //       time: "X月X日",
+  //       desc: "说明",
+  //       link: "https://..."
+  //     }
+  //   ],
+  //   openclawProducts: [
+  //     {
+  //       name: "产品名",
+  //       time: "X月X日",
+  //       desc: "说明",
+  //       link: "https://..."
+  //     }
+  //   ],
+  //   otherNews: [
+  //     {
+  //       name: "产品/事件名",
+  //       time: "X月X日",
+  //       desc: "说明",
+  //       link: "https://..."
+  //     }
+  //   ]
+  // },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  第一条真实数据示例（2026-03-23）
+  // ══════════════════════════════════════════════════════════════════
+  {
+    date: "2026-03-23",
+    title: "AI Agent 从「建议者」升级为「行动者」",
+    coreTrend: "交互范式转变——AI Agent 从只能「建议」人类行动，变成了能自主执行并形成协作网络。",
+    tags: ["Agent 协作", "OpenClaw", "支付", "电商", "Agent 安全"],
+    opportunities: [
+      {
+        title: "Skills 的护城河在于「嵌得深」，不在于「功能强」",
+        desc: "Veryfi Skill 做的是拍照报销，没什么炫酷的功能，但它嵌入了真实工作流（员工→拍照→报销系统→财务审核），链路一旦被依赖，替换成本极高。Skills 的价值逻辑和 App Store 完全不同——被工作流依赖比被更多人用更重要。"
+      },
+      {
+        title: "Agent 协作基础设施是空白地带",
+        desc: "AgentDiscuss（互评）+ Context Overflow（知识共享）+ GitAgent（可移植性）+ Agent Teams Update（多 Agent 协作），本质都是「让 Agent 不是孤岛」。但 Agent 之间的信任问题、记忆共享的隐私问题、跨框架调用标准问题至今没有真正解决。这里可能有机会。"
+      },
+      {
+        title: "企业级 Agent 安全是真实需求",
+        desc: "NVIDIA NemoClaw 的出现说明企业愿意为 Agent 安全付费。模型团队可以思考：如何让模型输出可审计、可控制、可回滚？这是企业买单的前提。"
+      }
+    ],
+    products: [
+      {
+        name: "AgentDiscuss",
+        oneliner: "AI 评价 AI 的产品评测平台",
+        launchDate: "3月16日",
+        how: "开发者提交产品链接，AI Agent 自动访问页面、阅读介绍、实际体验，然后像真实用户一样讨论「解决了什么问题」「哪里做得好」「哪里有问题」。人类旁观 AI 的真实反应，据此判断产品价值。",
+        why: "传统 Product Hunt 由人类投票，容易刷票。AgentDiscuss 让 AI 评价 AI，绕过了刷票问题。未来应用商店排名可能由 AI 决定而非人类投票。",
+        link: "https://www.producthunt.com/products/agentdiscuss"
+      },
+      {
+        name: "Shopify Agentic Storefronts",
+        oneliner: "在 AI 对话里直接购物",
+        launchDate: "3月下旬",
+        how: "商家上传商品时自动生成 AI 可读 metadata。用户对 AI 说「帮我找一双跑步鞋」，AI 直接调取符合条件商品，用户在对话里确认下单，Shopify 完成履约配送。全程不需要打开任何电商网站。",
+        why: "10年来电商的逻辑是「搜索→跳转→购买」，现在变成「对话→推荐→购买」。商品 metadata 的质量直接决定 AI 选不选你——这就是 AI 时代的「SEO」。",
+        link: "https://www.thekeyword.co/news/shopify-chatgpt-agentic-storefront-launch"
+      },
+      {
+        name: "Visa CLI",
+        oneliner: "AI Agent 可以自己刷卡付款",
+        launchDate: "3月18日",
+        how: "开发者给 Agent 分配一个虚拟信用卡，Agent 在执行任务过程中遇到需要付费的环节，直接通过 CLI 完成支付，不需要人类审批或输入密码。支付记录自动留存，可审计。",
+        why: "AI Agent 一直只能「建议」人类去买什么，但无法自己完成支付。Visa CLI 打通了意图→决策→执行→支付的全链路，AI 从「建议者」升级为「行动者」。这是 Agent 经济成立的前提条件。",
+        link: "https://www.theblock.co/post/394199/visa-crypto-labs-rolls-out-command-line-tool-for-ai-bot-payments"
+      },
+      {
+        name: "Context Overflow",
+        oneliner: "Agent 的「维基百科」",
+        launchDate: "3月20日",
+        how: "Agent A 在处理复杂问题时摸索出一套方法，这个方法被自动记录到共享知识库。Agent B 遇到类似问题时，Context Overflow 会推荐这个方法，Agent B 验证后可以直接使用。",
+        why: "这是 Agent 能力加速积累的基础设施。类比人类：一个人学会骑自行车，如果经验能自动沉淀给全人类，那所有人第二天就都会骑了。",
+        link: "https://www.producthunt.com/products/context-overflow"
+      },
+      {
+        name: "GitAgent",
+        oneliner: "Agent 的 Docker",
+        launchDate: "3月20日",
+        how: "三个文件：agent.yaml（基础配置）+ SOUL.md（人格和行为规则）+ SKILL.md（会用的工具和能力）。把这个仓库推到支持 GitAgent 的平台，Agent 就会按规则运行。在 Claude Code 里训练好的客服 Agent，一键导出后可以安装到 OpenClaw 里继续运行。",
+        why: "Agent 可以像 Docker 镜像一样打包、分发、安装，实现跨框架运行。这是 Agent 互操作性的关键一步，解决当前生态碎片化的核心问题。",
+        link: "https://www.producthunt.com/products/gitagent-2"
+      }
+    ],
+    openclawVendors: [
+      {
+        name: "ClawBot",
+        vendor: "腾讯",
+        time: "3月22日",
+        desc: "微信 10 亿用户直接接入 OpenClaw，像发消息一样执行任务",
+        link: "https://www.reuters.com/technology/tencent-integrates-wechat-with-openclaw-ai-agent-amid-china-tech-battle-2026-03-22/"
+      },
+      {
+        name: "NemoClaw",
+        vendor: "NVIDIA",
+        time: "GTC 2026",
+        desc: "Jensen Huang 在 GTC 大会发布，为 OpenClaw 增加内核级沙箱+PII 脱敏+审计日志，解决企业安全合规问题",
+        link: "https://github.com/NVIDIA/NemoClaw"
+      }
+    ],
+    openclawProducts: [
+      {
+        name: "Agent Teams Update",
+        time: "3月23日",
+        desc: "OpenClaw 原生多 Agent 协作功能正式上线，多 Agent 从此原生支持团队协作",
+        link: "https://www.youtube.com/watch?v=L26UjmHiabw"
+      },
+      {
+        name: "SkyClaw",
+        time: "3月21日",
+        desc: "从数据搜索→PPT→海报→视频→网站，一站式工作流 Skill",
+        link: "https://www.youtube.com/watch?v=la0uGXV_G0s"
+      },
+      {
+        name: "Veryfi Skill",
+        time: "3月17日",
+        desc: "拍照上传收据/发票，AI 秒级提取结构化数据（报销/记账场景）",
+        link: "https://www.veryfi.com/ai/top-openclaw-skills-veryfi-on-clawhub/"
+      },
+      {
+        name: "MetaClaw",
+        time: "3月16日",
+        desc: "自进化 Agent，支持强化学习训练，论文冲上 HuggingFace 日榜第一",
+        link: "https://github.com/aiming-lab/MetaClaw"
+      }
+    ],
+    otherNews: [
+      {
+        name: "Alibaba Wukong",
+        time: "3月17日",
+        desc: "企业多 Agent 调度平台，让钉钉里的报销/CRM/文档等办公流程自动化，支持钉钉（8亿用户+2700万企业）、Slack、Teams、微信多平台。",
+        link: "https://www.reuters.com/world/asia-pacific/alibaba-launches-new-ai-agent-platform-enterprises-2026-03-17/"
+      },
+      {
+        name: "Origami",
+        time: "3月18日",
+        desc: "用自然语言一句话生成 B2B 销售线索，自动抓取+结构化+丰富+评分。",
+        link: "https://www.producthunt.com/products/origami-ai"
+      },
+      {
+        name: "Claude Code Channels",
+        time: "3月20日",
+        desc: "Anthropic 让 Claude Code 接入 Telegram/Discord，可以远程控制编程会话。",
+        link: "https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels"
+      }
+    ]
+  },
+
+
+];
+
+// ===================================================================
+//  分页与筛选状态
+// ===================================================================
+const PAGE_SIZE = 12;
+let currentPage = 1;
+let filteredReports = [];
+
+// ===================================================================
+//  渲染逻辑
+// ===================================================================
+
+// 获取所有年份和月份
+function getYearsAndMonths() {
+  const years = new Set();
+  const months = new Set();
+  reports.forEach(r => {
+    const [y, m] = r.date.split('-');
+    years.add(y);
+    months.add(m);
+  });
+  return {
+    years: [...years].sort((a, b) => b.localeCompare(a)),
+    months: [...months].sort((a, b) => a.localeCompare(b))
+  };
+}
+
+// 月份数字转中文
+function monthLabel(m) {
+  const num = parseInt(m, 10);
+  return num + ' 月';
+}
+
+// 初始化筛选下拉框
+function initFilters() {
+  const { years, months } = getYearsAndMonths();
+  const yearSelect = document.getElementById('filter-year');
+  const monthSelect = document.getElementById('filter-month');
+
+  years.forEach(y => {
+    const opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y + ' 年';
+    yearSelect.appendChild(opt);
+  });
+
+  months.forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = monthLabel(m);
+    monthSelect.appendChild(opt);
+  });
+
+  yearSelect.addEventListener('change', () => { currentPage = 1; renderHome(); });
+  monthSelect.addEventListener('change', () => { currentPage = 1; renderHome(); });
+  document.getElementById('filter-reset-btn').addEventListener('click', () => {
+    yearSelect.value = '';
+    monthSelect.value = '';
+    currentPage = 1;
+    renderHome();
+  });
+}
+
+// 获取筛选后的数据
+function getFilteredReports() {
+  const yearVal = document.getElementById('filter-year').value;
+  const monthVal = document.getElementById('filter-month').value;
+
+  let result = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+
+  if (yearVal) {
+    result = result.filter(r => r.date.startsWith(yearVal));
+  }
+  if (monthVal) {
+    result = result.filter(r => {
+      const m = r.date.split('-')[1];
+      return m === monthVal;
+    });
+  }
+
+  return result;
+}
+
+// 首页渲染
+function renderHome() {
+  const grid = document.getElementById('card-grid');
+  const updateBadge = document.getElementById('last-update');
+  const countEl = document.getElementById('filter-count');
+
+  const allSorted = [...reports].sort((a, b) => b.date.localeCompare(a.date));
+
+  if (allSorted.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><p>暂无日报数据</p></div>';
+    return;
+  }
+
+  updateBadge.textContent = '最近更新：' + allSorted[0].date;
+
+  filteredReports = getFilteredReports();
+  const totalPages = Math.ceil(filteredReports.length / PAGE_SIZE);
+  if (currentPage > totalPages) currentPage = totalPages || 1;
+
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageData = filteredReports.slice(start, start + PAGE_SIZE);
+
+  countEl.textContent = `共 ${filteredReports.length} 篇`;
+
+  if (pageData.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><p>没有找到匹配的日报</p></div>';
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = pageData.map(r => `
+    <div class="grid-card" data-date="${r.date}">
+      <span class="card-arrow">→</span>
+      <div class="card-date">${r.date}</div>
+      <div class="card-title">${r.title}</div>
+      <div class="card-summary">${r.coreTrend}</div>
+      <div class="card-tags">
+        ${r.tags.slice(0, 3).map(t => `<span class="tag">${t}</span>`).join('')}
+        ${r.tags.length > 3 ? `<span class="tag">+${r.tags.length - 3}</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  // 渲染分页
+  renderPagination(totalPages);
+}
+
+// 分页渲染
+function renderPagination(totalPages) {
+  const container = document.getElementById('pagination');
+
+  if (totalPages <= 1) {
+    container.innerHTML = '';
+    return;
+  }
+
+  let html = '';
+
+  // 上一页
+  html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} data-page="${currentPage - 1}">‹</button>`;
+
+  // 页码按钮（最多显示 7 个）
+  const maxVisible = 7;
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+  if (endPage - startPage < maxVisible - 1) {
+    startPage = Math.max(1, endPage - maxVisible + 1);
+  }
+
+  if (startPage > 1) {
+    html += `<button class="page-btn" data-page="1">1</button>`;
+    if (startPage > 2) html += `<span class="page-info">…</span>`;
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+  }
+
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) html += `<span class="page-info">…</span>`;
+    html += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
+  }
+
+  // 下一页
+  html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">›</button>`;
+
+  container.innerHTML = html;
+}
+
+// 详情页渲染
+function renderDetail(report) {
+  const container = document.getElementById('detail-content');
+
+  let html = `
+    <div class="detail-header">
+      <div class="detail-date">${report.date}</div>
+      <h2>${report.title}</h2>
+      <div class="detail-summary">🌟 <strong>核心趋势：</strong>${report.coreTrend}</div>
+    </div>
+  `;
+
+  // 核心机会点
+  if (report.opportunities && report.opportunities.length) {
+    html += `
+      <div class="section">
+        <div class="section-title"><span class="emoji">🎯</span> 核心机会点</div>
+        <div class="section-content">
+          ${report.opportunities.map((o, i) => `
+            <div class="opportunity-item">
+              <div class="opp-title"><span class="opp-number">${i + 1}</span>${o.title}</div>
+              <div class="opp-desc">${o.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // 今日重点发现
+  if (report.products && report.products.length) {
+    html += `
+      <div class="section">
+        <div class="section-title"><span class="emoji">🔥</span> 今日重点发现</div>
+        <div class="section-content">
+          ${report.products.map(p => `
+            <div class="product-card">
+              <div class="product-head">
+                <span class="product-name">${p.name}</span>
+                <span class="product-date-tag">${p.launchDate}</span>
+              </div>
+              <div class="product-oneliner">${p.oneliner}</div>
+              <div class="product-detail">
+                <strong>🔧 具体怎么运作</strong>
+                <p>${p.how}</p>
+              </div>
+              <div class="product-detail">
+                <strong>💡 为什么值得关注</strong>
+                <p>${p.why}</p>
+              </div>
+              <a class="product-link" href="${p.link}" target="_blank" rel="noopener">查看来源 ↗</a>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // OpenClaw 专题 — 厂商动态
+  if (report.openclawVendors && report.openclawVendors.length) {
+    html += `
+      <div class="section">
+        <div class="section-title"><span class="emoji">🏗️</span> OpenClaw 专题 — 模型厂商动态</div>
+        <div class="section-content">
+          <div class="table-wrap">
+            <table class="info-table">
+              <thead><tr><th>产品</th><th>厂商</th><th>时间</th><th>说明</th></tr></thead>
+              <tbody>
+                ${report.openclawVendors.map(v => `
+                  <tr>
+                    <td>${v.name}</td>
+                    <td>${v.vendor}</td>
+                    <td>${v.time}</td>
+                    <td>${v.desc} <a href="${v.link}" target="_blank" rel="noopener">↗</a></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // OpenClaw 专题 — 产品案例
+  if (report.openclawProducts && report.openclawProducts.length) {
+    html += `
+      <div class="section">
+        <div class="section-title"><span class="emoji">🧩</span> OpenClaw 专题 — 产品案例</div>
+        <div class="section-content">
+          <div class="table-wrap">
+            <table class="info-table">
+              <thead><tr><th>产品</th><th>时间</th><th>说明</th></tr></thead>
+              <tbody>
+                ${report.openclawProducts.map(p => `
+                  <tr>
+                    <td>${p.name}</td>
+                    <td>${p.time}</td>
+                    <td>${p.desc} <a href="${p.link}" target="_blank" rel="noopener">↗</a></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // 其他行业动态
+  if (report.otherNews && report.otherNews.length) {
+    html += `
+      <div class="section">
+        <div class="section-title"><span class="emoji">📰</span> 其他 AI 行业动态</div>
+        <div class="section-content">
+          ${report.otherNews.map(n => `
+            <div class="brief-item">
+              <span class="brief-name">${n.name}<br><span style="font-weight:400;font-size:12px;color:var(--text-muted)">${n.time}</span></span>
+              <span class="brief-desc">${n.desc} <a href="${n.link}" target="_blank" rel="noopener">查看来源 ↗</a></span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+
+  // 底部导航
+  renderFooterNav(report.date);
+}
+
+function renderFooterNav(currentDate) {
+  const sorted = [...reports].sort((a, b) => a.date.localeCompare(b.date));
+  const idx = sorted.findIndex(r => r.date === currentDate);
+  const prev = idx > 0 ? sorted[idx - 1] : null;
+  const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
+  const footer = document.getElementById('detail-footer');
+
+  footer.innerHTML = `
+    <button class="nav-btn" ${prev ? `data-nav-date="${prev.date}"` : 'disabled'}>
+      ← 上一天${prev ? `<span style="margin-left:4px;font-size:12px;color:var(--text-muted)">${prev.date}</span>` : ''}
+    </button>
+    <button class="nav-btn" ${next ? `data-nav-date="${next.date}"` : 'disabled'}>
+      下一天${next ? `<span style="margin-right:4px;font-size:12px;color:var(--text-muted)">${next.date}</span>` : ''} →
+    </button>
+  `;
+
+  footer.querySelectorAll('.nav-btn[data-nav-date]').forEach(btn => {
+    btn.addEventListener('click', () => showDetail(btn.dataset.navDate));
+  });
+}
+
+// ===================================================================
+//  路由
+// ===================================================================
+function showHome() {
+  document.getElementById('page-detail').classList.remove('active');
+  document.getElementById('page-home').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState(null, '', window.location.pathname);
+}
+
+function showDetail(date) {
+  const report = reports.find(r => r.date === date);
+  if (!report) return;
+  renderDetail(report);
+  document.getElementById('page-home').classList.remove('active');
+  document.getElementById('page-detail').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState({ date }, '', `#${date}`);
+}
+
+// 浏览器前进/后退支持
+window.addEventListener('popstate', (e) => {
+  if (e.state && e.state.date) {
+    showDetail(e.state.date);
+  } else {
+    showHome();
+  }
+});
+
+// ===================================================================
+//  事件委托
+// ===================================================================
+document.addEventListener('click', function(e) {
+  // 网格卡片点击
+  const card = e.target.closest('.grid-card');
+  if (card && card.dataset.date) {
+    showDetail(card.dataset.date);
+    return;
+  }
+
+  // 分页按钮点击
+  const pageBtn = e.target.closest('.page-btn');
+  if (pageBtn && !pageBtn.disabled && pageBtn.dataset.page) {
+    currentPage = parseInt(pageBtn.dataset.page, 10);
+    renderHome();
+    // 滚动到卡片区域顶部
+    document.getElementById('card-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+});
+
+// ===================================================================
+//  初始化
+// ===================================================================
+(function init() {
+  initFilters();
+  renderHome();
+  // 如果 URL 带 hash，直接打开对应日报
+  const hash = window.location.hash.replace('#', '');
+  if (hash && reports.find(r => r.date === hash)) {
+    showDetail(hash);
+  }
+})();
+</script>
+</body>
+</html>

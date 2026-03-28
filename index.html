@@ -603,47 +603,30 @@
   .info-table td:first-child {
     font-weight: 600;
     color: var(--text-primary);
-    white-space: nowrap;
-  }
-
-  /* =====  列宽控制（固定布局） ===== */
-  .info-table {
-    table-layout: fixed;
-  }
-
-  /* 第一列（事件/产品）：27% */
-  .info-table td:first-child {
     width: 27%;
+    min-width: 100px;
+    max-width: 200px;
   }
 
-  /* 时间列：100px */
-  .info-table th:nth-child(2),
-  .info-table td:nth-child(2) {
-    width: 100px;
-  }
-
-  /* 厂商列（第3列，4列表格）：80px */
-  .info-table th:nth-child(3),
-  .info-table td:nth-child(3) {
-    width: 80px;
-  }
-
-  /* 说明列（最后列）：固定宽度，自动换行 */
-  .info-table td:last-child {
-    word-break: break-word;
-  }
-
-
-
-  /* 时间列不换行 */
-  .info-table th:nth-child(2),
-  .info-table td:nth-child(2) {
+  /* 时间列样式 */
+  .info-table .col-time {
     white-space: nowrap;
+    width: 100px;
+    min-width: 85px;
+    max-width: 110px;
+    text-align: center;
   }
 
-  /* 三列表格中时间是第二列 */
-  .info-table th:nth-child(3):last-child,
-  .info-table td:nth-child(3):last-child {
+  /* 厂商列样式 */
+  .info-table .col-vendor {
+    white-space: nowrap;
+    width: 80px;
+    min-width: 60px;
+    max-width: 100px;
+  }
+
+  /* 说明列自动占满剩余空间 */
+  .info-table .col-desc {
     width: auto;
   }
 
@@ -1443,14 +1426,14 @@ function renderDetail(report) {
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
-              <thead><tr><th>产品</th><th>厂商</th><th>时间</th><th>说明</th></tr></thead>
+              <thead><tr><th>产品</th><th class="col-vendor">厂商</th><th class="col-time">时间</th><th class="col-desc">说明</th></tr></thead>
               <tbody>
                 ${report.openclawVendors.map(v => `
                   <tr>
                     <td>${v.name}</td>
-                    <td>${v.vendor}</td>
-                    <td>${v.time}</td>
-                    <td>${v.desc} <a href="${v.link}" target="_blank" rel="noopener">↗</a></td>
+                    <td class="col-vendor">${v.vendor}</td>
+                    <td class="col-time">${v.time}</td>
+                    <td class="col-desc">${v.desc} <a href="${v.link}" target="_blank" rel="noopener">↗</a></td>
                   </tr>
                 `).join('')}
               </tbody>
@@ -1469,13 +1452,13 @@ function renderDetail(report) {
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
-              <thead><tr><th>产品</th><th>时间</th><th>说明</th></tr></thead>
+              <thead><tr><th>产品</th><th class="col-time">时间</th><th class="col-desc">说明</th></tr></thead>
               <tbody>
                 ${report.openclawProducts.map(p => `
                   <tr>
                     <td>${p.name}</td>
-                    <td>${p.time}</td>
-                    <td>${p.desc} <a href="${p.link}" target="_blank" rel="noopener">↗</a></td>
+                    <td class="col-time">${p.time}</td>
+                    <td class="col-desc">${p.desc} <a href="${p.link}" target="_blank" rel="noopener">↗</a></td>
                   </tr>
                 `).join('')}
               </tbody>
@@ -1494,13 +1477,13 @@ function renderDetail(report) {
         <div class="section-content">
           <div class="table-wrap">
             <table class="info-table">
-              <thead><tr><th>事件</th><th>时间</th><th>说明</th></tr></thead>
+              <thead><tr><th>事件</th><th class="col-time">时间</th><th class="col-desc">说明</th></tr></thead>
               <tbody>
                 ${report.otherNews.map(n => `
                   <tr>
                     <td>${n.name}</td>
-                    <td>${n.time}</td>
-                    <td>${n.desc} <a href="${n.link}" target="_blank" rel="noopener">↗</a></td>
+                    <td class="col-time">${n.time}</td>
+                    <td class="col-desc">${n.desc} <a href="${n.link}" target="_blank" rel="noopener">↗</a></td>
                   </tr>
                 `).join('')}
               </tbody>

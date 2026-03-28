@@ -606,7 +606,10 @@
     white-space: nowrap;
   }
 
-  /* =====  列宽控制 ===== */
+  /* =====  列宽控制（固定布局） ===== */
+  .info-table {
+    table-layout: fixed;
+  }
 
   /* 第一列（事件/产品）：27% */
   .info-table td:first-child {
@@ -617,19 +620,17 @@
   .info-table th:nth-child(2),
   .info-table td:nth-child(2) {
     width: 100px;
-    white-space: nowrap;
   }
 
   /* 厂商列（第3列，4列表格）：80px */
   .info-table th:nth-child(3),
   .info-table td:nth-child(3) {
     width: 80px;
-    white-space: nowrap;
   }
 
-  /* 说明列（最后列）：自动占满 */
+  /* 说明列（最后列）：固定宽度，自动换行 */
   .info-table td:last-child {
-    width: auto;
+    word-break: break-word;
   }
 
 

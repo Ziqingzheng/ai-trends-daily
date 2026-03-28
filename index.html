@@ -575,7 +575,6 @@
   }
 
   .info-table {
-    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
@@ -589,15 +588,6 @@
     text-align: left;
     padding: 10px 16px;
     white-space: nowrap;
-    width: 30%;
-  }
-
-  .info-table th:nth-child(2) {
-    width: 80px;
-  }
-
-  .info-table th:nth-child(3) {
-    width: auto;
   }
 
   .info-table td {
@@ -606,7 +596,6 @@
     color: var(--text-secondary);
     vertical-align: top;
     line-height: 1.6;
-    word-break: break-word;
   }
 
   .info-table tr:last-child td { border-bottom: none; }
@@ -614,8 +603,9 @@
   .info-table td:first-child {
     font-weight: 600;
     color: var(--text-primary);
-    white-space: normal;
+    white-space: nowrap;
   }
+
 
 
   /* 时间列不换行 */

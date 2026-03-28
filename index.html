@@ -606,10 +606,13 @@
     white-space: nowrap;
   }
 
-  /* 时间列不换行 */
+  /* 时间列不换行，紧凑宽度 */
   .info-table th:nth-child(2),
   .info-table td:nth-child(2) {
     white-space: nowrap;
+    width: 70px;
+    min-width: 70px;
+    max-width: 90px;
   }
 
   /* 三列表格中时间是第二列 */
@@ -934,33 +937,33 @@ const reports = [
   {
     date: "2026-03-27",
     title: "AI Agent 从「军备竞赛」转向「生产级治理」",
-    coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争——上下文记忆与垂直场景落地成为本周最清晰的产品主题。",
+    coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争，上下文记忆和垂直场景落地成为本周最清晰的产品主题。",
     tags: ["上下文记忆", "企业级Agent", "消费AI分发", "开源框架", "AI治理"],
     opportunities: [
-      {title: "上下文持久化是 Agent 的交互革命", desc: "Littlebird（屏幕感知+会议记忆）、WhatsApp AI（聊天上下文）、Gemini（记忆迁移）都在做同一件事：让 AI 记住对话背景，不必每次从零开始。用户感知最强、付费意愿最高的方向，2026 年是「AI 记忆」产品元年。"},
-      {title: "企业 Agent 治理是真实付费赛道", desc: "数据显示 80% 企业已遭遇 Agent 行为风险，但仅 21% 部署了治理工具。JetBrains Central、Databricks Lakewatch 已入局。护城河在于深度嵌入企业工作流，而非通用安全工具。"},
-      {title: "开源 Agent 框架垂直场景正在验证商业模式", desc: "Binance Ai Pro（金融）、微信 ClawBot（社交）分别代表头部企业与消费级产品的认可，OpenClaw 生态扩展路径已获验证。"}
+      {title: "上下文持久化是 Agent 的下一场交互革命", desc: "Littlebird（屏幕+会议）、WhatsApp AI（聊天上下文）、Gemini（记忆导入）都在做同一件事：让 AI 不再每次从零开始。这个方向用户感知最强、付费意愿最清晰，2026 年将是「AI 记忆」产品的元年。"},
+      {title: "企业 Agent 治理是真实付费赛道，窗口期已开", desc: "80% 企业报告 Agent 行为风险但仅 21% 有治理模型。JetBrains Central、Databricks Lakewatch 已入局，护城河在于深度嵌入企业工作流，而非通用安全工具。"},
+      {title: "开源 Agent 框架的垂直场景落地正在验证商业模式", desc: "Binance Ai Pro 基于 OpenClaw 做金融交易、微信 ClawBot/QClaw 代表大厂官方认可——开源框架做垂直 B2C 的可行性已验证，生态扩展路径清晰。"}
     ],
     products: [
-      {name: "Littlebird", oneliner: "屏幕与会议记忆的 AI 助手", launchDate: "2026-03-24", how: "macOS 原生应用，实时读取屏幕内容并转录会议，用户通过聊天界面基于这些上下文提问，AI 直接引用屏幕或会议内容作答。官方 Demo 展示 84% 用户满意度。", why: "壁垒在于 macOS 级别的屏幕读取权限，用户习惯建立后替换成本极高。获得 $11M 种子轮融资，方向已获验证。", link: "https://techcrunch.com/2026/03/23/littlebird-raises-11m-to-capture-context-from-your-computer-so-you-can-query-your-data/"},
-      {name: "JetBrains Central", oneliner: "企业级 Agent 开发治理平台", launchDate: "2026-03-24", how: "三层架构——语义层（整合代码知识）、执行层（对接 CI/CD 流水线）、治理层（身份认证、成本控制、可观测性）。支持 OpenAI、Anthropic、Google、Groq 等多模型，明年 Q2 开放 Early Access。", why: "定位为「Agentic AI 的 Kubernetes」——帮企业统一管理多个 AI Agent 的身份、权限和成本，企业级赛道暂无直接竞争对手。按企业规模收费。", link: "https://blog.jetbrains.com/blog/2026/03/24/introducing-jetbrains-central-an-open-system-for-agentic-software-development/"},
-      {name: "WhatsApp AI Responses", oneliner: "Meta 在 WhatsApp 中嵌入 AI 写作助手", launchDate: "2026-03-26", how: "Meta Private Processing AI，运行在本地设备上，消息不离开手机。AI 分析对话上下文后生成回复建议，用户选择后发送。支持 20 亿月活用户。", why: "AI 功能分发的新渠道是已有亿级用户基础的产品嵌入式功能，20 亿月活是最强的分发起点。", link: "https://techcrunch.com/2026/03/26/whatsapp-can-now-draft-ai-generated-responses-based-on-your-conversations/"},
-      {name: "Claude Code Auto Mode", oneliner: "Anthropic 为 Claude Code 推出安全可控的自动执行模式", launchDate: "2026-03-24", how: "Auto Mode 下 Agent 自动完成多步骤编程任务，在关键决策点暂停等待人类确认。同时推出 Dispatch 工具，支持同时调度多个 Agent 并行处理代码审查任务。", why: "代表 Anthropic 的市场分层策略——同时覆盖极客开发者工具与企业安全管控两条路线。", link: "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"},
-      {name: "Dreamina Seedance 2.0", oneliner: "字节跳动 AI 视频生成模型登陆 CapCut", launchDate: "2026-03-26", how: "在 CapCut 视频编辑器内直接调用 AI 生成视频，支持剪辑、生成、配音等操作。首批上线拉丁美洲市场。", why: "AI 视频进入落地竞争阶段，技术指标不再是唯一壁垒，CapCut 的分发能力是字节的核心优势。", link: "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/"}
+      {name: "Littlebird", oneliner: "读取你的屏幕和会议，构建「已知上下文」的 AI 助手", launchDate: "2026-03-24", how: "macOS 原生应用，实时读取屏幕上所有 App 的 structured content + 会议转录，通过聊天界面回答问题、起草文档、关联跨应用信息。内置 84% 用户满意度数据，Lenny Rachitsky 等顶级天使背书。", why: "解决 AI 助手「冷启动」问题——用户不需要 copy-paste 或写长 prompt。壁垒在操作系统级别的屏幕读取能力，一旦建立用户习惯替换成本极高。$11M 种子轮融资验证方向，这是「AI 记忆」产品方向最清晰的案例之一。", link: "https://techcrunch.com/2026/03/23/littlebird-raises-11m-to-capture-context-from-your-computer-so-you-can-query-your-data/"},
+      {name: "JetBrains Central", oneliner: "企业级 Agent 软件开发的治理与执行平台", launchDate: "2026-03-24", how: "三层架构：语义层（聚合代码库/架构/运行时知识）+ 执行层（连接代码库/知识库/CI/CD）+ 治理层（策略执行/身份管理/成本归属/可观测性）。支持 OpenAI/Anthropic/Google/Groq 模型，Q2 2026 开放 Early Access，Google Cloud、Anthropic、OpenAI 同时成为首批合作伙伴。", why: "90% 开发者用 AI 工具，72% 企业部署 Agent，但 80% 报告行为风险。JetBrains 定位为 Agentic AI 的 Kubernetes——单个 Agent 好用，但多 Agent 协作、企业级管控是真正瓶颈。$0 前期投入，Q2 EA 后按企业规模收费。", link: "https://blog.jetbrains.com/blog/2026/03/24/introducing-jetbrains-central-an-open-system-for-agentic-software-development/"},
+      {name: "WhatsApp AI Responses", oneliner: "Meta 将 AI 写作助手嵌入全球最大即时通讯应用", launchDate: "2026-03-26", how: "利用 Meta Private Processing AI 架构，消息内容不离开设备，不上传 Meta 服务器。AI 分析对话上下文，生成「Just Right」回复建议，用户选择后发送。", why: "AI 从「打字工具」升级为「对话助手」——用户不需要复制到 ChatGPT 就能获得上下文感知的回复。AI 分发的下一站不是新 App，而是已有亿级用户产品里的嵌入式功能。", link: "https://techcrunch.com/2026/03/26/whatsapp-can-now-draft-ai-generated-responses-based-on-your-conversations/"},
+      {name: "Claude Code Auto Mode", oneliner: "Anthropic 为 Claude Code 推出安全可控的 Auto Mode", launchDate: "2026-03-24", how: "Auto Mode 下 Agent 可自动执行多步骤任务流，仅在关键节点请求人类确认。结合 Dispatch for Cowork 分发任务给多个 Agent，配合 Claude Code Review 做自动代码审查。", why: "企业级 Agent 采用更看重可控性——出了问题能追责、能停下。Anthropic 押注「可控」而非「全能」，代表了一种市场分层：全能极客工具 vs 企业安全可控工具，两条路都会走出来。", link: "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/"},
+      {name: "Dreamina Seedance 2.0", oneliner: "字节 AI 视频生成模型登陆 CapCut，全球扩张", launchDate: "2026-03-26", how: "用户通过提示词、图片或参考视频生成视频内容，CapCut 内嵌模型能力，支持剪辑、生成和音视频同步全流程。首批上线拉美市场。", why: "OpenAI Sora 同日关停，字节逆势扩张。AI 视频生成进入「落地为王」阶段，CapCut 的分发渠道是字节相对于 Sora 的核心优势。技术强不等于产品胜。", link: "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/"}
     ],
     openclawVendors: [
-      {name: "高德开放平台", vendor: "阿里", time: "2026-03-23", desc: "高德地图发布 OpenClaw LBS 技能包，AI Agent 可直接调用地图查询、路径规划、导航等功能，开发者可在分钟级时间内搭建 LBS 应用。", link: "https://www.digitalphablet.com/ai/gaode-open-platform-launches-openclaw-skills-lbs-apps-built-in-minutes/"}
+      {name: "高德开放平台", vendor: "阿里", time: "2026-03-23", desc: "高德地图（阿里旗下）发布专用于 OpenClaw 的 LBS 技能包，让 AI Agent 可直接调用地理位置查询、路径规划、导航等能力，开发者分钟级搭建 LBS 应用。", link: "https://www.digitalphablet.com/ai/gaode-open-platform-launches-openclaw-skills-lbs-apps-built-in-minutes/"}
     ],
     openclawProducts: [
-      {name: "Binance Ai Pro", time: "2026-03-25", desc: "全球最大加密货币交易所 Binance 基于 OpenClaw 生态构建 AI 交易 Agent，用户配置策略后 Agent 自动执行交易操作。这是 OpenClaw 生态内首个金融垂直场景落地案例。", link: "https://dig.watch/updates/binance-ai-pro-brings-advanced-ai-to-trading"},
-      {name: "HeyBondi Claw", time: "2026-03-24", desc: "首款面向 60 岁以上老年用户的 OpenClaw AI 伴侣，支持本地数据存储、语音交互和隐私保护，定位美国 8000 万老年人口市场。", link: "https://www.prnewswire.com/news-releases/heybondi-launches-first-ai-companion-built-on-openclaw-for-older-adults-302721893.html"},
-      {name: "Hitem3D", time: "2026-03-23", desc: "新加坡公司 Math Magic 以 Skill 形式入驻 ClawHub，使 AI Agent 可直接调用其图像转 3D 模型能力。", link: "https://www.prnewswire.com/news-releases/hitem3d-becomes-callable-via-openclaw-skills-enabling-structured-image-to-3d-generation-302722082.html"}
+      {name: "Binance Ai Pro", time: "2026-03-25", desc: "全球最大加密货币交易所 Binance 基于 OpenClaw 生态构建 AI Agent 交易平台，用户配置策略后 Agent 负责执行和常规交易操作，是 OpenClaw 生态首个金融垂直应用。", link: "https://dig.watch/updates/binance-ai-pro-brings-advanced-ai-to-trading"},
+      {name: "HeyBondi Claw", time: "2026-03-24", desc: "首款专为老年人（60 岁以上）打造的 OpenClaw 生态 AI 伴侣产品，具备本地数据存储、个性化语音交互和技能扩展能力，解决了老年人在 AI 使用中的隐私安全和操作复杂性问题，直接面向美国 8000 万老年人口。", link: "https://www.prnewswire.com/news-releases/heybondi-launches-first-ai-companion-built-on-openclaw-for-older-adults-302721893.html"},
+      {name: "Hitem3D（ClawHub Skill）", time: "2026-03-23", desc: "新加坡 Math Magic 公司的 Hitem3D 以 Skill 形式入驻 ClawHub，使 AI Agent 能够直接调用图像转 3D 生成能力，降低了 AI Agent 在 3D 内容创作领域的应用门槛。", link: "https://www.prnewswire.com/news-releases/hitem3d-becomes-callable-via-openclaw-skills-enabling-structured-image-to-3d-generation-302722082.html"}
     ],
     otherNews: [
-      {name: "OpenAI Sora 关停", time: "2026-03-27", desc: "上线仅 7 个月即全面停运。官方披露 30 天留存率仅 1%，60 天归零。与字节 Dreamina 的快速扩张形成对比，验证了「技术领先≠产品成功」的产品规律。", link: "https://36kr.com/p/3737580650823945"},
-      {name: "YC W26 演示日", time: "2026-03-26", desc: "190 家公司参与演示日。值得关注的案例：Conntour 获得 $7M 融资，打造安保摄像头内容的 AI 搜索引擎，投资方包括 General Catalyst。", link: "https://techcrunch.com/2026/03/26/16-of-the-most-interesting-startups-from-yc-w26-demo-day/"},
-      {name: "Google Gemini 记忆迁移功能", time: "2026-03-26", desc: "支持将其他 AI 助手的个人记忆导入 Gemini，标志着用户数据可迁移性成为 AI 平台竞争的新维度。", link: "https://aitoolly.com/ai-news/article/2026-03-27-google-gemini-introduces-new-import-memory-and-chat-history-features-to-simplify-ai-migration"},
-      {name: "小米 Hunter Alpha 模型", time: "2026-03-26", desc: "小米自研 AI 模型登陆 OpenRouter。36氪报道确认这是小米 AI 路线图的组成部分，而非内部试水项目。", link: "https://36kr.com/p/3729285037424265"}
+      {name: "OpenAI Sora 宣布关停", time: "2026-03-27", desc: "7 个月前高调发布，全面停运，30 天留存率仅 1%，60 天归零。与字节 Dreamina 扩张形成鲜明对比——技术强不等于产品胜，AI 产品成败最终由用户是否真正使用决定。36氪独家报道。", link: "https://36kr.com/p/3737580650823945"},
+      {name: "YC W26 Demo Day", time: "2026-03-26", desc: "190 家公司参与，AI 再次成为主流方向。Conntour 获 $7M 融资打造安保视频 AI 搜索引擎。", link: "https://techcrunch.com/2026/03/26/16-of-the-most-interesting-startups-from-yc-w26-demo-day/"},
+      {name: "Google Gemini 导入记忆功能", time: "2026-03-26", desc: "用户可将其他 AI 助手的个人信息迁移到 Gemini，AI 记忆可迁移时代开启。", link: "https://aitoolly.com/ai-news/article/2026-03-27-google-gemini-introduces-new-import-memory-and-chat-history-features-to-simplify-ai-migration"},
+      {name: "小米 Hunter Alpha 模型", time: "2026-03-26", desc: "小米自研 AI 模型登陆 OpenRouter，36氪报道，证实为小米 AI 路线图一部分。", link: "https://36kr.com/p/3729285037424265"}
     ]
   },
   // ══════════════════════════════════════════════════════════════════
@@ -1141,39 +1144,7 @@ const reports = [
       }
     ]
   },
-  
-  {
-    date: "2026-03-28",
-    title: "Skills+MCP 打通企业核心业务，垂直 Agent 首个生产级 PMF 出炉",
-    coreTrend: "Skills+MCP 组合验证 AI Agent 落地企业核心业务的可行性、垂直行业 Agent 产出首个生产级 PMF 数据（保险场景 74% Containment Rate）、AI 安全基础设施成为独立产品赛道。",
-    tags: ["Skills", "MCP", "企业级Agent", "PMF验证", "AI安全基础设施"],
-    opportunities: [
-      {title: "Skills+MCP 是 AI Agent 企业落地的最短路径", desc: "Skills 将专业知识封装为可复用模块，MCP 赋予 Agent 操作外部 API 的能力，两者叠加使 AI 从「建议者」升级为「执行者」，直接介入企业核心业务系统。Skills 的本质是将「隐性经验」转化为「显性可复制的 AI 能力」。"},
-      {title: "垂直行业 Agent 出现首个生产级 PMF 硬数字", desc: "Strada 保险 AI Agent 74% Containment Rate 直接打破「保险客服 AI 替代率上限 40-50%」的业界共识，证明监管严格行业的核心业务流程同样可被 Agent 打通。"},
-      {title: "AI 安全基础设施独立赛道确立", desc: "Cisco DefenseClaw、AWS Security Agent、GoPlus AI Security API 三家同天密集发布，安全能力从「附加功能」升级为「独立产品赛道」。"}
-    ],
-    products: [
-      {name: "Claude Cowork + Skills + MCP", oneliner: "AI Agent 首次以执行者身份介入 Google Ads 核心工作流", launchDate: "3月27日", how: "Skills 封装关键词策略、出价逻辑、创意优化等专业知识；MCP 协议赋予 Claude 直接调用 Google Ads API 的能力，消除人工操作；Cowork 提供桌面端协作界面，三者联动实现「数据分析→策略生成→自动执行→效果反馈」全链路闭环。", why: "Skills+MCP 组合验证了 AI Agent 进入企业核心业务路径可行，Skills 将隐性经验转化为可复制能力，MCP 赋予 API 操作权限，两者叠加突破传统 AI 工具只能提供建议的限制。", link: "https://mp.weixin.qq.com/s/5g9JvZUmd4ymDEp8b7u1JA"},
-      {name: "Clawvard", oneliner: "首个 AI Agent 能力评测标准，以考试机制为 Agent 打分发成绩单", launchDate: "3月27日", how: "安装 Clawvard skill 后，AI Agent 自动完成 16 道诊断题，覆盖 8 个核心能力维度（理解力、执行力、信息检索、推理能力、自我反思、工具使用、情商、沟通能力），输出详细成绩单及改进建议，支持排行榜分享。当前已吸引 1841 个 Agent 注册。", why: "首个标准化 Agent 评测体系，强网络效应——用的人越多排行榜越有价值。若未来企业招聘 Agent 需要 Clawvard 成绩，其价值将达基础设施级别。揭示了 AI Agent 需要「可解释的能力证明」这一产品需求。", link: "https://clawvard.school"},
-      {name: "Strada", oneliner: "保险行业 AI Agent，首个生产级 PMF 数据验证", launchDate: "3月27日", how: "Strada 覆盖 7 个核心客服工作流（付款处理、保单服务、常规支持），AI Agent 自主处理标准化问询，持牌业务转合规人员，复杂 case 无缝转人工，实现人机协同最优分工。", why: "首个有硬数字的垂直行业 Agent 生产级 PMF 验证。74% 直接打破「保险客服 AI 替代率上限 40-50%」的业界共识，证明监管严格行业的核心业务流程同样可被 Agent 打通。", link: "https://www.thewhig.com/newsfile/290168-strada-selected-by-clearcover-inc-to-automate-its-customerfacing-operations-with-agentic-ai"},
-      {name: "AWS Security Agent（Project Metis）", oneliner: "Red-Team/Blue-Team 攻防架构，将安全评估周期从数周压缩至 4 小时", launchDate: "3月27日", how: "Red-Team Agent 扮演攻击者持续探测漏洞，Blue-Team Agent 同步防御并自动生成 patch，经沙箱验证后部署。全流程 AI 驱动，消除人工介入环节。", why: "直接导致 CrowdStrike 单日跌幅超 7%，改变安全行业价值链条——中小企业无需单独采购 CrowdStrike/Palo Alto，AWS 原生方案覆盖主要需求。", link: "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-27-amazons-new-ai-agent-sends-cybersecurity-stocks-into-a-tailspin"},
-      {name: "Cohere-transcribe 2B", oneliner: "2B 参数开源 ASR 模型登顶 HuggingFace，WER 5.42% 超越 Whisper Large v3", launchDate: "3月27日", how: "采用 Conformer 编码器+轻量 Transformer 解码器架构，Apache 2.0 许可（可商用、可本地部署），RTFx 速度优于同类 3 倍，支持 14 种企业关键语言，企业可通过 Model Vault 获取商业支持。", why: "垂直任务专用小模型击败通用大参数，2026 年开源模型标志性胜利。Apache 2.0 允许商用，同时 Cohere 通过 Model Vault 收费——开源不等于免费，商业模式依然成立。", link: "https://huggingface.co/blog/CohereLabs/cohere-transcribe-03-2026-release"}
-    ],
-    openclawVendors: [
-      {name: "OpenClawd Verified Skill Screening", vendor: "OpenClawd", time: "3月27日", desc: "安全审计发现 ClawHub 12% Skills 含恶意代码，OpenClawd 紧急上线自动化审查+沙箱隔离机制。", link: "https://www.mykxlg.com/online_features/press_releases/openclawd-ships-verified-skill-screening-after-security-researchers-find-12-of-openclaw-marketplace-skills-are-malware/article_4d9f3022-e410-5078-be88-f2c0b8ca37d3.html"}
-    ],
-    openclawProducts: [
-      {name: "Cisco DefenseClaw", time: "3月27日", desc: "思科在 RSA 大会发布 OpenClaw 开源治理框架，集成 NVIDIA OpenShell 沙箱+自有扫描器，已获 Fortune 100 企业验证采用。", link: "https://blogs.cisco.com/ai/cisco-announces-defenseclaw"},
-      {name: "OpenClaw v2026.3.23-2", time: "3月25-26日", desc: "核心框架紧急稳定版，修复浏览器自动化凭证泄露等关键漏洞。", link: "https://github.com/openclaw/openclaw/releases"}
-    ],
-    otherNews: [
-      {name: "feishu-cli v1.12.0 — 飞书 CLI 开源，Claude Code 可丝滑操控飞书", time: "3月25日", desc: "飞书开放平台命令行工具开源，内置 11 个 Claude Code Skills，AI Agent 可直接调用飞书文档、消息、日历、任务等全量 API。支持 Markdown 与飞书文档双向无损转换。博主评价：「飞书开源CLI的意义，不亚于 OpenClaw 第一次接入飞书的那一天」。", link: "https://github.com/riba2534/feishu-cli"}, {name: "feishu-cli 开源意义分析", time: "3月28日", desc: "科技博主评论：飞书CLI开源本质是将整个软件压缩降维成CLI化，向 Agent 时代吹响号角。未来所有产品都将有两种形态：GUI 面向普通用户，CLI 面向开发者和 AI。", link: "https://mp.weixin.qq.com/s/fvjxT_GgbEgxgsPCUlo-RQ"},
-      {name: "AWS 博客：Kiro CLI + ACP 构建飞书 AI 机器人", time: "3月24日", desc: "AWS 官方博客详解用 Kiro CLI + Agent Client Protocol (ACP) + acp-link 桥接服务，以不到 1000 行 Rust 代码构建飞书 AI 聊天机器人。ACP 定义标准 Agent 通信协议，Kiro CLI 提供完整 Agent 运行时，acp-link 实现飞书与 Kiro 的双向消息桥接。", link: "https://aws.amazon.com/cn/blogs/china/using-kiro-cli-agent-client-protocol-build-ai-chat/"},
-      {name: "LangChain/LangGraph 三大漏洞披露", time: "3月26-27日", desc: "The Hacker News 报道：LangChain 和 LangGraph 三个关键漏洞影响数百万生产部署，可导致 LLM 应用中的密钥、文件和数据库被窃取。", link: "https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html"},
-      {name: "Georgia Tech：AI 生成代码产生 35 个新 CVE", time: "3月26日", desc: "Georgia Tech SSLab 研究发现 2026 年 3 月 AI 生成代码引入 35 个新 CVE，Claude Code 占比最高（27个），真实数量可能为检测量的 5-10 倍。", link: "https://www.theregister.com/2026/03/26/ai_coding_assistant_not_more_secure/"},
-      {name: "DeepSeek V4 跳票分析", time: "3月27日", desc: "36氪分析：开源社区预期压力使 DeepSeek V4 迭代周期长于闭源厂商——开源需向社区公开底牌，而竞争对手可据此制定对策，形成独特竞争约束。", link: "https://36kr.com/p/3724953084637700"}
-    ]
-  }
+
 
 ];
 

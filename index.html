@@ -944,6 +944,35 @@ const reports = [
   // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
   {
+    date: "2026-03-31",
+    title: "2026.03.31 AI 产品趋势调研",
+    coreTrend: "今天值得关注的，不是又多了一个更强的 Agent，而是这些 Agent 开始真正进入工作流程：微软让 Copilot 去处理更长、更完整的任务；GitHub 让团队直接看到 AI 在做什么；Vercel 则把部署能力接进写代码的入口。AI 的竞争重点，正在从「谁更聪明」慢慢变成「谁更容易真正用起来」。",
+    tags: ["工作流Agent", "团队协作", "平台入口", "OpenClaw玩法", "企业Copilot"],
+    opportunities: [
+      {title: "AI 不再只是聊天助手，而是在真正接手工作", desc: "过去很多 AI 产品更像「会回答问题的助手」，你问一句，它答一句。今天这些新案例更像是在往前走一步：用户只说目标，AI 就开始自己规划、执行、推进任务。这说明市场开始从「会不会说」转向「能不能把事情做完」。"},
+      {title: "谁能把 AI 放进现有工作流，谁就更有优势", desc: "GitHub 把 AI 放进 Issues、Projects 和 Actions，Vercel 把平台能力放进 Codex，说明大家争的不是单独一个 AI 功能，而是「用户日常工作时最顺手会用到谁」。真正有价值的，不一定是最强的模型，而是最顺手、最省步骤的产品。"},
+      {title: "企业更在意 AI 是否可控，而不只是好不好用", desc: "OpenClaw 这次补的是审批、搜索、会话绑定这类能力，微软强调的是进度可见、过程可插手。这些都说明，企业需要的不是一个会自动行动但没人管得住的 AI，而是一个能做事、同时又能被看见、被干预、被管理的 AI。"}
+    ],
+    products: [
+      {name: "Copilot Cowork", oneliner: "微软把 Copilot 从聊天助手往「可以交代事情去做」的方向推进了一步。", launchDate: "03-30", how: "你告诉它想要什么结果后，它会自己拆步骤、推进任务，并在过程中持续告诉你做到哪一步了。它可以在 Microsoft 365 里跨文件、日程和工具协同工作，适合预算复盘、会议准备、日常协调这类不是一句话就能完成的任务。", why: "它重要的地方不在于更会聊天，而在于更像一个能接活、能持续推进的同事。对企业来说，这类产品比单纯的问答助手更接近真实价值。", link: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/30/copilot-cowork-now-available-in-frontier/"},
+      {name: "GitHub Agent Activity in Issues and Projects", oneliner: "GitHub 开始让团队在日常项目管理页面里直接看到 AI 在做什么。", launchDate: "03-26", how: "当 Copilot、Claude、Codex 这样的 coding agent 被分配到某个 issue 后，团队可以直接在 issue 和 project 视图里看到它现在是在排队、工作中、等审核，还是已经完成。也就是说，AI 的工作状态不再藏在单独的聊天框或日志页里，而是直接出现在团队每天都看的地方。", why: "这件事的意义很大，因为它让 AI 不再只是开发者个人在侧边栏里用的小工具，而开始变成团队协作流程的一部分。以后大家讨论的，可能不只是「谁来做」，还包括「AI 现在做到哪了」。", link: "https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects/"},
+      {name: "Vercel Plugin for Codex / Codex CLI", oneliner: "Vercel 想让开发者在写代码时，顺手就把部署和校验一起做掉。", launchDate: "03-26", how: "Vercel 让 Codex 和 Codex CLI 可以直接调用自己的 plugin，开发者不用离开当前的 AI 编码环境，就能调平台能力、做验证、调用专门的 agent。原本要在多个页面和工具间切换的动作，被压缩进了一条更顺的流程里。", why: "这说明平台开始意识到，未来用户不一定先打开控制台，而可能先打开 coding agent。谁先把自己的能力塞进这个入口，谁就更可能占住下一代开发工作流。", link: "https://vercel.com/changelog/vercel-plugin-openai-codex-and-codex-cli-support"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw 2026.3.28", vendor: "OpenClaw", time: "03-29", desc: "这次更新补上 x_search、插件审批、当前会话绑定 ACP、Gemini CLI backend 等能力，方向很明确：不是只做更强功能，而是让 Agent 更容易真正用进日常流程里。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.3.28"}
+    ],
+    openclawProducts: [
+      {name: "Liberate your OpenClaw", time: "03-27", desc: "Hugging Face 给出了一套把 OpenClaw、Pi、Open Code 等 agent 迁到开放模型和本地部署的做法。它的意义在于，OpenClaw 开始不只是一个默认配置下的工具，而更像一个可以自由替换底层能力的工作台。", link: "https://huggingface.co/blog/liberate-your-openclaw"},
+      {name: "当前对话直接绑定 ACP 会话", time: "03-29", desc: "这次更新后，用户可以直接把当前聊天变成背后 ACP / Codex 会话的入口，不需要再另外开一个线程。对普通用户来说，这其实很重要，因为它让 Agent 的使用方式更自然了：聊天窗口本身就是工作入口。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.3.28"},
+      {name: "插件级审批工作流", time: "03-29", desc: "OpenClaw 新增了工具调用前先暂停、等用户批准、再继续执行的能力。这个变化看起来不炫，但很关键，因为它让很多原本「不敢放给 AI 自动做」的场景，开始有机会真正跑起来。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.3.28"}
+    ],
+    otherNews: [
+      {name: "GitHub：Agentic Workflow configs in Actions run summary", time: "03-26", desc: "GitHub 现在让团队直接在 Actions 运行摘要里看 Agentic Workflow 配置，方便回头检查「这次 AI 是按什么规则跑的」。这类小改动看起来不抢眼，但对团队真正长期使用 AI 很重要。", link: "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary/"},
+      {name: "AWS SageMaker Studio 支持 Kiro / Cursor 远程 IDE", time: "03-26", desc: "AWS 开始兼容 agent IDE 的远程开发方式，说明云端开发环境也在适应新的工作习惯：AI 先写，人再看和改。", link: "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-studio-kiro-cursor/"},
+      {name: "Google TV 上线 3 个 Gemini 新功能", time: "03-24", desc: "Google TV 加入 Gemini 视觉回答、讲解和体育简报功能。它不是今天最重要的案例，但能看出一件事：AI 入口已经不只在手机和电脑上，也开始往客厅里的大屏走。", link: "https://blog.google/products-and-platforms/platforms/google-tv/new-gemini-features-march-2026/"}
+    ]
+  },
+  {
     date: "2026-03-27",
     title: "AI Agent 从「军备竞赛」转向「生产级治理」",
     coreTrend: "AI Agent 从「能力军备竞赛」转向「生产级基础设施与治理」竞争——上下文记忆与垂直场景落地成为本周最清晰的产品主题。",

@@ -972,6 +972,98 @@ const reports = [
       {name: "Google TV 上线 3 个 Gemini 新功能", time: "03-24", desc: "Google TV 加入 Gemini 视觉回答、讲解和体育简报功能。它不是今天最重要的案例，但能看出一件事：AI 入口已经不只在手机和电脑上，也开始往客厅里的大屏走。", link: "https://blog.google/products-and-platforms/platforms/google-tv/new-gemini-features-march-2026/"}
     ]
   },
+// ══════════════════════════════════════════════════════════════════
+  //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-04-16",
+    title: "Claude Opus 4.7 刷新编码基准，OpenAI Agents SDK 全面拥抱企业级沙箱",
+    coreTrend: "Anthropic 和 OpenAI 同天密集发布——Opus 4.7 登陆 GitHub Copilot、Adobe Firefly 上线创意 Agent、Databricks AI Gateway 支持 MCP 治理，行业重心全面转向企业级 Agent 基础设施。",
+    tags: ["Claude Opus 4.7", "OpenAI Agents SDK", "Adobe Firefly", "企业级Agent", "MCP治理"],
+    opportunities: [
+      {title: "企业级 Agent 基础设施成为主战场", desc: "OpenAI Agents SDK 沙箱隔离、Databricks AI Gateway MCP 治理、Google Gemma 4 Apache 2.0 开源——三条线同时指向同一个方向：2026 年的竞争不在于谁有最强的模型，而在于谁能让 Agent 在企业环境里安全、可靠、可控地跑起来。"},
+      {title: "开源模型 Apache 化成为企业采购的必要条件", desc: "Google Gemma 4 切换 Apache 2.0 许可是标志性事件。这意味着企业选模型时，「能不能自由部署、自由商用」已经从加分项变成必选项。Mistral Codestral 2 同期的 Apache 化印证了这一趋势不可逆。"}
+    ],
+    products: [
+      {name: "Claude Opus 4.7 登陆 GitHub Copilot", oneliner: "100万上下文 + 87.6% SWE-bench，Claude 刷新编码能力行业基准。", launchDate: "04-16", how: "Anthropic 于4月16日正式发布 Claude Opus 4.7，同日登陆 GitHub Copilot。100万 Token 超长上下文窗口，87.6% SWE-bench Verified 得分。Claude Opus 4.7 with xhigh effort level 现已可在 Claude Code 中使用，无需 --enable-auto-mode 标志。", why: "Claude Opus 4.7 将编码能力推向新高度。但更重要的是，Anthropic 在同一天密集发布：Opus 4.7 + Claude Code v2.1.111 + Claude Haiku 3 停用通知——说明 Claude 模型矩阵策略正在加速落地，不同场景用不同子模型的效率优化已成规模。", link: "https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/"},
+      {name: "OpenAI Agents SDK 重大更新", oneliner: "OpenAI 为企业级 Agent 推出沙箱隔离和多供应商 Harness 支持。", launchDate: "04-15", how: "OpenAI 于4月15日更新 Agents SDK，新增沙箱隔离环境和企业级 Harness，支持多沙箱供应商集成。开发者可以构建在受控沙箱环境内检查文件、运行命令、编辑代码、处理长时序任务的 Agent，同时保护系统整体完整性。", why: "这是 OpenAI 正式向企业级 Agent 基础设施发力的信号。沙箱隔离解决的是企业最关心的安全问题——让 Agent 可以执行复杂任务，同时不会对系统造成不可控风险。这是企业采购的前提条件。", link: "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/"},
+      {name: "Adobe Firefly AI 创意 Agent", oneliner: "Adobe 在 Firefly 中推出创意 Agent，AI 原生嵌入创意工作流。", launchDate: "04-15", how: "Adobe 于4月15日发布 Firefly AI Assistant，新增 Creative Agent 能力。Adobe 创意 Agent 可在 Creative Cloud 各产品间自主执行跨应用创意任务——从设计到导出，无需手动切换工具和格式。", why: "Adobe 是创意工具领域最大的存量玩家。Firefly AI Agent 的推出意味着 AI Agent 正在进入对质量要求最高的专业创作场景，而不是只在实验性小工具里跑。这对 Midjourney、Runway 等纯 AI 创意工具是压力信号。", link: "https://news.adobe.com/news/2026/04/adobe-new-creative-agent"},
+      {name: "Databricks AI Gateway MCP Governance", oneliner: "Databricks 为 Agentic AI 添加 MCP 治理层，支持细粒度权限控制。", launchDate: "04-15", how: "Databricks AI Gateway 新增 MCP governance，支持细粒度权限控制（OBO 访问）、端到端可观测性（监控 LLM 和 MCP 调用、按模型/团队/工作流归因成本）。", why: "Databricks 是企业数据平台的代表。它的 MCP governance 更新说明：企业不只是在用 Agent，而是在建立 Agent 的治理体系——谁可以用什么工具、访问什么数据、成本怎么分摊。这是 Agent 在企业大规模落地的必要基础设施。", link: "https://www.databricks.com/blog/ai-gateway-governance-layer-agentic-ai"},
+      {name: "GitHub gh skill 公开预览", oneliner: "GitHub 官方 Skill 命令行工具进入公开预览，Skills 供应链安全规范化。", launchDate: "04-07", how: "GitHub CLI 发布 gh skill 公开预览，支持版本固定、出处追踪和供应链安全。Skills 生态从野蛮生长走向标准化，GitHub 的背书是关键节点。", why: "GitHub 是全球最大的代码平台，它的入局意味着 Skills 不再只是社区玩具，而是开始进入企业供应链管理体系。版本固定 + 出处追踪解决了企业最担心的「Skills 供应链安全」问题。", link: "https://github.com/blog/github-skills"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw 2026.4.15", vendor: "OpenClaw", time: "04-15", desc: "OpenClaw 2026.4.15 大幅集成 Claude Opus 4.7，推出 Gemini TTS 支持，新增 Model Auth 状态卡显示 OAuth Token 健康度和提供商限流压力。同时加入 GitHub Copilot 记忆搜索和 memory-lancedb 云存储支持。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "OpenClaw v2026.4.12", time: "04-12", desc: "新增 LM Studio 集成和飞书 Bot 创建支持，OpenClaw 与本地模型的连接性大幅增强，企业私有化部署选项更丰富。", link: "https://www.kucoin.com/news/flash/openclaw-v2026-4-12-adds-lm-studio-integration-and-feishu-bot-creation"}
+    ],
+    otherNews: [
+      {name: "Gitar 获 $900 万融资", time: "04-15", desc: "AI 代码安全 Agent 初创公司 Gitar 走出隐匿模式，获得 900 万美元融资。Gitar 定位为 AI 原生的代码安全 Agent，用 Agent 自动执行代码质量检查和 CI 安全工作流。", link: "https://techcrunch.com/2026/04/15/gitar-a-startup-that-uses-agents-to-secure-code-emerges-from-stealth-with-9-million/"},
+      {name: "Gupshup Superagent", time: "04-15", desc: "Gupshup 推出面向客服场景的 AI Agent，支持跨 WhatsApp、Telegram 等多渠道规模化运营。", link: "https://www.prnewswire.com/news-releases/gupshup-launches-superagent-the-autonomous-ai-agent-for-customer-conversations-at-scale-302742192.html"},
+      {name: "Adcore AI Sales Agent", time: "04-15", desc: "Adcore 在 Proposaly 平台上线首个自主 AI Sales Agent，计划 Q2 前推出 Outreach Agent 和 Deal Agent，打通线索到收入全流程。", link: "https://finance.yahoo.com/sectors/technology/articles/adcore-launches-first-autonomous-ai-120000917.html"},
+      {name: "PM33 SaaStock 发布", time: "04-15", desc: "PM33 在 SaaStock USA 2026 公开露面，面向产品策略场景的 AI + 人类协作平台，结束封闭测试期。", link: "https://www.openpr.com/news/4473330/pm33-to-launch-at-saastock-usa-2026-bringing-ai-and-human"},
+      {name: "Claude Haiku 3 停用倒计时", time: "04-16", desc: "Anthropic 宣布 Claude Haiku 3 (claude-3-haiku-20240307) 将于 4 月 19 日正式停用，建议迁移到 Claude Haiku 4.5。", link: "https://platform.claude.com/docs/en/release-notes/overview"}
+    ]
+  },
+  {
+    date: "2026-04-11",
+    title: "Claude Code 进入 Computer Use 时代，企业级 Claude Managed Agents 开放探索",
+    coreTrend: "Claude Code 开始让 Agent 直接操控电脑界面（Computer Use），同时 Claude Managed Agents 向更广泛企业开放——Anthropic 的平台化战略正在从「卖模型」向「卖 Agent 工作环境」深化。",
+    tags: ["Computer Use", "Claude Managed Agents", "Claude Haiku", "企业级Agent", "Anthropic平台化"],
+    opportunities: [
+      {title: "Computer Use 是 Claude 从「辅助」到「代理」的分水岭", desc: "当 Agent 可以直接打开 App、点击 UI、验证变更时，它就不再是「帮你打字的东西」，而是真正替代你操作的同事。这个能力边界的变化，会让大量「点鼠标」型工作任务面临自动化机会。"},
+      {title: "Claude Managed Agents 正在成为企业 AI 基础设施", desc: "Claude Managed Agents 以 $0.08/小时计价，支持状态管理、子 Agent 和 MCP 接入，Notion/Rakuten/Asana 已率先使用。这说明企业开始接受「为 Agent 工作环境付费」而不是「为 AI 对话付费」。"}
+    ],
+    products: [
+      {name: "Claude Code Computer Use CLI 研究预览", oneliner: "Claude Code 让 Agent 直接控制 macOS 桌面应用，打开原生 App、点击 UI、验证变更。", launchDate: "04-11", how: "Claude Code Computer Use 功能进入 CLI 研究预览阶段。Agent 可以通过操作系统级接口直接操控 macOS 桌面应用：打开 App、点击 UI 元素、拖拽窗口、验证操作结果。与传统「模拟键盘输入」不同，Computer Use 是真正的系统级操作。", why: "这是 Claude 从「助手」到「代理」的能力边界跨越。传统 AI 编码工具只能在终端里工作，Computer Use 让 Agent 可以操作任何桌面应用——意味着 Notion 写文档、Figma 做设计图、Excel 跑数据都可以交给 Agent。应用层的壁垒开始被打破。", link: "https://code.claude.com/docs/en/changelog"},
+      {name: "Claude Code v2.1.95（研究预览期）", oneliner: "Claude Code 在 Computer Use 方向密集迭代，多项稳定性和安全修复。", launchDate: "04-11", how: "v2.1.95 是 Computer Use 功能密集开发期的版本，包含了子 agent 行为修复、安全规则加固和 MCP 超时处理改进。这一版本的密集更新说明 Anthropic 正快速将 Computer Use 从实验性功能推向生产可用。", why: "从 v2.1.92 到 v2.1.98，Claude Code 在两周内密集发布了多个版本。这种迭代速度说明 Claude Code 已经进入产品快速成熟期，不再是小修小补，而是核心交互范式在进化。", link: "https://code.claude.com/docs/en/changelog"},
+      {name: "Claude Managed Agents 正式发布", oneliner: "Anthropic 推出托管式 Agent 容器，$0.08/小时，支持状态管理和子 Agent。", launchDate: "04-08", how: "Claude Managed Agents 以容器方式运行，支持 24/7 持续工作、状态持久化、子 Agent 协作。通过 MCP 协议对接第三方工具。$0.08/小时的基础运行时成本，加上 Token 费用，构成完整的企业级定价模型。Notion、Rakuten Group、Asana 已率先使用。", why: "Managed Agents 是 Anthropic 从「卖模型调用」转向「卖 Agent 工作环境」的关键一步。企业不再需要自己运维 Agent，而是直接租用 Anthropic 托管的基础设施。这对中小企业吸引力很大——没有运维门槛，按用量付费。", link: "https://jimo.studio/blog/anthropic-launches-managed-agents-a-new-era-for-enterprise-ai-agent-infrastructure/"},
+      {name: "Claude Haiku 3 停用通知发布", oneliner: "Anthropic 宣布 Haiku 3 将于 4 月 19 日停用，敦促用户迁移到 Haiku 4.5。", launchDate: "04-11", how: "Anthropic 通过 Claude Platform 官方文档宣布，Claude Haiku 3 (claude-3-haiku-20240307) 将于 4 月 19 日正式停用，API 将不可访问。建议所有使用者尽快迁移到 Claude Haiku 4.5。", why: "Haiku 3 的停用是 Anthropic 模型迭代加速的信号。Haiku 4.5 的推出只隔一年，说明 Anthropic 的低端模型也在快速进化。对依赖 Haiku 3 的低成本应用是个迁移压力，但也意味着 Haiku 系列的整体能力在提升。", link: "https://platform.claude.com/docs/en/release-notes/overview"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw 2026.4.9 Dreaming", vendor: "OpenClaw", time: "04-09", desc: "OpenClaw Dreaming 版本升级记忆系统（REM Backfill + Diary Timeline UI），同时大幅加强 SSRF 防护和 Node 执行注入加固。Diary Timeline 让 Agent 记忆变得可导航、可审计。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.4.9"}
+    ],
+    openclawProducts: [
+      {name: "OpenClaw 2026.4.7", time: "04-08", desc: "TaskFlows webhooks、memory-wiki 持久化存储、session branching、Gemma 4 支持等多项核心能力更新，OpenClaw 在企业级存储和模型兼容性上大幅前进。", link: "https://blink.new/blog/openclaw-2026-4-9-whats-new-update-guide"}
+    ],
+    otherNews: [
+      {name: "Google Gemma 4 发布", time: "04-02", desc: "Google 发布 Gemma 4 系列，切换 Apache 2.0 许可（首次真正开源），31B 模型 AIME 89.2%，全面支持 Hugging Face Agents 和推理引擎。", link: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"},
+      {name: "Microsoft Agent Governance Toolkit", time: "04-02", desc: "微软发布覆盖全部 10 项 OWASP Agent 风险的开源治理工具包，MIT 许可，首个企业级 Agent 安全综合治理方案。", link: "https://github.com/microsoft/agent-governance-toolkit"},
+      {name: "Mistral Codestral 2", time: "04-13", desc: "Mistral 首款 Apache 2.0 代码模型，HumanEval 超越 GPT-4o，无限制商用。发布首周 Hugging Face 下载 38 万+。", link: "https://fazm.ai/blog/new-ai-model-releases-open-source-projects-april-2026"},
+      {name: "Visa Intelligent Commerce Connect", time: "04-08", desc: "Visa 推出首个支持 AI Agent 跨卡网络支付平台，同时支持四种协议（Visa/OpenAI/Stripe/Google），100+ 合作伙伴，2026-06 GA。", link: "https://www.visa.com"},
+      {name: "caveman Claude Code Skill", time: "04-05", desc: "Token 压缩 Skill，语言风格降 Token 75%，883 HN 分。GitHub 9,400+ 星。", link: "https://github.com/JuliusBrussee/caveman"}
+    ]
+  },
+  {
+    date: "2026-04-04",
+    title: "Claude Code 加速企业云集成，开源 Apache 浪潮冲击模型许可格局",
+    coreTrend: "Claude Code v2.1.92 大幅简化 AWS Bedrock 配置，同日 GitHub CLI 发布 gh skill 公开预览——AI 平台的基础设施争夺从模型能力转向工具链整合深度。",
+    tags: ["Claude Code Bedrock", "GitHub gh skill", "企业级AI", "Skills经济", "AWS集成"],
+    opportunities: [
+      {title: "Claude Code 企业云集成进入「零配置」时代", desc: "Bedrock 配置向导让 AWS 用户可以在几分钟内完成 Claude Code 与企业云环境的对接，不再需要手动管理 API 密钥、区域配置和权限策略。这意味着 Claude Code 的企业推广门槛大幅降低，从「技术团队专用」走向「普通工程师标配」。"},
+      {title: "Skills 经济正在复制 npm 的成功路径", desc: "GitHub gh skill 公开预览是标志性事件：Skills 的供应链安全（版本固定、出处追踪）第一次被全球最大代码平台正式认可。Skills 生态正在从「社区实验」变成「企业标准」。"}
+    ],
+    products: [
+      {name: "Claude Code v2.1.92 — Bedrock 配置向导", oneliner: "Claude Code 为 AWS Bedrock 用户提供交互式配置向导，企业云接入从几小时缩短到几分钟。", launchDate: "04-04", how: "Claude Code v2.1.92 新增 Bedrock 配置向导（Bedrock Configuration Wizard），AWS Bedrock 用户可以通过交互式引导完成 Claude Code 的云端配置——包括 API 密钥、模型选择、区域配置和 IAM 权限。原本需要几小时手动配置的流程，现在几分钟搞定。", why: "Claude Code 的企业用户大量使用 AWS Bedrock 托管的 Claude 模型。Bedding 配置向导解决的是「最后一公里」问题：让企业用户在不需要 DevOps 支持的情况下，自助完成接入。对 Anthropic 的企业市场扩张意义重大。", link: "https://code.claude.com/docs/en/changelog"},
+      {name: "Claude Code /release-notes", oneliner: "Claude Code 新增 /release-notes 命令，开发者可以快速查阅版本更新历史。", launchDate: "04-04", how: "Claude Code 新增 /release-notes 命令，用户可以直接在 Claude Code 终端内输入命令，调取最新版本的功能变更说明、已知问题和升级提示，无需跳转到外部文档。", why: "这是一个看似小但很重要的小工具。/release-notes 解决了开发者「当前版本有什么新功能」的信息差问题，特别是在 Claude Code 密集迭代的时期（两周发布 10+ 个版本）。它体现了 Claude Code 开始注重开发者体验的细节打磨。", link: "https://code.claude.com/docs/en/changelog"},
+      {name: "GitHub CLI gh skill 公开预览", oneliner: "GitHub 正式推出 Skill 命令行工具公开预览，Skills 供应链安全进入企业标准。", launchDate: "04-04", how: "GitHub CLI 发布 gh skill 公开预览，开发者可以使用 gh skill install/add/list 等命令管理 Skills，支持版本固定（pin to version）、出处追踪（provenance）和供应链安全验证。Skills 发布到 GitHub 后天然获得版本管理和安全审计能力。", why: "GitHub 是全球最大代码托管平台，gh skill 意味着 Skills 第一次被纳入全球开发者的工作流标准。版本固定解决了企业「Skill 版本混乱」的问题；出处追踪解决了「这个 Skill 来自哪里、是否可信」的问题。这是 Skills 经济走向成熟的里程碑事件。", link: "https://github.com/blog/github-skills"},
+      {name: "Google Gemma 4 发布（确认日期 04-02，延迟报道）", oneliner: "Google 首个 Apache 2.0 全开源多模态模型，AIME 数学从 20.8% 提升至 89.2%。", launchDate: "04-02", how: "Google 于 4 月 2 日发布 Gemma 4 系列，切换至 Apache 2.0 许可。31B 密集模型 AIME 数学基准从 20.8% 提升至 89.2%，26B MoE 仅用 4B 活跃参数达到 97% 性能。全面支持 Hugging Face Agents 和推理引擎。", why: "Gemma 4 的 Apache 2.0 切换是 Google 开源战略的重要转变。Apache 2.0 意味着企业可以自由部署、自由商用、自由修改，不受任何商业限制。这对依赖专有模型的企业是重大利好——终于可以用完全开源的方案替代昂贵的专有 API 了。", link: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"},
+      {name: "Microsoft Agent Governance Toolkit", oneliner: "微软发布首个覆盖全部 OWASP Agent 风险的开源治理工具包。", launchDate: "04-02", how: "微软 Agent Governance Toolkit 于 4 月 2 日发布，MIT 许可，覆盖 OWASP Agent Security Risks 定义的 10 项风险类别。这是首个由大厂发布的、覆盖完整的 Agent 安全治理开源工具包。", why: "OWASP 定义了 10 项 Agent 主要安全风险，但此前没有完整覆盖的治理工具。微软的入局说明：企业级 Agent 安全已经从「可选项」变成「必选项」。这个工具包如果被广泛采用，会成为企业 Agent 部署的安全基线。", link: "https://github.com/microsoft/agent-governance-toolkit"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw 2026.3.28", vendor: "OpenClaw", time: "03-29", desc: "x_search、插件审批、当前会话绑定 ACP、Gemini CLI backend 等能力更新，让 Agent 更容易真正用进日常流程。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.3.28"}
+    ],
+    openclawProducts: [
+      {name: "caveman Claude Code Skill", time: "04-05", desc: "Token 压缩 Skill，降 75% Token 消耗，883 HN 分。", link: "https://github.com/JuliusBrussee/caveman"},
+      {name: "Offsite", time: "04-13", desc: "人机混合团队组织架构可视化，支持 OpenClaw 及所有 MCP 兼容 Agent，Product Hunt 4 月第 2 周 #4（581 票）。", link: "https://www.producthunt.com/products/offsite-2"},
+      {name: "NousResearch Hermes Agent v0.7", time: "04-18", desc: "自演进 Agent 框架，v0.7.0 支持 SQLite 存储可复用 Skill，GitHub 35,820 星。", link: "https://github.com/NousResearch/hermes-agent"}
+    ],
+    otherNews: [
+      {name: "Claude Haiku 4.5 推出", time: "04-19", desc: "Anthropic 在 Haiku 3 停用前夕推出 Haiku 4.5，Haiku 系列模型完成年度迭代。", link: "https://platform.claude.com/docs/en/release-notes/overview"},
+      {name: "Offsite", time: "04-13", desc: "人机混合团队组织架构可视化工具，Product Hunt 4 月第 2 周第 4 名，581 票。支持 OpenClaw 及所有 MCP 兼容 Agent。", link: "https://www.producthunt.com/products/offsite-2"},
+      {name: "Claude Code Channels", time: "04-10", desc: "Claude Code 扩展到 Discord 和 Telegram，不再局限于终端界面，Claude 从开发者工具走向消费者产品。", link: "https://venturebeat.com/orchestration/anthropic-launches-claude-code-channels-let-agents-reach-outside-the-terminal/"},
+      {name: "Visa Agent 支付平台", time: "04-08", desc: "Visa Intelligent Commerce Connect 支持 AI Agent 跨卡网络支付，100+ 合作伙伴，2026-06 GA。", link: "https://www.visa.com"}
+    ]
+  },
   {
     date: "2026-03-27",
     title: "AI Agent 从「军备竞赛」转向「生产级治理」",

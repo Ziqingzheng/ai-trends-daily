@@ -943,7 +943,38 @@ const reports = [
 
   // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
-  {
+{
+    date: "2026-04-20",
+    title: "企业软件从「GUI时代」走向「API时代」",
+    coreTrend: "企业软件从「GUI时代」走向「API时代」——Salesforce 将平台暴露为 API/MCP 接口，Claude Design 进入设计场景，开源 Agent 生态（OpenClaw/Hermes）进入真实工作流落地阶段。",
+    tags: ["企业软件API化", "MCP生态", "Anthropic平台化", "开源Agent"],
+    opportunities: [
+      {title: "企业软件的 GUI 正在变成「历史遗留界面」", desc: "Salesforce：「在 AI Agent 可以推理和执行的世界里，公司还需要带图形界面的 CRM 吗？答案是：不需要。」GUI 对 Agent 工作流是多余阻力，未来企业软件的入口是 API 不是浏览器。竞争维度从「UI/UX」变成「API/MCP 覆盖率」。", why: "SAP、Oracle、Workday 都会面临同样问题：当 Claude Code 可以直接操作数据时，没人还会打开网页版。"},
+      {title: "开源 Agent 生态进入真实工作流落地阶段", desc: "OpenClaw 和 Hermes 不再只是工具——GitHub 27K+ 记忆抽屉、多 Agent 协调、凌晨自动生成内容，已经有人在用的真实系统。"},
+      {title: "MCP 成为企业 Agent 集成的「USB-C」", desc: "Salesforce Headless 360 发布 100+ MCP 工具，所有主流 coding agent 全部兼容。MCP 已越过社区标准，进入企业采购决策。"}
+    ],
+    products: [
+      {name: "Salesforce Headless 360", oneliner: "Salesforce 将整个平台暴露为 API/MCP，外部 Agent 可直接操作 CRM 数据。", launchDate: "04-17", how: "TDX 大会发布，100+ MCP 工具和 30+ 预配置 coding skills，任何外部 coding agent 都可以不打开浏览器直接操作整个 Salesforce org。", why: "企业软件史上最激进的结构转型。Salesforce 在主动自我革命，背后是 SaaS 板块近 28% 的股价下跌。", link: "https://venturebeat.com/technology/salesforce-launches-headless-360-to-turn-its-entire-platform-into-infrastructure-for-ai-agents"},
+      {name: "Claude Design", oneliner: "Anthropic 把 Claude 从「代码助手」扩展到「设计助手」，Powered by Opus 4.7。", launchDate: "04-17", how: "对话创建设计原型和幻灯片，可导出 PDF/PPTX/Canva，面向 Pro/Max/Team/Enterprise 订阅用户。", why: "从 Code → Cowork → Design，Anthropic 正在构建覆盖所有知识工作场景的 Agent 矩阵。设计不需要打开 Figma——对话就是设计。", link: "https://www.anthropic.com/news/claude-design-anthropic-labs"},
+      {name: "Grok 4.3 Beta", oneliner: "xAI 为 Grok 加入原生 PDF/PPTX/表格输出，$300/月。", launchDate: "04-17", how: "SuperGrok Heavy 专属，新增 PDF 创建、幻灯片生成、表格输出和视频输入。", why: "文档生成能力正式成为 Agent 工作流标配——Grok 可以直接进入工作流终点，而不只是给人类提供草稿。$300/月走高端专业用户路线。", link: "https://www.buildfastwithai.com/blogs/grok-4-3-beta-features-review"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.4.19-beta.2", vendor: "OpenClaw", time: "04-19", desc: "最新 beta：Opus 4.7 配置 + Gemini TTS + Gateway 修复。", link: "https://github.com/openclaw/openclaw/releases"},
+      {name: "Hermes Agent v0.10.0", vendor: "NousResearch", time: "04-16", desc: "118 skills（+48），三层记忆，六消息渠道，MIT 全开源。Benchmark：任务时间减少 40%。GitHub 95,600 星。", link: "https://github.com/nousresearch/hermes-agent"}
+    ],
+    openclawProducts: [
+      {name: "OpenClaw × 5 Agent 并行指挥中心", time: "04-17", desc: "5 个 Agent（Lisa 文档、Nyx 安全、Kael 运维）通过 MemPalace（27K+ 记忆）+ Hermes P1-P5 消息路由 + Discord Bridge 协调，凌晨自动生成教程并发布 GitHub 评论、安全报告。「把 Claude 从聊天工具变成自治 Agent 平台」。", link: "https://dev.to/wilsonhoe/openclaw-in-action-how-i-built-a-multi-agent-command-center-with-5-autonomous-claude-sessions-55aj"},
+      {name: "OpenClaw × WhatsApp 24/7 私人助理", time: "04-17", desc: "Docker + Claude 3.5 Sonnet 本地部署，接入 WhatsApp，30 个自动化场景：早上自动发天气+日程摘要（替代 5 个 App）、清理 847 封邮件、每 4 小时检查股票。30 分钟装完，永久拥有，无云依赖。", link: "https://dev.to/aniruddhaadak/my-openclaw-journey-30-hands-on-experiences-that-built-my-wealth-of-knowledge-kolkata-ai-agent-2hd1"},
+      {name: "OpenClaw vs Hermes：两条 Agent 路线对比", time: "04-16", desc: "OpenClaw（生态广度优先，247K+ 开发者，5700+ Skills，14+ 渠道）vs Hermes（学习深度优先，MIT 全开源，零 CVE 容器隔离，Agent 自演进、越用越聪明）。前者让 Agent 跑更多场景，后者让 Agent 学会而不是每次从零开始，且生产级安全是可能的。", link: "https://dev.to/tokenmixai/hermes-agent-review-956k-stars-self-improving-ai-agent-april-2026-11le"}
+    ],
+    otherNews: [
+      {name: "Claude Code v2.1.114", time: "04-18", desc: "修复子 agent 长时卡死 bug（超 10 分钟报错误）+ 权限对话框崩溃 + MCP 超时。", link: "https://code.claude.com/docs/en/changelog"},
+      {name: "Claude-lash：Opus 4.7 Token 争议", time: "04-17", desc: "Business Insider 报道 Opus 4.7 Token 消耗超预期。YC CEO Garry Tan 在用 Opus 4.7 跑 OpenClaw，已深度进入头部开发者工作流。", link: "https://www.businessinsider.com/anthropic-claude-opus-4-7-backlash-tokens-2026-4"},
+      {name: "OpenAI GPT-5.3 Instant Mini", time: "04-17", desc: "Rate Limit 降级模型 + 写作增强。新增 $100/月 Pro 档位，无限 GPT-5.4 访问。", link: "https://www.neuralbuddies.com/p/ai-news-recap-april-17-2026"},
+      {name: "Ring-a-Ding AI Phone Agent", time: "04-19", desc: "$19/月，AI Agent 直接打电话：自动预约、询价、查库存，录音+摘要。填补电话场景空白。", link: "https://aiagentstore.ai/ai-agent-news/this-week"}
+    ]
+  },
+    {
     date: "2026-03-31",
     title: "AI 开始真正进入工作流",
     coreTrend: "AI 开始真正进入工作流，竞争重点正从「谁更聪明」转向「谁更容易真正用起来」。",

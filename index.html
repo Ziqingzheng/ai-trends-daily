@@ -1107,43 +1107,7 @@ const reports = [
     ]
   },
 // ══════════════════════════════════════════════════════════════════
-  //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
-  {
-    date: "2026-04-23",
-    title: "2026.04.23 AI 产品趋势调研",
-    coreTrend: "企业AI基础设施争夺战：Google重塑Vertex品牌、Cursor估值井喷、Qwen开源旗舰双线出击。",
-    tags: ["Google Cloud Next", "Cursor $600亿", "企业AI平台", "开源模型双轨策略", "Agentic AI"],
-    opportunities: [
-      {title: "Google Cloud Next：企业AI基础设施竞争进入「品牌重塑」阶段", desc: "Vertex AI → Gemini Enterprise Agent Platform不只是改名，是Google正式宣告：企业AI的战场已从「模型能力」转向「平台成熟度」。MCP已有10,000+服务器、97M月SDK下载量，成为企业级Agent集成的「USB-C」。$750M合作伙伴基金将加速生态扩张。"},
-      {title: "Cursor估值井喷：AI编程工具进入「超级App」阶段", desc: "SpaceX给出$600亿收购期权或$100亿战略合作，Cursor成为全球估值最高的AI应用公司之一。这背后是AI编程工具从「IDE插件」进化为「研发平台」——不只是写代码，而是接管整个研发工作流。"},
-      {title: "Qwen开源旗舰双轨策略：开源拉流量、闭源赚利润", desc: "Qwen3.6先发闭源Max旗舰（API-only，6项基准#1），再发开源27B版本。这种「先用闭源旗舰证明实力、再用开源版本抢生态」的策略，正在成为顶级模型厂商的标配。"}
-    ],
-    products: [
-      {name: "Google Vertex AI → Gemini Enterprise Agent Platform", oneliner: "Google Cloud重塑企业AI品牌：Vertex全面升级为Gemini品牌，推出MCP Agent开发套件和Memory Bank，企业AI平台竞争进入新阶段。", launchDate: "04-21", how: "Google Cloud Next 2026（4月21-22日，拉斯维加斯）发布。MCP支持扩展至10,000+服务器、97M月SDK下载量。推出Agent开发套件（图谱化编排框架）和Memory Bank（持久化上下文）。$750M合作伙伴基金启动。第八代TPU同步发布（TPU 8t训练芯片 + TPU 8i推理芯片，2.8倍性价比提升）。", why: "Google用「品牌统一」代替「功能堆叠」，意味着企业客户不需要在Vertex、Gemini、Agent Builder之间做选择。这对AWS（Bedrock）和Azure（Cohere集成）是直接竞争信号。", link: "https://www.crn.com/news/ai/2026/google-cloud-next-2026-the-biggest-news-on-gemini-agentic-ai-tpus"},
-      {name: "SpaceX × Cursor：$600亿战略合作/收购", oneliner: "SpaceX宣布获得Cursor收购期权（$600亿）或战略合作（$100亿），将Cursor AI编程能力与Colossus超级计算机结合，Cursor估值突破全球TOP行列。", launchDate: "04-21", how: "SpaceX发布公告，获得Cursor收购期权（$600亿）或战略合作方案（$100亿）。据TechCrunch报道，SpaceX旨在将Cursor的AI编程能力与Colossus万卡集群结合，用于猎鹰火箭和星舰的代码开发。Cursor此前估值已超$500亿。", why: "$600亿是AI应用公司历史上最高的战略合作/收购要约之一。意味着SpaceX认为AI编程工具是下一代工业软件的核心——不是「辅助工具」，而是「核心竞争力」。这对GitHub Copilot、Claude Code都是重大信号。", link: "https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/"},
-      {name: "Qwen3.6-Max-Preview + Qwen3.6-27B", oneliner: "阿里发布Qwen3.6系列：先闭源旗舰API证明实力，再开源27B抢生态，开源+闭源双轨策略正式落地。", launchDate: "04-20/04-22", how: "阿里Qwen团队分两阶段发布：4月20日先发Qwen3.6-Max-Preview（API-only闭源旗舰），在SWE-Bench Pro、Terminal-Bench 2.0等6项编码/Agent基准上登顶#1；4月22日发Qwen3.6-27B开源版本，仅27B参数在编程/Agent任务上达顶级旗舰水平，Mac上推理速度25 token/s，已上线Hugging Face Hub和ModelScope。", why: "这是顶级开源模型厂商（阿里）首次采用「先闭源证明实力、再开源抢生态」的双轨策略。开源27B能让开发者在消费级硬件上跑起来，闭源Max面向企业高价值场景——两个市场同时打。", link: "https://github.com/QwenLM/Qwen3.6"}
-    ],
-    openclawVendors: [
-      {name: "OpenClaw v2026.4.20", vendor: "OpenClaw", time: "04-20", desc: "Onboard向导重构（安全免责声明优化）、Agent系统提示词强化（GPT-5 overlay + 完成偏置 + 弱结果恢复）、会话存储维护（OOM防护）、Cron稳定性（jobs-state.json拆分）、Kimi K2.6设为默认（支持thinking.keep=all）、多项安全修复（SSRF/Codex传输/浏览器DevTools）。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.4.20"},
-      {name: "OpenClaw v2026.4.21", vendor: "OpenClaw", time: "04-21", desc: "默认图像生成升级到gpt-image-2（支持2K/4K尺寸）、高危安全修复（owner-only命令鉴权漏洞#69774）、插件doctor修复（bundled插件运行时依赖路径）、Slack thread aliases保持、浏览器无效引用即时拒绝、npm依赖清理（移除deprecated依赖链）。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.4.21"}
-    ],
-    openclawProducts: [
-      {name: "Atomic Bot × Hermes Agent", time: "04-21", desc: "桌面应用宣布集成Hermes Agent一键安装，用户可在Atomic Bot内直接使用本地模型（Qwen/Gemma）或API key，支持Dashboard、终端、日志和文件浏览器，macOS原生App。", link: "https://www.testingcatalog.com/atomic-bot-adds-one-click-hermes-agent-setup-on-desktop/"},
-      {name: "Multica", time: "04月", desc: "开源多Agent协调平台，支持同时管理Claude Code、Codex、OpenClaw、OpenCode、Hermes、Gemini、Pi、Cursor Agent等多个Agent协同工作，提供任务分配、进度追踪、技能复用能力，Vendor-neutral开源。", link: "https://github.com/multica-ai/multica"},
-      {name: "hermes-webui", time: "04月", desc: "NESQUENA开发的Hermes WebUI，支持从网页或手机使用Hermes Agent，测试框架动态发现repo，隔离生产数据。", link: "https://github.com/nesquena/hermes-webui"}
-    ],
-    otherNews: [
-      {name: "Apple：Tim Cook宣布9月1日卸任CEO", time: "04-21", desc: "库克宣布将辞去苹果CEO职务（9月1日生效），由John Ternus接任。库克15年任期内苹果股价上涨超1000%。与此同时Apple与Google Gemini合作深化Siri的报道也在发酵。", link: "https://www.cnet.com/news-live/tim-cook-steps-down-as-apple-ceo-replaced-john-ternus/"},
-      {name: "Mira Murati Thinking Machines Lab：$B级别新融资", time: "04-22", desc: "前OpenAI CTO Mira Murati创立的Thinking Machines Lab获得Google Cloud单数十亿美元级别新融资（GB300 GPU访问权），同时与Amazon达成5GW容量合作（Claude训练/部署）。估值$120亿，2025年2月成立，已发布Tinker产品。", link: "https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/"},
-      {name: "OpenAI Workspace Agents登陆ChatGPT", time: "04-22", desc: "OpenAI为ChatGPT推出Workspace Agents，支持团队创建共享AI Agent处理复杂长流程任务，基于Codex驱动，可集成Slack，支持定时运行和CRM等工具连接。", link: "https://news.ycombinator.com/item?id=47866860"},
-      {name: "Zed编辑器Parallel Agents", time: "04-22", desc: "Zed编辑器发布Parallel Agents，在同一窗口内并行运行多个AI Agent，通过Threads Sidebar控制各Agent访问的文件夹/仓库，实现多线程跨项目Agent编排。", link: "https://news.ycombinator.com/item?id=47866750"},
-      {name: "Jeff Bezos Project Prometheus：$100亿融资，估值$380亿", time: "04-21", desc: "贝索斯AI实验室Project Prometheus接近完成$100亿融资，估值$380亿，摩根大通和贝莱德等华尔街巨头支持，专注Physical AI（物理世界理解能力的AI模型）。", link: "https://www.reuters.com/technology/jeff-bezos-ai-lab-nears-38-billion-valuation-funding-deal-ft-reports-2026-04-21/"},
-      {name: "Volkswagen Agentic AI for All", time: "04-22", desc: "大众在「大众之夜」发布Agentic AI for All战略，H2 2026在MEB+平台全面铺开，首家将Agentic AI规模化部署到全车系的跨国车企。", link: "https://finance.sina.com.cn/jjxw/2026-04-22/doc-inhvkcsa5594667.shtml"},
-      {name: "OpenAI Operator：87%复杂浏览器任务准确率", time: "04-21", desc: "OpenAI Operator在复杂浏览器任务上达到87%准确率，企业收入占OpenAI总收入的40%，Cognizant和CGI被招募用于Codex企业推广。", link: "https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era"},
-      {name: "fal.ai GPT Image 2企业API", time: "04-21", desc: "fal平台在GPT Image 2发布当天即推出企业级API，支持文本生成图像、图像编辑、产品摄影动画化，端到端一站式API工作流。", link: "https://fal.ai/gpt-image-2"},
-      {name: "Bond AI社交记忆应用", time: "04-21", desc: "前Meta/Instagram/TikTok/Twitter工程师创立，雇用DeepMind研究员自建模型，帮助用户与密友共同记录和创造回忆，种子轮融资中。", link: "https://www.businessinsider.com/bond-social-app-launches-seed-connecting-friends-memories-ai-2026-4"}
-    ]
-  },
+  ,
   {
     date: "2026-04-16",
     title: "Claude Opus 4.7 刷新编码基准，OpenAI Agents SDK 全面拥抱企业级沙箱",

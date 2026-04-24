@@ -976,6 +976,33 @@ const reports = [
       {name: "Bond AI社交记忆应用", time: "04-21", desc: "前Meta/Instagram/TikTok/Twitter工程师创立，雇用DeepMind研究员自建模型，帮助用户与密友共同记录和创造回忆，种子轮融资中。", link: "https://www.businessinsider.com/bond-social-app-launches-seed-connecting-friends-memories-ai-2026-4"}
     ]
   },
+  {
+    date: "2026-04-24",
+    title: "2026.04.24 AI 产品趋势调研",
+    coreTrend: "OpenAI发布GPT-5.5主打Agentic Coding，Anthropic公开Claude Code质量事故复盘，行业竞争从模型能力转向Agent可靠性",
+    tags: ["GPT-5.5", "Claude Code质量事故", "ChatGPT医疗", "开源Agent", "Agent基础设施"],
+    opportunities: [
+      {title: "大厂竞争焦点：从模型能力转向Agent可靠性", desc: "Anthropic主动公开Claude Code质量下降的三个技术根因，OpenAI同步发布GPT-5.5主打OS级计算机操作。两家同时聚焦「让Agent真正可靠地工作」，而非单纯刷榜。"},
+      {title: "开源Agent开始用「极简架构」与「Token高效」挑战大厂", desc: "Generic Agent用3K行代码实现全系统控制，Token消耗是大厂的1/6。Datawhale同步发布中文教程。它不预置技能，而是让Agent自己积累「只属于你」的技能树——用3K种子代码，长出独一无二的能力。"},
+      {title: "AI医疗从「能不能用」进化到「符不符合采购标准」", desc: "OpenAI发布ChatGPT for Clinicians，专为医疗专业人员设计，HIPAA合规+CME学分。说明AI医疗落地门槛最高的场景已开始被合规能力而非技术能力驱动。"}
+    ],
+    products: [
+      {name: "GPT-5.5", oneliner: "OpenAI发布最强大的Agentic Coding模型，主打OS级计算机操作和自主多步骤执行", launchDate: "04-23", how: "GPT-5.5（代号Spud）被定位为「新一代智能Agent引擎」。核心能力：①Agentic Coding——多文件重构、跨项目推理、自主调试；②Computer Use——操作系统级操作，不只是终端；③Terminal-Bench 2.0达82.7%准确率。同时登陆Codex，NVIDIA博客披露超过10,000名NVIDIA工程师提前接入测试。", why: "OpenAI正在用「让AI真正完成工作」而不是「让AI更好地回答问题」来重新定义模型价值。对比Claude Opus 4.7的100万Token上下文，GPT-5.5选择了让模型在真实计算机环境中自主行动。这是AI Agent从「辅助工具」到「执行者」的关键一步。", link: "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/"},
+      {name: "ChatGPT for Clinicians", oneliner: "OpenAI专为美国医疗专业人员推出免费临床AI版本，支持文档、医学研究、CME学分和HIPAA合规", launchDate: "04-22", how: "OpenAI与数百名临床医生合作设计，免费面向美国医生、护士、药师等。功能包括：①文档处理——自动整理患者记录；②医学研究——可信来源检索；③CME继续教育学分；④HIPAA合规选项。Greg Brockman亲自宣布。", why: "医疗是AI落地门槛最高的场景之一——HIPAA合规、临床验证、CME学分都是真实采购障碍。OpenAI选择用「合规」而不是「能力」切入市场，说明AI医疗已经从「能不能用」进化到「符不符合采购标准」的阶段。", link: "https://openai.com/index/making-chatgpt-better-for-clinicians/"},
+      {name: "Anthropic Claude Code质量事故复盘", oneliner: "Anthropic主动披露三个内部变更导致Claude Code质量下降，已于4月20日全部修复", launchDate: "04-23", how: "Anthropic工程师博客披露：三个独立变更共同导致Claude Code、Claude Agent SDK和Claude Cowork在3-4月出现质量下降——①reasoning effort降低（让模型更简洁但更容易出错）；②verbosity prompt修改（导致响应变短）；③缓存bug。全部在v2.1.116中修复。4月21日Anthropic还短暂测试从Pro计划中移除Claude Code（2%新用户），引发社区强烈反对后恢复。", why: "Anthropic选择主动公开技术根因而不是沉默或甩锅，这是企业级产品重要的信任建立方式。开发者对Claude Code从Pro移除的激烈反应说明——工具依赖程度已非常高，任何「降级」都会被社区视为背叛。", link: "https://www.anthropic.com/engineering/april-23-postmortem"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.4.22", vendor: "OpenClaw", time: "04-22", desc: "xAI全面支持（图像生成/TTS/STT + 6种实时声音 + Voice Call流式转录）；TUI新增本地嵌入式模式（无需Gateway即可运行但保留插件审批）；新增Onboarding自动安装缺失插件；WhatsApp支持per-group和per-direct系统提示词配置；新增腾讯云Provider插件（TokenHub onboarding + Hy3预览模型）；Bedrock Mantle支持Claude Opus 4.7；GPT-5 prompt overlay支持所有兼容GPT-5的Provider；移除Codex CLI auth导入路径（改用浏览器登录）。", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.4.22"}
+    ],
+    openclawProducts: [
+      {name: "Generic Agent", time: "04-21", desc: "Self-evolving autonomous agent框架，核心仅~3K行代码，9个原子工具覆盖浏览器/终端/文件系统/键鼠/屏幕视觉/ADB手机控制。支持Claude/Gemini/Kimi/MiniMax等主流模型。核心创新：Token高效（<30K上下文 vs 其他Agent的200K-1M），消耗是大厂的1/6。技能树自演进：每完成新任务自动将执行路径结晶为skill，下次同类任务直接调用。Datawhale同步发布Hello-GA中文教程。", link: "https://github.com/lsdefine/GenericAgent"}
+    ],
+    otherNews: [
+      {name: "ChatGPT Images 2.0", time: "04-21", desc: "OpenAI在发布GPT-5.5同天推出ChatGPT Images 2.0，主打Thinking推理能力、2K分辨率、8图批次生成，Image Arena排名第一。核心突破：终于能准确渲染文字和复杂布局，不再是「能看不能用」。已灰度推送给ChatGPT Plus和Pro用户，API同步上线。", link: "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/"},
+      {name: "Anthropic Mythos被黑：发布当天即被第三方承包商泄露", time: "04-21", desc: "Anthropic Mythos在4月21日发布的同一天，黑客通过第三方承包商获取了访问权限，并凭猜测找到了模型部署位置。Mythos是Anthropic在Project Glasswing计划中仅向Apple、Amazon、Cisco、JPMorgan、NVIDIA等大厂提供的网络安全专用模型。泄露凸显了「受限发布」模式的安全风险。Anthropic正在调查此事。", link: "https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/"},
+      {name: "Anthropic测试从Pro计划移除Claude Code（已恢复）", time: "04-21", desc: "Anthropic在4月21日下午短暂从$20/月的Pro计划中移除Claude Code访问权（仅影响新用户），引发开发者社区强烈反对。Anthropic随后恢复访问并表示是「2%新用户的A/B测试」。但The Register报道官方文档已同步更新，引发「测试是否假戏真做」的疑虑。", link: "https://www.theregister.com/2026/04/22/anthropic_removes_claude_code_pro/"}
+    ]
+  },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓,
   {

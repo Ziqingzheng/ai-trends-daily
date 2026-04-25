@@ -913,7 +913,7 @@
 //  数据层
 //  OpenClaw 每天在此数组【最前面】追加一条新记录，格式严格遵守下方模板。
 //  ⚠️  注意事项：
-//    1. 所有字符串值中，禁止使用英文双引号，请改用中文引号「」或『』
+//    1. 所有字符串值中，禁止使用英文双引号 "，请改用中文引号「」或『』
 //    2. date 格式必须为 "YYYY-MM-DD"（如 "2026-03-27"）
 //    3. 没有的字段（如 openclawVendors）可以传空数组 []，但字段本身不能省略
 //    4. 每条记录末尾加英文逗号 ,
@@ -940,35 +940,101 @@
 // ===================================================================
 
 const reports = [
-  
   {
-    date: "2026-04-25",
-    title: "2026.04.25 AI 产品趋势调研",
-    coreTrend: "DeepSeek V4 开源旗舰重新定义开源模型标准，Cloudflare Agent Week 密集发布 Agent 基础设施全家桶。",
-    tags: ["DeepSeek V4", "Cloudflare Agents Week", "NVIDIA Ising", "A2UI", "Browser Use"],
-    opportunities: [
-      {title: "开源模型竞争从「参数规模」转向「落地效率」", desc: "DeepSeek V4-Pro（1.6T总参/49B活跃）和V4-Flash（284B总参/13B活跃）同时发布，证明开源旗舰不只能刷榜，还能真正用起来。无缝集成Claude Code/OpenClaw/OpenCode让开发者零成本迁移。"},
-      {title: "Agent基础设施进入「全家桶」竞争阶段", desc: "Cloudflare Agents Week一周内密集发布compute（Workers AI）+ security（MCP鉴权）+ toolbox（Browser Run/Agent Lee）+ platform全线产品，意味着单点工具已无法竞争，必须提供完整基础设施栈。"},
-      {title: "量子AI从论文走向开源工具", desc: "NVIDIA Ising是全球首个开源量子AI模型系列，面向量子处理器校准和纠错。这代表AI已开始进入量子计算工作流，而非只在经典计算领域。"},
-    ],
-    products: [
-      {name: "DeepSeek V4-Pro + V4-Flash", oneliner: "DeepSeek重磅发布V4系列开源旗舰，1M上下文+Agent Coding SOTA，无缝集成Claude Code/OpenClaw/OpenCode。", launchDate: "04-24", how: "4月24日发布两个版本：V4-Pro（1.6T总参/49B活跃参数）和V4-Flash（284B总参/13B活跃参数）。Novel Attention实现Token压缩+DSA稀疏注意力，1M上下文成为所有官方服务的默认配置。支持双模式（Thinking/Non-Thinking）。已在Hugging Face开源权重，技术报告同步发布。", why: "这是真正面向Agent优化的开源旗舰——DeepSeek V4明确宣传与Claude Code、OpenClaw、OpenCode无缝集成，说明开源模型不再只是「可以下载」，而是真正进入主流Coding Agent工作流。V4-Flash 13B活跃参数让消费级硬件也能跑起来。", link: "https://api-docs.deepseek.com/news/news260424},
-      {name: "Cloudflare Agents Week 全家桶", oneliner: "Cloudflare一周发布Agent完整基础设施栈：Browser Run（CDP/MCP）、Agent Lee（Cloudflare栈接口）、4x并发提升。", launchDate: "04-20至04-24", how: "Agents Week密集发布：①Browser Run（原Browser Rendering）新增Live View、Human in the Loop、CDP访问、session recordings、4x更高并发限制；②Agent Lee——连接Cloudflare自身MCP服务器的新界面；③Workers AI compute升级；④MCP安全鉴权全套方案。", why: "Browser Run现在支持Claude Desktop、Cursor、Codex、OpenCode等所有主流MCP客户端通过CDP协议使用远程Chrome。这是Cloudflare在「让AI Agent可靠地操作浏览器」这一关键能力上的重要布局，解决了本地浏览器控制的复杂性和稳定性问题。", link: "https://blog.cloudflare.com/agents-week-in-review/},
-      {name: "NVIDIA Ising", oneliner: "NVIDIA发布全球首个开源量子AI模型系列，面向量子处理器校准与纠错，澳大利亚量子创业公司率先部署。", launchDate: "04-23", how: "NVIDIA于4月23日发布Ising开源量子AI模型族，专注量子处理器校准和量子纠错。合作伙伴包括IQM、EeroQ、Conductor等，已在真实量子硬件上完成早期部署。目标是加速量子计算走向实用化。", why: "这是AI首次真正进入量子计算工作流。传统AI在量子领域更多是模拟，Ising则直接与量子硬件结合。澳大利亚初创公司已将此视为机会而非威胁——量子AI工具可能成为新的创业赛道。", link: "https://nvidianews.nvidia.com},
-    ],
-    openclawVendors: [
-      {name: "NVIDIA NemoClaw", vendor: "NVIDIA", time: "04-24", desc: "NVIDIA开源NemoClaw参考栈，简化在NVIDIA OpenShell中安全运行OpenClaw助手。属于NVIDIA Agent Toolkit的一部分，提供额外的安全隔离层。", link: "https://github.com/NVIDIA/NemoClaw},
-    ],
-    openclawProducts: [
-      {name: "code-search MCP for Claude Code", time: "04-23", desc: "GitHub trending新上榜项目，将整个代码库作为上下文注入Claude Code，支持语义搜索，让Coding Agent在任意大型代码库中精准定位和推理。Python/TypeScript/nodejs，MIT许可证。", link: "https://github.com/alvinreal/awesome-opensource-ai},
-      {name: "Chrome DevTools MCP", time: "04-24", desc: "Chrome DevTools团队发布的MCP服务器，为AI编码助手提供完整的Chrome DevTools访问能力，实现可靠的浏览器自动化、深度调试和性能分析。Claude Desktop/Cursor/Codex/OpenCode可通过MCP协议连接。", link: "https://github.com/ChromeDevTools/chrome-devtools-mcp},
-    ],
-    otherNews: [
-      {name: "browser-use MCP server", time: "04-22", desc: "browser-use项目发布官方MCP服务器，让AI agent可靠地操作浏览器做自动化任务。该项目在GitHub已有10,263 stars，是浏览器自动化领域的标杆项目。", link: "https://github.com/browser-use},
-      {name: "DuPont RO Operations Advisor", time: "04-23", desc: "杜邦水务推出AI驱动的反渗透运维顾问，帮助反渗透运营商减少停机时间、优化系统性能。这是工业AI在水处理领域的具体应用案例。", link: "https://www.stocktitan.net/news/DD/du-pont-launches-ai-enabled-digital-advisor-to-help-customers-iqvcs3zbtqh8.html},
-      {name: "ml-intern", time: "04-21", desc: "Hugging Face发布ml-intern，开源AI Agent自动化LLM后训练工作流全流程。降低模型微调门槛，让更多团队可以在没有专业ML团队的情况下完成模型后训练。", link: "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/},
-    ]
-  },
+  "date": "2026-04-25",
+  "title": "2026.04.25 AI 产品趋势调研",
+  "coreTrend": "DeepSeek V4 开源旗舰重新定义开源模型标准，Cloudflare Agent Week 密集发布 Agent 基础设施全家桶。",
+  "tags": [
+    "DeepSeek V4",
+    "Cloudflare Agents Week",
+    "NVIDIA Ising",
+    "A2UI",
+    "Browser Use"
+  ],
+  "opportunities": [
+    {
+      "title": "开源模型竞争从「参数规模」转向「落地效率」",
+      "desc": "DeepSeek V4-Pro（1.6T总参/49B活跃）和V4-Flash（284B总参/13B活跃）同时发布，证明开源旗舰不只能刷榜，还能真正用起来。无缝集成Claude Code/OpenClaw/OpenCode让开发者零成本迁移。"
+    },
+    {
+      "title": "Agent基础设施进入「全家桶」竞争阶段",
+      "desc": "Cloudflare Agents Week一周内密集发布compute（Workers AI）+ security（MCP鉴权）+ toolbox（Browser Run/Agent Lee）+ platform全线产品，意味着单点工具已无法竞争，必须提供完整基础设施栈。"
+    },
+    {
+      "title": "量子AI从论文走向开源工具",
+      "desc": "NVIDIA Ising是全球首个开源量子AI模型系列，面向量子处理器校准和纠错。这代表AI已开始进入量子计算工作流，而非只在经典计算领域。"
+    }
+  ],
+  "products": [
+    {
+      "name": "DeepSeek V4-Pro + V4-Flash",
+      "oneliner": "DeepSeek重磅发布V4系列开源旗舰，1M上下文+Agent Coding SOTA，无缝集成Claude Code/OpenClaw/OpenCode。",
+      "launchDate": "04-24",
+      "how": "4月24日发布两个版本：V4-Pro（1.6T总参/49B活跃参数）和V4-Flash（284B总参/13B活跃参数）。Novel Attention实现Token压缩+DSA稀疏注意力，1M上下文成为所有官方服务的默认配置。支持双模式（Thinking/Non-Thinking）。已在Hugging Face开源权重，技术报告同步发布。",
+      "why": "这是真正面向Agent优化的开源旗舰——DeepSeek V4明确宣传与Claude Code、OpenClaw、OpenCode无缝集成，说明开源模型不再只是「可以下载」，而是真正进入主流Coding Agent工作流。V4-Flash 13B活跃参数让消费级硬件也能跑起来。",
+      "link": "https://api-docs.deepseek.com/news/news260424"
+    },
+    {
+      "name": "Cloudflare Agents Week 全家桶",
+      "oneliner": "Cloudflare一周发布Agent完整基础设施栈：Browser Run（CDP/MCP）、Agent Lee（Cloudflare栈接口）、4x并发提升。",
+      "launchDate": "04-20至04-24",
+      "how": "Agents Week密集发布：①Browser Run（原Browser Rendering）新增Live View、Human in the Loop、CDP访问、session recordings、4x更高并发限制；②Agent Lee——连接Cloudflare自身MCP服务器的新界面；③Workers AI compute升级；④MCP安全鉴权全套方案。",
+      "why": "Browser Run现在支持Claude Desktop、Cursor、Codex、OpenCode等所有主流MCP客户端通过CDP协议使用远程Chrome。这是Cloudflare在「让AI Agent可靠地操作浏览器」这一关键能力上的重要布局，解决了本地浏览器控制的复杂性和稳定性问题。",
+      "link": "https://blog.cloudflare.com/agents-week-in-review/"
+    },
+    {
+      "name": "NVIDIA Ising",
+      "oneliner": "NVIDIA发布全球首个开源量子AI模型系列，面向量子处理器校准与纠错，澳大利亚量子创业公司率先部署。",
+      "launchDate": "04-23",
+      "how": "NVIDIA于4月23日发布Ising开源量子AI模型族，专注量子处理器校准和量子纠错。合作伙伴包括IQM、EeroQ、Conductor等，已在真实量子硬件上完成早期部署。目标是加速量子计算走向实用化。",
+      "why": "这是AI首次真正进入量子计算工作流。传统AI在量子领域更多是模拟，Ising则直接与量子硬件结合。澳大利亚初创公司已将此视为机会而非威胁——量子AI工具可能成为新的创业赛道。",
+      "link": "https://nvidianews.nvidia.com"
+    }
+  ],
+  "openclawVendors": [
+    {
+      "name": "NVIDIA NemoClaw",
+      "vendor": "NVIDIA",
+      "time": "04-24",
+      "desc": "NVIDIA开源NemoClaw参考栈，简化在NVIDIA OpenShell中安全运行OpenClaw助手。属于NVIDIA Agent Toolkit的一部分，提供额外的安全隔离层。",
+      "link": "https://github.com/NVIDIA/NemoClaw"
+    }
+  ],
+  "openclawProducts": [
+    {
+      "name": "code-search MCP for Claude Code",
+      "time": "04-23",
+      "desc": "GitHub trending新上榜项目，将整个代码库作为上下文注入Claude Code，支持语义搜索，让Coding Agent在任意大型代码库中精准定位和推理。Python/TypeScript/nodejs，MIT许可证。",
+      "link": "https://github.com/alvinreal/awesome-opensource-ai"
+    },
+    {
+      "name": "Chrome DevTools MCP",
+      "time": "04-24",
+      "desc": "Chrome DevTools团队发布的MCP服务器，为AI编码助手提供完整的Chrome DevTools访问能力，实现可靠的浏览器自动化、深度调试和性能分析。Claude Desktop/Cursor/Codex/OpenCode可通过MCP协议连接。",
+      "link": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    }
+  ],
+  "otherNews": [
+    {
+      "name": "browser-use MCP server",
+      "time": "04-22",
+      "desc": "browser-use项目发布官方MCP服务器，让AI agent可靠地操作浏览器做自动化任务。该项目在GitHub已有10,263 stars，是浏览器自动化领域的标杆项目。",
+      "link": "https://github.com/browser-use"
+    },
+    {
+      "name": "DuPont RO Operations Advisor",
+      "time": "04-23",
+      "desc": "杜邦水务推出AI驱动的反渗透运维顾问，帮助反渗透运营商减少停机时间、优化系统性能。这是工业AI在水处理领域的具体应用案例。",
+      "link": "https://www.stocktitan.net/news/DD/du-pont-launches-ai-enabled-digital-advisor-to-help-customers-iqvcs3zbtqh8.html"
+    },
+    {
+      "name": "ml-intern",
+      "time": "04-21",
+      "desc": "Hugging Face发布ml-intern，开源AI Agent自动化LLM后训练工作流全流程。降低模型微调门槛，让更多团队可以在没有专业ML团队的情况下完成模型后训练。",
+      "link": "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/"
+    }
+  ]
+},
 {
     date: "2026-04-23",
     title: "2026.04.23 AI 产品趋势调研",

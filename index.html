@@ -979,47 +979,23 @@ const reports = [
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓,
   {
-    date: "2026-04-26", title: "2026.04.26 AI 产品趋势调研", coreTrend: "MCP安全漏洞触发生态大审查，AI编程工具进入真实工作流时代",
-    tags: ["MCP安全漏洞", "Google Deep Research Max", "Claude Code 4% GitHub", "AI Agent评价体系", "开源凭证代理"],
+    date: "2026-04-24", title: "2026.04.24 AI 产品趋势调研", coreTrend: "OpenAI发布GPT-5.5主打Agentic Coding，Anthropic公开Claude Code质量事故复盘，行业竞争从模型能力转向Agent可靠性",
+    tags: ["GPT-5.5", "Claude Code事故", "Agentic Coding", "开源Agent", "AI医疗合规"],
     opportunities: [
-      {title: "MCP协议安全漏洞成行业转折点", desc: "Anthropic MCP协议发现RCE远程代码执行漏洞，约20万台AI服务器受影响，安全研究人员呼吁建立MCP安全标准。这意味着：安全不是事后补救，而是协议设计的核心部分。Linux基金会已接管MCP标准，未来安全将成为MCP生态的入场券而非可选项。"},
-      {title: "AI研究工具进入「长程自主工作流」阶段", desc: "Google Deep Research Max支持MCP集成、原生图表生成、DeepSearchQA 93.3%得分，AI研究工具从单点查询演进到真正自主完成多步骤研究。这对需要深度行业研究的企业（咨询、金融、市场）价值巨大。"},
-      {title: "AI Agent评价体系开始建立", desc: "Claude Code已占全球4% GitHub提交，但AgentVet等平台开始提供多维度评价（准确性/速度/成本/安全/可扩展性）。当工具有了公认的评价标准，企业采购决策才能真正落地。"}
+      {title: "大厂竞争焦点从模型能力转向Agent可靠性", desc: "Anthropic主动公开Claude Code质量下降三个技术根因，OpenAI同步发布GPT-5.5主打OS级计算机操作。两家同时聚焦「让Agent真正可靠地工作」而非单纯刷榜。"},
+      {title: "开源Agent用极简架构与Token高效挑战大厂", desc: "Generic Agent用3K行代码实现全系统控制，Token消耗是大厂的1/6。技能树自演进——每完成新任务自动将执行路径结晶为skill。"},
+      {title: "AI医疗从能不能用进化到符不符合采购标准", desc: "ChatGPT for Clinicians HIPAA合规+CME学分，说明医疗落地门槛最高的场景已开始被合规能力而非技术能力驱动。"}
     ],
     products: [
-      {name: "MCP RCE漏洞披露", oneliner: "Anthropic MCP协议发现设计级远程代码执行漏洞，约20万台AI服务器受影响，Linux基金会宣布接管MCP安全标准制定。", launchDate: "04-22至04-24", how: "安全研究人员披露Anthropic MCP协议存在设计级漏洞：用户输入可直接流入命令执行流程，无需特殊权限即可实现远程代码执行。受影响范围包括所有使用MCP协议", why: "这是MCP协议自2024年底普及以来最严重的安全危机。20万台受影响服务器意味着企业数据泄露风险真实存在。更重要的是，它暴露了「让AI Agent自由调用外部工", link: "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-model-context-protocol-has-critical-security-flaw-exposed"},
-      {name: "Google Deep Research Max", oneliner: "Google发布Gemini 3.1 Pro驱动的企业级深度研究Agent，支持MCP集成和原生图表生成，面向需要长程自主研究的企业工作流。", launchDate: "04-21", how: "Google于4月21日发布Deep Research和Deep Research Max，基于Gemini 3.1 Pro。核心能力：①MCP协议支持，可连接", why: "这是Google在「让AI真正替代研究员」方向的关键一步——MCP支持意味着Deep Research可以接入企业的真实数据（CRM、知识库、代码库），而不仅是", link: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"},
-      {name: "Claude Code占全球4% GitHub提交", oneliner: "SemiAnalysis数据：Claude Code在2026年3月贡献了约4%的全球公开GitHub提交，每25行代码就有1行由Claude Code编写。", launchDate: "04-23至04-26", how: "OpenCode 2026年对比评测报告引用SemiAnalysis数据：Claude Code在2026年3月的公开GitHub提交中占约4%（相当于每25行", why: "4%不是小数字——它意味着AI编程工具已从「辅助」进入「主力」。对开源社区来说，这更是信任的标志：开发者愿意把真实提交交给Claude Code。对GitHub", link: "https://dev.to/skilaai/cursor-vs-claude-code-vs-codex-2026-one-just-took-4-of-all-github-commits-2ldn"},
-      {name: "AgentVet", oneliner: "社区正在构建AI Agent多维度评价平台，从准确性、速度、成本效益、安全性、可扩展性5个维度评估AI Agent，而非简单的星级评分。", launchDate: "04-25", how: "Reddit r/AI_Agents社区帖子：AgentVet团队正在构建AI Agent专业评价平台。相比现有评价体系（App Store星级、HN帖子），A", why: "当Claude Code已达4% GitHub提交，却没有公认评价体系时，企业采购决策缺乏依据。AgentVet的出现说明市场开始从「哪个最火」转向「哪个最适合", link: "https://www.reddit.com/r/AI_Agents/comments/1sum5kr/"}
+      {name: "GPT-5.5", oneliner: "OpenAI最强大Agentic Coding模型，主打OS级计算机操作和自主多步骤执行", launchDate: "04-23", how: "定位为「新一代智能Agent引擎」，核心能力：①Agentic Coding多文件重构、跨项目推理、自主调试；②Computer Use操作系统级操作；③Ter", why: "OpenAI用「让AI真正完成工作」而非「让AI更好地回答问题」重新定义模型价值。OS级操作=AI可以直接操控计算机而非仅输出文字。", link: "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/"},
+      {name: "ChatGPT for Clinicians", oneliner: "OpenAI专为美国医疗专业人员推出免费临床AI版本，HIPAA合规+CME学分", launchDate: "04-23", how: "与数百名临床医生合作设计，免费面向美国医生、护士、药师。功能：①文档处理自动整理患者记录；②医学研究可信来源检索；③CME继续教育学分；④HIPAA合规选项。G", why: "医疗是AI落地门槛最高的场景——HIPAA合规、临床验证、CME学分都是真实采购障碍。OpenAI用「合规」而非「能力」切入市场，说明AI医疗从「能不能用」进化", link: "https://openai.com/index/making-chatgpt-better-for-clinicians/"},
+      {name: "Claude Code质量事故复盘", oneliner: "Anthropic主动披露三个内部变更导致Claude Code质量下降，已全部修复", launchDate: "04-23", how: "三个独立变更导致质量下降：①reasoning effort降低让模型更简洁但更容易出错；②verbosity prompt修改导致响应变短；③缓存bug。全部", why: "这是企业级产品重要的信任建立方式——主动披露比沉默更有公信力。开发者对Claude Code短暂移除Pro计划的激烈反应说明：工具依赖程度已非常高，任何降级都会", link: "https://www.anthropic.com/engineering/april-23-postmortem"}
     ],
-    openclawVendors: [],
-    openclawProducts: [{name: "Agent Vault", time: "04-24至04-26", desc: "Show HN开源项目，为AI Agent提供安全的第三方服务访问凭证代理——Agent可以操作系统但无法读取密钥本身，解决MCP安全漏洞背景下的凭证管理问题。", link: "https://news.ycombinator.com/item?id=47865822"},
-      {name: "antigravity-awesome-skills", time: "04-26", desc: "GitHub新开源库，汇集1400+可安装的Agentic Skills，支持Claude Code、Cursor、Codex CLI、Gemini CLI等多", link: "https://github.com/sickn33/antigravity-awesome-skills"}],
-    otherNews: [{name: "Chrome DevTools MCP", time: "04-24至04-25", desc: "Chrome DevTools团队发布官方MCP服务器，让AI编程助手可控制真实Chrome浏览器进行自动化、调试和性能分析。OpenClaw生态已集成此工具，", link: "https://github.com/ChromeDevTools/chrome-devtools-mcp"},
-      {name: "Forbes AI 50 2026榜单", time: "04-21", desc: "Forbes第8版AI 50榜单发布：OpenAI和Anthropic继续领跑，20家新公司首次入选。今年趋势转向数据和工作流基础设施，Suno（AI音乐）、G", link: "https://www.forbes.com/lists/ai50/"},
-      {name: "Meta AI Business Assistant全球扩张", time: "04-25", desc: "Meta将其AI广告助手面向全球广告主全面开放（美国、EMEA、APAC、LATAM），Beta期间帮助小型广告主降低12%的单次成效成本，本地语言支持。", link: "https://www.facebook.com/business/news/meta-ai-business-assistant-expands-globally-with-more-languages"},
-      {name: "MCP Dev Summit北美站", time: "04-22", desc: "MCP开发者峰会在纽约举办，约1200人参会。MCP已成为AI Agent集成的行业标准，Linux基金会已接管协议标准化工作。", link: "https://en.wikipedia.org/wiki/Model_Context_Protocol"},
-      {name: "Vercel通过Context.ai被入侵", time: "04-20至04-24", desc: "黑客通过第三方AI工具Context.ai入侵Vercel，数据库、员工账号、GitHub/NPM token在BreachForums以200万美元出售。攻击", link: "https://thehackernews.com/2026/04/vercel-breach-tied-to-context-ai-hack.html"}]
-  },
-{
-    date: "2026-04-25", title: "2026.04.25 AI 产品趋势调研", coreTrend: "DeepSeek V4 开源旗舰重新定义开源模型标准，Cloudflare Agent Week 密集发布 Agent 基础设施全家桶。",
-    tags: ["DeepSeek V4", "Cloudflare Agents Week", "NVIDIA Ising", "A2UI", "Browser Use"],
-    opportunities: [
-      {title: "开源模型竞争从「参数规模」转向「落地效率」", desc: "DeepSeek V4-Pro（1.6T总参/49B活跃）和V4-Flash（284B总参/13B活跃）同时发布，证明开源旗舰不只能刷榜，还能真正用起来。无缝集成Claude Code/OpenClaw/OpenCode让开发者零成本迁移。"},
-      {title: "Agent基础设施进入「全家桶」竞争阶段", desc: "Cloudflare Agents Week一周内密集发布compute（Workers AI）+ security（MCP鉴权）+ toolbox（Browser Run/Agent Lee）+ platform全线产品，意味着单点工具已无法竞争，必须提供完整基础设施栈。"},
-      {title: "量子AI从论文走向开源工具", desc: "NVIDIA Ising是全球首个开源量子AI模型系列，面向量子处理器校准和纠错。这代表AI已开始进入量子计算工作流，而非只在经典计算领域。"}
-    ],
-    products: [
-      {name: "DeepSeek V4-Pro + V4-Flash", oneliner: "DeepSeek重磅发布V4系列开源旗舰，1M上下文+Agent Coding SOTA，无缝集成Claude Code/OpenClaw/OpenCode。", launchDate: "04-24", how: "4月24日发布两个版本：V4-Pro（1.6T总参/49B活跃参数）和V4-Flash（284B总参/13B活跃参数）。Novel Attention实现Tok", why: "这是真正面向Agent优化的开源旗舰——DeepSeek V4明确宣传与Claude Code、OpenClaw、OpenCode无缝集成，说明开源模型不再只是", link: "https://api-docs.deepseek.com/news/news260424"},
-      {name: "Cloudflare Agents Week 全家桶", oneliner: "Cloudflare一周发布Agent完整基础设施栈：Browser Run（CDP/MCP）、Agent Lee（Cloudflare栈接口）、4x并发提升。", launchDate: "04-20至04-24", how: "Agents Week密集发布：①Browser Run（原Browser Rendering）新增Live View、Human in the Loop、CD", why: "Browser Run现在支持Claude Desktop、Cursor、Codex、OpenCode等所有主流MCP客户端通过CDP协议使用远程Chrome。", link: "https://blog.cloudflare.com/agents-week-in-review/"},
-      {name: "NVIDIA Ising", oneliner: "NVIDIA发布全球首个开源量子AI模型系列，面向量子处理器校准与纠错，澳大利亚量子创业公司率先部署。", launchDate: "04-23", how: "NVIDIA于4月23日发布Ising开源量子AI模型族，专注量子处理器校准和量子纠错。合作伙伴包括IQM、EeroQ、Conductor等，已在真实量子硬件上", why: "这是AI首次真正进入量子计算工作流。传统AI在量子领域更多是模拟，Ising则直接与量子硬件结合。澳大利亚初创公司已将此视为机会而非威胁——量子AI工具可能成为", link: "https://nvidianews.nvidia.com"}
-    ],
-    openclawVendors: [{name: "NVIDIA NemoClaw", vendor: "NVIDIA", time: "04-24", desc: "NVIDIA开源NemoClaw参考栈，简化在NVIDIA OpenShell中安全运行OpenClaw助手。属于NVIDIA Agent Toolkit的一部", link: "https://github.com/NVIDIA/NemoClaw"}],
-    openclawProducts: [{name: "code-search MCP for Claude Code", time: "04-23", desc: "GitHub trending新上榜项目，将整个代码库作为上下文注入Claude Code，支持语义搜索，让Coding Agent在任意大型代码库中精准定位和", link: "https://github.com/alvinreal/awesome-opensource-ai"},
-      {name: "Chrome DevTools MCP", time: "04-24", desc: "Chrome DevTools团队发布的MCP服务器，为AI编码助手提供完整的Chrome DevTools访问能力，实现可靠的浏览器自动化、深度调试和性能分析", link: "https://github.com/ChromeDevTools/chrome-devtools-mcp"}],
-    otherNews: [{name: "browser-use MCP server", time: "04-22", desc: "browser-use项目发布官方MCP服务器，让AI agent可靠地操作浏览器做自动化任务。该项目在GitHub已有10,263 stars，是浏览器自动化", link: "https://github.com/browser-use"},
-      {name: "DuPont RO Operations Advisor", time: "04-23", desc: "杜邦水务推出AI驱动的反渗透运维顾问，帮助反渗透运营商减少停机时间、优化系统性能。这是工业AI在水处理领域的具体应用案例。", link: "https://www.stocktitan.net/news/DD/du-pont-launches-ai-enabled-digital-advisor-to-help-customers-iqvcs3zbtqh8.html"},
-      {name: "ml-intern", time: "04-21", desc: "Hugging Face发布ml-intern，开源AI Agent自动化LLM后训练工作流全流程。降低模型微调门槛，让更多团队可以在没有专业ML团队的情况下完", link: "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/"}]
+    openclawVendors: [{name: "OpenClaw v2026.4.22", vendor: "OpenClaw", time: "04-22", desc: "xAI全面支持（图像生成/TTS/STT + 6种实时声音 + Voice Call）；TUI新增本地嵌入式模式；WhatsApp支持per-group和per", link: "https://github.com/openclaw/openclaw/releases/tag/v2026.4.22"}],
+    openclawProducts: [{name: "Generic Agent", time: "04-21", desc: "Self-evolving autonomous agent框架，核心仅~3K行代码，9个原子工具覆盖浏览器/终端/文件系统/键鼠/屏幕视觉/ADB手机控制。支", link: "https://github.com/lsdefine/GenericAgent"}],
+    otherNews: [{name: "ChatGPT Images 2.0", time: "04-21", desc: "OpenAI发布，主打Thinking推理能力、2K分辨率、8图批次生成，Image Arena排名第一。核心突破：终于能准确渲染文字和复杂布局。已灰度推送给C", link: "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/"},
+      {name: "Anthropic Mythos被黑泄露", time: "04-21", desc: "Anthropic Mythos发布当天即被第三方承包商泄露，黑客凭猜测找到模型部署位置。Mythos是仅向Apple、Amazon、Cisco、JPMorga", link: "https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/"},
+      {name: "Anthropic测试从Pro移除Claude Code（已恢复）", time: "04-21", desc: "Anthropic短暂从$20/月的Pro计划移除Claude Code访问权（仅影响新用户），引发开发者社区强烈反对后恢复。官方表示是「2%新用户的A/B测试", link: "https://www.theregister.com/2026/04/22/anthropic_removes_claude_code_pro/"}]
   },
 {
     date: "2026-04-21",

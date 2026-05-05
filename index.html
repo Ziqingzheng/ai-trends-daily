@@ -1078,7 +1078,32 @@ const reports = [{
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
 
+
   {
+    date: "2026-05-03",
+    title: "2026.05.03 AI 产品趋势调研",
+    coreTrend: "AI推理缺陷与成本优势并现，多云竞争加剧",
+    tags: ["Mistral Medium 3.5", "ARC-AGI-3基准", "DeepClaude省钱", "AI客服工程实践"],
+    opportunities: [
+      {title: "开源推理能力逼近闭源前沿，但推理缺陷依然显著", desc: "Mistral Medium 3.5（77.6% SWE-Bench）开源挑战Claude/ GPT，但ARC-AGI-3测试GPT-5.5仅0.43%、Claude Opus 4.7仅0.18%，人类可达100%——说明开源模型在推理能力上仍有根本性差距。"},
+      {title: "AI成本优化进入实践阶段：DeepClaude实现17倍节省", desc: "开发者用DeepClaude（Claude Code+DeepSeek V4 Pro后端）实现每Token成本降低17倍（$0.87 vs $15/M）。Token定价战正在从技术竞争变成成本工程问题。"}
+    ],
+    products: [
+      {name: "Mistral Medium 3.5开源模型+Vibe远程Agent", oneliner: "Mistral发布128B开源模型77.6% SWE-Bench Verified，同步推出Vibe远程Agent，本地CLI可远程操控云端沙盒，4 GPU可自托管。", launchDate: "05-02至05-03", how: "128B MIT许可开源模型，通过CLI或Le Chat启动云端编码Agent，完成后GitHub PR自动通知，支持并行多个Agent运行。", why: "开源编码Agent首次支持异步+远程+状态保持，让GitHub Copilot有了真正的开源替代方案。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"},
+      {name: "DeepClaude：Claude Code+DeepSeek V4 Pro省17倍成本", oneliner: "开源工具DeepClaude让Claude Code使用DeepSeek V4 Pro替代Anthropic后端，成本降低17倍（$0.87 vs $15/百万Token），HN热议567分。", launchDate: "05-03", how: "DeepClaude通过API路由将Claude Code的Anthropic后端替换为DeepSeek V4 Pro，兼容Claude Code的Agent工具链同时大幅降低Token成本。", why: "Token定价战正在从技术竞争变成成本工程问题，17倍成本差让中小企业和独立开发者有了可行的AI编程方案。", link: "https://github.com/whtlee/deepClaude"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果App在App Store更新时意外打包Claude.md文件，揭示内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果Apple Support App意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践——AI与人无缝切换，苹果用了Claude Code开发生产应用本身就是背书。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "Anthropic Project Deal：AI Agent在闲鱼互割", oneliner: "Anthropic内部实验：69名员工获Claude Agent在Slack群里自主交易闲置物品，一周完成186笔交易，Opus卖家比Haiku平均多赚2.68美元/笔。", launchDate: "05-03", how: "Anthropic员工获100美元预算和Claude Agent，在Slack群组成的虚拟闲鱼里自主交易闲置物品。一周完成186笔交易，总流水超4000美元。", why: "这是首个在真实企业内部大规模验证AI Agent自主交易的研究——强模型（Opus）系统性比弱模型（Haiku）多赚12-15%，但用户完全感知不到价格不公平。", link: "https://36kr.com/p/3794465919704322"}
+    ],
+    openclawVendors: [],
+    openclawProducts: [
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "ARC-AGI-3：GPT-5.5仅0.43%、Claude Opus 4.7仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，人类首次接触可100%解决，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，揭示当前AI在抽象推理和适应新环境上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Uber 4个月烧光全年AI预算，全用Claude Code", time: "05-03", desc: "优步仅用4个月烧完全年AI预算全部用于Claude Code，引发业界对AI token消费ROI的深度讨论：为何有人月消费超1万美元，如何理性使用AI编程工具。", link: "https://news.ycombinator.com/item?id=47976415"}
+    ]
+  },  {
     date: "2026-05-01",
     title: "2026.05.01 AI 产品趋势调研",
     coreTrend: "AI云格局重塑：OpenAI-AWS联手，多强竞争时代开启",

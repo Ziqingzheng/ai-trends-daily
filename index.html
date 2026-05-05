@@ -1077,6 +1077,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1138,6 +1168,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1173,6 +1233,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1206,6 +1296,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1240,6 +1360,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1273,6 +1423,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1306,6 +1486,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1342,6 +1552,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {
@@ -1470,6 +1710,36 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-05",
+    title: "2026.05.05 AI 产品趋势调研",
+    coreTrend: "两大厂同日成立合资，AI商业化提速",
+    tags: ["Anthropic企业合资", "OpenAI The Deployment Company", "Mistral Vibe远程Agent", "苹果Claude.md泄露", "AI急诊诊断超人类"],
+    opportunities: [
+      {title: "AI商业化从「卖API」正式进入「卖服务」阶段", desc: "Anthropic（05-04）与黑石/HFG/高盛成立15亿合资，OpenAI同日宣布100亿The Deployment Company。合计150亿+PE承诺——两家同日宣布，说明AI企业落地的「最后一公里」已被识别，解决方案是专业AI服务公司而非云厂商。"},
+      {title: "开源编码Agent生态格局骤变：Mistral Vibe打穿本地限制", desc: "Mistral Vibe远程Agent（05-02）支持本地CLI远程操控云端沙盒并保持状态，4 GPU自托管，成本是GitHub Copilot的零头。开源编码Agent从「本地工具」升级为「云端异步团队成员」。"}
+    ],
+    products: [
+      {name: "Anthropic × 华尔街企业AI服务合资公司", oneliner: "Anthropic联合黑石、KKR、高盛等成立15亿美元企业AI服务合资公司，正式从「模型公司」转型「企业服务公司」。", launchDate: "05-04", how: "Anthropic联合黑石、Hellman & Friedman、高盛等成立合资公司，将Claude深度嵌入企业工作流，提供部署、集成、定制一站式服务。", why: "从「卖模型」到「卖服务」的关键一步。PE认可Anthropic有能力把Claude卖进企业核心系统。15亿美元估值说明专业服务模式已被资本验证。", link: "https://www.gic.com.sg/newsroom/all/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/"},
+      {name: "OpenAI The Deployment Company", oneliner: "OpenAI成立100亿美元合资企业服务公司，19家机构参投，帮助企业快速落地OpenAI全家桶。", launchDate: "05-04", how: "OpenAI联合TPG等PE成立The Deployment Company，帮助企业解决安全、合规、集成挑战，将ChatGPT/Codex/Managed Agents快速嵌入企业工作流。", why: "GPT-5.5发布当天宣布，说明OpenAI认知到最难的壁垒不是模型能力，而是「企业落地最后一公里」。Anthropic和OpenAI战略完全对齐。", link: "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/"},
+      {name: "苹果Apple Support App泄露Claude.md", oneliner: "苹果Apple Support App意外泄露Claude.md文件，证实内部用Claude Code开发生产应用，客服系统为Juno AI自动应答+Live Agents真人接管双后端。", launchDate: "05-02", how: "苹果App在App Store更新时意外打包了Claude.md文件，揭示其客服系统采用Juno AI自动应答+Live Agents真人接管双后端架构，用户无法分辨对面是人还是AI。", why: "苹果是全球市值最高的公司之一，其内部用Claude Code开发生产应用本身就是背书。「Juno AI+Live Agents」双后端是当前最成熟的AI客服工程实践之一。", link: "https://36kr.com/p/3791662444911617"},
+      {name: "OpenAI o1急诊诊断准确率超人类医生", oneliner: "哈佛医学院研究：OpenAI o1急诊诊断准确率67%，显著高于两名人类主治医师的50-55%。", launchDate: "05-03", how: "哈佛医学院研究对比o1模型与人类主治医师的急诊诊断准确率，o1达67%，人类医生仅50-55%。", why: "AI医疗应用首次在真实临床场景中有可量化的超越数据。说明AI在需要推理能力的专业场景已开始具备实用价值。", link: "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw v2026.5.3", vendor: "OpenClaw", time: "05-04", desc: "新增bundled file-transfer插件（file_fetch/dir_list/dir_fetch/file_write）；新增/steer命令（队列无关session steering）；Grok 4.3成为默认xAI聊天模型；Gateway性能优化（lazy-loading）。npm下载突破96万次。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenClaw 2026.5.1-beta.2", vendor: "OpenClaw", time: "05-03", desc: "OpenTelemetry诊断外置为@openclaw/diagnostics-otel独立包；Google Chat/LINE/Matrix/Mattermost进入ClawHub发布准备阶段。", link: "https://github.com/openclaw/openclaw/releases"}
+    ],
+    openclawProducts: [
+      {name: "Craft Agents（Lukilabs）", time: "05-02", desc: "Apache 2.0许可开源Agent框架，发布当天即登GitHub Trending。", link: "https://aitoolly.com/ai-news/article/2026-05-02-craft-agents-oss-lukilabs-launches-new-open-source-agent-framework-under-apache-20-license"},
+      {name: "awesome-openclaw-agents（205个模板）", time: "05-02", desc: "收录205个SOUL.md配置模板，覆盖24个行业分类，内置CrewClaw自动生成Docker部署包。", link: "https://github.com/mergisi/awesome-openclaw-agents"},
+      {name: "ClawRunr（JobRunr）", time: "05-03", desc: "Java AI Agent运行时，基于Spring Boot + Spring AI + JobRunr，支持MCP工具、浏览器自动化、Web/Telegram/Discord渠道。", link: "https://www.infoq.com/news/2026/05/clawrunr/"},
+      {name: "OpenClaw-RL v1正式版", time: "05-03", desc: "Track 2新增Terminal/GUI/SWE/Tool-call全场景RL，集成SDFT/SDPO，支持通过自然对话反馈训练个性化Agent。", link: "https://github.com/Gen-Verse/OpenClaw-RL"}
+    ],
+    otherNews: [
+      {name: "Claude Opus 4.7 ARC-AGI-3仅0.18%", time: "05-03", desc: "Keras之父Chollet设计的ARC-AGI-3测试中，GPT-5.5得0.43%、Claude Opus 4.7仅得0.18%，人类首次接触可100%解决，揭示当前AI在抽象推理上的根本缺陷。", link: "https://www.huxiu.com/article/4855465.html"},
+      {name: "Mistral Medium 3.5开源128B模型", time: "05-02", desc: "MIT许可128B开源模型，77.6% SWE-Bench Verified超越Devstral 2，256k上下文，4 GPU可自托管，成为Vibe和Le Chat默认模型。", link: "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"}
+    ]
+  },
   
 
 {

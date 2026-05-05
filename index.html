@@ -1077,7 +1077,33 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+
   {
+    date: "2026-05-01",
+    title: "2026.05.01 AI 产品趋势调研",
+    coreTrend: "AI云格局重塑：OpenAI-AWS联手，多强竞争时代开启",
+    tags: ["OpenAI-AWS结盟", "Anthropic专业软件扩张", "Apple端侧AI", "Big Tech财报", "多云分发"],
+    opportunities: [
+      {title: "AI云分发从「一家独占」走向「多强并立」", desc: "OpenAI于04-28将GPT-5.5、Codex、Managed Agents同步登陆AWS Bedrock，终结七年微软Azure独占绑定。企业可在AWS原生环境直接使用OpenAI全家桶，配合Bedrock的IAM和企业工具链，多云战略进入实操阶段。"},
+      {title: "AI进入专业软件的「嵌入式」阶段", desc: "Anthropic Claude Connectors覆盖Blender、Adobe CC、Ableton、Canva等专业软件，专业创作者可直接用自然语言操作专业工具，无需配置API。AI不再只是对话界面，而是作为底层能力嵌入工作流——比chatbot市场大一个数量级。"},
+      {title: "端侧AI在真实场景找到产品-market fit", desc: "苹果M5芯片Neural Accelerator+Private Cloud Compute（04-30）、腾讯440MB离线翻译模型同天发布（04-30），前者面向企业隐私合规，后者面向五一出行刚需。端侧AI从技术Demo变成有真实买单场景的产品。"}
+    ],
+    products: [
+      {name: "OpenAI on AWS Bedrock", oneliner: "OpenAI将GPT-5.5、Codex、Managed Agents同步登陆AWS Bedrock，终结七年微软Azure独占绑定，开启多云分发战略。", launchDate: "04-28", how: "通过Bedrock的IAM、日志和企业工具链原生集成，企业无需切换云供应商即可使用OpenAI全家桶。", why: "$800亿估值的OpenAI寻求最大化分发，AI云服务正式进入多强竞争时代。", link: "https://openai.com/index/models-codex-and-managed-agents-come-to-aws"},
+      {name: "Anthropic Claude Connectors", oneliner: "Anthropic发布覆盖Blender、Adobe CC、Ableton、Canva的创意工具连接器，专业用户可用自然语言直接操作专业软件功能。", launchDate: "04-28", how: "覆盖Blender、Adobe Creative Cloud、Ableton、Canva、SketchUp等，专业用户无需配置API即可用自然语言操作专业软件功能。", why: "AI从对话界面进入嵌入式工作流组件，与微软Copilot+正面竞争，专业软件市场比chatbot大一个数量级。", link: "https://www.anthropic.com/news/claude-connectors"},
+      {name: "Google Cloud Q1 2026：首破$200亿", oneliner: "Alphabet Q1财报：Google Cloud营收$201亿（+22% YoY），首次单季破$200亿；微软同期AI业务年化$370亿（+123%）。", launchDate: "04-29", how: "Alphabet发布Q1财报，Google Cloud首次单季突破$200亿，同比增长22%。", why: "AI货币化在云服务赛道已跑通，「可立即变现」比「模型最强」更受资本市场青睐。", link: "https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup"},
+      {name: "Apple M5 Neural Accelerator", oneliner: "苹果M5芯片每核心内置Neural Accelerator，AI相关GPU算力提升超4倍，配合Private Cloud Compute打造隐私优先的端云混合AI。", launchDate: "04-30", how: "M5每核心配备Neural Accelerator单元，Private Cloud Compute实现本地-云端隐私安全混合。", why: "20亿+活跃设备的AI分发是苹果独有优势，企业隐私合规场景有直接价值。", link: "https://www.cnbc.com/2026/04/30/apple-aapl-q2-2026-earnings-report.html"},
+      {name: "腾讯0.4GB端侧离线翻译模型", oneliner: "腾讯Hunyuan发布440MB量化翻译模型，支持33语言+5方言+1056翻译方向，完全本地运行，五一出行场景精准。", launchDate: "04-30", how: "基于腾讯混元1.8B翻译大模型Hy-Mt1.5，1.25bit量化后仅440MB，完全本地运行无需网络。", why: "端侧AI从技术Demo变成有真实买单场景的产品，隐私+便利+精准时机是完整商业逻辑。", link: "https://the-decoder.com/tencents-440-mb-ai-model-translates-33-languages-offline-on-your-phone/"}
+    ],
+    openclawVendors: [],
+    openclawProducts: [
+      {name: "OpenClaw新集成：Cerebras+Google Meet", time: "04-28", desc: "Cerebras成为第五个bundled推理供应商；Google Meet企业会议插件上线；Matrix端到端加密一键配置；openclaw migrate正式落地。", link: "https://releasebot.io/updates/openclaw"}
+    ],
+    otherNews: [
+      {name: "高盛香港禁员工使用Anthropic Claude", time: "04-29", desc: "《金融时报》报道高盛已禁止香港员工访问Claude，在岸AI监管收紧，合规+数据主权成企业AI采购硬门槛。", link: "https://www.zaobao.com.sg/news/china/story20260429-8969411"},
+      {name: "Warp AI Terminal开放源代码", time: "04-28", desc: "Warp发布Rust编写的GPU加速AI终端，定位「Open Agentic Development」，OpenAI作为创始赞助商支持。", link: "https://www.warp.dev/terminal"}
+    ]
+  },  {
     date: "2026-05-05",
     title: "2026.05.05 AI 产品趋势调研",
     coreTrend: "两大厂同日成立合资，AI商业化提速",

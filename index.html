@@ -1077,6 +1077,35 @@ const reports = [{
   },
     // ══════════════════════════════════════════════════════════════════
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  {
+    date: "2026-05-06",
+    title: "2026.05.06 AI 产品趋势调研",
+    coreTrend: "AI竞争转向生产级基础设施，金融和开发者工具率先规模化",
+    tags: ["Anthropic金融Agent", "Warp开源", "OpenClaw安全补丁", "企业AI", "开源生态"],
+    opportunities: [
+      {title: "金融AI Agent从试点进入生产环境", desc: "Anthropic的10个金融AI Agent已落地Goldman Sachs/Visa/Citi/AIG，标志着企业级AI Agent从试点走向规模化部署。核心障碍不再是技术，而是合规和风控的集成——Anthropic正在建立这个标准。"},
+      {title: "开发者工具成为AI落地主战场", desc: "Warp开源15小时35k stars、Claude Code v2.1.111新增auto mode、DeepSeek-TUI用开源替代——AI正在从「对话」进入「终端」和「IDE」。开发者工具的采用速度和深度远超企业聊天，工具化是AI落地的最快路径。"}
+    ],
+    products: [
+      {name: "Anthropic 10金融AI Agent（5月5日）", oneliner: "Anthropic发布10个金融行业专用Agent，覆盖研究/风控/合规/会计", launchDate: "05-05", how: "10个预配置AI Agent，集成Claude Code/Cowork，可直接插入Goldman Sachs、Visa、Citi、AIG等机构的生产流程。每个Agent针对特定金融场景定制，支持Claude Mythos模型。", why: "不是试点，是生产。Anthropic用「合规+风控+实际部署」重新定义金融AI标准。Goldman/Visa等不是试验田客户，而是生产用户——这意味着金融AI Agent的采购逻辑从「试了再说」变成「用了才买」。", link: "https://www.reuters.com/business/finance/anthropic-deepens-finance-push-with-10-new-ai-agents-banks-insurers-2026-05-05/"},
+      {name: "Warp终端正式开源（5月5日）", oneliner: "Sam Altman投资的AI终端正式开源，15小时35k GitHub stars", launchDate: "05-05", how: "Rust编写的AI终端，AGPL许可开源。新增Kimi/MiniMax/Qwen等国产模型支持，推出Agent-first协作工作流，OpenAI担任创始赞助商。15小时内GitHub star突破35,000。", why: "35k stars/15小时是GitHub历史上最快的开源项目之一。AI终端是开发者每天8小时都在用的工具——比聊天机器人更接近生产环境，更容易产生真实价值。Sam Altman投资+Warp的组合代表AI工具的主流化方向。", link: "https://www.warp.dev/blog/warp-is-now-open-source"},
+      {name: "Claude Code v2.1.111（5月5日）", oneliner: "Claude Code新增auto mode，Opus 4.6成默认，AI编程安全升级", launchDate: "05-05", how: "新增auto mode（研究预览）：让Claude在有保护措施的情况下自主决策，减少人工中断。支持Opus 4.6 medium effort作为默认，iTerm2集成，ghost dotfiles修复。", why: "auto mode是AI编程工具首次明确解决「AI太打断 vs 人类想放手」的矛盾。Claude Code正在从「AI辅助写代码」进化为「AI代替执行完整任务」，这是Copilot和Cursor之后最实质的能力跨越。", link: "https://claudefa.st/blog/guide/changelog"},
+      {name: "Dexter 自主金融研究Agent（5月6日）", oneliner: "TypeScript开源金融研究Agent，今日GitHub获659 stars", launchDate: "05-06", how: "自主金融研究Agent，TypeScript编写，内置多数据源接入，支持深度市场分析、竞争情报和投资研究。05-06登陆GitHub Trending。", why: "金融AI Agent具体落地场景再添一案例。与Anthropic的金融Agent不同，Dexter代表社区/开源力量的自下而上路径——开发者自己动手解决投研需求，这说明市场真实存在。", link: "https://github.com/virattt/dexter"},
+      {name: "DeepSeek-TUI 开源终端Coding Agent（5月4日）", oneliner: "基于DeepSeek V4的终端Coding Agent，5月初获2.3k GitHub stars", launchDate: "05-04", how: "Rust编写的终端Coding Agent，调用DeepSeek V4 API，支持/Skills自动发现、用户记忆、GitHub Skills安装。工作在终端内，5月初登陆GitHub Trending，自称开源Claude Code替代品。", why: "开源Claude Code替代方案出现——用DeepSeek替代Anthropic后端，绕过API成本问题。1M上下文+Skill自演进，在终端内完成完整的Coding Agent工作流，对成本敏感的独立开发者吸引力大。", link: "https://github.com/Hmbown/DeepSeek-TUI"}
+    ],
+    openclawVendors: [
+      {name: "OpenClaw 2026.5.2 + CVE-2026-25253补丁", vendor: "OpenClaw", time: "05-03", desc: "5月3日发布2026.5.2稳定版（外部插件安装加固、Doctor修复、热路径优化）。同期待披露CVE-2026-25253（CVSS 8.8，恶意链接一键RCE），影响<2026.1.29版本，已发布强制补丁。3月审计发现ClawHub有341个恶意skills。", link: "https://www.openclawplaybook.ai/blog/openclaw-2026-5-2-release-plugin-doctor-hot-paths/"}
+    ],
+    openclawProducts: [
+      {name: "OpenClaw 2026.5.4 Beta", time: "05-05", desc: "Google Meet实时音频和Voice Call增强（realtime voice loop）；Feishu/Discord/Slack多平台支持改进；控制面和WebChat加固；启动诊断改善；授权检查优化。OpenClaw正在快速迭代企业级功能。", link: "https://releasebot.io/updates/openclaw"},
+      {name: "OpenAI向OpenClaw开放ChatGPT订阅", time: "05-04", desc: "OpenAI向OpenClaw的320万用户开放ChatGPT Plus订阅（$23/月），通过GPT-5.4驱动OpenClaw自主Agent。Sam Altman于5月2日宣布。同日Anthropic封锁了Claude对OpenClaw的同类接入——两大厂商通过OpenClaw生态正面对抗。OpenClaw GitHub stars已达346,000。", link: "https://thenextweb.com/news/openai-openclaw-chatgpt-subscription-agent"},
+      {name: "DeerFlow 2.0字节跳动开源", time: "05-04", desc: "ByteDance开源的多Agent编排框架，支持深度研究和代码执行的SuperAgent harness，支持子Agent、沙箱、记忆、工具和消息网关，可处理从分钟到小时级别的长周期任务。", link: "https://github.com/bytedance/deer-flow"}
+    ],
+    otherNews: [
+      {name: "扫描百万暴露AI服务：安全形势严峻", time: "05-05", desc: "安全研究扫描100万个暴露的AI服务发现：大量自托管LLM缺乏基本安全防护，企业数据泄露风险激增。这暴露了AI部署热潮背后的安全债务——企业跑得比安全快。", link: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html"},
+      {name: "Cursor ARR超$20亿 / Claude Code年化$25亿", time: "05-05", desc: "AI编程工具收入规模超越历史任何SaaS产品：Cursor ARR已于2月超$20亿，Claude Code年化收入$25亿。AI编程工具是第一个真正实现规模收入和正向 unit economics 的AI应用品类。", link: "https://en.wikipedia.org/wiki/Anysphere"}
+    ]
+  },
 
 
   {

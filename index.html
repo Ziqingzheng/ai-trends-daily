@@ -1103,15 +1103,29 @@ const reports = [
     {
     date: "2026-05-08",
     title: "2026.05.08 AI 产品趋势调研",
-    summary: "xAI解散重塑算力格局，Claude Dreaming开启Agent自演进商用，Google正式下场",
-    tags: ["xAI解散", "Claude Dreaming", "Google Remy", "Spotify集成", "GitHub Trending"],
-    opportunities: [{"name":"Claude Dreaming","summary":"Claude Managed Agents新增Dreaming功能：Agent在idle时自动回顾session提炼模式主动改写memory，实现自演进","source":"Reuters / ZDNET","url":"https://www.reuters.com/business/retail-consumer/anthropic-unveils-dreaming-feature-help-its-ai-agents-self-improve-2026-05-06/","date":"2026-05-06"},{"name":"Google Remy (Gemini Agent)","summary":"Google内部测试代号Remy的24/7私人Agent，基于Gemini跨应用学习偏好并在授权下执行操作，是Google官方首次下场个人Agent战场","source":"Business Insider / 9to5Google","url":"https://www.businessinsider.com/google-ai-agent-openclaw-remy-gemini-assistant-2026-5","date":"2026-05-06"}],
-    products: [{"name":"xAI解散并入SpaceX","summary":"马斯克宣布解散xAI并入SpaceX更名为SpaceXAI，同时xAI将22万张GPU算力租赁给Anthropic，全球最大AI独角兽之一终结，算力格局重组","why":"纯独立AI公司商业逻辑受质疑，算力+模型+分发三位一体整合成为行业共识","source":"36氪 / 量子位 / 新浪财经","url":"https://36kr.com/p/3798593828477955","date":"2026-05-07"}],
-    openclawVendors: [{"name":"OpenClaw May 2026 更新","summary":"强化Google Meet实时音视频 + MCP协议改善 + 全平台性能提升","date":"2026-05-06","url":"https://releasebot.io/updates/openclaw"},{"name":"Memori Labs Agent记忆 → OpenClaw插件","summary":"通过v0.0.10深度集成，自动从Agent trace构建结构化记忆，跨OpenClaw/Hermes/Cursor/Codex通用","date":"2026-05-08","url":"https://www.prweb.com/releases/memori-labs-releases-new-agent-native-memory-infrastructure-automatically-creating-structured-memory-from-agent-trace-302765715.html"}],
-    openclawProducts: [{"name":"Spotify Save to Spotify CLI","summary":"OpenClaw/Claude Code用户可将日程笔记转化为播客保存至Spotify，消费级内容创作工作流首个规模化案例","date":"2026-05-07","url":"https://github.com/spotify/save-to-spotify"}],
-    otherNews: [{"name":"xAI解散并入SpaceX","summary":"马斯克解散xAI并入SpaceX更名为SpaceXAI，算力租赁给Anthropic，行业进入三位一体整合阶段","source":"36氪 / 量子位","url":"https://36kr.com/p/3798593828477955","date":"2026-05-07"},{"name":"agent-skills GitHub 3,062★/天","summary":"addyosmani发布生产级AI编程Agent工程技能库，覆盖lint/debug全流程，填补Cursor/Copilot与真实工程实践gap","source":"GitHub Trending","url":"https://github.com/addyosmani/agent-skills","date":"2026-05-08"}]
+    coreTrend: "xAI解散重塑算力格局，Claude Dreaming开启Agent自演进商用，Google正式下场",
+    tags: ["xAI解散", "Claude Dreaming", "Google Remy", "Spotify集成", "Agent自演进"],
+    opportunities: [
+        {title: "Claude Dreaming标志Agent进入自演进时代", desc: "Claude Managed Agents新增Dreaming功能——Agent在idle时自动回顾session提炼模式、主动改写memory，实现自我演进。这是第一个规模化商用的自演进机制，意味着Agent不再需要人类持续喂数据才能变强，是工具向数字员工的关键一跳。"},
+        {title: "Google下场认证个人Agent赛道战略价值", desc: "Google官方内测代号Remy的24/7私人Agent，定位与OpenClaw高度重叠。Remy的OS级系统权限是OpenClaw无法复制的护城河——个人Agent正式成为大厂战略方向，平台入口争夺将白热化。"}
+    ],
+    products: [
+        {name: "Anthropic Claude Dreaming", oneliner: "Claude新增Dreaming功能：Agent自动回顾历史session、提炼模式、主动改写memory实现自演进。", launchDate: "05-06", how: "Agent处于idle状态时自动激活Dreaming模式：回顾近期会话记录→识别行为模式→重写memory文件→下次启动加载优化后记忆。相当于人类睡觉时的记忆巩固，由AI自动完成。", why: "第一个规模化商用的Agent自演进机制。记忆从被动存取升级为主动自我改进，是数字员工化的关键技术节点。", link: "https://www.reuters.com/business/retail-consumer/anthropic-unveils-dreaming-feature-help-its-ai-agents-self-improve-2026-05-06/"},
+        {name: "Google Remy (Gemini Agent)", oneliner: "Google内测代号Remy的24/7私人Agent，基于Gemini跨应用学习用户偏好并在授权下执行操作。", launchDate: "05-06", how: "Remy深度集成至Google生态（Gmail/Calendar/YouTube/Chrome），可跨应用读取用户数据、学习偏好，在用户授权下执行具体操作（购物/日程/回复邮件）。员工内测阶段。", why: "Google首次官方下场个人Agent赛道，且定位与OpenClaw高度重叠。OS级系统权限是其独特护城河，意味着个人Agent正式成为大厂战略方向。", link: "https://www.businessinsider.com/google-ai-agent-openclaw-remy-gemini-assistant-2026-5"},
+        {name: "xAI解散并入SpaceX", oneliner: "马斯克宣布解散xAI并入SpaceX更名为SpaceXAI，同时xAI将22万张GPU算力租赁给Anthropic。", launchDate: "05-07", how: "xAI的Colossus超算继续运营，以算力出租形式与Anthropic合作；Grok模型以SpaceXAI品牌继续存在于SpaceX产品线。", why: "全球最大AI独角兽之一宣告终结。纯独立AI公司商业逻辑受质疑，算力+模型+分发三位一体整合成为行业共识。", link: "https://36kr.com/p/3798593828477955"}
+    ],
+    openclawVendors: [
+        {name: "OpenClaw May 2026大版本更新", vendor: "OpenClaw", time: "05-06", desc: "强化Google Meet实时音视频 + MCP协议改善 + Gateway/chat/diagnostics全平台性能提升，覆盖Windows/Slack/Telegram/Discord。", link: "https://releasebot.io/updates/openclaw"},
+        {name: "Memori Labs Agent原生记忆插件v0.0.10", vendor: "Memori Labs", time: "05-08", desc: "自动从Agent trace构建结构化记忆，通过OpenClaw plugin深度集成，可跨OpenClaw/Hermes/Cursor/Codex通用，代表记忆基础设施标准化的重要进展。", link: "https://www.prweb.com/releases/memori-labs-releases-new-agent-native-memory-infrastructure-automatically-creating-structured-memory-from-agent-trace-302765715.html"}
+    ],
+    openclawProducts: [
+        {name: "Spotify Save to Spotify CLI", time: "05-07", desc: "Spotify推出beta工具，用户可通过OpenClaw/Claude Code将日程/笔记转化为播客保存至Spotify——OpenClaw进入消费级内容创作工作流的首个规模化案例。", link: "https://github.com/spotify/save-to-spotify"}
+    ],
+    otherNews: [
+        {name: "GitHub Trending: agent-skills 3,062★/天", time: "05-08", desc: "addyosmani发布生产级AI编程Agent工程技能库，覆盖lint/debug全流程，填补Cursor/Copilot与真实工程实践之间的gap。", link: "https://github.com/addyosmani/agent-skills"}
+    ]
   },
-  //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
+  //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓ 每天在这里追加新记录，最新的放最上面  ↓↓↓
   //  ↓↓↓  OpenClaw 每天在这里追加新记录，最新的放最上面  ↓↓↓
   {
     date: "2026-04-22",

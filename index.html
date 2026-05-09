@@ -941,6 +941,33 @@
 
 const reports = [
 {
+  date: "2026-05-09",
+  title: "2026.05.09 AI 产品趋势调研",
+  coreTrend: "企业AI Agent从展示能力转向治理体系，安全和生命周期管理成入场门槛",
+  tags: ["\u4f01\u4e1aAgent", "\u5b89\u5168\u6cbb\u7406", "\u5168\u6808AI", "\u591aAgent\u534f\u4f5c"],
+  opportunities: [
+    {title: "Agent生命周期安全服务成为企业采购前置条件", desc: "企业开始要求Agent供应商提供完整的测试报告、操作日志、权限边界和人工干预机制。能否提供「Agent风险包」将成为进入大型企业的门票。"},
+    {title: "Agent从问答走向案例拥有权（Case Ownership）", desc: "新一代Agent不再只回答一个问题，而是成为某类客户问题的全程负责人——从接收、跨系统协调到最终解决。这意味着企业服务软件的新品类正在形成。"}
+  ],
+  products: [
+    {name: "Genesis AI GENE-26.5", oneliner: "全栈人形机器人公司推出26.5版模型", launchDate: "05-07", how: "Genesis AI同步自研模型（GENE-26.5）和人形机械手（与无锡科技合作），手型与人类手掌完全相同，可收集真实世界数据训练机器人执行烹饪、弹琴、解魔方等任务。模型和硬件全部自控，形成数据飞轮。", why: "机械手与人类手型一致意味着可获取其他机器人无法获取的训练数据量，形成真正的数据壁垒。前Mistral AI研究员任总裁、获Khosla 1.05亿美元种子轮，创始背景和技术路径在同类中最为稀缺。", link: "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/"},
+    {name: "HelloTriangle AI Agent", oneliner: "自然语言驱动的3D工程建模Agent", launchDate: "05-07", how: "用户用自然语言描述目标，系统自动生成Python代码执行，输出可编辑的3D参数化模型。工程师可对代码直接微调几何参数，结果通过链接分享，协作者在浏览器中直接查看交互式3D。", why: "将原本需要数小时的手动建模流程压缩到分钟级，同时保留工程师完全控制权——这是现有CAD工具做不到的平衡。比利时团队成员均有15年以上3D工程经验，产品化路径清晰。", link: "https://www.yuyjo.com/archives/63140"},
+    {name: "Sendbird Agent Steward", oneliner: "跨系统、跨渠道的企业案例全周期Agent", launchDate: "05-08", how: "运行在Delight.ai平台上的多Agent系统：一个主Agent协调多个子Agent，分别处理物流、退款、日程、后台系统等不同模块，同时保持跨渠道（电话/邮件/聊天）记忆连续性，在需要人工判断时自动转接。", why: "从「回答一个问题」到「拥有一个case直到解决」的转变，是客服Agent产品形态的重要迭代。Sendbird覆盖数万企业客户，产品直接进入已有客服工作流，而非需要单独采购。", link: "https://aiagentstore.ai/ai-agent-news/this-week"},
+    {name: "Cursor 3.3", oneliner: "Coding Agent上下文消耗可视化工具", launchDate: "05-07", how: "在Agent会话界面新增上下文使用分解视图，用户可直接看到Rules、Skills、MCP连接、子Agent各自占用了多少工作记忆。从而快速定位Agent表现差的原因：通常不是模型差，而是上下文太臃肿。", why: "这是首个将Coding Agent的内部运作透明化的产品，帮助团队从「换模型」转向「优化输入」。对Agent builder来说相当于性能诊断工具，可显著降低调试成本。", link: "https://aiagentstore.ai/ai-agent-news/this-week"}
+  ],
+  openclawVendors: [
+    {name: "AI Agent Store", vendor: "AI Agent Store", time: "05-08", desc: "AI Agent Store（AI AgentStore.ai）本周推出OpenClaw Starter Kit，提供社区验证过的配置文件，可帮助用户在几分钟内启动OpenClaw Agent，支持分享设置积累声誉后再开启付费，是首个结构化的OpenClaw生态应用市场。", link: "https://aiagentstore.ai/"}
+  ],
+  openclawProducts: [
+    {name: "OpenClaw Starter Kit", time: "05-08", desc: "OpenClaw Starter Kit在AI Agent Store上线，提供经过社区验证的开箱即用配置。用户可下载配置文件快速部署，同时向社区分享自己的配置以积累声誉（用于后续付费功能解锁）。", link: "https://aiagentstore.ai/"}
+  ],
+  otherNews: [
+    {name: "xAI解散并入SpaceX：22万GPU重新分配", time: "05-08", desc: "xAI团队解散并入SpaceX，约22万块GPU算力重新分配至SpaceX。合并后SpaceX向Anthropic提供额外算力，使Claude Code用户5小时使用限额翻倍（仅限付费用户），速度也有所提升。Musk的AI资源版图完成重新整合。", link: "https://www.qbitai.com/2026/05/413569.html"},
+    {name: "Microsoft Copilot Cowork登陆移动端并支持插件", time: "05-05", desc: "Microsoft宣布Copilot Cowork（与Anthropic合作设计的AI队友Agent）登陆iOS/Android，新增可复用技能和第三方插件支持。Agent可在邮件、会议、文档、工作流中执行多步骤任务。与5月1日全面上市的Agent 365形成高中低档完整覆盖。", link: "https://www.thurrott.com/a-i/335689/microsofts-copilot-cowork-agent-mobile-plugins-support"}
+  ],
+},
+
+{
     date: "2026-05-07", title: "2026.05.07 AI 产品趋势调研", coreTrend: "大厂同日押注Agent治理层，平台生态战开打",
     tags: ["Claude Design", "ServiceNow Otto", "AWS OpenAI Bedrock", "Agent治理", "Google A2A"],
     opportunities: [

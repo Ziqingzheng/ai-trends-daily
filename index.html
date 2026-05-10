@@ -939,13 +939,32 @@
 //                    name 产品/事件名、time 时间、desc 说明、link 链接
 // ===================================================================
 
-const reports = [
+const reports = [{
+  date: "2026-05-10",
+  title: "2026.05.10 AI 产品趋势调研",
+  coreTrend: "AI Agent自主支付从概念变现实，全球开源Agent生态加速爆发",
+  tags: ["Agent支付", "稳定币结算", "开源Agent", "企业Agent安全", "大厂资本布局"],
+  opportunities: [
+    {title: "Agent自主支付让AI从「工具」变成「经济行为者」", desc: "AWS Bedrock AgentCore Payments（集成Coinbase/Stripe）和Google Cloud Pay.sh本周相继上线，Agent可自主注册、用稳定币支付API——不再依赖人类开户绑卡。这是AI经济化的第一个生产级实现，即插即用、即用即付时代正式开启。"},
+    {title: "开源Agent工具链从极客玩具变成真实开发主流", desc: "DeepSeek-TUI一周Stars翻倍（8.7k→16.3k），ByteDance UI-TARS-desktop突破31k stars。开发者社区用脚投票，说明开源Agent正在进入真实工作流，而非只是演示项目。"}
+  ],
+  products: [
+    {name: "AWS Bedrock AgentCore Payments", oneliner: "首个让AI Agent自主用稳定币购买API的云平台", launchDate: "05-07", how: "内置于AWS Bedrock AgentCore，集成Coinbase CDP和Stripe Privy钱包，Agent可自主发现API、评估价格、用稳定币完成支付，全程无需人类介入账户管理。", why: "AWS/Coinbase/Stripe三方联手解决了身份验证和支付合规问题，Agent即插即用、即用即付的商业模式成为可能。API供应商首次迎来「无需人工销售对接」的AI客户。", link: "https://startupfortune.com/aws-and-google-cloud-just-made-ai-agents-stablecoin-buyers/"},
+    {name: "OpenAI GPT-Realtime-2", oneliner: "API内置实时语音Agent能力，支持70+语言同声传译", launchDate: "05-07", how: "GPT-Realtime-2内置GPT-5级推理；GPT-Realtime-Translate支持70+输入语言、13种输出语言同声传译；GPT-Realtime-Whisper提供实时语音转文字。三合一让开发者无需自研即可在App中嵌入语音Agent。", why: "GPT-5级推理首次进入实时语音API，端侧助手可处理复杂多步骤任务而非简单问答。70+语言同声传译对全球化客服是刚需，开发门槛从「自研模型」降到「调API」。", link: "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/"},
+    {name: "Meta Hatch", oneliner: "基于十年社交数据打造的常驻AI个人助手", launchDate: "05-09", how: "Meta内测代号「Hatch」的常驻AI Agent，基于Instagram和Facebook十年社交关系和互动偏好数据，为用户提供个性化服务，目标年底前向部分用户开放。", why: "社交平台首次将自有数据直接转化为AI助手资产。30亿+用户社交数据是任何其他AI公司都无法复制的护城河——个性化程度远超纯对话建立的助手。", link: "https://www.cryptointegrat.com/p/ai-news-may-8-2026"},
+    {name: "Cognizant Secure AI Services", oneliner: "首个面向大型企业的AI Agent全生命周期安全服务", launchDate: "05-07", how: "覆盖安全开发、治理框架和规模化部署三大环节，解决「传统安全模型无法应对AI系统概率性和上下文驱动特性」的核心矛盾，帮助企业将Agent嵌入决策和核心工作流。", why: "企业Agent落地遇到的不是模型问题，是安全合规问题。Cognizant拥有全球大型企业客户网络，这是AI安全治理赛道首个大型咨询公司级产品——企业AI安全从「可选」变成「必选」。", link: "https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems"}
+  ],
+  openclawVendors: [],
+  openclawProducts: [
+    {name: "DeepSeek-TUI", time: "05-08至05-09", desc: "开源Terminal代码助手，一周内GitHub Stars从8.7k飙升至16.3k（翻倍）。运行在命令行，支持多模型后端，适合本地轻量化开发场景。", link: "https://github.com"},
+    {name: "ByteDance UI-TARS-desktop", time: "05-07至05-09", desc: "字节跳动开源多模态桌面Agent，GitHub突破31k stars，支持视觉理解+桌面操作自动化，可控制GUI应用完成复杂任务，是目前最热门的开源桌面Agent项目之一。", link: "https://github.com"}
+  ],
+  otherNews: [
+    {name: "NVIDIA 2026年已承诺$400亿投资AI企业", time: "05-09", desc: "NVIDIA年内外投已超$400亿（含$300亿OpenAI），同步向Corning、IREN等基础设施公司注资。算力军备竞赛持续升温，AI行业资本格局加速分化。", link: "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/"},
+    {name: "Moonshot AI完成$20亿融资，估值$200亿", time: "05-07", desc: "月之暗面（Kimi开发方）完成约$20亿融资，美团龙珠领投，估值突破$200亿，成为中国估值最高的AI创业公司。Kimi K2.6开源模型持续对标OpenAI/Anthropic。", link: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/"}
+  ],
+},
 
-{
-n  date: "2026-05-10",n  title: "2026.05.10 AI 产品趋势调研",n  coreTrend: "AI Agent自主支付从概念变现实，全球开源Agent生态加速爆发",n  tags: ["Agent支付", "稳定币结算", "开源Agent", "企业Agent安全", "大厂资本布局"],n  opportunities: [n    {title: "Agent自主支付让AI从「工具」变成「经济行为者」", desc: "AWS Bedrock AgentCore Payments（集成Coinbase/Stripe）和Google Cloud Pay.sh本周相继上线，Agent可自主注册、用稳定币支付API——不再依赖人类开户绑卡。这是AI经济化的第一个生产级实现，即插即用、即用即付时代正式开启。"},n    {title: "开源Agent工具链从极客玩具变成真实开发主流", desc: "DeepSeek-TUI一周Stars翻倍（8.7k→16.3k），ByteDance UI-TARS-desktop突破31k stars。开发者社区用脚投票，说明开源Agent正在进入真实工作流，而非只是演示项目。"}n  ],n  products: [n    {name: "AWS Bedrock AgentCore Payments", oneliner: "首个让AI Agent自主用稳定币购买API的云平台", launchDate: "05-07", how: "内置于AWS Bedrock AgentCore，集成Coinbase CDP和Stripe Privy钱包，Agent可自主发现API、评估价格、用稳定币完成支付，全程无需人类介入账户管理。", why: "AWS/Coinbase/Stripe三方联手解决了身份验证和支付合规问题，Agent即插即用、即用即付的商业模式成为可能。API供应商首次迎来「无需人工销售对接」的AI客户。", link: "https://startupfortune.com/aws-and-google-cloud-just-made-ai-agents-stablecoin-buyers/"},n    {name: "OpenAI GPT-Realtime-2", oneliner: "API内置实时语音Agent能力，支持70+语言同声传译", launchDate: "05-07", how: "GPT-Realtime-2内置GPT-5级推理；GPT-Realtime-Translate支持70+输入语言、13种输出语言同声传译；GPT-Realtime-Whisper提供实时语音转文字。三合一让开发者无需自研即可在App中嵌入语音Agent。", why: "GPT-5级推理首次进入实时语音API，端侧助手可处理复杂多步骤任务而非简单问答。70+语言同声传译对全球化客服是刚需，开发门槛从「自研模型」降到「调API」。", link: "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/"},n    {name: "Meta Hatch", oneliner: "基于十年社交数据打造的常驻AI个人助手", launchDate: "05-09", how: "Meta内测代号「Hatch」的常驻AI Agent，基于Instagram和Facebook十年社交关系和互动偏好数据，为用户提供个性化服务，目标年底前向部分用户开放。", why: "社交平台首次将自有数据直接转化为AI助手资产。30亿+用户社交数据是任何其他AI公司都无法复制的护城河——个性化程度远超纯对话建立的助手。", link: "https://www.cryptointegrat.com/p/ai-news-may-8-2026"},n    {name: "Cognizant Secure AI Services", oneliner: "首个面向大型企业的AI Agent全生命周期安全服务", launchDate: "05-07", how: "覆盖安全开发、治理框架和规模化部署三大环节，解决「传统安全模型无法应对AI系统概率性和上下文驱动特性」的核心矛盾，帮助企业将Agent嵌入决策和核心工作流。", why: "企业Agent落地遇到的不是模型问题，是安全合规问题。Cognizant拥有全球大型企业客户网络，这是AI安全治理赛道首个大型咨询公司级产品——企业AI安全从「可选」变成「必选」。", link: "https://news.cognizant.com/2026-05-07-Cognizant-Launches-Secure-AI-Services-to-Help-Enterprises-Safely-Scale-Agentic-Systems"}
-  ],n  openclawVendors: [],n  openclawProducts: [n    {name: "DeepSeek-TUI", time: "05-08至05-09", desc: "开源Terminal代码助手，一周内GitHub Stars从8.7k飙升至16.3k（翻倍）。运行在命令行，支持多模型后端，适合本地轻量化开发场景。", link: "https://github.com"},n    {name: "ByteDance UI-TARS-desktop", time: "05-07至05-09", desc: "字节跳动开源多模态桌面Agent，GitHub突破31k stars，支持视觉理解+桌面操作自动化，可控制GUI应用完成复杂任务，是目前最热门的开源桌面Agent项目之一。", link: "https://github.com"}
-  ],n  otherNews: [n    {name: "NVIDIA 2026年已承诺$400亿投资AI企业", time: "05-09", desc: "NVIDIA年内外投已超$400亿（含$300亿OpenAI），同步向Corning、IREN等基础设施公司注资。算力军备竞赛持续升温，AI行业资本格局加速分化。", link: "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/"},n    {name: "Moonshot AI完成$20亿融资，估值$200亿", time: "05-07", desc: "月之暗面（Kimi开发方）完成约$20亿融资，美团龙珠领投，估值突破$200亿，成为中国估值最高的AI创业公司。Kimi K2.6开源模型持续对标OpenAI/Anthropic。", link: "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/"}
-  ],n},
 {
   date: "2026-05-09",
   title: "2026.05.09 AI 产品趋势调研",

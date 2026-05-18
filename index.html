@@ -1248,7 +1248,12 @@ const reports = [{
     }
   ],
   openclawProducts: [
-    
+    {
+      name: "ClawX v0.4.3-alpha.2",
+      time: "05-13",
+      desc: "基于OpenClaw的图形化AI助手，05-13发布alpha版。提供GUI界面让用户更直观地使用OpenClaw能力，降低上手门槛。",
+      link: "https://github.com/ValueCell-ai/ClawX/releases"
+    },
     {
       name: "Clawpatch acpx provider",
       time: "05-17",
@@ -1287,15 +1292,55 @@ const reports = [{
     }
   ],
   products: [
-    
-    
-    
-    ],
+    {
+      name: "Google I/O 2026 确认发布内容",
+      oneliner: "5月19日I/O确认：Android XR眼镜、Gemini最新模型（预期Gemini 4.0）、Aluminium OS",
+      launchDate: "05-17",
+      how: "确认发布：Android XR眼镜（联合三星）、最新Gemini模型更新（预期Gemini 4.0）、Agentic Coding工具链扩展。预期：Aluminium OS（ChromeOS替代品）、Google Cloud Agent Toolkit扩展。",
+      why: "这是Google今年最重要的开发者大会。Gemini 4.0如果发布，将是GPT-5.5发布后大厂模型的首次正面交锋。Android XR眼镜代表AI+硬件的新形态。",
+      link: "https://aitoolsrecap.com/Blog/ai-news-may-17-2026"
+    },
+    {
+      name: "OpenAI探索AI硬件设备",
+      oneliner: "OpenAI正探索「AI优先设备」，完全消除传统App界面，与MediaTek/Qualcomm合作芯片",
+      launchDate: "05-17",
+      how: "OpenAI被报道正与MediaTek和Qualcomm合作，探索「AI优先设备」——完全消除传统App界面，转向常驻AI层。设备形态尚未确定，可能是独立硬件或参考设计。",
+      why: "OpenAI做硬件意味着AI交互形态从屏幕内的App扩展到物理设备。如果成功，OpenAI将成为类似苹果的硬件+软件一体化公司，直接与苹果生态竞争。",
+      link: "https://aitoolsrecap.com/Blog/ai-news-may-17-2026"
+    },
+    {
+      name: "Meta Avocado 5月窗口关闭",
+      oneliner: "Meta AI助手Avocado内部测试性能不足，5月发布窗口关闭，6月发布概率最大",
+      launchDate: "05-17",
+      how: "内部测试显示Avocado性能仅在Gemini 2.5和3.0之间，不足以与GPT-5.5或Claude Opus 4.7正面竞争。Meta决定不在5月发布，团队继续打磨。",
+      why: "Meta在5月的发布时间窗口关闭，说明大厂在AI助手上仍然谨慎，质量优先于速度。对比Anthropic Claude Code ARR $25亿，Meta的变现压力在上升。",
+      link: "https://aitoolsrecap.com/Blog/ai-news-may-17-2026"
+    },
+    {
+      name: "MiniMax M2.5 开源版",
+      oneliner: "MiniMax发布M2.5 SOTA编程与Agent模型，同步入驻HuggingFace",
+      launchDate: "05-17",
+      how: "MiniMax发布M2.5编程与Agent模型，专为Agent Universe设计，已同步在HuggingFace和GitHub开源，支持私有集群部署和微调。",
+      why: "中国AI公司继续在开源编程Agent领域发力，与DeepSeek V4形成竞争。对HuggingFace生态来说，中国开源模型是不可忽视的力量。",
+      link: "https://huggingface.co/MiniMaxAI/MiniMax-M2.1"
+    }
+  ],
   openclawVendors: [],
   openclawProducts: [],
   otherNews: [
-    
-    ]
+    {
+      name: "Google I/O 2026前瞻",
+      time: "05-17",
+      desc: "Google I/O 2026确认5月19日开幕，确认发布Android XR眼镜预览、最新Gemini模型更新、Agentic Coding。预期Gemini 4.0、Aluminium OS详情、Google Cloud Agent工具包扩展。",
+      link: "https://aitoolsrecap.com/Blog/ai-news-may-17-2026"
+    },
+    {
+      name: "GenZ AI创业融资热潮",
+      time: "05-17",
+      desc: "投资界复盘16个GenZ AI创业团队融资，百万级密集出现，社交仍最热赛道。Series产品利用iMessage内置AI Agent连接用户与联合创始人、导师和雇主，已获25万用户。",
+      link: "https://news.pedaily.cn/202605/563957.shtml"
+    }
+  ]
 },
 
 {
@@ -1333,17 +1378,55 @@ const reports = [{
       why: "亚马逊正式从AI聊天机器人转向购物Agent。AI购物助手从「极客玩具」变成「大众日常工具」。",
       link: "https://www.cnbc.com/2026/05/13/amazon-ditches-rufus-ai-chatbot-in-favor-of-alexa-shopping-agent.html"
     },
-    
-    ],
+    {
+      name: "OpenAI Codex移动端",
+      oneliner: "OpenAI将Codex编程Agent接入ChatGPT手机App，实现跨设备实时协作",
+      launchDate: "05-14",
+      how: "在ChatGPT手机App中连接运行Codex的开发机，实时查看Codex的工作进展（截图、终端输出、diff、测试结果），随时批准命令或调整方向。支持iOS和Android，所有ChatGPT计划均可用。",
+      why: "每周超过400万人使用Codex。手机端实时协作让开发者随时随地推进开发进度，AI编程工具从「桌面专属」走向「随时随地」。",
+      link: "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/"
+    },
+    {
+      name: "OpenAI ChatGPT个人理财",
+      oneliner: "OpenAI在ChatGPT中推出个人理财仪表盘，Pro用户可连接12000+金融机构",
+      launchDate: "05-15",
+      how: "Pro用户通过Plaid连接银行账户，ChatGPT展示预算分析，投资建议，大额决策建议和订阅费用监控。所有数据在用户控制下，支持超过12000家金融机构。",
+      why: "2亿月活用户已在用ChatGPT处理财务问题，正式产品化让AI理财建议有真实数据支撑。GPT-5.5的推理能力在此场景首次产生直接商业价值。",
+      link: "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/"
+    }
+  ],
   openclawVendors: [
     
-    ],
+    {
+      name: "OpenClaw subagent任务可见性改进",
+      vendor: "OpenClaw",
+      time: "05-15",
+      desc: "subagent任务以native形式在子会话首次可见消息中传递，而非隐藏在系统提示符中，提升任务委托的审计透明度，同时减少重复token消耗。",
+      link: "https://github.com/openclaw/openclaw/releases"
+    }
+  ],
   openclawProducts: [
     ],
   otherNews: [
-    
-    
-    ]
+    {
+      name: "Recursive Superintelligence融资6.5亿美元",
+      time: "05-13至05-14",
+      desc: "AI安全研究员Richard Socher创立递归超智能公司，GV和Greycroft领投，Nvidia和AMD跟投，估值46.5亿美元。目标构建AI自动识别自身弱点并自主重新设计修复的系统。",
+      link: "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/"
+    },
+    {
+      name: "Cerebras IPO首日股价暴涨68%",
+      time: "05-14",
+      desc: "Cerebras在纳斯达克上市，上市首日股价飙升68%，市值突破预期。S-1披露其晶圆级芯片专为AI训练优化，已获政府超级计算合同。",
+      link: "https://www.sec.gov/Archives/edgar/data/2021728/000162828026025762/cerebras-sx1april2026.htm"
+    },
+    {
+      name: "Runway押注世界模型转型",
+      time: "05-15",
+      desc: "Runway从AI视频生成工具转向世界模型（world model）构建。认为视频数据比语言更能代表现实世界的物理规律，已与Lionsgate等媒体巨头签约。",
+      link: "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/"
+    }
+  ]
 },
 
 {
@@ -1407,7 +1490,13 @@ const reports = [{
     }
   ],
   openclawProducts: [
-    ],
+    {
+      name: "NemoClaw：NVIDIA企业级Agent运行安全边界",
+      time: "05-14",
+      desc: "NVIDIA更新NemoClaw文档，在OpenShell内提供企业级Agent运行安全边界，适用于金融/医疗等强合规场景。Credential存储隔离、运行时审计、合规边界等企业安全能力，处于早期预览阶段。",
+      link: "https://github.com/NVIDIA/NemoClaw"
+    }
+  ],
   otherNews: [
     {
       name: "百度Create 2026：DAA指标成AI时代新度量衡",
@@ -1415,7 +1504,13 @@ const reports = [{
       desc: "百度提出「日活智能体数（DAA）」作为AI时代核心指标——AI的价值不在于多少用户打开App，而在于有多少AI Agent在持续为用户工作。如果DAA成为行业标准，AI公司估值逻辑和商业模式都将重写。",
       link: "https://www.stocktitan.net/news/BIDU/baidu-advances-agent-portfolio-to-embrace-the-agent-era-champions-aedc0jjigch1.html"
     },
-    ]
+    {
+      name: "OpenAI DeployCo：企业AI落地专业公司正式成立",
+      time: "05-12",
+      desc: "OpenAI宣布成立OpenAI DeployCo，专注帮助企业将前沿AI模型转化为可测量的业务成果。收购Tomoro获得150名Forward Deployed Engineers，联手McKinsey/Bain等19家伙伴，从「API模型公司」向「企业AI服务公司」延伸。",
+      link: "https://openai.com/index/openai-launches-the-deployment-company/"
+    }
+  ]
 },
 
 {

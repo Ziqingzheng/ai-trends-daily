@@ -940,6 +940,31 @@
 // ===================================================================
 
 const reports = [{
+  date: "2026-05-19",
+  title: "2026.05.19 AI 产品趋势调研",
+  coreTrend: "个人AI Agent从云端转向本地数据主权，平台安全成企业采购新门槛",
+  tags: ["本地AI Agent", "数据主权", "Coding安全", "Google I/O", "开源框架加速"],
+  opportunities: [
+    {title: "数据主权成新竞争维度", desc: "OpenHuman首个落地「本地优先」个人Agent（118+服务集成），AMD同步推进200B参数本地运行，软硬件合流，本地AI从概念走向可部署。"},
+    {title: "Coding安全成入场券", desc: "Codex Windows沙盒全面升级，Cursor删库事件后企业开始要求生产级安全边界而非「能跑就行」。"}
+  ],
+  products: [
+    {name: "OpenHuman", oneliner: "首个「上下文先行」个人Agent，上线即登GitHub Trending和Product Hunt", launchDate: "05-12至05-19", how: "auto-fetch每20分钟本地拉取数据（邮件/日历/GitHub等118+服务），Memory Trees压缩为Obsidian式Wiki，Agent第一天就有完整上下文，可选全本地运行。", why: "颠覆「AI需慢慢了解你」的旧范式，上线即个性化。118+服务集成+隐私优先是组合壁垒。", link: "https://github.com/tinyhumansai/openhuman"},
+    {name: "Superpowers", oneliner: "GitHub 17万stars的AI编程技能框架，把Coding Agent拉回工程规范", launchDate: "05-15至05-17", how: "将工程方法论（TDD→代码审查→子Agent协调→worktree并行）封装为可组合Skills，Agent从「代码生成器」变「资深工程师」。", why: "17万stars+Anthropic官方市场收录，Cursor删库事故的解药：让Coding Agent按方法论工作而非凭直觉执行。", link: "https://github.com/obra/superpowers"},
+    {name: "MEXC AI Strategy", oneliner: "全球首家零手续费交易所推出完全免费AI自主交易Agent", launchDate: "05-18", how: "用户零成本在MEXC平台调用AI Strategy执行自主交易，无需订阅或手续费。", why: "用「完全免费」打破AI交易工具价格壁垒，AI自主交易从专业工具变人人可用基础设施。", link: "https://www.openpr.com/news/4516646/mexc-launches-ai-strategy-advancing-its-end-to-end-ai-trading"},
+    {name: "AMD Ryzen AI Max", oneliner: "首款支持200B参数本地运行的AI PC平台，端侧Agent成为现实", launchDate: "05-19", how: "最小开发系统即可在无网络下运行200B参数模型，端侧AI推理不再需要云端。", why: "隐私敏感场景（医疗/法律）首次具备端侧Agent条件，本地AI从概念走向可部署产品。", link: "https://startupfortune.com/amds-tiny-ai-pc-points-to-a-more-local-future-for-model-inference/"}
+  ],
+  openclawVendors: [
+    {name: "OpenClaw v2026.5.12", vendor: "OpenClaw", time: "05-18", desc: "Gateway提速、Mac Settings增强、Codex运行时修复、QA-Lab覆盖扩大。", link: "https://github.com/openclaw/openclaw/releases"},
+    {name: "OpenClaw安全路线图", vendor: "OpenClaw", time: "05-15", desc: "全面安全升级，解决工具权限边界、子Agent追踪链路、cron可靠性等企业级安全核心问题。", link: "https://blockchain.news/news/openclaw-security-roadmap-2026"}
+  ],
+  openclawProducts: [],
+  otherNews: [
+    {name: "Google I/O 2026今日开幕", time: "05-19", desc: "Gemini 4.0预期发布，AI Agent工具链扩展为核心主线。", link: "https://io.google/2026/"},
+    {name: "Anthropic收紧Claude用量限制", time: "05-14", desc: "头部厂商从「扩大使用」转向「精细化管理」，AI资源竞争进入新阶段。", link: "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens"}
+  ],
+},
+
   date: "2026-05-10",
   title: "2026.05.10 AI 产品趋势调研",
   coreTrend: "AI Agent自主支付从概念变现实，全球开源Agent生态加速爆发",

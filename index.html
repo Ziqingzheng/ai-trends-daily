@@ -940,6 +940,101 @@
 // ===================================================================
 
 const reports = [{
+  {
+  date: "2026-05-21",
+  title: "2026.05.21 AI 产品趋势调研",
+  coreTrend: "大厂押注Agent推理速度战，Anthropic双线布局追赶",
+  tags: [
+    "Gemini 3.5 Flash",
+    "Qwen3.7-Max",
+    "Karpathy加入Anthropic",
+    "Agent速度竞争",
+    "Cursor Composer 2.5",
+  ]
+,
+  opportunities: [
+    {
+      title: "速度成Agent核心战场：Gemini 3.5 Flash 4倍速背后的产品逻辑",
+      desc: "Google于5月19日发布Gemini 3.5 Flash，主打\"前沿智能+即时行动\"。在Terminal-Bench 2.1（76.2%）、GDPval-AA（1656 Elo）等Agent基准上大幅领先，速度是其他前沿模型的4倍。社区估计约250-300B总参数/10-16B激活，使用FP4/FP8混合精度+TPU 8i。这标志着Agent竞争从\"基准刷分\"转向\"速度体验\"——用户愿意用稍低基准分换4倍响应速度。"
+    },
+    {
+      title: "Anthropic加速追赶：Karpathy加盟+收购Stainless双线布局",
+      desc: "Karpathy于5月19日宣布加入Anthropic，带来AutoResearch项目（LLM自主做科学研究），引发社区对\"AI for Science\"的强烈讨论（1404分，602评论）。加上05-18Anthropic收购API设计公司Stainless（强化开发者生态），Anthropic一周内完成人才+工具链双重布局，与OpenAI的全面竞争态势明朗。"
+    },
+  ]
+,
+  products: [
+    {
+      title: "Qwen3.7-Max（通义千问）",
+      date: "2026-05-21",
+      oneLine: "阿里发布Qwen3.7-Max，定位\"AI Agent前沿模型\"，在AA-omniscience基准上实现非幻觉率SOTA。",
+      how: "基于Qwen3系列继续优化，聚焦Agent任务中的指令遵循和多步推理能力。社区发现其通过\"拒绝回答\"规避幻觉风险，有用户指出：真正SOTA应该是\"既答对又多答\"，而非靠不回答来降幻觉。",
+      why: "通义千问在开源Agent模型中用户基数最大，此次Max版本专门为Agent任务优化，意味着开源Agent生态在推理可靠性上迈出一步。但\"拒绝式降幻觉\"也暴露了当前前沿模型的本质矛盾——能力越强幻觉越多，Agent落地仍需人工兜底。",
+      url: "https://news.ycombinator.com/item?id=48205626"
+    },
+    {
+      title: "Gemini 3.5 Flash（Google）",
+      date: "2026-05-19",
+      oneLine: "Google发布Gemini 3.5 Flash，主打4倍速+强Agent能力，今日全球开放。",
+      how: "使用混合专家架构（估计250-300B总参数/10-16B激活），FP4/FP8混合精度+TPU 8i。今日起在Gemini App、AI Mode、Google Antigravity（AI Agent平台）、Gemini Enterprise Agent Platform同步上线。3.5 Pro内部已测试，预计下月发布。",
+      why: "Gemini 3.5 Flash的最大意义是\"速度平权\"——把前沿级Agent能力（多步推理+代码生成+多模态）的响应时间从10秒压缩到2.5秒，让Agent应用从\"演示\"走向\"生产\"。4倍速不是噱头，而是决定了开发者是否愿意把Gemini用在高频Agent调用场景。",
+      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"
+    },
+    {
+      title: "Cursor Composer 2.5",
+      date: "2026-05-19",
+      oneLine: "Cursor推出Composer 2.5，公开使用Moonshot Kimi K2.5开源checkpoint，社区猜测下一步将接入xAI Grok。",
+      how: "Composer 2.5底层使用Kimi K2.5开源版本（Cursor首次公开承认外部代码模型来源）。社区热议：Cursor Composer 3或将接入SpaceX/xAI的Grok模型，由Elon Musk的合并后团队提供支持。",
+      why: "Cursor作为AI编程工具的头部产品，其模型选择是行业风向标。公开使用Kimi K2.5说明中国开源代码模型已获全球开发者认可。若Grok接入坐实，xAI将成为编程Agent赛道的重磅玩家。",
+      url: "https://news.ycombinator.com/item?id=48182516"
+    },
+    {
+      title: "Agora-1 Multi-Agent World Model（Odyssey）",
+      date: "2026-05-18",
+      oneLine: "Odyssey发布Agora-1，一个让多个AI Agent在共享虚拟环境中协同感知和决策的多智能体世界模型。",
+      how: "开发者或研究者可在Agora-1平台上创建多个AI Agent，赋予它们不同的角色和目标，让其在同一个虚拟世界中交互、协作和竞争。可用于模拟真实世界的多智能体场景（城市交通、分布式系统、多角色游戏）。",
+      why: "这是\"AI Agent社会\"的一次有形化尝试。与单Agent相比，Multi-Agent系统能模拟更复杂的社会行为——多角色协作、多方博弈、涌现行为。这是Agent从\"工具\"走向\"系统\"的关键一步，但目前更多面向研究者而非终端用户。",
+      url: "https://news.ycombinator.com/item?id=48183748"
+    },
+  ]
+,
+  openclawVendors: [
+    {
+      title: "智谱AI推出AutoClaw移动APP版",
+      date: "2026-05-19",
+      oneLine: "智谱AI（Zhipu AI）为其Agent平台AutoClaw推出独立移动APP，降低个人用户使用门槛。",
+      why: "AutoClaw基于OpenClaw生态构建，移动APP的推出意味着OpenClaw框架的个人用户场景进一步扩展。智谱AI是中国最早将OpenClaw产品化的厂商之一，APP化是Agent平台从开发者向消费者渗透的典型路径。",
+      url: "https://36kr.com/p/3817698479866757"
+    },
+  ]
+,
+  openclawProducts: []
+,
+  otherNews: [
+    {
+      title: "Karpathy加入Anthropic",
+      date: "2026-05-19",
+      oneLine: "AI传奇人物Andrej Karpathy宣布加入Anthropic，带来AutoResearch项目（LLM自主做科学研究）。",
+      productAngle: "AutoResearch让LLM在结构化评估框架下自主发现科学改进，类AlphaEvolve范式。社区讨论认为：结构化评估+LLM搜索确实能发现有用改进，但\"完全自主科研\"仍遥远。Karpathy的加入使Anthropic在人才层面与OpenAI的竞争达到新高度。",
+      url: "https://news.ycombinator.com/item?id=48194352"
+    },
+    {
+      title: "OpenAI采用SynthID水印（AI图片溯源）",
+      date: "2026-05-19",
+      oneLine: "OpenAI宣布采用Google的SynthID水印技术用于AI生成图片，并配套推出图片溯源验证工具。",
+      productAngle: "从\"监管博弈\"到\"行业标准\"：SynthID最初是Google的防御性工具，现在OpenAI主动采纳意味着AI图片溯源从技术竞争转向生态共识。未来所有主流图像生成工具（水印不可见但可检测）将成为标配，对内容平台和新闻媒体有重要意义。",
+      url: "https://news.ycombinator.com/item?id=48198291"
+    },
+    {
+      title: "GitHub 3800个仓库遭恶意VSCode扩展入侵",
+      date: "2026-05-21",
+      oneLine: "GitHub确认数千个代码仓库因恶意VSCode扩展被攻破，攻击者借此植入后门程序。",
+      productAngle: "这不只是安全事件，更是AI编程工具供应链的警示：随着Cursor、Copilot等工具深度集成VSCode生态，扩展商店成为新的攻击面。AI编程工具越普及，供应链安全越重要——Anthropic收购Stainless强化API安全，以及微软/GitHub收紧扩展审核，都是应对这一趋势的布局。",
+      url: "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/"
+    },
+  ]
+},
+
   date: "2026-05-20",
   title: "2026.05.20 AI \u4ea7\u54c1\u8d8b\u52bf\u8c03\u7814",
   coreTrend: "\u5927\u5382\u4e89\u593aSDK/\u5de5\u5177\u94fe\u63a7\u5236\u6743\uff0cAI\u7f16\u7a0b\u5de5\u5177\u8fdb\u516590%\u964d\u4ef7\u65f6\u4ee3",

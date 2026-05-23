@@ -1029,7 +1029,72 @@ const reports = [
     },
   ]
 },
-{
+  {
+  date: "2026-05-23",
+  title: "2026.05.23 AI 产品趋势调研",
+  coreTrend: "企业AI从狂热迈向成本管控，Multi-Agent工具链密集爆发",
+  tags: [
+    "企业AI成本危机",
+    "Multi-Agent IDE",
+    "Anthropic Glasswing",
+    "Superset YC P26",
+    "DeepSeek价格战",
+  ],
+  opportunities: [
+    {
+      title: "企业AI从狂热迈向成本管控：从「AI替代人」到「AI消耗失控」的认知反转",
+      desc: "微软取消Claude Code内部授权成标志性事件。HN热帖（156分114评论）揭示核心矛盾：无监督代理工厂模式Token消耗完全不可预测——8个开发者在一天内烧掉$2000没人知道怎么发生的。企业开始严肃审视AI ROI，「监督式人工协作」（人机同审每步输出）vs「无监督代理工厂」（并行跑10个代理无人看管）的成本效率差异被广泛讨论。这标志着AI落地从「狂热期」进入「精算期」，催生Token监控、成本审计、预算管控类工具需求。"
+    },
+    {
+      title: "Multi-Agent工具链密集发布：从「单代理」向「多代理协作平台」的范式转移",
+      desc: "05-21 YC Superset（并行IDE）+ KanBots（开源看板+并行Agent）密集发布，指向同一趋势：当开发者同时跑5-10个Agent时，「管理状态」本身成为瓶颈。Superset解决的是「多工作树+远程工作区+移动端管理」，KanBots解决的是「每张卡片跑独立Agent+MCP协议集成」。这不是功能迭代，而是Multi-Agent开发从「极客玩具」走向「工程实践」的拐点信号。Models.dev（开源模型数据库）则解决「选哪个模型」的决策痛点，与Superset/KanBots共同构成Multi-Agent工具链生态。"
+    },
+  ],
+  products: [
+    {
+      title: "Anthropic Glasswing Project",
+      date: "2026-05-22",
+      oneLine: "Anthropic安全研究项目Glasswing更新，Claude Mythos Preview单月发现10000+高危漏洞，英国AI安全研究所称其为「首个端到端完成网络攻防演练的模型」。",
+      how: "Glasswing是Anthropic的AI网络安全研究框架，Mythos Preview（旗舰模型）在Cloudflare测试中单月找到2000个bug，Firefox测试中找到271个（是Claude Opus 4.6的10倍以上），被英国AI安全研究所认证为「首个完成完整攻防闭环的AI系统」。开发者社区实测Codex Security：不到一周成为必备工具，90%准确率，持续扫描每次commit。",
+      why: "Glasswing的实战数据重新定义了「AI在安全领域的商业价值」——它不是噱头，而是已经在改变企业安全开发流程的生产工具。HN评论区开发者称「AI coding+AI review+AI vuln search」三位一体正在成为开发标配，AI安全工具从防御走向进攻（发现漏洞），再走向工程化（集成到CI/CD）。Anthropic在这条赛道已建立先发优势。",
+      url: "https://news.ycombinator.com/item?id=48240419"
+    },
+    {
+      title: "Superset（YC P26）",
+      date: "2026-05-21",
+      oneLine: "YC P26项目Superset发布——首个为Claude Code/Codex/OpenCode等编码代理设计的并行IDE，解决同时跑多个Agent时代的管理状态瓶颈。",
+      how: "Superset支持多工作树管理、远程工作区、任务追踪和移动端，让开发者可以在同一界面并行管理5-10个编码代理的工作状态。YC P26孵化，Launch HN热帖，解决的是Multi-Agent开发中「状态管理」这个新瓶颈——当每个Agent跑独立任务时，没有统一视图会导致严重的上下文丢失和重复劳动。",
+      why: "Superset的出现是「编码代理大众化」的里程碑事件。当Coding Agent从极客玩具变成团队标配工具时，Superset类管理平台就是刚需——就像Git不是代码管理工具一样，IDE本身需要有管理Agent的能力。这是YC率先看到的机会，也预示着未来IDE的标准功能之一就是「Agent管理器」。",
+      url: "https://news.ycombinator.com/item?id=48236770"
+    },
+    {
+      title: "KanBots",
+      date: "2026-05-21",
+      oneLine: "KanBots开源发布——在每张卡片上运行并行AI代理的看板桌面应用，支持Claude Code和Codex，本地优先（SQLite）+零遥测+MCP协议集成，MIT协议。",
+      how: "KanBots将看板的卡片概念与AI代理深度集成：每张卡片背后跑一个独立的Claude Code或Codex实例，支持Autopilot模式（多角色并行自演进开发）。本地SQLite存储，无遥测数据，MCP协议原生支持，可以在自己的服务器上私有部署。与Superset同一天发布，但定位不同：Superset面向「专业开发团队」，KanBots面向「个人开发者/极客」。",
+      why: "KanBots的开源策略（MIT+本地优先）抓住了开发者对「数据主权」的敏感点——当Agent处理的是公司代码时，没有人想让看板工具收集使用数据。这是与Notion AI、Linear AI等云端工具的本质差异。Multi-Agent看板是「工作流+AI」结合的最小可行产品形态，工程化门槛低但扩展性强。",
+      url: "https://news.ycombinator.com/item?id=48239413"
+    },
+  ],
+  openclawVendors: [],
+  openclawProducts: [],
+  otherNews: [
+    {
+      title: "Microsoft取消Claude Code企业授权",
+      date: "2026-05-22",
+      oneLine: "微软开始取消内部Claude Code授权，HN热帖（156分）揭示企业AI代理「无监督工厂模式」Token消耗失控的严峻现实。",
+      productAngle: "「Token预算失控」已成企业AI落地的首要挑战。有开发者用8行评论精准概括：「过去给士兵付工资，现在给子弹付弹药预算。」无监督并行Agent消耗的不可预测性，vs企业财务需要的可预测性，是根本矛盾。这会倒逼行业出现「Token审计」「Agent预算管控」类工具，也将使「监督式人机协作」重新成为企业首选模式，而非「无监督Agent工厂」。",
+      url: "https://news.ycombinator.com/item?id=48238896"
+    },
+    {
+      title: "DeepSeek V4 Pro价格永久化+Models.dev开源",
+      date: "2026-05-22",
+      oneLine: "DeepSeek将V4 Pro折扣价格永久化（HN 297分172评论），Models.dev开源模型数据库同步发布（HN 95分），共同构成开发者侧的「模型选择工具链」补全。",
+      productAngle: "DeepSeek V4 Pro永久降价是模型层价格战的延续，而Models.dev解决的是「我该选哪个模型」的信息不对称问题——两者结合意味着开发者可以在Models.dev上对比Claude Code、Codex、OpenCode及其背后模型的价格/性能比，再切换到DeepSeek V4 Pro的实际API使用。LiteLLM等代理工具成为这个链条的关键中间件，让跨模型动态调度成为现实。这条工具链的成熟，将使「永远选最便宜的模型」成为标准开发实践。",
+      url: "https://news.ycombinator.com/item?id=48237663"
+    },
+  ]
+},
   date: "2026-05-20",
   title: "2026.05.20 AI \u4ea7\u54c1\u8d8b\u52bf\u8c03\u7814",
   coreTrend: "\u5927\u5382\u4e89\u593aSDK/\u5de5\u5177\u94fe\u63a7\u5236\u6743\uff0cAI\u7f16\u7a0b\u5de5\u5177\u8fdb\u516590%\u964d\u4ef7\u65f6\u4ee3",

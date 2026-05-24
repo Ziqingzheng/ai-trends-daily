@@ -940,6 +940,150 @@
 // ===================================================================
 
 const reports = [
+{
+  date: "2026-05-24",
+  title: "2026.05.24 AI 产品趋势调研",
+  coreTrend: "Agent工具链加速分化，代码知识图谱和团队管理平台成新爆款赛道",
+  tags: [
+"codegraph",
+"Understand-Anything",
+"multica",
+"chrome-devtools-mcp",
+"Claude plugins",
+"Meta SAM 3",
+"Runtime",
+"Intuit裁员",
+"Anthropic Azure"
+  ],
+  opportunities: [
+{
+      title: "代码知识图谱：编程Agent的「第二大脑」赛道爆发",
+      summary: "codegraph和Understand-Anything同日登顶GitHub Trending，分别解决Agent代码理解和项目可视化问题，合计日增5000+ stars",
+      impact: "编程Agent进入「记忆增强」阶段，从被动工具变为主动推理助手",
+      url: "https://github.com/colbymchenry/codegraph",
+      date: "2026-05-24"
+    },
+{
+      title: "多Agent团队管理：从「管工具」到「管团队」的范式转移",
+      summary: "multica把编程Agent变成真正的团队成员，支持任务分配、进度追踪和技能积累，用户日均运行5-10个并行Agent",
+      impact: "企业多Agent工作流从实验走向生产，Agent编排平台成为新基础设施层",
+      url: "https://github.com/multica-ai/multica",
+      date: "2026-05-24"
+    }
+  ],
+  products: [
+{
+      title: "codegraph（colbymchenry）",
+      oneLiner: "给Claude/Cursor等编程Agent预建代码知识图谱，查询无需扫描文件",
+      how: "本地预索引代码符号关系图，Agent直接查询图而非grep/Read文件，工具调用减少70%",
+      why: "解决大代码库下Agent效率低、Token消耗高的问题，VS Code大仓实测Token降低73%、速度提升49%",
+      url: "https://github.com/colbymchenry/codegraph",
+      date: "2026-05-24",
+      stars: "19,479（今日+2,456）"
+    },
+{
+      title: "Understand-Anything（Lum1104）",
+      oneLiner: "把任意代码库转成交互式可视化知识图谱，支持Claude/Cursor/Codex等所有主流编程Agent插件",
+      how: "多Agent管道扫描项目，提取文件/函数/类/依赖关系生成图谱，提供可探索的Web仪表盘",
+      why: "帮助工程师和PM快速理解陌生代码库，降低大型项目 onboarding 成本",
+      url: "https://github.com/Lum1104/Understand-Anything",
+      date: "2026-05-24",
+      stars: "21,566（今日+2,299）"
+    },
+{
+      title: "multica（multica-ai）",
+      oneLiner: "开源多Agent团队管理平台，把编程Agent变成真正的团队成员",
+      how: "Agent有独立Profile、任务看板、评论和技能库，支持Squads分组+Leader路由，多Agent并行协作",
+      why: "解决多Agent并行时代的状态管理混乱问题，已有用户日均运行5-10个并行Agent",
+      url: "https://github.com/multica-ai/multica",
+      date: "2026-05-24",
+      stars: "31,928（今日+410）"
+    },
+{
+      title: "chrome-devtools-mcp（ChromeDevTools）",
+      oneLiner: "让AI编程Agent直接控制Chrome浏览器，自动化操作、截图、性能分析、JS调试",
+      how: "作为MCP Server暴露Chrome DevTools协议，AI可执行点击/截图/抓网络请求/录Performance Trace",
+      why: "填补编程Agent与真实浏览器环境的最后一公里，让Agent能操作Web应用和执行端到端测试",
+      url: "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      date: "2026-05-24",
+      stars: "41,335（今日+435）"
+    }
+  ],
+  openclawVendors: [],
+  openclawProducts: [
+{
+      title: "Andrej Karpathy Skills（multica-ai/andrej-karpathy-skills）",
+      oneLiner: "把Karpathy多年编程经验沉淀为单个CLAUDE.md文件，直接提升Claude Code表现",
+      how: "Karpathy基于自身LLM编程踩坑经验写成行为指南，Claude Code加载后自动规避常见陷阱",
+      why: "顶级AI教育者首次系统化分享编程Agent最佳实践，GitHub日增266 stars",
+      url: "https://github.com/multica-ai/andrej-karpathy-skills",
+      date: "2026-05-24",
+      stars: "2,750（今日+266）"
+    },
+{
+      title: "Anthropic Claude Plugins官方目录",
+      oneLiner: "Anthropic官方维护的Claude Code高质量插件市场，含内部插件和第三方合作伙伴插件",
+      how: "通过Claude Code的/plugin install直接安装，Anthropic官方审核把关质量",
+      why: "标志Anthropic从工具公司向生态平台转型，插件经济开始形成",
+      url: "https://github.com/anthropics/claude-plugins-official",
+      date: "2026-05-24",
+      stars: "26,453（今日+2,193）"
+    },
+{
+      title: "Anthropic Cybersecurity Skills（754个安全Agent技能库）",
+      oneLiner: "给AI Agent的754个网络安全技能库，映射到MITRE ATT&CK/NIST CSF 2.0等5大安全框架",
+      how: "agentskills.io标准格式，YAML元数据+N路框架映射，Claude/Cursor/Copilot直接使用",
+      why: "企业安全Agent落地加速，安全团队可以把专业经验资产化为可复用的Agent能力",
+      url: "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      date: "2026-05-24",
+      stars: "7,422（今日+281）"
+    }
+  ],
+  otherNews: [
+{
+      title: "Meta SAM 3：任意概念的图像分割",
+      summary: "Meta发布SAM 3，支持文本、点击和任意概念驱动的图像分割，GitHub日增1500+ stars",
+      productAnalysis: "从「点击分割」升级到「语义理解分割」，降低专业图像编辑门槛，非设计师也能精确抠图",
+      url: "https://github.com/facebookresearch/segment-anything-3",
+      date: "2026-05-22"
+    },
+{
+      title: "Runtime（YC P26）：为团队每位成员提供沙箱化编码Agent",
+      summary: "YC P26团队产品，为团队每位成员提供隔离的沙箱化编码Agent，解决个人Agent无法团队协作的问题",
+      productAnalysis: "与Superset互补——Superset管理多Agent并行，Runtime管理多成员各自的Agent资产",
+      url: "https://www.runtm.com/",
+      date: "2026-05-21"
+    },
+{
+      title: "Microsoft×OpenAI：ChatGPT for PowerPoint正式上线",
+      summary: "OpenAI为Microsoft PowerPoint推出官方集成插件，用户可在PPT内通过侧边栏用对话生成/编辑幻灯片",
+      productAnalysis: "Microsoft Office全家桶AI化再下一城，AI助手从Excel扩展到PPT，办公AI落地进入深水区",
+      url: "https://www.theverge.com/2026/5/21/ai-powerpoint-chatgpt",
+      date: "2026-05-21"
+    },
+{
+      title: "Intuit裁员3000+员工，全面转向AI",
+      summary: "财会软件巨头Intuit宣布裁员约17%员工，CEO在内部备忘录中明确表示裁员是为了聚焦AI战略",
+      productAnalysis: "继Klarna之后，又一大型企业以AI为由大规模裁员，白领知识工作AI替代进入实质阶段",
+      url: "https://www.theverge.com/2026/5/20/intuit-layoffs-ai",
+      date: "2026-05-20"
+    },
+{
+      title: "Anthropic洽谈使用Microsoft Azure算力",
+      summary: "The Information报道，Anthropic除SpaceX合同外，正在洽谈租用微软Azure服务器，扩大算力来源",
+      productAnalysis: "大模型厂商算力竞争加剧，Anthropic多元化供应商以对冲供应链风险，也反映GPU资源仍极度稀缺",
+      url: "https://www.theverge.com/2026/5/21/anthropic-microsoft-azure-chips",
+      date: "2026-05-21"
+    },
+{
+      title: "OpenAI安全负责人Aleksander Madry离职",
+      summary: "OpenAI前安全负责人（preparedness head）Madry宣布离职，将创业聚焦于AI对经济的影响研究",
+      productAnalysis: "OpenAI近期安全团队连续动荡，Madry的去向（研究AI经济影响）也暗示业界开始正视AI就业冲击问题",
+      url: "https://www.theverge.com/2026/5/21/openai-madry-departs",
+      date: "2026-05-21"
+    }
+  ]
+},
   {
   date: "2026-05-21",
   title: "2026.05.21 AI 产品趋势调研",

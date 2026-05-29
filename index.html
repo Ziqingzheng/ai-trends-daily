@@ -3050,7 +3050,59 @@ function renderPagination(totalPages) {
 }
 
 // 详情页渲染
+// 字段归一化：兼容历史报告中不一致的字段命名（title/url/date/oneLine 等），
+// 统一成渲染代码期望的 name/time/desc/link 等，避免出现 undefined。
+function pickField(obj, ...keys) {
+  for (const k of keys) {
+    const v = obj[k];
+    if (v !== undefined && v !== null && v !== '') return v;
+  }
+  return '';
+}
+
+function fmtTime(t) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(t));
+  return m ? `${m[2]}-${m[3]}` : t;
+}
+
+function normalizeReport(report) {
+  const r = { ...report };
+  r.opportunities = (report.opportunities || []).map(o => ({
+    title: pickField(o, 'title', 'name'),
+    desc:  pickField(o, 'desc', 'oneLine', 'summary', 'oneliner')
+  }));
+  r.products = (report.products || []).map(p => ({
+    name:       pickField(p, 'name', 'title'),
+    launchDate: fmtTime(pickField(p, 'launchDate', 'date', 'time')),
+    oneliner:   pickField(p, 'oneliner', 'oneLine', 'oneLiner', 'summary'),
+    how:        pickField(p, 'how'),
+    why:        pickField(p, 'why', 'productAngle', 'productAnalysis'),
+    link:       pickField(p, 'link', 'url')
+  }));
+  r.openclawVendors = (report.openclawVendors || []).map(v => ({
+    name:   pickField(v, 'name', 'title'),
+    vendor: pickField(v, 'vendor'),
+    time:   fmtTime(pickField(v, 'time', 'date')),
+    desc:   pickField(v, 'desc', 'oneLine', 'summary', 'oneliner'),
+    link:   pickField(v, 'link', 'url')
+  }));
+  r.openclawProducts = (report.openclawProducts || []).map(p => ({
+    name: pickField(p, 'name', 'title'),
+    time: fmtTime(pickField(p, 'time', 'date')),
+    desc: pickField(p, 'desc', 'oneLine', 'oneLiner', 'summary'),
+    link: pickField(p, 'link', 'url')
+  }));
+  r.otherNews = (report.otherNews || []).map(n => ({
+    name: pickField(n, 'name', 'title'),
+    time: fmtTime(pickField(n, 'time', 'date')),
+    desc: pickField(n, 'desc', 'oneLine', 'summary', 'oneliner'),
+    link: pickField(n, 'link', 'url')
+  }));
+  return r;
+}
+
 function renderDetail(report) {
+  report = normalizeReport(report);
   const container = document.getElementById('detail-content');
 
   let html = `

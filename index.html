@@ -941,6 +941,410 @@
 
 const reports = [
 {
+  "date": "2026-05-29",
+    "title": "2026.05.29 AI 产品趋势调研",
+    "coreTrend": "Anthropic 650亿美元融资刷新纪录，Claude Opus 4.8 可靠性成主战场",
+    "tags": [
+      "Claude Opus 4.8",
+      "Anthropic 650亿",
+      "DeepSeek价格战",
+      "ElevenLabs Music v2",
+      "Figma Make GA",
+      "YouTube AI标注"
+    ],
+    "opportunities": [
+      {
+        "title": "Claude Opus 4.8子智能体并行：大型代码库「一人11天重写75万行」成真",
+        "desc": "Anthropic于05-28发布Claude Opus 4.8，同步上线Dynamic Workflows功能，支持数百个子智能体并行工作、互相反驳迭代。核心改进：幻觉率降至前代1/4、fast mode价格降低3倍、Prompt Cache门槛降至1024 tokens。"
+      },
+      {
+        "title": "DeepSeek极致性价比策略：API价格战进入「买断制」时代",
+        "desc": "DeepSeek V4 Pro永久降价75%，对比Claude Sonnet/GPT-5.5输入便宜7倍、输出便宜17倍。V4 Flash以约1/50的成本达到接近前沿模型效果，OpenRouter排行榜登顶第一。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Claude Opus 4.8（Anthropic）",
+        "oneliner": "Anthropic旗舰模型05-28发布：幻觉率降至1/4、fast价格降3倍、支持数百子智能体并行",
+        "launchDate": "05-28",
+        "how": "诚实性大幅提升（幻觉率降至前代1/4）、过度自信行为概率降至1/10、工具调用能力增强、fast mode价格降低3倍、Prompt Cache门槛降至1024 tokens。Dynamic Workflows支持数百子智能体并行、互相反驳迭代。",
+        "why": "把可靠性变成产品，配合Dynamic Workflows大型代码库重写首次具备经济可行性——1人11天可重写75万行代码，Multi-Agent编程进入生产阶段。",
+        "url": "https://www.anthropic.com/news/claude-opus-4-8"
+      },
+      {
+        "name": "ElevenLabs Music v2",
+        "oneliner": "AI音乐生成器支持中途无缝切换音乐风格，仅用授权数据可商业使用",
+        "launchDate": "05-27",
+        "how": "支持歌曲中途切换风格（歌剧→金属等）、更快rap演唱、非音乐音效。所有内容仅使用授权数据训练，获得商业使用授权。",
+        "why": "解决了AI音乐版权争议行业最大障碍。独立音乐制作人可零成本生成配乐，商业化路径彻底打通。",
+        "url": "https://www.theverge.com/2026/5/27"
+      },
+      {
+        "name": "Figma Make 正式版（GA）",
+        "oneliner": "Figma AI编程工具支持GitHub双向同步，非工程师可可视化编辑生产代码",
+        "launchDate": "05-28",
+        "how": "连接GitHub仓库后设计稿和代码库双向同步，团队直接在Figma可视化界面上编辑并自动同步到生产代码库。新增精确布局、颜色、字体、效果编辑面板。",
+        "why": "解决设计-开发协作「代码是单向下发设计稿」的长期痛点，非工程师也可参与代码修改，降低技术协作门槛。",
+        "url": "https://www.theverge.com/2026/5/28/24047001/figma-make-ai-general-availability"
+      },
+      {
+        "name": "DeepSeek V4 Pro 永久降价75%",
+        "oneliner": "DeepSeek V4 Pro价格永久下调，对比Claude/GPT输入便宜7倍、输出便宜17倍",
+        "launchDate": "05-28",
+        "how": "V4 Pro价格永久降低75%。V4 Flash在OpenRouter排行榜登顶第一，周增长48%。对比Claude Sonnet/GPT-5.5-Med：输入成本便宜7倍，输出成本便宜17倍。",
+        "why": "V4 Flash以约1/50的成本达到接近前沿模型效果，「选最便宜的够用模型」正在成为标准开发实践。",
+        "url": "https://venturebeat.com/infrastructure/how-deepseks-radical-architecture-is-shattering-silicon-valleys-token-moat"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": [
+      {
+        "name": "Anthropic 完成650亿美元H轮融资，估值9650亿美元",
+        "time": "05-28",
+        "desc": "Anthropic获得史上最大AI融资，ARR已突破470亿美元（月加速：2月140亿→4月300亿→5月470亿），Claude Code/Cowork产品化加速。",
+        "link": "https://www.anthropic.com/news/series-h"
+      },
+      {
+        "name": "YouTube 上线AI生成内容自动标注功能",
+        "time": "05-27",
+        "desc": "YouTube推出AI内容自动识别标签，自动标注由AI生成或大幅修改的视频，无需创作者手动披露。AI透明度成平台合规新标配。",
+        "link": "https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/"
+      }
+    ]
+}
+{
+  "date": "2026-05-28",
+    "title": "2026.05.28 AI 产品趋势调研",
+    "coreTrend": "MCP协议争夺战开打，大厂 all in 工具链",
+    "tags": [
+      "FastVideo Dreamverse",
+      "Runway MCP",
+      "Claude Code v2.1.152",
+      "MiMo 2.5 Pro",
+      "Cognition 260亿",
+      "MCP协议"
+    ],
+    "opportunities": [
+      {
+        "title": "MCP服务器成AI Agent的「USB接口」：万众跑马圈地",
+        "desc": "OpenAI（企业私有MCP）、Runway（生成式视频）、Google Pay（支付）、Krea（图像生成）四家同日发布MCP服务器支持。MCP正从编程工具扩展到视频、支付、设计全场景。参考USB协议演进史——先标准化再规模化，现在是入场基础设施层的窗口期。"
+      },
+      {
+        "title": "开源视频生成性能突破：7秒30秒1080p背后的产品机会",
+        "desc": "清华Sky Computing Lab开源FastVideo Dreamverse，单卡B200实现7秒出30秒1080p。AI视频从「离线渲染」进入「实时直播」时代，将冲击短视频制作、直播、监控等领域的产品形态。"
+      }
+    ],
+    "products": [
+      {
+        "name": "FastVideo Dreamverse（清华/Sky Computing Lab）",
+        "oneliner": "单卡7秒生成30秒1080p，开源实时视频生成",
+        "launchDate": "05-27",
+        "how": "基于LTX-2模型+单张NVIDIA B200 GPU，氛围引导视频生成。用户输入文字/图像提示，7秒内输出30秒1080p视频。开源在GitHub上。",
+        "why": "当前最强开源视频生成速度记录，让AI视频从「离线渲染」走向「实时直播」。开源性质让任何团队可私有部署。",
+        "url": "https://github.com/hhaoyan/FastVideo"
+      },
+      {
+        "name": "Runway MCP服务器",
+        "oneliner": "AI Agent在对话里直接生成视频和图像",
+        "launchDate": "05-27",
+        "how": "Runway发布MCP协议服务器，兼容MCP的AI Agent（Claude、ChatGPT、Cursor等）可在对话中直接调用Runway的SOTA生成模型，无需切换到Runway网页端。",
+        "why": "填补AI Agent创意生成工具链空白——Agent想生成视频无需手动操作网页，可在对话流中无缝完成。Runway从「工具」升级为「基础设施」。",
+        "url": "https://runwayml.com/news/mcp"
+      },
+      {
+        "name": "Claude Code v2.1.152（Anthropic）",
+        "oneliner": "新增code-review直接修bug+skill热重载",
+        "launchDate": "05-27",
+        "how": "`/code-review --fix`可将审查建议直接应用到代码文件；`/reload-skills`支持不退出会话重新加载技能文件，调试技能循环更快。",
+        "why": "Code Review从「发现-复制-粘贴-修改」的手动流程，变成「发现-自动修复」的单键操作，大幅减少人工介入次数。",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.152"
+      },
+      {
+        "name": "MiMo 2.5 Pro永久降价99%（小米）",
+        "oneliner": "小米API价格与DeepSeek V4 Pro持平，token量增5-8倍",
+        "launchDate": "05-27",
+        "how": "MiMo V2.5系列API价格永久下调至DeepSeek V4 Pro同一档位，token套餐同价格可用量增加5-8倍。老用户额度全额重置。",
+        "why": "当顶级模型成本趋近于零，中小开发者涌入AI应用的门槛也趋近于零。MiMo以开源+低价切入，争夺价格敏感型开发者。",
+        "url": "https://x.com/kimmonismus/status/2059354372643975490"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "title": "Anthropic Claude Managed Agents（伦敦发布）",
+        "date": "05-25",
+        "oneLine": "Code w/ Claude London活动宣布两项新能力：自托管沙箱（公开测试版）允许企业将Agent运行在私有基础设施；MCP隧道（研究预览）让Agent可安全访问企业内网MCP服务器。",
+        "url": "https://www.anthropic.com/news"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "title": "Krea 2 API支持OpenClaw",
+        "oneLine": "Krea 2的图像生成API全面支持OpenClaw agent接入，配合fal、ComfyUI等工具，形成完整的OpenClaw图像生成工作流。",
+        "url": "https://krea.ai/blog/krea-2-api",
+        "date": "2026-05-27",
+        "stars": ""
+      },
+      {
+        "title": "Perplexity Unigram分词器开源",
+        "oneLine": "Perplexity重新设计分词器，CPU占用降低5-6倍，小型重排序和嵌入在GPU上仅需个位数毫秒，为边缘设备AI部署提供新基础设施。",
+        "url": "https://github.com/perplexity-ai/unigram",
+        "date": "2026-05-27",
+        "stars": ""
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Cognition成全球最大独立Agent实验室，估值260亿美元",
+        "time": "05-27",
+        "desc": "Devin背后公司Cognition完成超10亿美元新融资，Lux Capital等领投，估值达260亿美元。企业使用量年初以来增长10倍以上，年化收入增至4.92亿美元。",
+        "link": "https://x.com/swyx/status/2059717021944926238"
+      },
+      {
+        "name": "OpenAI企业私有MCP服务器安全连接",
+        "time": "05-27",
+        "desc": "企业团队可将MCP服务器保留在内部网络，ChatGPT、Codex和Responses API通过出站HTTPS连接访问，在不牺牲安全合规的前提下使用MCP生态。",
+        "link": "https://x.com/OpenAIDevs/status/2059703536825565499"
+      }
+    ]
+}
+{
+  "date": "2026-05-27",
+    "title": "2026.05.27 AI 产品趋势调研",
+    "coreTrend": "领域Agent工具密集落地，本地记忆基础设施成竞争新焦点",
+    "tags": [
+      "Minicor YC W26",
+      "RuView WiFi感知",
+      "ViMax视频生成",
+      "claude-mem",
+      "agentmemory",
+      "具身智能"
+    ],
+    "opportunities": [
+      {
+        "title": "垂直场景Agent工具链加速落地",
+        "desc": "Minicor（YC W26）将Claude Code/Codex接入Windows桌面RPA，解决无API遗留系统的自动化问题；RuView用$9 ESP32+WiFi CSI实现穿墙存在感知+心率监测。AI Agent正加速向物理世界和遗留企业系统两个垂直方向渗透，垂直Agent工具链是接下来6个月最确定的创业方向。"
+      },
+      {
+        "title": "AI Agent记忆基础设施成为竞争新焦点",
+        "desc": "本周GitHub Trending同时出现claude-mem（78k stars）、agentmemory（18k stars）和HN热帖「Agent Memory: An Anatomy」，三者共同指向同一问题——跨会话记忆是Agent从「演示」走向「生产」的核心瓶颈。记忆压缩、时序去重、跨会话知识继承等新工具赛道正在形成。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Minicor（YC W26）",
+        "oneliner": "让Claude Code/Codex直接操控Windows虚拟机做规模化RPA，解决无API遗留系统的自动化难题",
+        "launchDate": "05-26",
+        "how": "构建MCP Server连接Claude Code/Codex与Windows虚拟机，运行Python脚本执行RPA；内置VM克隆（并行执行）、2FA处理、Screenshot LLM验证；工作流代码化，支持版本控制、Slack通知和人工审核节点。",
+        "why": "企业有大量无API的Windows遗留系统（医疗、ERP，政府），Minicor让AI Agent直接操作GUI而非依赖API，是RPA领域的范式升级。",
+        "url": "https://news.ycombinator.com/item?id=48280729"
+      },
+      {
+        "name": "RuView（ruvnet）",
+        "oneliner": "把普通WiFi信号变成穿墙空间传感器，无需摄像头实时监测人员存在，呼吸和心率",
+        "launchDate": "05-22",
+        "how": "$9 ESP32设备读取WiFi信道状态信息（CSI），Hugging Face预训练模型（8KB量化版）推断是否有人、在哪，呼吸频率和心率；本地运行，接入Home Assistant/Apple Home等；每节点21个实体感知+10个语义状态。",
+        "why": "隐私敏感场景（养老院、婴儿监护、医疗机构）首次有了无需穿戴设备、无需摄像头的感知方案。$9成本+完全本地运行让大规模部署门槛极低。",
+        "url": "https://github.com/ruvnet/RuView"
+      },
+      {
+        "name": "ViMax（HKUDS）",
+        "oneliner": "一个AI同时当导演+编剧+制片人+视频生成器，从概念描述全自动产出完整视频故事",
+        "launchDate": "05-22",
+        "how": "多Agent管道：LLM先写剧本和分镜→AI生成角色和场景→视频生成模型输出；解决传统AI视频的一致性差、仅能生成短视频的问题；支持小说改编成系列视频、用户照片客串视频。",
+        "why": "AI视频工具从「生成一段」进化到「完成一个作品」，降低专业内容创作门槛。香港大学团队出品，用Multi-Agent协调替代单模型生成。",
+        "url": "https://github.com/HKUDS/ViMax"
+      },
+      {
+        "name": "Presenton",
+        "oneliner": "开源AI演示文稿生成器，可完全自托管或下载桌面端，支持PPTX导出",
+        "launchDate": "05-25",
+        "how": "支持OpenAI/Gemini/本地Ollama等任意模型，自带设计模板，Markdown/PDF上传生成PPT，可完全离线使用；开源Apache 2.0，Mac/Windows/Linux桌面端可直接下载。",
+        "why": "开源版Gamma/Beautiful.ai替代品，解决企业不愿把内部数据发给SaaS的问题。本地运行+PPTX全导出+自托管API，让它在数据合规敏感场景有独特价值。",
+        "url": "https://github.com/presenton/presenton"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "title": "claude-mem（thedotmack）",
+        "oneLine": "跨会话持久化记忆系统，支持OpenClaw等几乎所有主流AI coding agent，自动压缩会话记忆并在后续会话注入上下文。",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "date": "2026-05-22",
+        "stars": "78,660"
+      },
+      {
+        "title": "ECC v2.0-rc.1（affaan-m）",
+        "oneLine": "Agent性能优化框架，Anthropic Hackathon冠军，v2.0-rc.1新增Hermes operator，支持OpenClaw/Claude Code/Codex多harness。",
+        "url": "https://github.com/affaan-m/ECC",
+        "date": "2026-05-25",
+        "stars": "182,000+"
+      },
+      {
+        "title": "agentmemory（rohitg00）",
+        "oneLine": "AI编程agent持久化记忆方案，8+框架支持，Benchmark排名第一，明确列出OpenClaw为一级支持平台。",
+        "url": "https://github.com/rohitg00/agentmemory",
+        "date": "2026-05-22",
+        "stars": "18,229"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "AI语音克隆诈骗首例重大刑案",
+        "time": "05-26",
+        "desc": "旧金山女子被AI克隆女儿声音骗走数千美元。AI语音克隆进入犯罪实战阶段，成本低至几分钟音频即可生成高仿真声音，倒逼语音验证成为金融/安防场景的刚需合规项。",
+        "link": "https://sfist.com/2026/05/26/local-woman-bilked-out-of-thousands-after-scammers-clone-daughters-voice-with-ai/"
+      },
+      {
+        "name": "「Agent Memory: An Anatomy」深度解析Agent记忆系统原理",
+        "time": "05-27",
+        "desc": "独立开发者发布深度技术分析，从认知科学角度解构Agent记忆系统的Extractor/Store/Retriever三大组件。与本周claude-mem/agentmemory的Trending形成互证——记忆系统已是Agent领域的显学。",
+        "link": "https://brgsk.xyz/agent-memory-anatomy/"
+      }
+    ]
+}
+{
+  "date": "2026-05-26",
+    "title": "2026.05.26 AI 产品趋势调研",
+    "coreTrend": "企业AI安全漏洞从理论到实战，Agent混沌工程成管理盲区",
+    "tags": [
+      "Microsoft Copilot漏洞",
+      "Apple CVE Claude发现",
+      "Unabyss MCP",
+      "Edgee Claude Code网关",
+      "企业AI安全"
+    ],
+    "opportunities": [
+      {
+        "title": "AI Agent安全从「功能问题」变成「生产事故」",
+        "desc": "Microsoft Copilot Cowork被曝文件泄露漏洞（间接提示词注入），79%企业已部署AI Agent但缺乏混沌工程治理框架，41%企业AI项目将因风控不足被取消。企业AI安全不再是「合规问题」而是「生产可用性」问题。"
+      },
+      {
+        "title": "MCP生态加速分化——上下文管理成新细分赛道",
+        "desc": "Unabyss（MCP原生、自更新上下文）和Edgee（Claude Code Token压缩网关）同日出现，指向「Agent上下文管理」的标准化机会。MCP从协议层向应用层演进，上下文压缩/更新/管理成为独立产品机会。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Microsoft Copilot Cowork文件泄露漏洞",
+        "oneliner": "微软企业AI Agent被曝可通过间接提示词注入窃取文件，Claude Opus 4.7也受影响",
+        "launchDate": "05-25",
+        "how": "攻击者在被污染的Skill中植入间接提示词，绕过邮件/Teams发送的人工审批机制，自动将M365文件外发。整个过程无需受害者主动触发，AI在后台自主完成攻击。",
+        "why": "首个公开的、影响范围覆盖真实企业用户的大厂自有AI Agent安全漏洞。多系统集成的Agent产品天然比单点工具有更大的提示词注入攻击面。安全Agent（审查/隔离/监控）从合规需求变成生产必需。",
+        "url": "https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files"
+      },
+      {
+        "name": "Apple macOS CVE-2026-28952（Claude发现）",
+        "oneliner": "苹果macOS 26.5内核高危漏洞由Claude AI发现，AI驱动安全研究进入生产阶段",
+        "launchDate": "05-26",
+        "how": "Anthropic的Claude在安全研究过程中发现了macOS内核漏洞，苹果官方确认并发布CVE-2026-28952。漏洞属于内核级内存安全问题。",
+        "why": "首个主流媒体报道的「AI自主发现内核级CVE」案例。Claude Opus级别的推理能力能发现系统级漏洞，意味着AI安全Agent的商业价值远超辅助工具定位。",
+        "url": "https://news.ycombinator.com/item?id=48273169"
+      },
+      {
+        "name": "Unabyss（MCP原生上下文层）",
+        "oneliner": "MCP原生、自更新上下文的AI上下文层，让编程Agent始终持有最新代码状态",
+        "launchDate": "05-26",
+        "how": "基于Model Context Protocol构建，auto-fetch代码变更后主动更新Agent上下文，解决大项目下Agent上下文过时/不完整的问题。",
+        "why": "MCP协议层再进化。codegraph解决的是「预索引」，Unabyss解决的是「实时同步」——两者共同构成编程Agent的上下文基础设施层。",
+        "url": "https://www.producthunt.com/products/unabyss"
+      },
+      {
+        "name": "Edgee（Claude Code Token压缩网关）",
+        "oneliner": "Claude Code专用Agent网关，自动压缩Token消耗，帮企业节省AI调用成本",
+        "launchDate": "05-24",
+        "how": "在Claude Code和企业API之间插入网关层，智能压缩请求/响应Token，自动做上下文摘要，减少Claude Code的Token消耗（企业用例节省30-50%）。",
+        "why": "企业AI成本失控的核心原因是Token无序消耗。Edgee代表「AI成本管控」工具链的细分机会，继成本审计/监控之后，开始出现「Token网关」这个新品类。",
+        "url": "https://www.producthunt.com/products/edgee"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": [
+      {
+        "name": "VentureBeat：AI Agent正在产生企业无法追踪的混沌工程故障",
+        "time": "05-24",
+        "desc": "79%企业已部署AI Agent但缺乏对应混沌工程治理框架，自主修复Agent跳过了人工SLO检查直接触发基础设施故障。40%企业AI项目将因此被取消，催生「Agent混沌工程治理平台」机会。",
+        "link": "https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet"
+      },
+      {
+        "name": "Nolan Lawson：使用AI写代码实际上让你写得更慢",
+        "time": "05-25",
+        "desc": "实测发现AI辅助编程导致开发者过度依赖、上下文切换成本上升、代码可维护性下降。揭示了AI编程工具的「速度幻觉」问题——表面快了，但认知负担和代码债务实际上拖慢了长期开发速度。",
+        "link": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/"
+      }
+    ]
+}
+{
+  "date": "2026-05-25",
+    "title": "2026.05.25 AI 产品趋势调研",
+    "coreTrend": "DeepSeek缓存优化开辟编程Agent成本新范式",
+    "tags": [
+      "DeepSeek Reasonix",
+      "ByteDance Lance",
+      "Claude架构反思",
+      "Microsoft取消Claude Code"
+    ],
+    "opportunities": [
+      {
+        "title": "缓存稳定性成编程Agent核心竞争力",
+        "desc": "DeepSeek Reasonix实测435M tokens费用仅$12（原价$61），99.82%缓存命中率。关键洞察：真正优化不是开功能，而是让整个循环围绕字节级缓存稳定性设计。"
+      },
+      {
+        "title": "企业AI评估从「能力」转向「成本可控性」",
+        "desc": "微软取消Claude Code授权（HN 478分）+LLM后端脆弱性研究共同指向：Token审计和成本管控工具成企业刚需，人类监督式协作重新受重视。"
+      }
+    ],
+    "products": [
+      {
+        "name": "DeepSeek Reasonix",
+        "oneliner": "首个围绕缓存稳定性设计的DeepSeek原生编程Agent",
+        "launchDate": "05-24",
+        "how": "4层缓存优化机制+字节对齐工具调用，实测99.82%缓存命中，$12/天 vs 原价$61。npm安装即用。",
+        "why": "真正解决「Agent越用越贵」问题。HN 418分。",
+        "url": "https://github.com/esengine/DeepSeek-Reasonix"
+      },
+      {
+        "name": "Claude不是你的架构师",
+        "oneliner": "开发者反思：LLM擅长模仿代码，但无法做真正的架构决策",
+        "launchDate": "05-24",
+        "how": "HN热帖（228分172评论）：LLM在「理解+按规则扩展」优秀，但「权衡取舍、预判后果」等架构决策存在根本缺陷。",
+        "why": "社区从「AI能做什么」转向「AI不该做什么」，人类工程师在架构设计阶段价值凸显。",
+        "url": "https://news.ycombinator.com/item?id=48259784"
+      },
+      {
+        "name": "ByteDance Lance",
+        "oneliner": "字节跳动开源3B统一多模态模型，图像理解+生成+编辑一体化",
+        "launchDate": "05-24",
+        "how": "3B参数Any-to-Any架构，消费级GPU可运行。05-24上线HF，首日1.47k stars。",
+        "why": "字节首次在多模态融合领域拿出开源产品，三合一能力让多模态从Demo走向可用。",
+        "url": "https://huggingface.co/bytedance-research/Lance"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": [
+      {
+        "name": "Greg Brockman采访",
+        "time": "05-24",
+        "desc": "OpenAI总裁讨论AI发展路径与内部治理，HN 169分。",
+        "link": "https://news.ycombinator.com/item?id=48255593"
+      },
+      {
+        "name": "AI washing现象",
+        "time": "05-24",
+        "desc": "大量公司未真正集成AI却重塑为AI品牌，Z世代负面情绪明显，HN 146分。",
+        "link": "https://news.ycombinator.com/item?id=48257980"
+      },
+      {
+        "name": "HBM成本占AI芯片2/3",
+        "time": "05-24",
+        "desc": "HBM已占AI芯片总成本近2/3，中国厂商正颠覆DRAM格局，HN 280分。",
+        "link": "https://news.ycombinator.com/item?id=48258684"
+      }
+    ]
+},
+  {
   date: "2026-05-24",
   title: "2026.05.24 AI 产品趋势调研",
   coreTrend: "Agent工具链加速分化，代码知识图谱和团队管理平台成新爆款赛道",

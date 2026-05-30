@@ -940,6 +940,134 @@
 // ===================================================================
 
 const reports = [
+
+  {
+    date: "2026-05-30",
+    title: "2026.05.30 AI 产品趋势调研",
+    coreTrend: "Anthropic领跑650亿融资、Claude Opus 4.8发布，推理效率与端侧部署成新竞争维度",
+    tags: [
+    "Claude Opus 4.8",
+    "MiniMax Hy3",
+    "OpenClaw v2026.5.28-beta.4",
+    "MCP争议",
+    "Robinhood AI交易",
+    "YouTube AI标注",
+    "Mistral Vibe for Work",
+    "MiniCPM5",
+    "LiquidAI LFM",
+    "端侧模型"
+  ],
+    opportunities: [
+      {
+        title: "推理效率优化：端侧与实时推理的新赛道",
+        why: "端侧1B~8B模型爆发（MiniCPM5-1B、LFM2.5-8B）+开源推理引擎（Tiny-vLLM、实时推理3k tokens/s），共同指向推理效率成为新的核心竞争维度，而非单纯追求模型参数规模"
+      },
+      {
+        title: "AI Agent工具链：从「管工具」到「管协议」的范式转移",
+        why: "MCP协议争议揭示Agent生态从工具集成转向协议标准化争夺战；OpenClaw v2026.5.28-beta.4的provider扩展（NVIDIA/MiniMax音乐）表明开源框架正快速填补大厂空白"
+      }
+    ],
+    products: [
+      {
+        title: "Claude Opus 4.8（Anthropic）",
+        date: "2026-05-28",
+        url: "https://www.anthropic.com/news/claude-opus-4-8",
+        oneLine: "Anthropic发布Claude Opus 4.8，Super-Agent基准测试中唯一完成全部端到端案例的模型，超越GPT-5.5",
+        how: "新增「动态工作流」（Dynamic Workflows）让Claude Code在大型编程任务中自动规划多步解决方案；Fast Mode成本降低2/3；CursorBench和法律基准均超越前代",
+        why: "Anthropic在Agent编程能力上与OpenAI的差距进一步拉开——Super-Agent测试中唯一全通过的模型，且成本更低，说明RL后训练的规模化路径已跑通"
+      },
+      {
+        title: "MiniMax Hy3 Preview（MiniMax）",
+        date: "2026-05-25~29",
+        url: "https://minimaxir.com/2026/05/openrouter-hy3/",
+        oneLine: "MiniMax推出Hy3 Preview突然登顶OpenRouter排行榜，token使用量超越Claude 50%以上",
+        how: "通过OpenRouter API调用，在无公开宣传的情况下悄然积累大量用户；初期神秘感引发社区大量技术讨论",
+        why: "反映了中国AI厂商正以「灰度发布+API优先」策略切入海外开发者市场，透明度不足但增长速度惊人"
+      },
+      {
+        title: "OpenClaw v2026.5.28-beta.4",
+        date: "2026-05-29",
+        url: "https://github.com/openclaw/openclaw/releases/tag/v2026.5.28-beta.4",
+        oneLine: "开源Agent框架OpenClaw发布v2026.5.28-beta.4，重大改进Agent/Codex运行时恢复、渠道消息投递、移动端支持和provider覆盖",
+        how: "新增NVIDIA模型provider（via OpenAI兼容API）、MiniMax音乐模型provider；修复GitHub proof comment API；改进channel delivery；移动端和即时通讯平台优化",
+        why: "开源Agent框架正快速迭代对主流模型provider的支持，OpenClaw的扩展速度表明开源社区在Agent基础设施层的活跃度正在追赶商业平台"
+      },
+      {
+        title: "MiniCPM5-1B（面壁智能）",
+        date: "2026-05-26",
+        url: "https://huggingface.co/openbmb/MiniCPM5-1B",
+        oneLine: "面壁智能发布MiniCPM5-1B，端侧设备最强1B开源模型，首创Think/No-Think双模式",
+        how: "同一模型支持快速回答（enable_thinking=false）和深度思考（enable_thinking=true）；RL+OPD后训练；工具调用和代码生成达到1B参数级SOTA",
+        why: "端侧模型首次将「双模式推理」产品化，用户可按任务复杂度自由切换速度与深度；工具调用能力下放到1B参数意味着本地AI Agent在消费级硬件上成为可能"
+      },
+      {
+        title: "Robinhood AI Agent股票交易（Robinhood）",
+        date: "2026-05-27~28",
+        url: "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
+        oneLine: "Robinhood推出AI Agent股票交易功能，用户可授权AI助手直接买卖股票",
+        how: "用户授权第三方AI Agent通过API代为交易；支持实时市场数据和自动化策略执行",
+        why: "AI Agent获得金融API权限标志着「Agent经济」从工具层迈向真实财务行为；将引发监管和平台层面的跟进讨论"
+      }
+    ],
+    openclawVendors: [
+      {
+        title: "Anthropic完成650亿美元H轮融资，估值接近1万亿美元",
+        date: "2026-05-28",
+        url: "https://www.theverge.com/ai-artificial-intelligence",
+        why: "史上最大AI融资之一，资金将加速Claude Enterprise和Agent平台商业化"
+      },
+      {
+        title: "OpenAI Codex新增Windows计算机控制能力",
+        date: "2026-05-29",
+        url: "https://www.theverge.com/ai-artificial-intelligence",
+        why: "继Mac之后，OpenAI的计算机控制功能扩展至Windows生态"
+      },
+      {
+        title: "微软开发整合Copilot/GitHub的AI超级应用",
+        date: "2026-05-29",
+        url: "https://fortune.com/2026/05/29/microsoft-working-on-super-app/",
+        why: "将Copilot聊天、GitHub Copilot、Copilot Cowork和Autopilot整合为统一产品，对标AI Agent平台"
+      }
+    ],
+    openclawProducts: [
+      {
+        title: "OpenClaw v2026.5.28-beta.4发布",
+        date: "2026-05-29",
+        url: "https://github.com/openclaw/openclaw/releases/tag/v2026.5.28-beta.4",
+        why: "Agent/Codex运行时恢复改进、移动端/即时通讯支持、NVIDIA和MiniMax新provider"
+      }
+    ],
+    otherNews: [
+      {
+        title: "MCP协议争议：OpenAI Codex负责人亲自下场反驳「MCP已死」论",
+        date: "2026-05-29~30",
+        url: "https://www.quandri.io/engineering-blog/mcp-is-dead",
+        oneLine: "工程师博客质疑MCP协议价值，引发OpenAI Codex团队负责人亲自反驳：「每家公司都在构建MCP服务器，这就是为什么MCP比以往任何时候都更重要」",
+        productWhy: "争议背后是AI Agent工具生态的路线之争：协议标准化（MCP）vs.平台绑定。OpenAI高管的反驳表明头部厂商正将MCP纳入事实标准"
+      },
+      {
+        title: "YouTube宣布自动标注AI生成视频，DuckDuckGo搜索流量反涨28%",
+        date: "2026-05-27",
+        url: "https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/",
+        oneLine: "YouTube推出AI内容自动标签（HN 1304分），与此同时DuckDuckGo因Google强推AI Mode而流量暴涨28%（HN 1065分）",
+        productWhy: "AI内容识别和隐私保护分别成为内容平台和搜索平台的新竞争维度——两者形成有趣对比：平台推AI vs.用户反AI"
+      },
+      {
+        title: "Mistral AI Now峰会：欧洲AI厂商被质疑已落后前沿",
+        date: "2026-05-29",
+        url: "https://koenvangilst.nl/lab/mistral-ai-now-summit",
+        oneLine: "Mistral举办AI峰会，但社区普遍认为其已落后——120B参数模型性能不及参数量仅1/4的竞品，Gemma4/Qwen3.6全面超越",
+        productWhy: "Mistral同期发布Vibe for Work（类Claude for Work），但市场关注度远不及预期，欧洲AI厂商在开源模型竞争中的先发优势正在消失"
+      },
+      {
+        title: "「AI是否重演前端失去的十年」：开发者焦虑升温",
+        date: "2026-05-28~29",
+        url: "https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/",
+        oneLine: "HN 285分热帖：AI工具链更迭过快、框架碎片化、「MCP疲劳」是否正在重演前端开发失去的十年",
+        productWhy: "社区情绪从「AI赋能」转向「AI过载」——工具爆炸式增长但缺乏整合标准，对产品经理和开发者都是机会：简化工作流比增加功能更重要"
+      }
+    ]
+  }
 {
   "date": "2026-05-29",
     "title": "2026.05.29 AI 产品趋势调研",

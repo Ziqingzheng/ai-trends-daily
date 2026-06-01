@@ -1260,7 +1260,7 @@ const reports = [
         productWhy: "社区情绪从「AI赋能」转向「AI过载」——工具爆炸式增长但缺乏整合标准，对产品经理和开发者都是机会：简化工作流比增加功能更重要"
       }
     ]
-  }
+  },
 {
   "date": "2026-05-29",
     "title": "2026.05.29 AI 产品趋势调研",
@@ -3404,19 +3404,19 @@ function normalizeReport(report) {
     name:   pickField(v, 'name', 'title'),
     vendor: pickField(v, 'vendor'),
     time:   fmtTime(pickField(v, 'time', 'date')),
-    desc:   pickField(v, 'desc', 'oneLine', 'summary', 'oneliner'),
+    desc:   pickField(v, 'desc', 'oneLine', 'summary', 'oneliner', 'why', 'productWhy'),
     link:   pickField(v, 'link', 'url')
   }));
   r.openclawProducts = (report.openclawProducts || []).map(p => ({
     name: pickField(p, 'name', 'title'),
     time: fmtTime(pickField(p, 'time', 'date')),
-    desc: pickField(p, 'desc', 'oneLine', 'oneLiner', 'summary'),
+    desc: pickField(p, 'desc', 'oneLine', 'oneLiner', 'summary', 'why', 'productWhy'),
     link: pickField(p, 'link', 'url')
   }));
   r.otherNews = (report.otherNews || []).map(n => ({
     name: pickField(n, 'name', 'title'),
     time: fmtTime(pickField(n, 'time', 'date')),
-    desc: pickField(n, 'desc', 'oneLine', 'summary', 'oneliner'),
+    desc: pickField(n, 'desc', 'oneLine', 'summary', 'oneliner', 'productWhy', 'productAngle', 'productAnalysis', 'why'),
     link: pickField(n, 'link', 'url')
   }));
   return r;

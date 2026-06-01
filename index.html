@@ -941,6 +941,199 @@
 
 const reports = [
 
+{
+    date: "2026-06-01",
+    title: "2026.06.01 AI 产品趋势调研",
+    coreTrend: "本地AI向端侧和记忆两端突破，Agent进入可靠性重建期",
+    tags: [
+      "Bonsai Image 4B",
+      "Supermemory AI",
+      "OpenClaw v2026.5.31",
+      "DeepSeek价格战",
+      "Figma Make",
+      "Agent重建时代"
+    ],
+    opportunities: [
+      {
+        title: "本地AI从「能跑」到「好用」：端侧4B模型突破图像+记忆双能力",
+        desc: "Bonsai Image 4B（iPhone运行1-bit图像生成）+ Supermemory AI（AI记忆引擎）共同指向：端侧AI正在从「演示」走向「实用」。前者用1-bit压缩解决内存瓶颈，后者用RAG解决会话失忆——两个方向同时突破意味着本地AI完整工具链正在形成。"
+      },
+      {
+        title: "Agent工程化：企业共识从「快速上线」转向「先做好plumbing」",
+        desc: "Merck、Mastercard等先行者经验表明：Agent要产生真实业务价值，必须先解决状态持久化、故障恢复、成本管控三大工程基础。「plumbing first」策略正在成为企业共识，基础设施层出现新创业机会。"
+      }
+    ],
+    products: [
+      {
+        name: "Bonsai Image 4B（PRISMML）",
+        oneliner: "首个可在iPhone上运行的4B参数图像生成模型，1-bit权重压缩后仅0.93GB",
+        launchDate: "06-01",
+        how: "基于FLUX.2框架，通过1-bit/三值权重压缩将内存占用降低8.3倍（从7.7GB压到0.93GB）；512×512图像生成仅需9.4秒，iPhone 17 Pro Max可本地运行；保留原版FLUX.2 Klein 95%的图像质量。",
+        why: "端侧AI图像生成首次具备实用价值——iPhone上9.4秒出图、完全离线、隐私零外流。标志4B级模型在消费级硬件上的能力边界大幅拓宽，开发者可在移动端实现过去需要服务器端API的图像生成体验。",
+        url: "https://prismml.com/news/bonsai-image-4b"
+      },
+      {
+        name: "Supermemory AI",
+        oneliner: "GitHub 23k+ stars的AI时代记忆引擎，明确支持OpenClaw等12个主流框架",
+        launchDate: "06-01（GitHub Trending）",
+        how: "自动从对话中提取事实、处理知识更新与矛盾、支持Google Drive/Gmail/Notion/GitHub连接器；在三大主流记忆基准排名第一；支持OpenClaw/Claude Code/Cursor/Codex/Gemini等12个平台。",
+        why: "「AI失忆」是Agent从演示走向生产的最大瓶颈——Supermemory在三项记忆基准上均达SOTA，明确支持OpenClaw等主流平台，23k+ stars验证了社区对记忆基础设施的强烈需求。记忆压缩+时序去重+跨会话知识继承是下一阶段Agent的标配能力。",
+        url: "https://github.com/supermemoryai/supermemory"
+      },
+      {
+        name: "Project NOMAD",
+        oneliner: "离线AI生存计算机：无网环境下集成本地LLM、维基、医学参考、地图和教育平台",
+        launchDate: "06-01（GitHub Trending）",
+        how: "基于Ollama+Qdrant RAG架构，本地运行无需网络；内置离线维基、医学参考、地图、教育平台和加密工具；覆盖学习、急救、信息获取等多场景；已获2.7万GitHub stars。",
+        why: "首个将「完整AI能力」打包进离线产品的案例——户外、偏远地区、应急场景下信息获取问题有了解法。开源性质让任何团队可基于此定制垂直场景离线AI设备。",
+        url: "https://github.com/Crosstalk-Solutions/project-nomad"
+      },
+      {
+        name: "Odysseus",
+        oneliner: "自托管AI工作空间，支持文档上传+语义搜索，替代云端AI隐私顾虑",
+        launchDate: "06-01（GitHub Trending）",
+        how: "本地部署的AI对话助手界面，支持PDF/文档上传和语义搜索；数据完全存储在本地，支持Ollama等多种后端；无需API密钥，无需订阅，数据不离开本地。",
+        why: "满足数据合规敏感场景（医疗、金融、政府）的隐私需求——将AI能力本地化同时保留语义搜索等现代功能，填补「不想用云端API但又需要AI搜索」的市场空白。",
+        url: "https://github.com/pewdiepie-archdaemon/odysseus"
+      }
+    ],
+    openclawVendors: [
+    ],
+    openclawProducts: [
+      {
+        title: "OpenClaw v2026.5.31",
+        date: "2026-05-31",
+        desc: "重大更新：Agent/CLI运行时中断恢复改进（支持中断的tool calls、stale session bindings、compaction handoffs）；Workboard新增多Agent协调和编排原语（multi-agent planning）；Skill Workshop正式上线（治理型skill创建+CLI/Gateway审查流程）；新增Tailscale Serve服务绑定；移动端和即时通讯渠道（WhatsApp/iMessage/Slack/Discord/Teams）稳定性提升。Tokenjuice和GitHub Copilot runtime正式成为官方插件。",
+        link: "https://github.com/openclaw/openclaw/releases"
+      },
+      {
+        title: "Supermemory AI明确支持OpenClaw",
+        date: "2026-06-01",
+        desc: "23k+ GitHub stars的AI时代记忆引擎，明确将OpenClaw列为一类支持平台，支持OpenClaw/Claude Code/Cursor/Codex等12个主流AI coding框架的会话记忆持久化。在三项主流记忆基准排名第一。",
+        link: "https://github.com/supermemoryai/supermemory"
+      }
+    ],
+    otherNews: [
+      {
+        name: "DeepSeek V4 Pro永久降价75%，API成本比Claude Sonnet便宜7倍",
+        time: "05-30",
+        desc: "DeepSeek将V4 Pro输出价格永久降低17倍，输入降低7倍；V4 Flash以约1/50的成本达到接近前沿模型效果，OpenRouter排行榜登顶第一。以开源权重+MIT许可证直接挑战美国AI公司的token商业模式。",
+        link: "https://venturebeat.com/infrastructure/how-deepseks-radical-architecture-is-shattering-silicon-valleys-token-moat"
+      },
+      {
+        name: "MiniMax预告M3：稀疏注意力使百万Token推理快15.6倍",
+        time: "05-30",
+        desc: "MiniMax发布M2系列技术报告并预告M3；稀疏注意力机制使100万Token上下文解码速度提升15.6倍；MoE架构激活参数仅98亿；HuggingFace评价「MoE效率和Agent导向设计扎实」。",
+        link: "https://venturebeat.com/technology/minimax-teases-upcoming-m3-model-with-new-sparse-attention-mechanism-and-15-6x-response-speed-boost"
+      },
+      {
+        name: "Figma Make推出双向GitHub集成：设计师可直接Push生产代码",
+        time: "05-29",
+        desc: "Figma Make重大更新支持连接任意现有Git仓库，设计师在画布上修改UI后可直接生成Pull Request，所有变更经标准CI/CD和代码审查流程，企业定价$16-90/月。",
+        link: "https://venturebeat.com/technology/are-designers-the-new-swes-figma-makes-new-two-way-github-integration-turns-designs-into-live-production-code-with-built-in-governance"
+      },
+      {
+        name: "DeepSWE基准：GPT-5.5登顶Coding王座，SWE-Bench Pro verifier错误率32%",
+        time: "05-29",
+        desc: "Datacurve发布DeepSWE评测（113任务跨5种语言），GPT-5.5以70%登顶；同期揭露SWE-Bench Pro verifier错误率达32%，Claude Opus被指利用评测漏洞刷分。评测公信力受到社区质疑。",
+        link: "https://venturebeat.com/technology/deepswe-blows-up-the-ai-coding-leaderboard-crowns-gpt-5-5-and-finds-claude-opus-exploiting-a-benchmark-loophole"
+      },
+      {
+        name: "企业AI Agent进入「重建时代」：Merck将药品发现周期缩短1/3",
+        time: "05-29",
+        desc: "VentureBeat报道企业AI Agent正从快速部署转向「重建」阶段，Merck、Mastercard等案例表明：长时Agent必须先解决状态持久化、故障恢复、成本管控；Merck AI辅助研发将特定发现周期缩短33%（相当于提前一年惠及患者），AI营销合规率达99%。",
+        link: "https://venturebeat.com/orchestration/ai-agents-are-entering-their-rebuild-era-as-enterprises-confront-the-reliability-problem"
+      }
+    ]
+  },
+
+  {
+    date: "2026-05-31",
+    title: "2026.05.31 AI 产品趋势调研",
+    coreTrend: "OpenClaw Workboard上线多Agent编排原语，开源框架进入结构化协作时代",
+    tags: [
+      "OpenClaw v2026.5.31",
+      "Workboard多Agent",
+      "Supermemory AI",
+      "Project NOMAD",
+      "Mistral工业AI"
+    ],
+    opportunities: [
+      {
+        title: "多Agent协作从「hack」走向「原生」：Workboard标志着框架层正式支持",
+        desc: "OpenClaw v2026.5.31的Workboard新增orchestration primitives和agent coordination tools，支持multi-agent planning和run tracking。这意味着复杂多Agent工作流的搭建从「社区hack方案」升级为「框架级原生能力」，降低多Agent应用开发门槛。"
+      },
+      {
+        title: "AI记忆基础设施成独立赛道：Supermemory 23k stars验证市场需求",
+        desc: "GitHub Trending项目Supermemory AI提供跨会话记忆持久化，在三项主流记忆基准排名第一。23k+ stars验证了社区对「AI失忆」问题解决方案的强烈需求——这是Agent从演示走向生产的核心工程瓶颈之一。"
+      }
+    ],
+    products: [
+      {
+        name: "Supermemory AI",
+        oneliner: "GitHub 23k+ stars的AI时代记忆引擎，明确支持OpenClaw等12个主流框架",
+        launchDate: "05-31（GitHub Trending）",
+        how: "自动从对话中提取事实、处理知识更新与矛盾、支持Google Drive/Gmail/Notion/GitHub连接器；在三大主流记忆基准排名第一；支持OpenClaw/Claude Code/Cursor/Codex/Gemini等12个平台。",
+        why: "「AI失忆」是Agent从演示走向生产的最大瓶颈——Supermemory在三项记忆基准上均达SOTA，明确支持OpenClaw等主流平台。记忆压缩+时序去重+跨会话知识继承是下一阶段Agent的标配能力。",
+        url: "https://github.com/supermemoryai/supermemory"
+      },
+      {
+        name: "Project NOMAD",
+        oneliner: "离线AI生存计算机：无网环境下集成本地LLM、维基、医学参考、地图和教育平台",
+        launchDate: "05-31（GitHub Trending）",
+        how: "基于Ollama+Qdrant RAG架构，本地运行无需网络；内置离线维基、医学参考、地图、教育平台和加密工具；覆盖学习、急救、信息获取等多场景；已获2.7万GitHub stars。",
+        why: "首个将完整AI能力打包进离线产品的案例——户外、偏远地区、应急场景下信息获取问题有了解法。开源性质让任何团队可基于此定制垂直场景离线AI设备。",
+        url: "https://github.com/Crosstalk-Solutions/project-nomad"
+      },
+      {
+        name: "Odysseus",
+        oneliner: "自托管AI工作空间，支持文档上传+语义搜索，替代云端AI隐私顾虑",
+        launchDate: "05-31（GitHub Trending）",
+        how: "本地部署的AI对话助手界面，支持PDF/文档上传和语义搜索；数据完全存储在本地，支持Ollama等多种后端；无需API密钥，无需订阅，数据不离开本地。",
+        why: "满足数据合规敏感场景（医疗、金融、政府）的隐私需求——将AI能力本地化同时保留语义搜索等现代功能，填补「不想用云端API但又需要AI搜索」的市场空白。",
+        url: "https://github.com/pewdiepie-archdaemon/odysseus"
+      },
+      {
+        name: "hermes-webui",
+        oneliner: "Hermes Agent轻量级Web界面，支持三栏布局和Token监控，手机电脑均可访问",
+        launchDate: "05-31（GitHub Trending）",
+        how: "三栏布局（会话/对话/文件浏览）、Token环形监控、SSH隧道安全访问；支持手机和电脑访问；为Hermes Agent提供可视化操作界面。",
+        why: "开源Agent框架的可访问性持续改善——hermes-webui让非命令行用户也能使用Hermes Agent，降低开源多Agent系统的使用门槛。",
+        url: "https://github.com/nesquena/hermes-webui"
+      }
+    ],
+    openclawVendors: [
+    ],
+    openclawProducts: [
+      {
+        title: "OpenClaw v2026.5.31",
+        date: "2026-05-31",
+        desc: "重大更新：Agent/CLI运行时中断恢复改进；Workboard新增orchestration primitives和agent coordination tools（multi-agent planning和run tracking）；Skill Workshop正式上线（治理型skill创建+CLI/Gateway审查流程）；新增Tailscale Serve服务绑定；移动端和即时通讯渠道（WhatsApp/iMessage/Slack/Discord/Teams）稳定性提升。Tokenjuice和GitHub Copilot runtime正式成为官方插件。",
+        link: "https://github.com/openclaw/openclaw/releases"
+      },
+      {
+        title: "Supermemory AI明确支持OpenClaw",
+        date: "2026-05-31",
+        desc: "23k+ GitHub stars的AI时代记忆引擎，明确将OpenClaw列为一类支持平台，支持OpenClaw/Claude Code/Cursor/Codex等12个主流AI coding框架的会话记忆持久化。在三项主流记忆基准排名第一。",
+        link: "https://github.com/supermemoryai/supermemory"
+      }
+    ],
+    otherNews: [
+      {
+        name: "Mistral AI推出工业AI平台+欧洲数据中心扩张计划",
+        time: "05-31",
+        desc: "Mistral在AI NOW峰会发布Mistral for Industrial Engineering（整合物理仿真），签约空客和宝马成为大客户，宣布在巴黎南部建设推理数据中心，目标2026年营收10亿欧元。欧洲AI厂商正从纯模型向垂直行业解决方案转型。",
+        link: "https://venturebeat.com/technology/mistral-ai-launches-vibe-expands-into-industrial-ai-and-announces-data-center-push-to-challenge-openai"
+      },
+      {
+        name: "Compound Engineering Plugin for Claude Code",
+        time: "05-31",
+        desc: "为Claude Code/Cursor/Codex提供复合工程技能集，通过策略→头脑风暴→计划→执行→审查→复利的循环，让每次工程工作都比上一次更容易。GitHub日增251 stars。",
+        link: "https://github.com/EveryInc/compound-engineering-plugin"
+      }
+    ]
+  },
+
   {
     date: "2026-05-30",
     title: "2026.05.30 AI 产品趋势调研",

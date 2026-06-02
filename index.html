@@ -940,6 +940,105 @@
 // ===================================================================
 
 const reports = [
+  {
+    "date": "2026-06-02",
+    "title": "2026.06.02 AI 产品趋势调研",
+    "coreTrend": "Physical AI数据兴起，工厂Agent落地",
+    "tags": [
+      "Physical AI",
+      "Agent",
+      "企业AI",
+      "开源工具",
+      "IPO"
+    ],
+    "opportunities": [
+      {
+        "title": "机器人训练数据采集成为新兴产业链",
+        "desc": "多家公司（Shift、Human Archive、Pronto）通过免费家政服务换取视频数据，拍摄用户做家务用于训练家务机器人。这一模式在纽约和印度等地落地，已引发隐私争议，预计将成为Physical AI数据供给的主要路径之一。"
+      },
+      {
+        "title": "本地AI Agent成为消费级硬件新场景",
+        "desc": "RTX Spark（128GB统一内存，可本地运行120B参数模型）+ OpenShell安全框架，让普通PC首次具备本地AI Agent运行条件。隐私敏感场景（医疗、法律、企业内部）的本地Agent需求将被激活。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Compound-engineering-plugin",
+        "oneliner": "将AI编程升级为系统工程",
+        "launchDate": "06-01",
+        "how": "通过 /ce-brainstorm、/ce-plan、/ce-code-review 等命令驱动 Claude Code，先深度规划再执行代码，每一步都为下一步降低难度，实现知识积累而非重复踩坑。",
+        "why": "把 compound engineering 理念引入 AI 编程，让 AI 真正做「知识积累」而非「重复踩坑」。已获 19.1k stars，增速 417/day，成为 Claude Code 生态的明星插件，适合追求高质量代码的团队。",
+        "link": "https://github.com/EveryInc/compound-engineering-plugin"
+      },
+      {
+        "name": "SuperMemory",
+        "oneliner": "AI跨会话记忆引擎",
+        "launchDate": "06-01",
+        "how": "自动从对话中提取事实、处理时间变化和矛盾信息、主动遗忘过期信息，让 AI 在多轮对话中真正「记住」用户。提供 npm/PyPI 双包支持，可接入任何 AI 应用。",
+        "why": "解决 AI 跨会话记忆缺失的核心痛点，位居 LongMemEval、LoCoMo、ConvoMem 三大 AI 记忆基准榜首。国内由 OpenBMB 联合清华发布，对中文 AI 生态有实质推动。",
+        "link": "https://github.com/supermemoryai/supermemory"
+      },
+      {
+        "name": "Oh-my-pi",
+        "oneliner": "终端AI编程Agent",
+        "launchDate": "05-30",
+        "how": "终端里的 AI 编程 Agent，内置 40+ 模型提供商、32 个内置工具、LSP + 调试支持，支持子 Agent 和浏览器操作，一条命令安装，开箱即用。",
+        "why": "Pi 的开源分支，比 Claude Code 更轻量的终端方案，支持 hash 锚定编辑防止上下文漂移，适合喜欢在 terminal 里干活的开发者。9.5k stars，335/day 增长。",
+        "link": "https://github.com/can1357/oh-my-pi"
+      },
+      {
+        "name": "MoneyPrinterTurbo",
+        "oneliner": "AI一键生成高清短视频",
+        "launchDate": "05-31",
+        "how": "输入一个主题或文案，AutoGPT 自动生成脚本、配音、字幕、视频素材并合成成片，支持多个大模型，适合自媒体内容、营销视频、知识科普等场景。",
+        "why": "零门槛视频生产，一条命令搞定全套流程。比 Runway/Pika 更适合批量化内容创作，76.8k stars，3375/day 增长，位居 GitHub Trending 第一。",
+        "link": "https://github.com/harry0703/MoneyPrinterTurbo"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic提交IPO S-1",
+        "vendor": "Anthropic",
+        "time": "06-01",
+        "desc": "向美国SEC秘密提交IPO S-1上市申请文件，公司近期完成650亿美元H轮融资，估值达9650亿美元，为本周期最受关注的AI IPO里程碑事件。",
+        "link": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "NVIDIA FOX Blueprint（内置MoMClaw）",
+        "time": "06-01",
+        "desc": "基于NemoClaw、AI-Q Blueprint和Nemotron开源模型构建工厂自主管理Agent参考架构，富士康以此构建MoMClaw多智能体系统，根源分析时间缩短80%、劳动生产率提高15%，为AI智能体首次在工业级场景大规模落地的参考设计。",
+        "link": "https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain"
+      },
+      {
+        "name": "OpenClaw Framework",
+        "time": "06-01",
+        "desc": "持续作为MoMClaw等工厂多智能体系统的底层框架使用，NVIDIA FOX Blueprint将其与NemoClaw共同列为工厂AI大脑的核心组件。",
+        "link": "https://github.com/openclaw/openclaw"
+      },
+      {
+        "name": "NemoClaw",
+        "time": "06-01",
+        "desc": "NVIDIA FOX工厂运营蓝图的核心组件，与AI-Q Blueprint和Nemotron并列，共同构成工厂自主管理Agent的参考架构。",
+        "link": "https://github.com/NVIDIA/NeMo-Claw"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "NVIDIA RTX Spark芯片发布",
+        "time": "06-01",
+        "desc": "NVIDIA发布首个消费级PC处理器RTX Spark，支持128GB统一内存，可本地运行120B参数AI Agent。微软Surface Laptop Ultra首发搭载，8家PC厂商30+款产品秋季上市，开启AI Native PC时代。",
+        "link": "https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date"
+      },
+      {
+        "name": "Anthropic向SEC提交IPO S-1",
+        "time": "06-01",
+        "desc": "Anthropic正式向美国SEC提交IPO上市申请文件，公司估值9650亿美元，为本周期AI行业最重大的市场信号事件。",
+        "link": "https://www.reuters.com/business/ai-giant-anthropic-confidentially-files-us-ipo-2026-06-01/"
+      }
+    ]
+  },
 
 {
     date: "2026-06-01",

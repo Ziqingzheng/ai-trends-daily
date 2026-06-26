@@ -941,6 +941,99 @@
 
 const reports = [
   {
+    "date": "2026-06-22",
+    "title": "2026.06.22 AI 产品趋势调研",
+    "coreTrend": "AI Agent全流程自主化启动",
+    "tags": [
+      "AI Agent",
+      "全流程自动化",
+      "具身智能",
+      "开源基础设施",
+      "OpenClaw生态"
+    ],
+    "opportunities": [
+      {
+        "title": "AI Agent正成为企业级SaaS核心交互层",
+        "desc": "Agent 37 Cloud、Atomic Mail等新品让AI从单点工具进化为完整工作流自主执行者，企业SaaS的交互范式正在被重写——从「人找功能」变为「人派任务，AI完成」"
+      },
+      {
+        "title": "具身智能商业化越过临界点",
+        "desc": "Figure机器人数首超人类员工，标志着具身智能从实验室走向规模商业部署，劳动力自动化拐点已至"
+      }
+    ],
+    "products": [
+      {
+        "name": "Agent 37 Cloud（06-21）",
+        "oneliner": "首个OpenClaw/Hermes B2B AI员工托管平台",
+        "launchDate": "06-21",
+        "how": "企业为每个客户/员工部署专属AI员工，支持多租户管理；接入CRM、ERP、Slack等系统；通过自然语言指令自动化跨系统工作流程，无需API对接。",
+        "why": "首个将OpenClaw/Hermes框架产品化并商业托管的平台，企业无需自建即可拥有专属Agent；多租户隔离和CRM集成解决企业最关心的安全和管理问题。",
+        "link": "https://www.producthunt.com/products/agent-37-38"
+      },
+      {
+        "name": "Atomic Mail Agentic（06-21）",
+        "oneliner": "AI Agent自主处理全流程邮件",
+        "launchDate": "06-21",
+        "how": "AI Agent读取、撰写、发送、回复邮件，可根据预设规则和上下文自主决策；用户只需说明需求，Agent完成从收件到回复的完整闭环。",
+        "why": "邮件是企业中最高频的碎片化工作流之一；继AutoGPT在通用任务成功后，垂直场景Agent开始涌现，Atomic Mail定位「邮件版AutoGPT」填补空缺。",
+        "link": "https://www.producthunt.com/products/atomic-mail-agentic"
+      },
+      {
+        "name": "Backgrind（06-21）",
+        "oneliner": "用自然语言控制任意应用的AI Agent",
+        "launchDate": "06-21",
+        "how": "用户用自然语言描述目标，AI Agent自动识别界面元素、执行操作、控制电脑或手机上的任意应用，包括游戏、办公软件、设计工具等。",
+        "why": "打破AI Agent「只能对话无法操控App」的局限；无需应用方提供API，AI直接学习操控任意界面，扩展性强。",
+        "link": "https://www.producthunt.com/products/backgrind"
+      },
+      {
+        "name": "NVIDIA SpatialClaw（06-19）",
+        "oneliner": "免训练开源空间推理框架",
+        "launchDate": "06-19",
+        "how": "NVIDIA Research开源框架，将代码作为动作接口，让AI Agent调用深度估计（Depth Anything 3）、图像分割（SAM 3）等感知工具进行3D空间判断；无需重新训练，同一提示词跨骨干网络通用。",
+        "why": "在20项基准测试中平均准确率59.9%，比SpaceTools高11.2个百分点；开源免费，支持Qwen3.5/3.6及Gemma4等26B-397B参数模型，开发者可直接集成到Agent系统中。",
+        "link": "https://www.marktechpost.com/2026/06/19/nvidia-ai-introduce-spatialclaw-a-training-free-agent-that-treats-code-as-the-action-interface-for-spatial-reasoning"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "John Jumper",
+        "vendor": "DeepMind→Anthropic",
+        "time": "06-19",
+        "desc": "AlphaFold负责人、2024年诺贝尔化学奖得主宣布离职Google DeepMind，将加入Anthropic，标志着顶级结构生物学AI科学家向下一代AI系统迁移",
+        "link": "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "Agent 37 Cloud（06-21）",
+        "time": "06-21",
+        "desc": "首个基于OpenClaw/Hermes框架的B2B SaaS平台上线，支持多租户AI员工托管、CRM/ERP/Slack集成、企业级自然语言工作流自动化",
+        "link": "https://www.producthunt.com/products/agent-37-38"
+      },
+      {
+        "name": "Cloudflare临时账户（06-19）",
+        "time": "06-19",
+        "desc": "Cloudflare为OpenClaw/Flue等Agent框架提供零门槛部署方案，AI Agent一行命令即可部署可用的实时Worker，无需注册账号",
+        "link": "https://blog.cloudflare.com/temporary-accounts"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Figure机器人数首超人类员工（06-19）",
+        "time": "06-19",
+        "desc": "人形机器人公司Figure宣布机器人数量首次超过人类员工数量，有史以来第一次具身智能商业规模超越人力",
+        "link": "https://x.com/rohanpaul_ai/status/2068089038213693800"
+      },
+      {
+        "name": "微软双向转售DeepSeek给西方客户（06-20）",
+        "time": "06-20",
+        "desc": "彭博社报道微软正测试托管DeepSeek-R1/V4，将中国模型转售给西方企业用户，构建跨中美AI模型的贸易网络",
+        "link": "https://x.com/AYi_AInotes/status/2068218661710512231"
+      }
+    ]
+  },
+  {
     "date": "2026-06-21",
     "title": "2026.06.21 AI 产品趋势调研",
     "coreTrend": "压缩 +14k stars，三大厂嵌 AI 入企",

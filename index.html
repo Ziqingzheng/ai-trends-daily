@@ -941,6 +941,85 @@
 
 const reports = [
   {
+    "date": "2026-06-09",
+    "title": "2026.06.09 AI 产品趋势调研",
+    "coreTrend": "Apple Intelligence入场WWDC，AI助手平台化浪潮来袭",
+    "tags": [
+      "Apple Intelligence",
+      "Siri AI",
+      "Claude Swift",
+      "Kimi Code",
+      "AI助手平台化"
+    ],
+    "opportunities": [
+      {
+        "title": "苹果入局AI助手平台：Native开发框架成为新战场",
+        "desc": "WWDC26发布Apple Intelligence（覆盖iOS/macOS等全平台）+ Siri AI（开发者测试今日开放）+ Claude for Apple Foundation Models（Anthropic官方Swift包）。三大玩家同步押注Native AI开发框架，意味着AI应用开发从「跨平台Web」向「系统级AI」范式转移——在Apple平台上，AI能力将成为系统原生功能，而非App附加功能。"
+      },
+      {
+        "title": "AI Agent技能市场崛起：last30days-skill验证「调研自动化」赛道",
+        "desc": "GitHub Trending项目last30days-skill（今日+3558 stars）让AI Agent自动研究任意话题并生成结构化报告，被OpenClaw生态直接引用。pm-skills（PM技能市场）、Agent-Reach（平台访问插件）共同指向：AI Agent的工具链正从「通用能力」向「垂直技能市场」分层，技能封装+分发可能成为下一个平台机会。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Apple Intelligence + Siri AI",
+        "oneliner": "WWDC26重磅：Apple Intelligence全平台覆盖，Siri AI开发者测试今日开放",
+        "launchDate": "06-08",
+        "how": "iOS 27/macOS 27等全平台秋季推送，Siri AI今日起开放开发者测试（iOS 27/iPadOS 27/macOS 27/visionOS 27 beta）；Apple Intelligence支持17种语言；Siri AI在iPhone 16及以后、iPhone 15 Pro、M系列Mac等设备可用。",
+        "why": "苹果以系统级整合方式入场AI——不是又一个App，而是把AI能力嵌入操作系统底层。AI助手将从「独立App」变成「系统无处不在的功能」，对所有AI助手App形成降维打击。",
+        "link": "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more"
+      },
+      {
+        "name": "Claude for Apple Foundation Models",
+        "oneliner": "Anthropic官方Swift包，三行代码让Apple开发者调用Claude",
+        "launchDate": "06-08",
+        "how": "通过Swift包让Apple开发者直接在Foundation Models框架中调用Claude；支持多步推理、代码生成、联网搜索、数据分析；苹果本地模型处理轻量任务，Claude接管复杂推理，响应流式返回同一SwiftUI视图。",
+        "why": "Anthropic与苹果深度绑定意味着Claude成为Apple原生开发的标准选项之一。Claude被嵌入Apple开发工具链，影响数百万iOS/macOS开发者的AI选型决策。",
+        "link": "https://claude.com/blog/claude-for-foundation-models"
+      },
+      {
+        "name": "Kimi Code焕新升级",
+        "oneliner": "月之暗面Kimi Code大版本升级：毫秒启动+视频理解+ACP协议",
+        "launchDate": "06-08",
+        "how": "一行命令毫秒级启动；新增视频理解能力；集成同花顺、天眼查等权威数据源；支持ACP协议可在JetBrains、Zed中使用；底层由Kimi K2.6模型驱动。",
+        "why": "国内Coding Agent首次具备视频理解能力，结合本土数据源切入金融/商业场景。ACP协议支持让Kimi Code可与主流IDE深度集成，降低开发者迁移门槛。",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzkzMTY4NTIyNA%3D%3D&mid=2247484250&idx=1&sn=d0a07f5358250f3a54df8fbabe61f09a"
+      },
+      {
+        "name": "last30days-skill",
+        "oneliner": "今日+3558 stars：让AI Agent自动研究任意话题的OpenClaw Skill",
+        "launchDate": "06-09（GitHub Trending）",
+        "how": "安装后对AI助手说一句「帮我研究XXX」，自动从Reddit/X/YouTube/HN/Polymarket等抓取信息并合成结构化摘要报告。已发布为OpenClaw Skill，可直接被OpenClaw Agent调用。",
+        "why": "AI Agent实时获取网络信息的痛点被它一条指令解决。已被OpenClaw生态直接引用，3558 stars/日的增速表明社区对「调研自动化」的强烈需求。",
+        "link": "https://github.com/mvanhorn/last30days-skill"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "name": "last30days-skill（mvanhorn）",
+        "time": "06-09",
+        "desc": "让AI Agent自动研究任意话题的OpenClaw Skill，今日新增3558 stars（总34,537），周增速6616 stars。自动从Reddit/X/YouTube/HN/Polymarket等抓取信息并合成结构化报告，已被OpenClaw生态直接引用。",
+        "link": "https://github.com/mvanhorn/last30days-skill"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "OpenAI向SEC机密提交S-1草案",
+        "time": "06-08",
+        "desc": "OpenAI向美国SEC机密提交首次公开募股注册声明，同日CEO奥尔特曼发文宣布公司进入第三发展阶段——「让AI普及、易用且安全」。上市时间和细节尚未披露。",
+        "link": "https://openai.com/index/openai-submits-confidential-s-1"
+      },
+      {
+        "name": "ChatGPT筹备自2022年来最大改版：变身Agent平台",
+        "time": "06-07",
+        "desc": "OpenAI正筹备ChatGPT从聊天机器人向超级应用/Agent平台转型，整合Codex编程工具、图像生成和第三方应用。ChatGPT目前有9亿周活用户、5000万付费用户，月收入20亿美元但仍未盈利。",
+        "link": "https://x.com/dotey/status/2063686036895478162"
+      }
+    ]
+  },
+  {
     "date": "2026-06-08",
     "title": "2026.06.08 AI 产品趋势调研",
     "coreTrend": "开源AI Agent进入Linux基金会时代，多Agent协作基础设施加速成熟",

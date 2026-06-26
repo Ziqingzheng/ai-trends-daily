@@ -941,6 +941,98 @@
 
 const reports = [
   {
+    "date": "2026-06-20",
+    "title": "2026.06.20 AI 产品趋势调研",
+    "coreTrend": "开源模型并跑闭源、具身智能规模化、Agent工具链爆发",
+    "tags": [
+      "开源模型",
+      "具身智能",
+      "Agent工具链",
+      "企业AI成本"
+    ],
+    "opportunities": [
+      {
+        "title": "AI员工平台：零门槛Agent进入企业工作流",
+        "desc": "Viktor在Slack实现2000万美元年化收入，无销售团队，进入Teams的3.2亿用户池。用工成本倒逼企业寻找AI替代方案，零门槛Agent平台正在验证真实付费意愿。"
+      },
+      {
+        "title": "AI Agent可观测性：企业部署刚需",
+        "desc": "企业大量部署AI Coding Agent后，消耗失控、响应不稳定、Token成本不可追溯。AI Agent可观测性工具正成为企业AI部署的基础设施需求。"
+      }
+    ],
+    "products": [
+      {
+        "name": "智谱GLM-5.2（06-19）",
+        "oneliner": "首个工程级长程任务逼近Claude Opus的开源模型",
+        "launchDate": "06-19",
+        "how": "MoE架构，744B总参数/40B激活参数，100万token无损上下文。MIT协议可商用，国产算力Day 0适配（昇腾/摩尔线程/寒武纪/昆仑芯）。",
+        "why": "Code Arena排全球第一、Design Arena视觉审美全球第一、Terminal-Bench首个突破80%的开源模型。发布当天股价涨12.62%，次日再涨26.14%，市值突破9300亿港元，半年累计涨幅超18倍。开源模型在工程级任务上正式并跑顶级闭源。",
+        "link": "https://www.tmtpost.com/8033052.html"
+      },
+      {
+        "name": "DeepSeek识图模式（06-18）",
+        "oneliner": "国产开源模型补全多模态最后一块短板",
+        "launchDate": "06-18",
+        "how": "在网页和App端正式上线，与快速模式、专家模式并列。开启后可直接上传图片识别，技术框架为\"Thinking with Visual Primitives（以视觉原语思考）\"。",
+        "why": "DeepSeek在开源推理模型领先地位上补全多模态视觉能力，视觉+推理联合使用场景大幅扩展。网页和App同步上线，用户零门槛使用。",
+        "link": "https://www.ithome.com/0/966/066.htm"
+      },
+      {
+        "name": "OpenMontage（06-19）",
+        "oneliner": "开源agentic视频制作，一句话生成完整视频",
+        "launchDate": "06-19",
+        "how": "开源agentic视频制作系统。用户输入文字描述，系统自动完成脚本、素材搜集、粗剪、配乐全流程。命令行即可调用，无需专业视频制作经验。",
+        "why": "将视频制作从专业技能变为自然语言交互，大幅降低视频内容生产门槛。开源+命令行设计使其可嵌入现有AI Agent工作流。",
+        "link": "https://github.com/calesthio/OpenMontage"
+      },
+      {
+        "name": "headroom（06-19）",
+        "oneliner": "上下文压缩60-95%，Coding Agent省token神器",
+        "launchDate": "06-19",
+        "how": "在LLM调用前压缩tool输出、日志、文件和RAG chunks。支持Library/Proxy/MCP Server三种接入方式。兼容Claude Code、Codex、Cursor等主流coding agent。",
+        "why": "Per-developer token消耗9个月内增长18.6倍，企业AI编码预算4个月烧完。headroom将token消耗压缩60-95%，直接解决成本失控问题。本周新增12,793 stars，增速全网第一。",
+        "link": "https://github.com/chopratejas/headroom"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "OpenClaw核心维护",
+        "vendor": "OpenClaw",
+        "time": "06-20",
+        "desc": "核心仓库今日UTC 01:00有活跃提交（Vincent Koc修复SQLite benchmark CLI args），持续维护中。skills扩展系统、MCP协议集成能力保持更新。",
+        "link": "https://github.com/openclaw/openclaw"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "NVIDIA SkillSpector",
+        "time": "06-19",
+        "desc": "NVIDIA Research发布AI agent技能安全扫描器。检测prompt注入、恶意代码、数据泄露等64种漏洞模式，覆盖16类安全风险。26.1%的agent技能包含漏洞、5.2%含恶意意图。研究发现企业部署agent前缺乏安全审查工具。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      },
+      {
+        "name": "Google AI Control路线图",
+        "time": "06-19",
+        "desc": "Google DeepMind发布AI Agent安全控制路线图。核心类比为\"AI Agent的教练车\"——信任但随时准备接管。措施包括思维链监控、异步警报、实时访问控制和关机基础设施。",
+        "link": "https://www.theverge.com/tech/952899/google-deepmind-announced-an-ai-control-roadmap-for-improving-ai-agent-security"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Figure机器人数量首超人类员工",
+        "time": "06-19",
+        "desc": "具身智能商业化里程碑：Figure机器人数量首次超过人类员工数量，标志着具身智能从实验室走向规模化商业部署。同日John Jumper（AlphaFold负责人）离职DeepMind加入Anthropic，AI产业从科学探索向产品化竞争范式切换。",
+        "link": "https://x.com/rohanpaul_ai/status/2068089038213693800"
+      },
+      {
+        "name": "八部门联合力推AI+消费（06-18）",
+        "time": "06-18",
+        "desc": "商务部等8部门联合发文，从5方面提出17条举措扩大AI手机电脑、智能家居、智能网联汽车、AI机器人消费。同日上交所发布AI大模型科创板第五套上市标准指引，申报要求至少一个产品上线+规模化应用。中国AI产业政策与资本双轮驱动。",
+        "link": "https://www.ithome.com/0/966/295.htm"
+      }
+    ]
+  },
+  {
     "date": "2026-06-19",
     "title": "2026.06.19 AI 产品趋势调研",
     "coreTrend": "Agent开发工具链走向生产化，基础设施成新焦点",

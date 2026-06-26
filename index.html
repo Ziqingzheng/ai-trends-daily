@@ -941,6 +941,93 @@
 
 const reports = [
   {
+    "date": "2026-06-05",
+    "title": "2026.06.05 AI 产品趋势调研",
+    "coreTrend": "AI Agent从开发工具迈入生产环境，企业基础设施层成为新战场",
+    "tags": [
+      "AI Agent",
+      "企业级AI",
+      "开源模型",
+      "AI基础设施",
+      "记忆系统"
+    ],
+    "opportunities": [
+      {
+        "title": "AI个人记忆系统成Agent差异化新战场",
+        "desc": "ChatGPT Dreaming（10亿用户）+ hermes-agent（开源自主学习）是同一条主线的两种路径：让AI真正「记住你」。记忆能力是Agent从工具变伴侣的核心变量，2026下半年将成标配"
+      },
+      {
+        "title": "企业AI基础设施是当前最稀缺的环节",
+        "desc": "微软Execution Containers解决「企业敢不敢跑Agent」的安全顾虑，DeepSeek V3/R1 500亿融资验证开源模型+自有infra的可行性，NVIDIA RTX Spark重新定义AI PC芯片格局"
+      }
+    ],
+    "products": [
+      {
+        "name": "DeepSeek V3/R1（500亿元融资）",
+        "oneliner": "国产开源大模型最大规模融资",
+        "launchDate": "06-03",
+        "how": "DeepSeek计划从腾讯（100亿）、宁德时代（50亿）等处筹集约500亿元，投后估值3500-4000亿元；同时已连续4周登顶OpenRouter Token份额榜首",
+        "why": "国产大模型迄今最大规模单笔融资，腾讯+宁德时代的产业资本组合参投，显示DeepSeek V3/R1的技术路线获得实业资本真金白银的认可。开源+低成本路线被验证，OpenRouter连续4周第一证明海外开发者也在用脚投票",
+        "link": "https://www.ithome.com/0/959/249.htm"
+      },
+      {
+        "name": "headroom",
+        "oneliner": "LLM上下文压缩省60-95% token",
+        "launchDate": "06-02",
+        "how": "将LLM读取的上下文（工具输出/日志/文件/RAG chunks/对话历史）压缩60-95%后再发送，GSM8K/TruthfulQA精度不降。支持Claude Code/Codex/Cursor等所有主流Coding Agent，MCP协议，本地运行",
+        "why": "今日GitHub爆发式增长3142 stars。Token成本是Coding Agent的核心痛点，省60-95%意味着直接降价，开发者接受度会极高",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "OpenClaw 2026.6.1",
+        "oneliner": "新增Windows节点与技能工坊",
+        "launchDate": "06-03",
+        "how": "新增原生Windows节点主机（无需WSL）、技能工坊（Skill Workshop）支持自主学习型智能体、支持MiniMax M3模型",
+        "why": "中文AI社区重要开源Agent框架更新，Windows节点大幅降低企业部署门槛，技能工坊让Agent真正自主学习和积累经验",
+        "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.6.1"
+      },
+      {
+        "name": "ChatGPT Dreaming记忆系统",
+        "oneliner": "跨对话长期记忆终于来了",
+        "launchDate": "06-04",
+        "how": "ChatGPT推出名为Dreaming的新记忆系统，能跨对话记住用户偏好、历史偏好和上下文，付费用户现已可用",
+        "why": "ChatGPT MAU突破10亿后最重要的个人化升级。告别「每次对话从零开始」的历史，对日常用户有直接可感知的体验提升",
+        "link": "https://openai.com/index/chatgpt-memory-dreaming"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "微软Execution Containers",
+        "vendor": "Microsoft",
+        "time": "06-02",
+        "desc": "Build大会上推出Execution Containers，让AI Agent在企业Windows环境中安全隔离运行，解决「怕删文件不敢跑Agent」的核心顾虑",
+        "link": "https://blogs.windows.com/windowsdeveloper/2026/06/02/build-2026-furthering-windows-as-the-trusted-platform-for-development/"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw 2026.6.1",
+        "time": "06-03",
+        "desc": "新增原生Windows节点主机（无需WSL可直接运行）、技能工坊（Skill Workshop）支持自主学习型Agent、支持MiniMax M3，中文生态持续完善",
+        "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.6.1"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic秘密提交IPO申请",
+        "time": "06-02",
+        "desc": "Anthropic已秘密递交IPO申请，Alphabet同期宣布融资800亿美元扩展AI基础设施，Claude vs ChatGPT商业化竞争全面加速",
+        "link": "https://www.bloomberg.com/news/videos/2026-06-02/bloomberg-tech-6-2-2026-video"
+      },
+      {
+        "name": "Cloudflare：机器人流量首超人类（57.5%）",
+        "time": "06-04",
+        "desc": "Cloudflare Radar数据显示，过去一周全球HTML网页请求中57.5%来自机器人（爬虫/AI抓取），首次超过人类（42.5%），互联网流量结构迎来历史性转折",
+        "link": "https://x.com/xiaohu/status/2062367357868355622"
+      }
+    ]
+  },
+  {
     "date": "2026-06-04",
     "title": "2026.06.04 AI 产品趋势调研",
     "coreTrend": "AI编程工具从能力竞赛转向基础设施竞争",

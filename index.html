@@ -941,6 +941,93 @@
 
 const reports = [
   {
+    "date": "2026-06-08",
+    "title": "2026.06.08 AI 产品趋势调研",
+    "coreTrend": "开源AI Agent进入Linux基金会时代，多Agent协作基础设施加速成熟",
+    "tags": [
+      "开源Agent",
+      "Linux基金会",
+      "自学习Agent",
+      "向量检索",
+      "具身智能"
+    ],
+    "opportunities": [
+      {
+        "title": "开源AI Agent工具链整合机会",
+        "desc": "goose/NousHermes等项目正在整合多Provider支持+MCP扩展生态，跨平台Agent工具链是下一阶段基础设施竞争焦点"
+      },
+      {
+        "title": "本地向量检索基础设施",
+        "desc": "turbovec用TurboQuant把10M向量压缩到4GB内存且速度超越FAISS，解决RAG系统内存瓶颈，开源替代方案稀缺"
+      }
+    ],
+    "products": [
+      {
+        "name": "goose（06-07）",
+        "oneliner": "Linux基金会孵化的开源AI Agent",
+        "launchDate": "06-07",
+        "how": "基于Rust构建的通用AI Agent，提供桌面App+CLI+API三种形态，支持15+模型Provider和70+MCP扩展，连接任意终端工具。安装即用，无需配置。",
+        "why": "从block/goose迁入Linux Foundation AAIF，标志开源Agent进入主流生态。三入口+70+MCP扩展覆盖开发者/用户/集成商全场景，与OpenClaw等框架可无缝对接。",
+        "link": "https://github.com/aaif-goose/goose"
+      },
+      {
+        "name": "hermes-agent（06-07）",
+        "oneliner": "内置学习循环的自进化Agent",
+        "launchDate": "06-07",
+        "how": "NousResearch推出的自改进Agent，任务完成后自动创建可复用Skill，跨session持久记忆用户偏好，用FTS5向量检索历史对话，支持Telegram/Discord/Slack等多平台接入。",
+        "why": "唯一内置完整学习闭环的开源Agent——学到的Skill在后续使用中持续自我优化，非每次重置。1111 stars/day增长速度印证社区强烈需求。",
+        "link": "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        "name": "Open Notebook（06-07）",
+        "oneliner": "开源版Notebook LM",
+        "launchDate": "06-07",
+        "how": "Docker一键部署，支持18+AI Provider，自托管数据完全自主，支持PDF/视频/音频生成播客对话，多语言UI，可部署在任意服务器。",
+        "why": "打破Google Notebook LM封闭生态——自托管+多Provider选择让用户不被单一供应商锁定，对隐私敏感企业/研究者吸引力强。",
+        "link": "https://github.com/lfnovo/open-notebook"
+      },
+      {
+        "name": "turbovec（06-07）",
+        "oneliner": "超越FAISS的向量检索库",
+        "launchDate": "06-07",
+        "how": "基于Google TurboQuant论文的Rust向量索引库，无需训练数据，10M向量从31GB压缩到4GB内存，SIMD优化内核搜索速度超越FAISS，支持过滤搜索+混合检索，接LangChain/LlamaIndex开箱即用。",
+        "why": "RAG系统生产部署的核心痛点是内存占用——turbovec彻底解决了这个问题，完全本地运行无API依赖，1554 stars/day是本周期最高增长开源项目。",
+        "link": "https://github.com/RyanCodrai/turbovec"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "OpenClaw",
+        "vendor": "OpenClaw",
+        "time": "06-07",
+        "desc": "OpenClaw Workspace Skills新增coding-agent skill，支持通过子Agent将任务委托给Codex/Claude Code/Pi等外部编码Agent，内置权限管理和临时目录隔离，实现多Agent协同工作流。",
+        "link": "https://clawhub.com"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "coding-agent skill",
+        "time": "06-07",
+        "desc": "OpenClaw Skills体系新增编码委托能力，开发者可通过标准化接口让Agent调用外部AI Coding工具执行复杂编程任务，适用于大型项目的任务分解与并行执行。",
+        "link": "https://clawhub.com"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic完成350亿美元融资",
+        "time": "06-07",
+        "desc": "Anthropic完成历史最大AI领域融资，由Apollo/Blackstone提供债务融资，资金主要用于采购AI芯片。标志着头部AI公司对计算资源海量投入趋势持续加速。",
+        "link": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic"
+      },
+      {
+        "name": "OpenAI转型超级应用平台",
+        "time": "06-07",
+        "desc": "OpenAI宣布ChatGPT自2022年以来最大改版，整合Codex编程工具和第三方应用，从聊天机器人转向超级应用/Agent平台，目标成为跨个人生活和工作场景的统一AI入口。",
+        "link": "https://techcrunch.com/2026/06/07/openai-is-still-working-on-that-super-app"
+      }
+    ]
+  },
+  {
     "date": "2026-06-06",
     "title": "2026.06.06 AI 产品趋势调研",
     "coreTrend": "模型压缩本地化、数据库内置Agent、AI安全工具兴起",

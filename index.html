@@ -941,6 +941,78 @@
 
 const reports = [
   {
+    "date": "2026-06-24",
+    "title": "2026.06.24 AI 产品趋势调研",
+    "coreTrend": "多厂商密集发布企业级和跨Agent协作产品",
+    "tags": [
+      "多Agent协作",
+      "企业级AI",
+      "视频生成",
+      "开源工具",
+      "基础设施"
+    ],
+    "opportunities": [
+      {
+        "title": "多Agent协作从框架层下沉到产品层",
+        "desc": "Sakana AI Fugu把多Agent系统封装成单个API，Claude Tag把AI协作植入Slack工作流，标志多Agent从\"框架玩具\"进入\"开箱即用产品\"阶段，工程复杂度被平台消化。"
+      },
+      {
+        "title": "AI开发工具链易用性快速提升",
+        "desc": "IBM CUGA提供20多个单文件示例让开发者一天内搭起可用Agent，Oak为AI原生Git替代方案，都降低了构建AI应用的门槛，工具层的竞争开始激烈。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Sakana AI Fugu（06-22）",
+        "oneliner": "多模型Agent编排API",
+        "launchDate": "06-22",
+        "how": "将多Agent系统封装成单个API调用，内部自动拆解任务、调度全球模型并验证结果；通过动态编排多模型绕开单一供应商出口管制风险。",
+        "why": "把复杂的多Agent工程变成一行API调用，让普通开发者也能用上多模型协作；解决了多Agent系统落地门槛高的核心痛点。",
+        "link": "https://x.com/berryxia/status/2069090959938466298"
+      },
+      {
+        "name": "Claude Tag（06-23）",
+        "oneliner": "Slack中@协作AI",
+        "launchDate": "06-23",
+        "how": "在Slack频道中通过@Claude委托任务，支持多用户交互；可记住频道上下文，经授权后自动学习其他频道和数据源；支持异步工作，可自主推进项目数小时或数天。",
+        "why": "把AI协作能力直接嵌入团队日常沟通工具，让AI像同事一样参与工作流，而非单独打开另一个窗口；企业采用门槛极低。",
+        "link": "https://www.anthropic.com/news/introducing-claude-tag"
+      },
+      {
+        "name": "Seedance 4K（06-23）",
+        "oneliner": "4K视频生成旗舰模型",
+        "launchDate": "06-23",
+        "how": "Runway发布Seedance 4K、Seedance Mini和Kling 3.0 Turbo三款新模型，通过统一API调用；新用户首三个月七折。",
+        "why": "Seedance 4K达到4K分辨率商用级别，视频生成进入\"好莱坞质量\"门槛；多版本覆盖不同场景需求，API统一降低接入复杂度。",
+        "link": "https://x.com/runwayml/status/2069535148450705517"
+      },
+      {
+        "name": "OpenMontage（06-24）",
+        "oneliner": "开源Agentic视频制作",
+        "launchDate": "06-24",
+        "how": "首个开源Agentic视频制作系统，含12条流水线、52个工具、500+Agent技能；把AI编码助手扩展为完整视频制作工作室；06-24 GitHub Trending第1，日增3592★。",
+        "why": "开源+Agentic让视频制作工作流可编程、可扩展；相比Adobe和Runway的闭源方案，提供了透明可控的替代选择，降低团队视频制作成本。",
+        "link": "https://github.com/calesthio/OpenMontage"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": [
+      {
+        "name": "五眼联盟警告AI网络威胁数月内将影响普通用户",
+        "time": "06-23",
+        "desc": "五眼联盟（美英加澳新）联合警告，即将到来的AI模型（GPT-5.5-Cyber、Mythos等）将大幅降低攻击代码编写门槛，自动化Agent可全天候扫描互联网漏洞，大幅缩短安全窗口期。",
+        "link": "https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats"
+      },
+      {
+        "name": "GitHub联合开源联盟呼吁修改加州AI透明度法案",
+        "time": "06-23",
+        "desc": "GitHub联合Black Forest Labs、Hugging Face、Mozilla，呼吁修改加州AI透明度法案（SB 942）中\"违反义务即撤销开源许可证\"条款，认为这与开源许可证永久不可撤销的核心原则冲突。",
+        "link": "https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source"
+      }
+    ]
+  },
+  {
     "date": "2026-06-23",
     "title": "2026.06.23 AI 产品趋势调研",
     "coreTrend": "AI基础设施成为竞争重心，agent从单体走向多智能体编排与自主部署",

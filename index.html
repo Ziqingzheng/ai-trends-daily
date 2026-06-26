@@ -941,6 +941,103 @@
 
 const reports = [
   {
+    "date": "2026-06-18",
+    "title": "2026.06.18 AI 产品趋势调研",
+    "coreTrend": "Physical AI数据兴起，基础设施加速整合",
+    "tags": [
+      "Physical AI数据",
+      "Agent基础设施",
+      "开源模型",
+      "智能音箱",
+      "并购整合"
+    ],
+    "opportunities": [
+      {
+        "title": "Physical AI数据采集成为新兴产业链",
+        "desc": "XDOF获7000万美元融资专门采集机器人物理交互数据，Shift等公司以免费家政换取视频数据训练家务机器人。继大语言模型之后，物理世界的交互数据（触觉，力学，操作序列）正在成为AI的下一类核心资产。以数据采集和清洗为主业的公司正大量涌现，这一模式在06-16~06-17的融资新闻中得到验证。"
+      },
+      {
+        "title": "AI Agent基础设施层加速整合",
+        "desc": "GitHub Trending显示本周Agent网络访问（Agent-Reach）、上下文压缩（headroom）、安全扫描（SkillSpector）、记忆管理（codebase-memory-mcp）四类工具同时爆发。NVIDIA推出SkillSpector、addonsmani推出agent-skills（7个斜杠命令封装高级工程师工作流），整个生态正从「各自为战」向「标准化模块」收敛，企业用AI Agent的工程门槛显著降低。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Goldfish（Product Hunt，606票）",
+        "oneliner": "Mac状态栏AI助手，主动感知工作上下文",
+        "launchDate": "06-15",
+        "how": "安装在Mac状态栏的AI助手，主动了解用户的工作背景和风格，在任何应用中弹出提供智能补全、语气调整和内容建议。支持写作场景的主动式AI，而非等待用户提问。",
+        "why": "PH史上增速最快的Mac AI助手之一（606票，1.1K关注）。解决了AI助手太被动的问题——主动感知上下文而非等待提问。产品简洁，差异化清晰，有望成为Mac用户的AI标配工具。",
+        "link": "https://www.producthunt.com/products/goldfish-early-access"
+      },
+      {
+        "name": "Framer 3.0",
+        "oneliner": "AI Agent支持的网站构建器正式发布",
+        "launchDate": "06-17",
+        "how": "用户用自然语言描述想要的网站，AI Agent自动生成、修改、发布；可添加AI修改功能到任何网站；内置SEO和内容优化Agent。支持在构建流程中调用外部Agent。Framer拥有7.2K关注，是成熟产品引入Agent的标杆。",
+        "why": "将AI Agent概念直接嵌入核心建站工作流——用户说一句话网站就出来，Agent自动完成从设计到上线的全流程。大型成熟产品拥抱AI Agent是本周最重要的产品信号，意味着AI编程正在从工具变成平台。",
+        "link": "https://www.producthunt.com/products/framer"
+      },
+      {
+        "name": "SpaceX收购Cursor（600亿美元）",
+        "oneliner": "AI编程工具Cursor被SpaceX收入囊中",
+        "launchDate": "06-16",
+        "how": "SpaceX在IPO数天后以600亿美元股票收购AI编程工具Cursor（原Anysphere），预计今年Q3完成。Cursor此前以500亿美元估值融资20亿美元，xAI已租用其数据中心算力。",
+        "why": "600亿美元收购AI编程独角兽是迄今最大的AI工具并购，说明AI编程工具已升级为AI战略资产。SpaceX意在借助Cursor的能力追赶主要AI实验室，标志着AI编程工具从「开发者效率工具」变成「核心业务基础设施」。",
+        "link": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo"
+      },
+      {
+        "name": "GLM-5.2（Z ai）",
+        "oneliner": "开源模型新王登顶Intelligence Index",
+        "launchDate": "06-16",
+        "how": "Z ai发布GLM-5.2，在Artificial Analysis Intelligence Index得分51（超过MiniMax-M3和DeepSeek V4 Pro的44分），参数规模744B（激活40B），上下文窗口扩展至1M token，定价1.4/4.4/0.26美元/百万token，MIT许可证。",
+        "why": "开源模型首次在综合评测上超过闭源主力模型，科学推理大幅提升（CritPt +16%、HLE +12%），被社区称为「 Opus 4.8的小弟但价格便宜太多」。MIT许可证允许任何商业使用，推动开源生态快速追赶闭源阵营。",
+        "link": "https://news.ycombinator.com/item?id=48567759"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "name": "Agent-Reach（GitHub 33k stars）",
+        "time": "06-15",
+        "desc": "让AI Agent秒上互联网，支持Twitter/X、Reddit、YouTube、B站、小红书、GitHub等平台，零API费用。本周新增6.8k stars，Agent无需手动操作网页即可获取互联网信息。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "agent-skills（addyosmani，GitHub 62k stars）",
+        "time": "06-15",
+        "desc": "Google工程师addyosmani出品的AI编程工作流技能集，提供/spec/plan/build/test/review/ship等7个斜杠命令。本周新增11.7k stars，将高级工程师的开发方法论封装成可执行的自动化流程。",
+        "link": "https://github.com/addyosmani/agent-skills"
+      },
+      {
+        "name": "headroom（GitHub 32k stars）",
+        "time": "06-15",
+        "desc": "上下文压缩层，在AI Agent和LLM之间压缩工具输出、日志、文件和RAG chunks，节省60-95%的token消耗。本周新增9.5k stars，支持Python/TS库、代理模式、MCP服务器等多种接入方式。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "SkillSpector（NVIDIA，GitHub 7.5k stars）",
+        "time": "06-15",
+        "desc": "NVIDIA推出的AI Agent技能安全扫描工具，检测prompt注入、数据泄露、权限提升、供应链攻击等64种漏洞模式。本周新增5.3k stars，支持静态分析和LLM语义评估两阶段扫描。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic Fable 5被美国政府拦截发布",
+        "time": "06-17",
+        "desc": "美国政府以「过于危险」为由拒绝Anthropic的Fable 5/Mythos模型公开发布。安全专家联合发声指出商务部援引的出口管制理由站不住脚。此举开创了美国政府单方面迫使科技公司下架AI产品的先例，对整个AI行业具有深远警示意义。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence"
+      },
+      {
+        "name": "Noam Shazeer离开Google加入OpenAI",
+        "time": "06-18",
+        "desc": "2024年Google以27亿美元请回的AI传奇人物Noam Shazeer已离开谷歌加入OpenAI。这是继Gelsinger离开Intel之后科技圈最重磅的人事变动之一，对Google Gemini团队是重大人才流失。",
+        "link": "https://x.com/Yuchenj_UW/status/2067401895178817999"
+      }
+    ]
+  },
+  {
     "date": "2026-06-17",
     "title": "2026.06.17 AI 产品趋势调研",
     "coreTrend": "AI编程工具成巨头竞技场，资本加速涌入应用层",

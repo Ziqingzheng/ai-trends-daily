@@ -941,6 +941,117 @@
 
 const reports = [
   {
+    "date": "2026-06-14",
+    "title": "2026.06.14 AI 产品趋势调研",
+    "coreTrend": "AI编程工具全面工程化，Agent安全与质量管控成新战场",
+    "tags": [
+      "AI编程",
+      "Agent安全",
+      "开源生态",
+      "多模型",
+      "上下文压缩"
+    ],
+    "opportunities": [
+      {
+        "title": "企业Agent安全合规检测成刚需",
+        "desc": "26.1%的Agent Skill存在漏洞，5.2%可能有恶意意图，NVIDIA开源SkillSpector填补了上市前安全检测空白"
+      },
+      {
+        "title": "Agent上下文成本管控加速落地",
+        "desc": "Headroom等压缩工具实测节省60-95% Token，解决Agent长会话成本失控痛点，推动企业大规模部署"
+      }
+    ],
+    "products": [
+      {
+        "name": "Agent Skills（06-11）",
+        "oneliner": "Google推工程级AI编程Skill",
+        "launchDate": "06-11",
+        "how": "提供24个结构化Skill（/spec、/plan、/build、/test、/review、/ship），通过slash commands嵌入Claude Code、Cursor、Windsurf等主流编码Agent。每个Skill含步骤、验证门和反合理化检查表。",
+        "why": "Google工程负责人Addy Osmani出品，9,348 stars/周、1,514 stars/天，增速极快。将资深工程师工作流固化为AI可复用Skill，解决AI编程质量不稳定问题。",
+        "link": "https://github.com/addyosmani/agent-skills"
+      },
+      {
+        "name": "Cursor Auto-review（06-11）",
+        "oneliner": "用分类器智能体管住Agent",
+        "launchDate": "06-11",
+        "how": "专门分类器智能体在工具调用前审查动作风险，根据上下文判断动作是否与用户意图一致，高风险时阻止并返回解释，低风险时放行。分类器读取工作区文件辅助判断。",
+        "why": "解决编码Agent自主权限过大的核心矛盾——既不能断路影响体验，又必须拦截读取密钥、操作生产数据等危险动作。测试基于6,122条内部开发标签数据。",
+        "link": "https://cursor.com/blog/auto-review"
+      },
+      {
+        "name": "Claude Code浏览器模式（06-12）",
+        "oneliner": "AI编程进入真实浏览器调试",
+        "launchDate": "06-12",
+        "how": "OpenAI Codex与Chrome深度集成，通过CDP（Chrome DevTools协议）调试浏览器，分析JavaScript性能、检查控制台输出、网络流量和页面状态。Codex从黑盒变成白盒调试。",
+        "why": "AI编程助手从纯编辑器跃升到真实浏览器环境，Agent可直接观察网页渲染结果自我修正，编程-验证闭环大幅缩短。",
+        "link": "https://x.com/OpenAIDevs/status/2065226355495895521"
+      },
+      {
+        "name": "DeepSeek-R1开源实现（06-11）",
+        "oneliner": "最强推理模型全面开源复现",
+        "launchDate": "06-11",
+        "how": "Hugging Face开源项目Open R1，以开源方式复现DeepSeek-R1推理模型，在Hacker News获101分。开发者可在本地运行完整推理pipeline。",
+        "why": "推理能力最强的开源模型之一全面可复现，降低企业自部署门槛，推动推理模型在各场景落地。",
+        "link": "https://github.com/huggingface/open-r1"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic Claude Corps奖学金",
+        "vendor": "Anthropic",
+        "time": "06-11",
+        "desc": "Anthropic推出Claude Corps全国奖学金项目，培训1,000名早期职业研究员使用Claude，为美国非营利组织工作一年，年薪85,000美元+福利，初始投入1.5亿美元。",
+        "link": "https://www.anthropic.com/news/claude-corps"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "last30days-skill",
+        "time": "06-11",
+        "desc": "一个/launch command并行抓取Reddit/X/YouTube/HN/Polymarket/GitHub等平台，AI评分输出带来源简报。12,602 stars/周，OpenClaw生态内最热Skill之一。",
+        "link": "https://github.com/mvanhorn/last30days-skill"
+      },
+      {
+        "name": "Superpowers Framework",
+        "time": "06-12",
+        "desc": "在Agent启动时强制介入，要求先理解需求、生成分块Spec、制定原子化任务计划后执行。可安装到Claude Code、Codex、Cursor等所有主流编码Agent。",
+        "link": "https://github.com/obra/superpowers"
+      },
+      {
+        "name": "SkillSpector",
+        "time": "06-11",
+        "desc": "NVIDIA开源的AI Agent Skill安全扫描器，检测64种漏洞模式（Prompt Injection、数据外泄、权限提升等16大类），查询OSV.dev实时CVE，输出0-100风险评分。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      },
+      {
+        "name": "Headroom",
+        "time": "06-11",
+        "desc": "Token压缩工具，拦截工具输出/日志/RAG chunks后压缩60-95%再送入LLM。实测SRE故障排查节省92% Token，代码搜索节省92%，解决Agent上下文窗口耗尽痛点。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "OpenRouter Fusion API",
+        "time": "06-13",
+        "desc": "OpenRouter推出复合模型Fusion API，以一半价格实现Fable级智能，已可在OpenRouter平台调用。中小团队用顶级推理模型成本大幅下降。",
+        "link": "https://x.com/OpenRouter/status/2065856853989270011"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "xAI Grok Build插件市场",
+        "time": "06-11",
+        "desc": "xAI发布Grok Build内置插件市场，将技能/斜杠命令/MCP服务器/LSP打包为可安装包，首发合作伙伴包括MongoDB、Vercel、Sentry、Cloudflare和Superpowers，开发者可提交PR发布插件。",
+        "link": "https://x.ai/news/grok-plugin-marketplace"
+      },
+      {
+        "name": "Perplexity Computer集成Deep Research",
+        "time": "06-11",
+        "desc": "Perplexity将Deep Research作为原生技能集成到Computer，连接到Agent框架，可访问搜索、长运行沙箱、连接器和授权数据，Pro和Max订阅者可用。",
+        "link": "https://x.com/perplexity_ai/status/2065124930463916317"
+      }
+    ]
+  },
+  {
     "date": "2026-06-13",
     "title": "2026.06.13 AI 产品趋势调研",
     "coreTrend": "任务模式AI从聊天走向执行多步工作流",

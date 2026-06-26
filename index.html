@@ -941,6 +941,93 @@
 
 const reports = [
   {
+    "date": "2026-06-10",
+    "title": "2026.06.10 AI 产品趋势调研",
+    "coreTrend": "苹果企业AI全面落地，字节腾讯竞逐企业入口",
+    "tags": [
+      "Apple Intelligence",
+      "微信AI",
+      "Kimi Code",
+      "企业AI",
+      "WWDC2026"
+    ],
+    "opportunities": [
+      {
+        "title": "企业 AI 办公入口争夺战：飞书/钉钉迎来字节+腾讯双线冲击",
+        "desc": "火山引擎 TRAE Work（字节）和微信 AI（腾讯）同周内测，前者面向非技术岗位的 Work 模式和面向开发者的 Code 模式，后者以13 亿月活小程序生态切入。两者同时瞄准钉钉和飞书的腹地，企业 AI 办公赛道将从「二选一」变成「三足鼎立」。"
+      },
+      {
+        "title": "Apple Intelligence EU 解禁：端侧 AI 普及最大规模事件",
+        "desc": "Apple Intelligence 在 iOS 27 / iPadOS 27 / macOS 27 / visionOS 27 / watchOS 27 全面铺开，且欧盟因 DMA 要求不能延迟——这是全球覆盖最广的端侧 AI 更新。Claude Swift 包让第三方大模型首次原生进入 Apple 生态，双向打通意义重大。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Apple Intelligence 下一代（iOS 27 等）",
+        "oneliner": "苹果端侧AI全面铺开，欧盟同步上线",
+        "launchDate": "06-08",
+        "how": "深度集成于 iPhone/iPad/Mac/Watch/Vision Pro，系统级访问、Siri 升级为 AI 助手、跨 App 操作、屏幕感知、相机视觉问答。visionOS 27 新增「注视唤醒」Siri 浮空球交互。Claude 推出 Swift 包，三行代码调用 Claude，覆盖 Apple 全平台。",
+        "why": "苹果姗姗来迟但直接对标 GPT-4o/Gemini Live，覆盖设备量全球第一；visionOS 注视唤醒是首个商业化空间 AI 交互形态；Claude Swift 包让 Apple开发者首次原生集成第三方大模型，双向生态打通。",
+        "link": "https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences"
+      },
+      {
+        "name": "Kimi Code（视频理解版）",
+        "oneliner": "国内Coding Agent首次打通视频→代码链路",
+        "launchDate": "06-08",
+        "how": "新增视频理解能力：提取视频风格生成 LUT 文件、长视频切片、根据录屏生成代码；集成同花顺/天眼查等权威数据源可查股票财报；支持 ACP 协议，可在 JetBrains 和 Zed 中使用；底层由 Kimi K2.6 模型提供视觉推理。",
+        "why": "国内头部 Coding Agent 首次实现「视频→代码」端到端链路，数据源覆盖股票财报等高价值场景，开发者友好度大幅提升，是 AI 编程工具链国产替代的重要信号。",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzkzMTY4NTIyNA%3D%3D&mid=2247484250&idx=1&sn=d0a07f5358250f3a54df8fbabe61f09a"
+      },
+      {
+        "name": "微信 AI（内测）",
+        "oneliner": "13亿月活生态的AI入口级事件",
+        "launchDate": "06-08",
+        "how": "开放平台提供两种接入模式：自动模式授权平台读取小程序源码，AI 直接操作页面；开发模式允许开发者自主开发技能审核后由 AI 调用。自然语言对话即可调用和操作小程序。",
+        "why": "微信拥有超 13 亿月活用户，若成功落地将是国内最大的 AI Native 应用入口；两种模式兼顾小白用户和开发者生态，小程序行业可能被重构。",
+        "link": "https://www.ithome.com/0/961/480.htm"
+      },
+      {
+        "name": "火山引擎 TRAE Work 企业版",
+        "oneliner": "字节跳动正式入局企业AI办公赛道",
+        "launchDate": "06-09",
+        "how": "Work 模式面向非技术岗位，支持多格式混合输入直出 PPT/文档、语音讨论自动整理纪要、定时数据整理报告；Code 模式面向开发者，自然语言生成页面或小应用。企业后台统一配置模型、用量限额、内部文档，沙箱隔离执行。",
+        "why": "字节跳动正式入局企业 AI 办公，对标钉钉 AI 和飞书 AI；「多格式→PPT直出」和「语音→结构化纪要」是真实高频办公痛点，企业级安全管控降低合规顾虑。",
+        "link": "https://mp.weixin.qq.com/s/f7QzLzwHPHHv3tWT1Wrnkw"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "OpenAI提交S-1草案",
+        "vendor": "OpenAI",
+        "time": "06-08",
+        "desc": "向SEC秘密提交S-1首次公开募股注册声明，目前尚未决定上市时间。Altman同步宣布OpenAI进入第三阶段：普及AI、易用且安全，研究员自动化，经济提速，通用AI for Everyone。",
+        "link": "https://openai.com/index/openai-submits-confidential-s-1"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "AgentOS",
+        "time": "06-09",
+        "desc": "基于OpenClaw构建的统一控制面板，管理AI agent、工作区、任务、审批和运行时可见性。local-first，单一界面管理多agent协作，适合团队使用。Product Hunt日均票数120+，增长快速。",
+        "link": "https://www.producthunt.com/products/agentos-run-agents-like-a-company"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Cursor欧洲总部落子伦敦，SpaceX收购选择权",
+        "time": "06-09",
+        "desc": "Cursor将欧洲总部设在伦敦，计划招聘约200名员工。B2B年化营收约26亿美元，客户包括英国航空、英国石油、诺基亚等。SpaceX拥有以600亿美元收购Cursor的选择权。平台数据留存欧洲本地以满足合规。",
+        "link": "https://www.ithome.com/0/961/868.htm"
+      },
+      {
+        "name": "NotebookLM智能体能力升级+欧洲全面上线",
+        "time": "06-08",
+        "desc": "NotebookLM推出对话中的智能体能力、更高级推理及新输出格式，现面向Google AI Ultra订阅者推出。其笔记本功能已在欧洲Gemini App中100%上线，可在Gemini App内直接访问个人笔记本并将对话作为来源。",
+        "link": "https://x.com/NotebookLM/status/2064016460964585549"
+      }
+    ]
+  },
+  {
     "date": "2026-06-09",
     "title": "2026.06.09 AI 产品趋势调研",
     "coreTrend": "Apple Intelligence入场WWDC，AI助手平台化浪潮来袭",

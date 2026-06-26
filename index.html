@@ -941,6 +941,85 @@
 
 const reports = [
   {
+    "date": "2026-06-19",
+    "title": "2026.06.19 AI 产品趋势调研",
+    "coreTrend": "Agent开发工具链走向生产化，基础设施成新焦点",
+    "tags": [
+      "Coding Agent",
+      "Agent基础设施",
+      "开源工具链",
+      "LLM优化",
+      "安全扫描"
+    ],
+    "opportunities": [
+      {
+        "title": "Agent技能市场崛起，分工体系形成",
+        "desc": "Skills marketplaces（agent-skills/pm-skills）提供100+可复用技能组合，从单Agent工具向多Agent协作平台演进，分工体系正在形成"
+      },
+      {
+        "title": "Token成本优化工具爆发，基础设施填补生产缺口",
+        "desc": "headroom等压缩工具将LLM调用成本降低60-95%，生产部署关键基础设施填补中，token优化成为Agent生产化的必经之路"
+      }
+    ],
+    "products": [
+      {
+        "name": "headroom（06-19）",
+        "oneliner": "LLM Token压缩60-95%",
+        "launchDate": "06-19",
+        "how": "在LLM调用前压缩工具输出、日志、文件和RAG分块；支持库模式、代理模式、MCP服务器三种接入方式。",
+        "why": "Token成本是Agent生产化的核心瓶颈，60-95%的压缩率意味着成本等比下降，是当前最实用的Agent基础设施之一。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "codebase-memory-mcp（06-19）",
+        "oneliner": "代码库毫秒级建知识图谱",
+        "launchDate": "06-19",
+        "how": "将代码库索引为持久化知识图谱的MCP服务器，支持158种编程语言，亚毫秒查询速度，单文件零依赖，一个命令行即可接入。",
+        "why": "代码理解是Coding Agent的必备能力，传统方案token消耗巨大，此工具节省99% tokens同时提速，是Agent上下文管理的范式升级。",
+        "link": "https://github.com/DeusData/codebase-memory-mcp"
+      },
+      {
+        "name": "KiloCode（06-19）",
+        "oneliner": "开源全链路Coding Agent平台",
+        "launchDate": "06-19",
+        "how": "一站式开源Coding Agent平台，支持构建、部署和迭代AI编程Agent，提供完整开发流水线，开源可自托管。",
+        "why": "Cursor等商业IDE功能强大但封闭，KiloCode提供开源替代方案，团队可自主掌控AI编程流水线的全部环节。",
+        "link": "https://github.com/Kilo-Org/kilocode"
+      },
+      {
+        "name": "SkillSpector（06-19）",
+        "oneliner": "NVIDIA开源Agent技能安全扫描",
+        "launchDate": "06-19",
+        "how": "NVIDIA开源的安全扫描工具，检测AI Agent技能中的漏洞、恶意模式和已知安全风险，支持CI/CD集成。",
+        "why": "随着Agent技能库爆发式增长，安全问题凸显，SkillSpector是第一个针对Agent技能生态的专用安全工具，抢占先机。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "name": "KiloCode集成OpenClaw架构",
+        "time": "06-19",
+        "desc": "KiloCode作为全链路开源Coding Agent平台，在架构上与OpenClaw的Agent能力方向高度一致，代表了开源Coding Agent平台的新一轮竞争。",
+        "link": "https://github.com/Kilo-Org/kilocode"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Claude Design更新编辑器功能",
+        "time": "06-17",
+        "desc": "Anthropic为Claude Design推出新编辑器，支持直接拖拽、对齐元素，新增Adobe和Canva导出选项，可与Claude Code无缝接力。设计→代码的完整工作流正在形成。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence"
+      },
+      {
+        "name": "Noam Shazeer加入OpenAI",
+        "time": "06-18",
+        "desc": "谷歌Gemini联创Noam Shazeer重返OpenAI，曾共同创立Character.AI，代表大模型核心人才持续向OpenAI聚拢。",
+        "link": "https://techcrunch.com/2026/06/18/google-gemini-co-lead-noam-shazeer-join-openai/"
+      }
+    ]
+  },
+  {
     "date": "2026-06-18",
     "title": "2026.06.18 AI 产品趋势调研",
     "coreTrend": "Physical AI数据兴起，基础设施加速整合",

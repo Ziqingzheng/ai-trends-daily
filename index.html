@@ -941,6 +941,111 @@
 
 const reports = [
   {
+    "date": "2026-06-03",
+    "title": "2026.06.03 AI 产品趋势调研",
+    "coreTrend": "OpenClaw联手微软进企业，AI编程工具爆发",
+    "tags": [
+      "企业AI",
+      "开源Agent",
+      "多模态",
+      "模型集成",
+      "开发者工具"
+    ],
+    "opportunities": [
+      {
+        "title": "企业AI Agent部署成为新赛道",
+        "desc": "OpenClaw与Microsoft合作、NVIDIA NemoClaw面向工业软件厂商，标志着AI Agent从开发者工具向企业级基础设施演进，预计2026年下半年将有更多厂商跟进企业授权模式"
+      },
+      {
+        "title": "AI IDE向多智能体工作流演进",
+        "desc": "Claude Code动态工作流、GitHub Copilot App、Replit+Fabric集成表明，AI编程工具正在从单一辅助向多智能体协作平台升级，开发者工作流将被重新定义"
+      }
+    ],
+    "products": [
+      {
+        "name": "GitHub Copilot App（06-02）",
+        "oneliner": "首个智能体原生桌面AI编程工具",
+        "launchDate": "06-02",
+        "how": "微软Build 2026发布，将Copilot定位为「智能体原生」桌面体验，让AI智能体能以用户习惯的方式工作，支持跨文件上下文理解和自主任务执行",
+        "why": "GitHub Copilot拥有数千万开发者用户基础，此次定位升级意味着AI编程从「代码补全」进化到「自主完成整个任务」，极大提升开发者生产力",
+        "link": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience"
+      },
+      {
+        "name": "OpenAI Codex Sites（06-02）",
+        "oneliner": "一句话生成可分享的交互网站",
+        "launchDate": "06-02",
+        "how": "Codex新增Sites功能，用户用自然语言描述想法即可生成可交互网站或应用，团队可通过单一URL访问、使用和分享，Business/Enterprise计划优先",
+        "why": "将「有代码想法」到「可运行产品」的路径压缩到一次对话，降低了非技术用户用AI构建工具的门槛，有望成为新一代个人主页和小工具的首选平台",
+        "link": "https://x.com/OpenAI/status/2061845949170045346"
+      },
+      {
+        "name": "OpenAI Codex Python SDK（06-02）",
+        "oneliner": "把顶级编程Agent嵌入自有应用",
+        "launchDate": "06-02",
+        "how": "通过pip install openai-codex即可集成到任意Python应用，获得Codex的编程和生图Agent能力，可复用Codex登录态，支持流式输出",
+        "why": "SDK化降低了接入门槛，应用开发者无需fork或调用API即可获得顶级AI编程能力，预计将成为教育、游戏、自动化等领域快速集成AI的首选方式",
+        "link": "https://x.com/vista8/status/2061846741885018296"
+      },
+      {
+        "name": "Claude Code 动态工作流（06-02）",
+        "oneliner": "单次对话中多智能体协作解决复杂任务",
+        "launchDate": "06-02",
+        "how": "通过执行特定JavaScript文件，Claude Code可动态创建和协调多个拥有独立上下文窗口的子代理，适用于研究、安全分析、代码审查等复杂长任务",
+        "why": "解决单一上下文窗口处理长任务时的「智能惰性」问题，让Claude Code能够处理原本超出上下文限制的复杂项目，是工程团队使用AI处理真实生产代码的关键能力",
+        "link": "https://claude.ai/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "OpenClaw",
+        "vendor": "OpenClaw",
+        "time": "06-02",
+        "desc": "OpenClaw与Microsoft达成合作，Claws现可在企业环境中安全运行，打通Windows生态和企业身份认证，标志着开源Agent框架进入企业级市场",
+        "link": "https://x.com/openclaw/status/2061869633624580452"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw企业集成×Microsoft",
+        "time": "06-02",
+        "desc": "OpenClaw与Microsoft正式合作，支持企业身份认证和Windows生态系统安全运行，适用于有数据合规要求的企业内部AI Agent部署",
+        "link": "https://x.com/openclaw/status/2061869633624580452"
+      },
+      {
+        "name": "OpenClaw×阿里云AgentScope",
+        "time": "06-02",
+        "desc": "阿里云AgentScope新增Claw功能，支持本地MinQwenPaw加Shell访问；Builder支持多租户零代码企业平台，工作区驱动进化与分布式隔离",
+        "link": "https://x.com/alibaba_cloud/status/2061745401393291554"
+      },
+      {
+        "name": "ECC Agent工具链",
+        "time": "06-03",
+        "desc": "GitHub Trending热门的Agent性能优化系统，将OpenClaw列为支持目标之一，为Claude Code、Codex、Cursor等工具提供Skills、记忆、安全等能力",
+        "link": "https://github.com/affaan-m/ECC"
+      },
+      {
+        "name": "hermes-webui",
+        "time": "06-03",
+        "desc": "Hermes Agent的网页/WebUI界面，可从浏览器或手机远程操控Agent，GitHub单日+1722 stars，生态活跃度持续上升",
+        "link": "https://github.com/nesquena/hermes-webui"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "NVIDIA NemoClaw平台发布",
+        "time": "06-02",
+        "desc": "NVIDIA在COMPUTEX发布NemoClaw，为工业软件厂商提供构建自主AI工程师的开放蓝图，十余家CAD/CAE/EDA厂商基于此构建专业Agent，核心开源运行时OpenShell提供安全管控",
+        "link": "https://blogs.nvidia.com/blog/industrial-software-leaders-secure-autonomous-ai-engineers-nemoclaw"
+      },
+      {
+        "name": "Google DeepMind Science Skills开源",
+        "time": "06-02",
+        "desc": "DeepMind开源Science Skills科研专用Agent工具包，以科学基础和更高token效率加速科研工作流，面向生物、化学、物理等科学领域的研究人员",
+        "link": "https://github.com/google-deepmind/science-skills"
+      }
+    ]
+  },
+  {
     "date": "2026-06-26",
     "title": "2026.06.26 AI 产品趋势调研",
     "coreTrend": "代码视频Agent商业化加速，国内大厂豆包/字节正式入场",

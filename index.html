@@ -941,6 +941,110 @@
 
 const reports = [
   {
+    "date": "2026-06-26",
+    "title": "2026.06.26 AI 产品趋势调研",
+    "coreTrend": "代码视频Agent商业化加速，国内大厂豆包/字节正式入场",
+    "tags": [
+      "AI Agent商业化",
+      "computer use",
+      "视频生成",
+      "国内大厂动态"
+    ],
+    "opportunities": [
+      {
+        "title": "国内AI Agent付费产品正式规模化：豆包68元/月开道",
+        "desc": "豆包专业版代表国内首批落地的AI Agent商业化产品，Agent直接操控电脑/浏览器/Office，直接对标GPT Plus的Agent模式。68元/月的亲民定价有望把AI Agent从小众开发者推向大众用户，开辟国内AI订阅新赛道。"
+      },
+      {
+        "title": "computer use从独立能力变为内置工具，门槛质变",
+        "desc": "Gemini 3.5 Flash将computer use从独立模型降为内置功能，且该模型本身已具备价格优势。意味着任何开发者现在都能零门槛构建跨浏览器/桌面/移动的AI Agent，而不需要自己训练或部署专门模型。这是基础设施层面的一次跃迁。"
+      }
+    ],
+    "products": [
+      {
+        "name": "豆包专业版（06-24）",
+        "oneliner": "字节首款商业化AI Agent产品",
+        "launchDate": "06-24",
+        "how": "基于豆包2.1系列大模型，支持Agent任务：直接操控本地电脑、浏览器、Skills技能、定时任务；内置Office套件，可生成带后端数据库的在线应用。标准套餐68元/月，Pro模型200元/月，大学生38元/月。",
+        "why": "字节正式进入付费AI办公赛道。国内首批真正商业化的AI Agent产品之一——不是Demo，是用户可付费使用的完整产品。68元/月的定价亲民，直接对标GPT Plus（20美元），标志着国内AI Agent从技术探索进入商业规模化阶段。",
+        "link": "https://mp.weixin.qq.com/s/Sb-NMXTrWFQES1EDO_Gr2g"
+      },
+      {
+        "name": "Gemini 3.5 Flash computer use（06-24）",
+        "oneliner": "内置computer use的主力模型",
+        "launchDate": "06-24",
+        "how": "Google将computer use能力内置到Gemini 3.5 Flash中，开发者可通过Gemini API直接调用，构建跨浏览器、移动端和桌面的AI Agent。支持企业级安全防护（用户确认机制、间接注入检测）。零API改动，只需换一行import即可。",
+        "why": "computer use从独立模型变为内置工具，是一次质的门槛降低：开发者不再需要调用专门的computer use模型，只需使用主力模型Gemini 3.5 Flash即可。加上该模型本身的价格优势，这一功能将大幅加速AI Agent的普及。",
+        "link": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash"
+      },
+      {
+        "name": "OpenAI × Broadcom Jalapeño推理芯片（06-24）",
+        "oneliner": "OpenAI首款自研推理加速器",
+        "launchDate": "06-24",
+        "how": "OpenAI与Broadcom联合设计首款专为LLM推理从头设计的加速芯片Jalapeño。早期测试性能功耗比大幅优于现有SOTA，工程样片已在实验室以目标频率运行GPT-5.3-Codex-Spark等负载。从设计到流片仅用9个月。",
+        "why": "OpenAI正式进入AI芯片自研，代表大厂纵向整合趋势。Jalapeño直接影响未来模型推理成本和部署速度——推理成本下降将传导至API定价，让更便宜的Agent调用成为可能，是整个AI Agent生态的基础设施工具。",
+        "link": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip"
+      },
+      {
+        "name": "Runway Seedance 4K / Mini（06-23）",
+        "oneliner": "视频生成平台最强军备更新",
+        "launchDate": "06-23",
+        "how": "Runway发布Seedance 4K（高端画质）和Seedance Mini（轻量），同时集成字节Kling 3.0 Turbo视频生成模型，三款产品统一上线Runway平台，首三个月享七折优惠。4K版主打影视级画质，Mini版主打快速生成。",
+        "why": "Seedance 4K代表视频生成最高水准；Kling 3.0 Turbo首次以第三方模型身份登陆Runway，形成全球最强模型聚合平台。Seedance Mini降低使用门槛，让更多创作者能以更低成本制作高质量视频。",
+        "link": "https://x.com/runwayml/status/2069535148450705517"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "暂无重大OpenClaw框架更新",
+        "vendor": "",
+        "time": "",
+        "desc": "近3天无重大OpenClaw版本更新或官方公告，OpenClaw生态调研结果聚焦第三方应用层面（见openclawProducts）。",
+        "link": ""
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "火山引擎 Agent Ready（06-24）",
+        "time": "06-24",
+        "desc": "字节火山引擎发布面向企业的Agent Ready基础设施，AgentKit升级提供Identity/Runtime/Sandbox/Evaluation等模块；ArkClaw企业版集成Agent广场、技能中心与企业知识库，支持飞书、钉钉等IM统一管控。海底捞案例：门店Agent将小时级工作压缩到分钟级，人工跟进减少70%。",
+        "link": "https://mp.weixin.qq.com/s/83mrPAPgQRKhxLkoSvRgBQ"
+      },
+      {
+        "name": "aws/agent-toolkit-for-aws（06-23）",
+        "time": "06-23",
+        "desc": "AWS官方出品的AI Agent工具包，为Claude Code、Codex、Cursor等主流AI编码助手提供MCP Server和插件，覆盖CDK/CloudFormation、Lambda/容器、数据分析、安全审查等场景，一条命令即可让AI助手操作AWS。",
+        "link": "https://github.com/aws/agent-toolkit-for-aws"
+      },
+      {
+        "name": "DESIGN.md（06-25）",
+        "time": "06-25",
+        "desc": "Google Labs开源的设计系统规范格式，让AI编码助手能持久化、结构化地理解产品视觉语言（字体、颜色、间距、动效等）。19k stars，1475今日新增。解决AI生成代码风格不一致的问题，是AI前端开发工作流的基础设施。",
+        "link": "https://github.com/google-labs-code/design.md"
+      },
+      {
+        "name": "page-agent（06-23）",
+        "time": "06-23",
+        "desc": "阿里巴巴开源的网页内嵌GUI Agent，无需浏览器扩展或无头浏览器，用自然语言直接操控任意网页界面。支持MCP Server，无截图/多模态LLM要求。可为SaaS产品快速嵌入AI Copilot，把20步表单填写压缩成一句话指令，接入仅需一行script标签。",
+        "link": "https://github.com/alibaba/page-agent"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Claude Tag：Anthropic AI正式加入Slack团队（06-23）",
+        "time": "06-23",
+        "desc": "Anthropic发布Claude Tag——AI agent可作为团队成员加入Slack频道，任何人@mention即可委托任务，并在频道对话中积累上下文。Anthropic内部数据：产品团队65%的代码已由Claude Tag生成。标志着AI从对话工具向持续性团队成员转变。",
+        "link": "https://anthropic.com/news/introducing-claude-tag"
+      },
+      {
+        "name": "Codex正式登陆ChatGPT移动App（06-25）",
+        "time": "06-25",
+        "desc": "OpenAI宣布Codex编程助手在ChatGPT移动应用中正式开放（GA）。用户可通过手机启动编码任务、审查输出、引导执行和批准下一步，Codex实际在后台笔记本/Mac上运行。新增设备配对、通知、文件预览及内联评论功能。",
+        "link": "https://x.com/OpenAIDevs/status/2070254532911882707"
+      }
+    ]
+  },
+  {
     date: "2026-06-02",
     "title": "2026.06.02 AI 产品趋势调研",
     "coreTrend": "Physical AI数据兴起，工厂Agent落地",

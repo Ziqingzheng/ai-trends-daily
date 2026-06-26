@@ -941,6 +941,105 @@
 
 const reports = [
   {
+    "date": "2026-06-13",
+    "title": "2026.06.13 AI 产品趋势调研",
+    "coreTrend": "任务模式AI从聊天走向执行多步工作流",
+    "tags": [
+      "AI Agent",
+      "任务模式",
+      "开源模型",
+      "上下文压缩",
+      "具身AI"
+    ],
+    "opportunities": [
+      {
+        "title": "全自主无人机首次实战击毙人类士兵",
+        "desc": "据《新科学家》报道，2026年6月10日有记录以来首次由完全自主运行的无人机执行致命攻击。这不只是新闻，而是AI从辅助决策走向独立执行的关键一步——在军事、安保、物流等场景，自动驾驶 AI 执行端已经真实落地。"
+      },
+      {
+        "title": "跨应用任务模式成为 AI Agent 产品化主线",
+        "desc": "字节豆包、华为云具身平台、Codex 浏览器模式三条路线同时指向「AI 调用工具完成多步骤任务」。当执行端成本下降（Token 压缩）、联网问题解决（Agent-Reach），AI Agent 从问答工具走向真正的数字劳动力。"
+      }
+    ],
+    "products": [
+      {
+        "name": "headroom（06-10）",
+        "oneliner": "Token压缩60-95%成本直降",
+        "launchDate": "06-10",
+        "how": "通过 6 种压缩算法（LLM Zip、CCR 可逆压缩等）压缩工具输出、日志、RAG 分块和对话历史，再送入 LLM。可作 Python/TS 库、代理或 MCP 服务器使用。",
+        "why": "Token 成本占 LLM 调用费用大头，压缩 60-95% 意味着成本同比例下降，同时保持答案质量。支持跨 Agent 共享记忆，自动学习失败 session 并写入 CLAUDE.md。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "Agent-Reach（06-11）",
+        "oneliner": "让AI读懂全网",
+        "launchDate": "06-11",
+        "how": "一条命令安装后，Claude Code / Cursor / OpenClaw 等 Agent 即可读取 Twitter、Reddit、YouTube、B 站、小红书等内容，无需任何 API Key，全程免费（服务器代理可选 $1/月）。",
+        "why": "解决了 AI Agent「最后一公里」问题——能推理但无法上网获取实时信息。多后端路由自动切换，某个平台封禁后无感切换下一个。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "小米MiMo Code（06-10）",
+        "oneliner": "SWE-Bench超越Claude Code",
+        "launchDate": "06-10",
+        "how": "小米开源终端 AI 编程助手 MiMo Code V0.1.0，内置限时免费 MiMo-V2.5 多模态模型。核心能力包括持久记忆系统、无限上下文和独创 Compose 模式，终端输入 `mimo` 即可使用。",
+        "why": "SWE-Bench Pro 达 62%（Claude Code 57%），首次有中国公司开源代码模型在主流基准上超越 Claude Code。MIT 协议，终端友好，降低了 AI 编程的门槛。",
+        "link": "https://mp.weixin.qq.com/s/WkMPz-eBK2Hz0ZTQEwtx6w"
+      },
+      {
+        "name": "openmed（06-10）",
+        "oneliner": "本地1000+医疗AI模型",
+        "launchDate": "06-10",
+        "how": "一行 Python 代码调用 1000+ 医疗专业模型，完成临床文本实体提取和 PII（个人身份信息）脱敏。支持 Apple MLX，可在 iPhone 上完全离线运行，临床数据永不离开设备。",
+        "why": "医疗 AI 对数据隐私要求极高，该工具让医院和诊所无需云端即可获得 SOTA 医疗 NLP 能力，避免患者数据外泄。Apache-2.0 开源，12 种语言支持。",
+        "link": "https://github.com/maziyarpanahi/openmed"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "olmo-eval",
+        "vendor": "Ai2（Hugging Face）",
+        "time": "06-12",
+        "desc": "Ai2 发布面向 LLM 开发循环的评估工作台 olmo-eval，基于 OLMES 标准构建，支持 agentic 和多轮评测，采用模块化架构，评测结果同时报告分数、标准误差和最小可检测效应，聚焦开发阶段快速迭代。",
+        "link": "https://huggingface.co/blog/allenai/olmo-eval"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "Agent-Reach",
+        "time": "06-11",
+        "desc": "让 OpenClaw 等 AI Agent 原生读懂全网：Twitter、Reddit、YouTube、B 站、小红书等平台内容无需 API Key 即可获取，多后端路由自动切换，OpenClaw 用户一条命令即装即用。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "open-notebook",
+        "time": "06-11",
+        "desc": "开源复刻 Google NotebookLM，支持 OpenClaw 等 18+ AI 模型作为后端，可上传 PDF/视频/音频生成播客、全文搜索、AI 对话，数据完全自托管，OpenClaw 用户可本地部署私有知识库。",
+        "link": "https://github.com/lfnovo/open-notebook"
+      },
+      {
+        "name": "taste-skill",
+        "time": "06-10",
+        "desc": "作为 AI Agent Skill 加载后，提升 AI 生成的前端界面质量——更强的布局、字体、动效和间距规范。OpenClaw 用户用 ChatGPT Images 生成参考图后交给 AI 实现，解决「能用但丑」的核心痛点。",
+        "link": "https://github.com/Leonxlnx/taste-skill"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Kimi K2.7-Code",
+        "time": "06-12",
+        "desc": "月之暗面发布开源代码模型 Kimi K2.7-Code，HN 引发 400 票讨论，号称具有更优 token 效率，吸引开源社区关注。",
+        "link": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+      },
+      {
+        "name": "Claude Fable 5",
+        "time": "06-11",
+        "desc": "Anthropic 发布 Claude Fable 5，Simon Willison 实测发现 Agent 仅凭一张截图自主创建本地服务器、注入 JS 测量元素，甚至 Hack Safari 窗口完成调试，引发社区对 AI 超主动行为边界的大讨论。",
+        "link": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/"
+      }
+    ]
+  },
+  {
     "date": "2026-06-12",
     "title": "2026.06.12 AI 产品趋势调研",
     "coreTrend": "AI编程工具加速云端部署闭环，Agent安全管控成产品差异点",

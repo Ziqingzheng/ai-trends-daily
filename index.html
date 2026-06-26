@@ -941,6 +941,111 @@
 
 const reports = [
   {
+    "date": "2026-06-25",
+    "title": "2026.06.25 AI 产品趋势调研",
+    "coreTrend": "传统软件加速嵌入第三方AI模型",
+    "tags": [
+      "Agent嵌入传统软件",
+      "多模型编排",
+      "开发者工具",
+      "企业AI",
+      "开源框架"
+    ],
+    "opportunities": [
+      {
+        "title": "Cursor SDK 模式：AI能力快速嵌入传统软件",
+        "desc": "Notion数周即完成编码Agent集成，用户在文档@Cursor即可端到端完成PR。传统软件商无需自建AI基础设施，通过SDK快速获得完整栈编码能力，产品迭代速度大幅提升。"
+      },
+      {
+        "title": "多智能体编排：从单Agent到工作流的演进",
+        "desc": "Sakana Fugu将多Agent封装为单个API调用，天然绕开单一供应商出口管制；OpenRouter统一图像API整合30+模型。基础设施层正在快速整合，多模型协同工作流正在从复杂工程变为开箱即用的产品形态。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Notion+Cursor SDK（06-24）",
+        "oneliner": "文档中@Cursor即可端到端完成PR",
+        "launchDate": "06-24",
+        "how": "用户可在Notion文档中@Cursor、在讨论串提及或向数据库指派任务；Cursor自动完成规划、构建、测试、验证并创建PR；基于Provider无关智能体框架，每条消息对应一次Agent运行，SSE流式传输支持断连恢复。",
+        "why": "Notion无需自建AI基础设施即获得完整栈编码能力；SDK模式让任何SaaS可在数周内集成专业级编码Agent，对传统软件有普遍参考价值；这本质上是'AI能力插件化'的新产品路径。",
+        "link": "https://cursor.com/blog/notion"
+      },
+      {
+        "name": "Sakana AI Fugu（06-22）",
+        "oneliner": "多Agent封装为单个API调用",
+        "launchDate": "06-22",
+        "how": "Fugu将多智能体系统封装成单个API，内部自动拆解任务、调度全球模型并验证结果；Fugu Ultra在工程、科学、推理等基准上对标前沿模型，通过动态编排多模型绕开单一供应商出口管制风险。",
+        "why": "将复杂多Agent工程变为开箱即用产品，降低了多模型协作的技术门槛；出口管制规避路径产品化，有地缘政治价值；Sakana作为东京本土团队，具有亚太市场辐射优势。",
+        "link": "https://x.com/berryxia/status/2069090959938466298"
+      },
+      {
+        "name": "OpenRouter统一图像API（06-23）",
+        "oneliner": "30+图像模型统一API调用",
+        "launchDate": "06-23",
+        "how": "OpenRouter推出统一图像API，整合Google、OpenAI、Black Forest Labs、Recraft、字节等30+模型；通过标准化请求格式一次接入多服务商；GPT-5系列图像模型支持SSE流式预览，边生成边返回预览。",
+        "why": "开发者无需对接每个服务商，降低了多模型图像生成的工程复杂度；图像模型正在走向'模型即服务'的聚合模式；流式预览提升了用户交互体验。",
+        "link": "https://openrouter.ai/blog/announcements/image-api"
+      },
+      {
+        "name": "Figma Config 2026（06-24）",
+        "oneliner": "画布集成第三方AI代码/动画/3D",
+        "launchDate": "06-24",
+        "how": "Figma在Config 2026发布重大更新：Code Layers（代码与设计并存）、Motion动画、深度层、Shader效果和Generative Plugins；设计师可用自然语言创建AI Skills连接Notion、GitHub等工具；AI功能依赖Anthropic、OpenAI和Google等外部模型。",
+        "why": "这是头部设计工具商'用第三方AI模型填补自身能力缺口'的典型案例；AI功能外包给专业模型商成为可行路径，对中小工具商有参考意义；但Figma的利润率将持续承压于外部推理成本。",
+        "link": "https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "NousResearch/hermes-agent",
+        "vendor": "NousResearch",
+        "time": "06-22",
+        "desc": "自进化AI Agent框架，支持任意模型（OpenRouter 200+、NVIDIA NIM、火山引擎Kimi等）无缝切换；内置学习闭环，可自主创建技能、跨会话记忆；支持Telegram/Discord/Slack/WhatsApp多平台部署；原生支持Daytona/Modal serverless，空闲时几乎零成本。GitHub Trending热门项目。",
+        "link": "https://github.com/NousResearch/hermes-agent"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenMontage（开源视频制作Agent）",
+        "time": "06-22",
+        "desc": "首个开源agentic视频制作系统，12条管线、52个工具、500+ Agent技能；用户用自然语言描述需求，Agent自动完成调研、脚本、配音、配乐、字幕、合成；支持真实素材管线剪辑和AI图像动画化；内置7维度工具评分自动ffprobe验证；成本低至$0.15/视频；与Claude Code/Cursor/Copilot/Codex无缝集成。GitHub 19,406 stars，今日3,719 stars增长。",
+        "link": "https://github.com/calesthio/OpenMontage"
+      },
+      {
+        "name": "codebase-memory-mcp（代码知识图谱索引）",
+        "time": "06-22",
+        "desc": "基于Tree-Sitter AST解析+Hybrid LSP语义类型解析，将代码库索引为持久知识图谱；Linux内核（2800万行代码、7.5万文件）仅3分钟索引；一次查询减少99%+ token消耗；零API Key，100%本地处理；自动配置支持Claude Code/Codex/Gemini/Zed等11种编码Agent。GitHub 14,120 stars，本周9,589 stars增长，增速极快。",
+        "link": "https://github.com/DeusData/codebase-memory-mcp"
+      },
+      {
+        "name": "Agent-Reach（Agent互联网接入工具）",
+        "time": "06-22",
+        "desc": "一键给AI Agent装上互联网能力，支持Twitter、Reddit、YouTube、B站、小红书等平台，完全免费零API费用；自动选型、安装、体检、路由，平台封了自动切换；Cookie本地存储不上传；OpenClaw/Claude Code/Cursor等支流Agent均可使用。GitHub 39,725 stars。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "NVIDIA SkillSpector（Agent技能安全扫描器）",
+        "time": "06-22",
+        "desc": "NVIDIA开源的AI Agent Skill安全扫描器，检测68种漏洞模式、17个风险类别；研究显示26.1%的Agent技能包含漏洞，5.2%可能有恶意意图；实时查询OSV.dev CVE数据库，支持JSON/Markdown/SARIF报告格式，可集成到CI/CD；零API Key扫描可用Docker本地运行。GitHub 10,354 stars。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Oracle因AI应用裁员21000人",
+        "time": "06-23",
+        "desc": "Oracle截至2026年5月31日财年裁员21000人，员工总数降至141000人，降幅12.9%；裁员由AI技术采用驱动，同时重组成本达18亿美元；公司计划2026年筹集450-500亿美元扩建Oracle Cloud Infrastructure，服务OpenAI、xAI、AMD、Nvidia、Meta等客户；债务超1200亿美元。",
+        "link": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments"
+      },
+      {
+        "name": "五眼联盟警告AI网络威胁",
+        "time": "06-23",
+        "desc": "美、英、加、澳、新五眼联盟网络安全部门联合警告，即将到来的AI模型（OpenAI GPT-5.5-Cyber、Anthropic Mythos）将大幅降低复杂攻击代码门槛；自动化Agent可全天候扫描互联网漏洞，大幅缩短安全窗口期；AI驱动超个性化钓鱼诈骗已在亚太蔓延，印度2026年初勒索软件事件激增165%。",
+        "link": "https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats"
+      }
+    ]
+  },
+  {
     "date": "2026-06-24",
     "title": "2026.06.24 AI 产品趋势调研",
     "coreTrend": "多厂商密集发布企业级和跨Agent协作产品",

@@ -941,6 +941,111 @@
 
 const reports = [
   {
+    "date": "2026-06-16",
+    "title": "2026.06.16 AI 产品趋势调研",
+    "coreTrend": "企业级AI加速落地，客户服务自动化成新主线",
+    "tags": [
+      "企业AI",
+      "Agent",
+      "开源工具",
+      "基础设施",
+      "定价战"
+    ],
+    "opportunities": [
+      {
+        "title": "企业AI Agent托管平台",
+        "desc": "Salesforce以36亿美元收购Fin，验证了AI客服自动化作为独立赛道的企业价值。随着Fin等垂类Agent进入企业核心工作流，配套的部署、监控、合规托管平台将成基础设施层的机会。"
+      },
+      {
+        "title": "Agent安全与审计工具",
+        "desc": "Cursor Auto-review（自主权限管控）和NVIDIA SkillSpector（Agent技能安全扫描）同期出现，指向同一逻辑：Agent被广泛部署后，安全合规将从选修变必修。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Meta AI Mode（06-15）",
+        "oneliner": "Facebook搜索内置AI摘要",
+        "launchDate": "06-15",
+        "how": "用户在Facebook搜索栏输入自然语言问题，Meta AI从平台公开帖子、群组内容和Reels中提取相关信息合成答案。",
+        "why": "Facebook月活超30亿，AI Mode将搜索行为从关键词升级为对话式获取信息，改变用户发现内容的方式；同时为Meta订阅服务导流，打开AI to Consumer的商业化路径。",
+        "link": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms"
+      },
+      {
+        "name": "Salesforce收购Fin",
+        "oneliner": "36亿美元收购AI客服Fin",
+        "launchDate": "06-15",
+        "how": "Fin（前Intercom）提供跨实时聊天、WhatsApp、短信、电话、Slack等多渠道AI客服Agent。Salesforce将其整合进Agentforce平台，供企业构建自定义AI客服。",
+        "why": "AI客服自动化赛道被企业市场验证为价值36亿美元的刚需场景。随着Fin等垂类Agent进入Salesforce生态，企业AI Agent的落地正在从试点进入规模部署阶段。",
+        "link": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b"
+      },
+      {
+        "name": "Kimi K2.7 Code高速版",
+        "oneliner": "国产编程模型6倍速输出",
+        "launchDate": "06-15",
+        "how": "K2.7 Code高速版与普通版为同一模型，通过推理优化实现约180 Token/s的输出速度，短上下文场景达260 Token/s，为K2.6的5-6倍。",
+        "why": "国内AI编程模型竞争升级。高速度直接改善开发者体验，API定价翻倍但性价比仍有优势，吸引对延迟敏感的国内企业开发者迁移。",
+        "link": "https://mp.weixin.qq.com/s/p87ebkY1xqKtkGZ2N3DGSw"
+      },
+      {
+        "name": "Cursor Auto-review",
+        "oneliner": "分类器Agent管控自主权限",
+        "launchDate": "06-11",
+        "how": "Cursor在工具调用前插入专门的分类器Agent，根据上下文判断动作风险等级，高风险时阻止并解释，低风险时放行，兼顾安全和效率。",
+        "why": "解决Agent落地开发团队的核心信任问题：在不阻断日常开发的前提下，用小模型实时审核工具调用风险，为企业级部署提供可控的自主边界。",
+        "link": "https://cursor.com/blog/auto-review"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "xAI Grok Build",
+        "vendor": "xAI",
+        "time": "06-15",
+        "desc": "Grok Build上线Agent Dashboard，支持单一屏幕管理多个编码会话、实时查看输出、分派新任务。",
+        "link": "https://x.ai/news/agent-dashboard"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "NVIDIA SkillSpector",
+        "time": "06-16",
+        "desc": "开源AI Agent技能安全扫描工具，检测Agent技能中的漏洞、恶意模式和隐私风险，支持pip安装，帮助开发者在部署前发现和修复Agent技能的安全问题。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      },
+      {
+        "name": "Agent-Reach",
+        "time": "06-16",
+        "desc": "让AI Agent读取Twitter、Reddit、YouTube、GitHub、小红书等平台，一个CLI命令即可获取任意网站内容，无需API费用。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "Cursor Auto-review",
+        "time": "06-11",
+        "desc": "通过分类器Agent在工具调用前审查动作风险，实现安全与效率的平衡，为企业级Agent部署提供可控自主边界。",
+        "link": "https://cursor.com/blog/auto-review"
+      },
+      {
+        "name": "CUA开源基础设施",
+        "time": "06-16",
+        "desc": "trycua/cua：开源的Computer-Use Agent基础设施，包含沙箱、SDK和基准测试，支持训练和评估可控制macOS/Linux/Windows完整桌面的AI Agent。",
+        "link": "https://github.com/trycua/cua"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic秘密申请IPO，估值9650亿美元",
+        "time": "06-13",
+        "desc": "Anthropic正式向SEC秘密提交IPO申请，估值达9650亿美元，为史上增长最快的AI初创公司。Anthropic增长主要来自开发者和编码工作流，Claude Code已深度融入企业日常工作。",
+        "link": "https://www.bloomberg.com/news/articles/2026-06-13/global-capitalism-bets-it-all-on-ai-future-that-alarms-voters"
+      },
+      {
+        "name": "贝佐斯Prometheus融资120亿美元，估值410亿美元",
+        "time": "06-11",
+        "desc": "Jeff Bezos旗下AI公司Prometheus在成立仅7个月、无任何产品交付的情况下，以410亿美元估值完成120亿美元融资，定位「人工通用工程师」，计划斥资1000亿美元收购传统工企获取制造业训练数据。",
+        "link": "https://x.com/kimmonismus/status/2065097988859744503"
+      }
+    ]
+  },
+  {
     "date": "2026-06-15",
     "title": "2026.06.15 AI 产品趋势调研",
     "coreTrend": "AI Agent 从框架竞赛转向安全与执行层基建",

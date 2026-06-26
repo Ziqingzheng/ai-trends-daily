@@ -941,6 +941,112 @@
 
 const reports = [
   {
+    "date": "2026-06-11",
+    "title": "2026.06.11 AI 产品趋势调研",
+    "coreTrend": "自主Agent进入生产阶段，模型路由经济成形",
+    "tags": [
+      "MiMo Code",
+      "Claude Fable 5",
+      "OpenRouter Advisor",
+      "CloudRobo",
+      "Cursor Bugbot"
+    ],
+    "opportunities": [
+      {
+        "title": "模型路由经济成形：「小模型执行+大模型参谋」成企业AI新范式",
+        "desc": "OpenRouter Advisor（GPT-4o Mini执行遇困难时调用Claude Fable 5）让成本从$10/M降至$0.15/M，同时质量天花板不变。Cursor Bugbot更新背后的Composer 2.5也是同一逻辑：不是让最强模型做所有事，而是让每个token花得更值。这是Agent商业化的核心路径。"
+      },
+      {
+        "title": "具身AI走出实验室：云厂商正式推出端到端开发平台",
+        "desc": "华为CloudRobo（覆盖数据→模型→部署→集成全生命周期）是首个云厂商推出的端到端具身AI平台，标志着具身智能从研究项目变成商业产品。Google DeepMind欧洲机器人加速器入选15家初创、小米开源MiMo Code——三条线同时指向具身AI工程化拐点已到。"
+      }
+    ],
+    "products": [
+      {
+        "name": "MiMo Code V0.1（小米）",
+        "oneliner": "首个百万token上下文开源终端编程助手",
+        "launchDate": "06-10",
+        "how": "小米开源终端AI编程助手，核心：①无限上下文（百万token，自动知识积累无损压缩）；②Agent-模型深度协同（测试→审查→验证闭环）；③Compose模式（规格→计划→构建→报告）；④兼容Claude Code零成本迁移；⑤支持Anthropic/OpenAI/DeepSeek/Kimi/GLM等主流模型，MIT许可证。",
+        "why": "小米首次将具身AI的自进化系统引入编程工具，且真正开源+多模型支持，使其成为Claude Code的有力开源替代。百万token上下文解决的是「AI编程知识断层」——上下文越大，踩过的坑越多，生成质量越高。",
+        "link": "https://x.com/XiaomiMiMo/status/2064772356443394441"
+      },
+      {
+        "name": "Cursor Bugbot 更新",
+        "oneliner": "3x提速+22%降本，代码审查进入日常流程",
+        "launchDate": "06-10",
+        "how": "代码审查工具Bugbot更新：速度提升3倍，成本降低22%，每轮多发现10%的bug，90%运行3分钟内完成。新增/review命令可在推送前运行Bugbot+安全审查，与GitHub/GitLab同步（已审查过的diff自动跳过）。性能源于Composer 2.5模型训练改进，支持组织禁用时自动回退。",
+        "why": "Bugbot解决的是「跑Bugbot太慢太贵」的工程痛点，让代码审查真正进入日常开发流程。这是Cursor「AI原生IDE」战略的核心组件——不是用AI生成代码，而是用AI保证代码质量。",
+        "link": "https://cursor.com/blog/bugbot-updates-june-2026"
+      },
+      {
+        "name": "OpenRouter Advisor",
+        "oneliner": "服务器端工具实现模型动态路由，67x成本差质量不变",
+        "launchDate": "06-09",
+        "how": "OpenRouter发布advisor服务器工具：向工具数组添加openrouter:advisor配置，执行模型（如GPT-4o Mini）遇到困难时自动调用更强模型（如Claude Fable 5），67x价格差但质量天花板不变。服务器端执行，模型负责写最终答案。支持任意模型组合（Gemini执行调用Claude，或GPT执行调用DeepSeek）。",
+        "why": "这是「路由即服务」的首次产品化——OpenRouter不只是API市场，开始成为AI推理的质量调节层。企业可以大胆用便宜模型，用前沿模型兜底，总成本可预测。",
+        "link": "https://openrouter.ai/blog/advisor-server-tool"
+      },
+      {
+        "name": "华为云 CloudRobo 具身AI平台",
+        "oneliner": "全球首个云厂商端到端具身AI开发平台",
+        "launchDate": "06-10",
+        "how": "华为云在INSPIRE2026发布CloudRobo，覆盖数据采集、模型训练到部署集成的全生命周期。已展示能力：数据与模型双评估系统、主动力控模型快速组装、机器人小时级上云、模型分钟级部署。国家地方共建人形机器人创新中心、Yijiahe Technology、上海交通大学已基于该平台构建核心能力。",
+        "why": "具身AI的核心障碍是「端到端工具链缺失」——CloudRobo让工厂/机器人公司不再需要自己拼凑全套基础设施。标志着具身AI进入商业化快车道。",
+        "link": "https://x.com/HuaweiCloud1/status/2064637581652852831"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic Claude Fable 5 正式发布",
+        "vendor": "Anthropic",
+        "time": "06-09",
+        "desc": "Anthropic推理型Agent产品正式版上线，HN 2546分、2076评论。企业版含定制guardrail和合规控制，API直接调用Mythos 5模型推理能力。标志Claude从聊天助手升级为可信赖的企业级推理Agent。",
+        "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      },
+      {
+        "name": "MiniMax M3 on-chain 0G Labs",
+        "vendor": "MiniMax",
+        "time": "06-10",
+        "desc": "M3在0G Labs上链，可验证+私有计算，6月15-18日限时免费运行。稀疏注意力使百万token上下文解码速度快15.6倍，MoE架构激活参数仅98亿。",
+        "link": "https://x.com/MiniMax_AI/status/2064791800884363286"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "addyosmani/agent-skills（GitHub Trending）",
+        "time": "06-11",
+        "desc": "Google前工程师addyosmani发布的生产级AI coding agent工程技能库，含测试、重构、PR review等标准化工作流。与OpenClaw skill体系高度契合，23.9k stars。",
+        "link": "https://github.com/addyosmani/agent-skills"
+      },
+      {
+        "name": "mvanhorn/last30days-skill（GitHub Trending，39k stars）",
+        "time": "06-11",
+        "desc": "跨Reddit、X、YouTube、HN、Polymarket的AI agent研究skill，与OpenClaw自主学习skill体系形成生态互补，2550 stars今日增长。",
+        "link": "https://github.com/mvanhorn/last30days-skill"
+      },
+      {
+        "name": "openBMB/SuperMemory 明确支持OpenClaw（23k stars）",
+        "time": "06-09",
+        "desc": "跨会话记忆引擎，明确将OpenClaw列为一类支持平台，三项主流记忆基准排名第一，支持OpenClaw/Claude Code/Cursor/Codex等12个主流AI coding框架的会话记忆持久化。",
+        "link": "https://github.com/supermemoryai/supermemory"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "德国法院裁定Google对AI Overviews幻觉内容负有法律责任",
+        "time": "06-09",
+        "desc": "开创性法律先例，若其他国家跟进将重塑AI服务商责任边界。标志着AI幻觉不再是「技术问题」而是「法律问题」。",
+        "link": "https://garymarcus.substack.com/p/breaking-google-liable-for-hallucinations"
+      },
+      {
+        "name": "百度搭子DuMate通过信通院企业级Agent能力评估获最高4+级",
+        "time": "06-09",
+        "desc": "国内首批通过国家级权威认证的企业级中文Agent，支持多Agent协作、容器化部署、三级差异化授权、企业知识库接入、全链路日志审计。",
+        "link": "https://mp.weixin.qq.com/s/lv99XfrRtMMgiOflcT67VA"
+      }
+    ]
+  },
+  {
     "date": "2026-06-10",
     "title": "2026.06.10 AI 产品趋势调研",
     "coreTrend": "苹果企业AI全面落地，字节腾讯竞逐企业入口",

@@ -941,6 +941,91 @@
 
 const reports = [
   {
+    "date": "2026-06-21",
+    "title": "2026.06.21 AI 产品趋势调研",
+    "coreTrend": "压缩 +14k stars，三大厂嵌 AI 入企",
+    "tags": [
+      "AI Agent",
+      "企业工具",
+      "GitHub Trending",
+      "上下文压缩",
+      "MCP协议"
+    ],
+    "opportunities": [
+      {
+        "title": "企业工具 AI 化入口之争：聊天界面即工作流",
+        "desc": "Slack 推出 MCP Client 后，企业协作的入口从「人找工具」转变为「对话即工作流」。这意味着未来企业软件的价值锚点正在从功能转向 AI 协作层，先占入口者将获得最大数据优势。"
+      },
+      {
+        "title": "AI Agent 记忆层成为新的基础设施赛道",
+        "desc": "GitHub 上 pumaDB（托管记忆层）、codebase-memory-mcp（代码知识图谱）、headroom（上下文压缩）三款工具同时爆发。核心逻辑：AI Agent 要真正落地，必须先解决「记忆」问题——这是当前制约复杂任务 Agent 化的关键瓶颈。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Agent-Reach（06-19）",
+        "oneliner": "让 AI Agent 直接上网搜全平台内容",
+        "launchDate": "06-19",
+        "how": "安装只需一条命令，配置好后 Agent 可直接调用各平台搜索/API。每个平台有「首选+备选」多后端路由，一个被封自动切换。兼容 Claude Code、Cursor、OpenClaw 等所有命令行 Agent。",
+        "why": "让 AI Agent 真正「看到」互联网，改变了 AI 获取实时信息的方式——不再依赖训练数据或付费 API，而是直接实时抓取各平台内容。Agent 从玩具走向生产力的关键一步。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "headroom（06-19）",
+        "oneliner": "压缩 LLM token 消耗 60-95%",
+        "launchDate": "06-19",
+        "how": "支持 Library / Proxy / MCP Server 三种部署方式，「headroom wrap claude」一键包装编码 Agent。还支持跨 Agent 记忆共享和输出 token 压缩。",
+        "why": "LLM 推理成本的核心瓶颈是 token 数量，60-95% 的压缩率意味着 API 成本可降至原来的 1/10。周爆发 +14k stars 说明这是社区真实痛点。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "Slackbot MCP Client（06-18）",
+        "oneliner": "Slack 内跨 20+ 应用完成团队协作",
+        "launchDate": "06-18",
+        "how": "Slack 官方推出 MCP Client，支持在 Slack 对话中直接调用 MCP 协议连接的各种 SaaS 应用（Notion、Figma、GitHub 等），团队成员可以像 @同事 一样 @应用完成跨工具协作。",
+        "why": "企业工具史上第一次把 AI Agent 协作能力直接嵌入数亿人每天使用的聊天界面，改变了企业协作范式——不再是「人找工具」，而是「对话即工作流」。",
+        "link": "https://www.producthunt.com/posts/slackbots-mcp-client"
+      },
+      {
+        "name": "Adobe Creative Cloud AI 智能体（06-18）",
+        "oneliner": "Photoshop、Premiere 等加入 AI 代理",
+        "launchDate": "06-18",
+        "how": "Adobe 将创意 AI 智能体以公开测试形式扩展至 Photoshop、Premiere、Illustrator、InDesign 等全线 Creative Cloud 应用，可自动完成多步骤常规任务：Premiere 分拣素材和粗剪、Photoshop 换背景、Illustrator 批量生成文件等。",
+        "why": "覆盖全球数千万 Creative Cloud 用户；多步骤自动化填补了专业创意工作流 AI 化的空白，首次将 AI 从单点功能升级为完整的自动化工作流代理，是 Adobe 史上最重要的产品方向转变。",
+        "link": "https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "name": "Agent-Reach（06-19）",
+        "time": "06-19",
+        "desc": "明确宣布兼容 OpenClaw CLI（与 Claude Code、Cursor 并列），让 OpenClaw Agent 直接具备全网实时信息获取能力，安装一条命令即可使用，完全免费。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "codebase-memory-mcp（06-19）",
+        "time": "06-19",
+        "desc": "将代码库索引为持久化知识图谱，支持 158 种语言、平均建库毫秒级，可作为 MCP Server 接入 OpenClaw，为 OpenClaw Agent 提供超高速代码理解能力。",
+        "link": "https://github.com/DeusData/codebase-memory-mcp"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Google DeepMind AI Control Roadmap（06-19）",
+        "time": "06-19",
+        "desc": "Google DeepMind 公布面向 AI Agent 的安全工程框架，核心思路是「配双控制器驾驶教练」模式：信任 AI 同时保持实时干预能力，具体包括思维链监控、异步警报、实时访问控制和 shutdown 基础架构。随着 AI Agent 逐步接管多应用操作权限，此类安全基础设施需求急剧上升。",
+        "link": "https://www.theverge.com/tech/952899/google-deepmind-announced-an-ai-control-roadmap-for-improving-ai-agent-security"
+      },
+      {
+        "name": "Figure 机器人数首超人类员工（06-19）",
+        "time": "06-19",
+        "desc": "Figure CEO 宣布，有史以来第一次 Figure 的机器人数量超过了人类员工数量，标志着具身智能从理论走向规模化部署，是 AI 从软到硬、从数字世界到物理世界的重要里程碑。",
+        "link": "https://x.com/rohanpaul_ai/status/2068089038213693800"
+      }
+    ]
+  },
+  {
     "date": "2026-06-20",
     "title": "2026.06.20 AI 产品趋势调研",
     "coreTrend": "开源模型并跑闭源、具身智能规模化、Agent工具链爆发",

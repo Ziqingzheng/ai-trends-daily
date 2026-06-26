@@ -941,6 +941,93 @@
 
 const reports = [
   {
+    "date": "2026-06-23",
+    "title": "2026.06.23 AI 产品趋势调研",
+    "coreTrend": "AI基础设施成为竞争重心，agent从单体走向多智能体编排与自主部署",
+    "tags": [
+      "AI Agent基础设施",
+      "多智能体编排",
+      "自主部署",
+      "MCP生态",
+      "OpenClaw"
+    ],
+    "opportunities": [
+      {
+        "title": "Agent评测与自主调试",
+        "desc": "AgentX等产品出现，从\"让agent做事\"进化到\"让agent自己修自己\"，填补了agent质量保障工具的空白，是刚需市场。"
+      },
+      {
+        "title": "无障碍部署基础设施",
+        "desc": "Cloudflare\"让agent先部署再注册\"的思路，预示未来agent原生平台会以低门槛入网为核心竞争力，减少人工介入。"
+      }
+    ],
+    "products": [
+      {
+        "name": "OpenMontage（06-22）",
+        "oneliner": "开源自主视频制作",
+        "launchDate": "06-22",
+        "how": "12条流水线、52个工具、500+智能体技能，支持输入参考视频自动分析，从脚本到成片全流程自动编排。",
+        "why": "首个将agent能力引入视频生产全流程的开源系统，把原本需要专业团队的视频工作变成\"对AI说一句话\"。展示了agent作为内容工厂的可行性。",
+        "link": "https://github.com/calesthio/OpenMontage"
+      },
+      {
+        "name": "Cloudflare临时账号（06-22）",
+        "oneliner": "让agent先部署再注册",
+        "launchDate": "06-22",
+        "how": "用户访问任意网站时，Cloudflare自动创建临时账号，agent可以在真实环境中操作，无需人工完成注册流程。",
+        "why": "解决了agent在实际web环境中\"第一步就需要登录\"的鸡生蛋问题，是agent与真实互联网交互的基础设施突破。",
+        "link": "https://www.producthunt.com/products/cloudflare"
+      },
+      {
+        "name": "AgentX（06-21）",
+        "oneliner": "一键自动修复agent",
+        "launchDate": "06-21",
+        "how": "上传agent行为记录，AgentX自动定位问题节点，点击即生成修复补丁并验证，循环迭代直至全部通过。",
+        "why": "填补了AI agent质量保障工具的空白，让\"agent自己找bug自己修\"成为可能，大幅降低agent生产级部署的维护成本。",
+        "link": "https://www.producthunt.com/products/agentx"
+      },
+      {
+        "name": "Sakana Fugu（06-22）",
+        "oneliner": "多智能体API编排",
+        "launchDate": "06-22",
+        "how": "东京AI公司Sakana AI推出的多智能体编排系统，将多agent协同封装为单个API调用，内部自动拆解任务、调度全球模型并验证结果。",
+        "why": "将多智能体从\"复杂工程问题\"变成\"一个API调用\"，是让普通开发者也能用上多agent的产品化路径重要突破。",
+        "link": "https://x.com/berryxia/status/2069090959938466298"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Claude桌面版上企业云",
+        "vendor": "Anthropic",
+        "time": "06-22",
+        "desc": "AWS、Google Cloud、Microsoft Foundry三大平台均支持完整Claude桌面体验，含Chat、Cowork和Claude Code。策略可导出至Intune/GPO，支持Entra ID和Okta登录，M365连接器也已落地。",
+        "link": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "oak — 面向agent的开源Git替代",
+        "time": "06-22",
+        "desc": "开源版本控制系统，专为Claude Code等AI智能体设计。采用BLAKE3内容哈希、内容定义分块，可选SQLite/git后端，分支-会话替代逐次提交，智能体数秒内编辑任意仓库。已发布v0.99.0公测。",
+        "link": "https://oak.space/oak/oak"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "The AI world is getting loopy",
+        "time": "06-22",
+        "desc": "TechCrunch报道\"loopy AI\"新范式——loop将agentic AI再推进一步，授权一群智能体在后台持续、不间断地工作，被视为比单体agent更接近真实自动化工作的方向。由Boris Cherny等人推动。",
+        "link": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/"
+      },
+      {
+        "name": "Anthropic：Claude可能要求实名验证",
+        "time": "06-22",
+        "desc": "Anthropic更新隐私政策，Claude在某些情况下可能要求用户提供护照或驾照进行身份验证，以满足年龄核查合规要求，是主要大模型厂商首次引入ID验证机制。",
+        "link": "https://techcrunch.com/2026/06/22/anthropic-says-claude-may-want-to-see-your-id/"
+      }
+    ]
+  },
+  {
     "date": "2026-06-22",
     "title": "2026.06.22 AI 产品趋势调研",
     "coreTrend": "AI Agent全流程自主化启动",

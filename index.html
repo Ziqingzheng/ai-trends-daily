@@ -941,6 +941,111 @@
 
 const reports = [
   {
+    "date": "2026-06-17",
+    "title": "2026.06.17 AI 产品趋势调研",
+    "coreTrend": "AI编程工具成巨头竞技场，资本加速涌入应用层",
+    "tags": [
+      "AI编程",
+      "企业AI",
+      "开源模型",
+      "MCP协议",
+      "政府AI"
+    ],
+    "opportunities": [
+      {
+        "title": "Agent网络访问基础设施成刚需",
+        "desc": "Agent-Reach等工具赋予AI agents读取Twitter/Reddit/YouTube等平台的能力，解决agents无法主动获取外部信息的问题，有望成为AI Agent的标准网络交互层。"
+      },
+      {
+        "title": "政府AI采购格局生变",
+        "desc": "Pentagon因安全顾虑弃用Anthropic，释放大量政府AI需求，可能引发新一轮企业AI市场的竞争格局重塑，中小AI厂商迎来机会窗口。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Agent-Reach（06-16）",
+        "oneliner": "让AI agents浏览全网",
+        "launchDate": "06-16",
+        "how": "通过标准API（Twitter/X、Reddit、YouTube等）赋予AI agents网络访问能力，支持搜索和内容读取。用户只需一行代码即可将agent接入互联网信息源。",
+        "why": "解决了当前AI agents只能被动处理文本、无法主动获取外部信息的问题。该工具为AI agents提供标准化的互联网访问层，具有跨平台通用性，有望成为Agent基础设施的标准组件。",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      },
+      {
+        "name": "Athena Desktop（06-15）",
+        "oneliner": "本地运行的AI编程助手",
+        "launchDate": "06-15",
+        "how": "首个可在Mac本地运行的AI编程工具，集成了Claude和OpenAI模型，支持离线使用和代码库索引，用户数据不离开本地设备。",
+        "why": "满足了开发者对隐私泄露的核心担忧——代码数据不会上传云端。Athena在Product Hunt 06-15榜单排名第一，体现了本地化AI编程工具的真实市场需求。",
+        "link": "https://www.producthunt.com/products/athena-desktop"
+      },
+      {
+        "name": "Botme（06-15）",
+        "oneliner": "零代码构建AI Agent",
+        "launchDate": "06-15",
+        "how": "无需编程基础即可构建AI agents的平台，支持自然语言定义工作流，可连接Gmail、Slack、Notion等多种工具，自动执行多步骤任务。",
+        "why": "将AI agent的构建门槛降到普通用户级别，让非技术背景用户也能用自然语言搭建自动化流程。Botme突破了传统聊天机器人的局限，将agent能力带入大众市场。",
+        "link": "https://www.producthunt.com/products/botme"
+      },
+      {
+        "name": "Fluxmail（06-15）",
+        "oneliner": "AI驱动邮件自动化",
+        "launchDate": "06-15",
+        "how": "AI驱动的Gmail/Outlook邮件自动化工具，用户用自然语言描述邮件处理规则（如「自动将发票归档并回复确认」），AI自动执行分类、起草、发送等操作。",
+        "why": "将自然语言指令直接转化为邮件自动化工作流，改变了人机交互范式——用户不再需要学习IFTTT/Zapier等工具的配置逻辑，直接说「帮我做XX」即可，大幅降低了自动化邮件的使用门槛。",
+        "link": "https://www.producthunt.com/products/fluxmail"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Pentagon弃用Anthropic",
+        "vendor": "美国政府",
+        "time": "06-16",
+        "desc": "美国国防部因安全顾虑将数据处理从Anthropic转移至其他选择，这是Anthropic首次在政府层面遭遇重大流失，可能引发企业AI市场的竞争格局重塑。",
+        "link": "https://www.ithome.com/0/964/675.htm"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "小米MiMo Claw正式版发布",
+        "time": "06-16",
+        "desc": "小米推出MiMo Claw正式版，深度适配OpenClaw框架的MiMo-V2.5-Pro旗舰模型发布，原生兼容MCP协议，支持单会话千次以上连续工具调用，联动金山办公生态，免费用户每日体验时长升至4小时。这是头部厂商基于OpenClaw框架的首个重量级产品落地，验证了OpenClaw+MCP路线的产品化可行性。",
+        "link": "https://mp.weixin.qq.com/s/N5ac768a8LkhEjOVpkR1dQ"
+      },
+      {
+        "name": "微软Copilot Cowork集成DeepSeek V4",
+        "time": "06-16",
+        "desc": "微软正考虑为Copilot Cowork提供DeepSeek V4版本作为更便宜的模型选项，并从无限定价转向按量计费，DeepSeek V4 Pro输入价格约为GPT-5.5的1/11。",
+        "link": "https://x.com/kimmonismus/status/2066946013026263110"
+      },
+      {
+        "name": "Grok Build Agent Dashboard",
+        "time": "06-15",
+        "desc": "xAI为Grok Build推出Agent Dashboard，提供单一屏幕管理多个编码会话，按状态分组，支持会话peek和直接回复，通过快捷键打开。",
+        "link": "https://x.ai/news/agent-dashboard"
+      },
+      {
+        "name": "Google Cloud推出OKF v0.1规范",
+        "time": "06-15",
+        "desc": "Google Cloud发布Open Knowledge Format（OKF）v0.1，供应商中立的Markdown规范，为AI agents提供结构化上下文知识，无需专有SDK，可托管在GitHub或任意文件系统。",
+        "link": "https://www.marktechpost.com/2026/06/16/google-cloud-introduces-open-knowledge-format-okf-a-vendor-neutral-markdown-spec-for-giving-ai-agents-curated-context"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "SpaceX以600亿美元收购Cursor",
+        "time": "06-16",
+        "desc": "SpaceX在历史性IPO数天后，以600亿美元股票收购AI编程初创公司Cursor（此前估值约500亿美元），帮助其围绕xAI构建的AI部门追赶主要AI实验室。AI编程工具赛道正式进入巨头竞争时代。",
+        "link": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo"
+      },
+      {
+        "name": "DeepSeek首轮融资，估值超500亿美元",
+        "time": "06-16",
+        "desc": "DeepSeek完成首轮外部融资，募资约74亿美元，腾讯和宁德时代为主要外部投资者，梁文锋个人投入约200亿元，继续坚持开源路线，V4 Pro输入价格约为GPT-5.5的1/11，重塑行业定价标准。",
+        "link": "https://the-decoder.com/deepseek-takes-outside-money-for-the-first-time-at-a-50-billion-valuation"
+      }
+    ]
+  },
+  {
     "date": "2026-06-16",
     "title": "2026.06.16 AI 产品趋势调研",
     "coreTrend": "企业级AI加速落地，客户服务自动化成新主线",

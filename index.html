@@ -941,6 +941,85 @@
 
 const reports = [
   {
+    "date": "2026-06-06",
+    "title": "2026.06.06 AI 产品趋势调研",
+    "coreTrend": "模型压缩本地化、数据库内置Agent、AI安全工具兴起",
+    "tags": [
+      "开源模型",
+      "Agent工作流",
+      "端侧部署",
+      "AI安全",
+      "语音AI"
+    ],
+    "opportunities": [
+      {
+        "title": "AI基础设施从外部编排走向内置",
+        "desc": "继向量库之后，数据库和浏览器开始内置Agent执行引擎（pg_durable、Agent Browser Shield），AI工作流在数据层消重、减延迟"
+      },
+      {
+        "title": "开源小模型加速端侧部署落地",
+        "desc": "Gemma 4 QAT将2B模型压缩至1GB手机运行、headroom省60-95% token，成本驱动本地AI从极客玩具走向企业场景"
+      }
+    ],
+    "products": [
+      {
+        "name": "Ideogram 4.0 [06-03]",
+        "oneliner": "开源文生图模型支持布局控制",
+        "launchDate": "06-03",
+        "how": "从头训练的开源文生图模型，支持bounding-box布局控制、多语言文字渲染、原生2K输出，专为开发者和企业设计。",
+        "why": "开源权重可微调私部部署；文字渲染效果超越同类竞品；2K原生输出适合设计场景，GitHub已开源。",
+        "link": "https://www.producthunt.com/products/ideogram-4-0"
+      },
+      {
+        "name": "headroom [06-03]",
+        "oneliner": "LLM上下文压缩省60-95% token",
+        "launchDate": "06-03",
+        "how": "Python/TS库，把工具输出、聊天记录、RAG片段全部压缩后再发给LLM，支持Claude/Codex/Cursor等主流Agent，一行命令wrap即可。",
+        "why": "直接降低API费用，压缩效果有真实数据验证（10K→1.2K tokens），本周GitHub最热新项目，1.2万+ stars。",
+        "link": "https://github.com/chopratejas/headroom"
+      },
+      {
+        "name": "open-notebook [06-04]",
+        "oneliner": "开源版NotebookLM支持18+模型",
+        "launchDate": "06-04",
+        "how": "本地部署后上传PDF/视频/音频，自动生成播客、进行语义搜索、与内容对话。支持OpenAI/Anthropic/Ollama等18家提供商，完全私有。",
+        "why": "NotebookLM的开源替代，数据留本地，支持自定义AI提供商，支持多人播客和多语言。",
+        "link": "https://github.com/lfnovo/open-notebook"
+      },
+      {
+        "name": "Gemma 4 QAT [06-05]",
+        "oneliner": "手机跑2B模型仅需1GB内存",
+        "launchDate": "06-05",
+        "how": "Google发布Gemma 4 QAT（量化感知训练）版本，通过在训练中模拟量化大幅压缩模型体积。E2B模型内存占用降至1GB，移动端2-bit专项量化。支持llama.cpp/Ollama/LM Studio本地运行。",
+        "why": "开源小模型端侧部署重大突破——首次在手机上以1GB内存运行2B模型，企业和开发者可直接本地部署，无需云端API。",
+        "link": "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw + MCP生态",
+        "time": "06-04",
+        "desc": "GitHub Trending出现多个基于MCP（Model Context Protocol）的开源工具，Agent-Reach为AI Agent提供全网搜索能力，Viggle支持视频动作捕捉，OpenClaw生态在工具扩展方向快速生长",
+        "link": "https://github.com/Panniantong/Agent-Reach"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "ChatGPT记忆系统升级Dreaming [06-04]",
+        "time": "06-04",
+        "desc": "OpenAI在ChatGPT中新增「记忆做梦」功能，AI在后台自动浏览历史对话提取关键信息并保存，用户无需主动提示，Plus/Pro用户现已可用。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence"
+      },
+      {
+        "name": "pg_durable数据库内置Agent工作流 [06-05]",
+        "time": "06-05",
+        "desc": "Microsoft开源pg_durable，将「持久化执行」模式直接嵌入PostgreSQL，开发者用SQL定义工作流步骤，引擎自动checkpoint，崩溃后自动恢复，无需额外部署Temporal/Airflow。",
+        "link": "https://github.com/microsoft/pg_durable"
+      }
+    ]
+  },
+  {
     "date": "2026-06-05",
     "title": "2026.06.05 AI 产品趋势调研",
     "coreTrend": "AI Agent从开发工具迈入生产环境，企业基础设施层成为新战场",

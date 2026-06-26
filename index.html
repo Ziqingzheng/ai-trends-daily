@@ -941,6 +941,111 @@
 
 const reports = [
   {
+    "date": "2026-06-15",
+    "title": "2026.06.15 AI 产品趋势调研",
+    "coreTrend": "AI Agent 从框架竞赛转向安全与执行层基建",
+    "tags": [
+      "AI Agent安全",
+      "苹果AI代理",
+      "开源Agent工具",
+      "HCI研究",
+      "基础设施"
+    ],
+    "opportunities": [
+      {
+        "title": "Agent 执行层安全工具成新缺口",
+        "desc": "SkillSpector 首周 5.3k star 印证市场对 AI Agent 安全扫描工具的迫切需求，Perplexity HBS 研究显示 Agent 单次自主运行 26 分钟、调用多工具，风险暴露面远超传统 AI，机会窗口已打开。"
+      },
+      {
+        "title": "Apple 验证系统级 Agent 路线，OpenClaw 生态获顶级追随者",
+        "desc": "Apple 正在开发类 OpenClaw 的系统级 AI Agent，将利用自研芯片 + 统一内存架构深度整合，绑定 Apple One 订阅不限量使用。这一信号表明 OpenClaw 的核心理念已被行业最高体量玩家追随验证。"
+      }
+    ],
+    "products": [
+      {
+        "name": "NVIDIA SkillSpector（06-15）",
+        "oneliner": "AI Agent技能安全扫描器",
+        "launchDate": "06-15",
+        "how": "扫描 AI Agent 技能文件中的漏洞、恶意模式和权限滥用风险，支持 YAML/JSON 规则扩展，可集成到 CI/CD 流水线，开发者上传技能描述即得安全报告。",
+        "why": "随着 Agent 调用工具权限扩大，恶意指令注入和权限升级攻击已成企业部署最大顾虑。SkillSpector 首日获 964 star，增长速度超过绝大多数安全类开源项目，说明市场空白已形成。",
+        "link": "https://github.com/NVIDIA/SkillSpector"
+      },
+      {
+        "name": "Kage（06-15）",
+        "oneliner": "一键将网站打包为离线二进制",
+        "launchDate": "06-15",
+        "how": "用户输入网址，Kage 自动抓取页面全部资源（HTML/CSS/JS/图片），打包为单一可执行文件，双击即可离线浏览，支持 Windows/macOS/Linux。",
+        "why": "HN 获 385 分，反映开发者对 AI 生成网页常因依赖失效而无法离线查看这一痛点的强烈共鸣，是 AI 辅助开发工具链的有力补充。",
+        "link": "https://github.com/tamnd/kage"
+      },
+      {
+        "name": "Trace（06-15）",
+        "oneliner": "Mac端离线会议转录工具",
+        "launchDate": "06-15",
+        "how": "Mac 原生应用，录制会议时实时转文字，用户可在会议中打标记，会后按标记快速定位关键时刻，转录本地存储不传云端。",
+        "why": "HN 获 87 分，切入高频会议场景的隐私需求，本地转录比云端方案更让企业用户放心，是 AI 会议工具差异化竞争的一个方向。",
+        "link": "https://traceapp.info"
+      },
+      {
+        "name": "Meta AI眼镜捐赠退伍军人（06-12）",
+        "oneliner": "AI眼镜批量惠及视障退伍军人",
+        "launchDate": "06-12",
+        "how": "Meta 向全美超过 13 万盲人退伍军人免费提供 AI 眼镜，通过摄像头 + AI 视觉识别实时描述前方环境，帮助视障用户独立导航和识别物体。",
+        "why": "AI 眼镜从极客玩具走向真实公益场景，针对特定弱势群体的规模化部署，验证了可穿戴 AI 辅助设备的真实市场接受度。",
+        "link": "https://www.theverge.com/tech/935229/meta-ai-glasses-blind-veterans-donation"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Apple",
+        "vendor": "Apple",
+        "time": "06-15",
+        "desc": "Apple 正在开发类 OpenClaw 的系统级 AI Agent，计划利用自研芯片和统一内存架构深度整合，有望绑定 Apple One 订阅不限量使用。分析师认为该产品仍面临安全隐私平衡难题，但路线已明确。OpenClaw 的核心理念已被行业最高体量玩家追随验证。",
+        "link": "https://www.aibase.com/news/28896"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "Anthropic Claude Fable5 自主调试演示",
+        "time": "06-14",
+        "desc": "Anthropic 发布 Claude Fable5 仅 3 天后，Simon Willison 演示了其自主调试 Datasette Agent 的完整流程——自动切换浏览器、重现代码、构建 CORS 服务器抓取数据，全程无需人工干预。展示了 AI 编程 Agent 已达到可怖的生产级自主能力。",
+        "link": "https://www.aibase.com/news/28888"
+      },
+      {
+        "name": "Perplexity+HBS AI Agent 效率研究报告",
+        "time": "06-13",
+        "desc": "Perplexity 联合哈佛商学院发布研究，对比 AI Agent 与传统搜索助手：Agent 单次自主运行时长 26 分钟，是传统助手的 48 倍；任务时间减少 79-92%，综合成本降低 87-96%，是首个量化 Agent 商业价值的生产级数据。",
+        "link": "https://www.aibase.com/news/28890"
+      },
+      {
+        "name": "WorkBuddy 战略升级",
+        "time": "06-13",
+        "desc": "腾讯 AI 战略重心从「元宝」转向智能体产品 WorkBuddy，月访问 885 万次、3 个月内迭代 43 版、打通微信支付等生态应用，是国内大厂 AI Agent to C 商业化的重要参考。",
+        "link": "https://www.aibase.com/news/28879"
+      },
+      {
+        "name": "通义千问足球预测AI助手",
+        "time": "06-12",
+        "desc": "阿里通义千问在世界杯开幕日上线足球预测助手，引入海拔、天气等非传统数据，揭幕战预测命中比分及红牌，引发社媒热议，是大模型 to C 拉新的典型场景案例。",
+        "link": "https://www.aibase.com/news/28891"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic Claude Fable5 全球召回",
+        "time": "06-12",
+        "desc": "Claude Fable5 和 Mythos 5 发布仅 3 天后，美国政府即以国家安全为由下令全球断供（包括本国用户），Anthropic 正在申诉；显示前沿 AI 模型已处于政府强力监管区间。",
+        "link": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/"
+      },
+      {
+        "name": "SpaceX Colossus 1 超算出租给 Anthropic/Google",
+        "time": "06-12",
+        "desc": "SpaceX 建设 AI 超算遭遇延迟，将 Colossus 1 出租给 Anthropic（年 158 亿美元）和 Google（月 9.2 亿美元），算力基础设施已独立成为年营收百亿美元级别的生意。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/827532/shadow-of-colossus"
+      }
+    ]
+  },
+  {
     "date": "2026-06-14",
     "title": "2026.06.14 AI 产品趋势调研",
     "coreTrend": "AI编程工具全面工程化，Agent安全与质量管控成新战场",

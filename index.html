@@ -941,6 +941,93 @@
 
 const reports = [
   {
+    "date": "2026-06-30",
+    "title": "2026.06.30 AI 产品趋势调研",
+    "coreTrend": "Agent记忆+Token压缩+硬件三线并进",
+    "tags": [
+      "AI Agent",
+      "记忆基础设施",
+      "Token压缩",
+      "开源工具",
+      "云端集成"
+    ],
+    "opportunities": [
+      {
+        "title": "Agent记忆基础设施成为下一代应用底座",
+        "desc": "cognee、EverOS等开源记忆层正在把「跨会话上下文」做成标准化API组件，结合向量搜索+知识图谱让Agent真正拥有长期记忆，可能催生新一代记忆增强型应用。"
+      },
+      {
+        "title": "Token压缩与路由聚合降低AI工具使用门槛",
+        "desc": "OmniRoute等工具用RTK等算法将Token消耗压缩85%以上，配合聚合免费额度的路由层，让开发者和中小企业也能在预算有限的情况下持续使用Claude Code等工具。"
+      }
+    ],
+    "products": [
+      {
+        "name": "cognee（06-30）",
+        "oneliner": "开源知识图谱记忆平台让Agent拥有持久记忆",
+        "launchDate": "06-30",
+        "how": "接收任意格式文档，自动构建自托管知识图谱，结合向量嵌入与图推理提供remember/recall/forget/improve四个API，让AI Agent在多次会话间保持上下文连续性。",
+        "why": "当前Agent每次对话都是「失忆」的——cognee解决了这个核心痛点，支持本地部署、多租户隔离和跨Agent知识共享，是构建可靠生产级Agent的基础设施。topoteretes出品，MIT协议。",
+        "link": "https://github.com/topoteretes/cognee"
+      },
+      {
+        "name": "OmniRoute（06-30）",
+        "oneliner": "聚合160+AI提供商的Token压缩路由网关",
+        "launchDate": "06-30",
+        "how": "一个端点接入160+AI提供商（含50+免费），内置RTK+Caveman双重Token压缩（节省15-95%），自动故障转移，支持MCP/A2A协议，桌面端和PWA两种形态。",
+        "why": "在Claude/GPT API越来越贵的背景下，OmniRoute聚合真实可用的免费额度（~1.6B tokens/月），配合智能压缩让免费用户也能跑满AI编程工具。617 stars/day，TypeScript类当天最高增长。",
+        "link": "https://github.com/diegosouzapw/OmniRoute"
+      },
+      {
+        "name": "ppt-master（06-29）",
+        "oneliner": "AI从任意文档生成真实可编辑的PowerPoint文件",
+        "launchDate": "06-29",
+        "how": "上传PDF/Markdown/Word文档，AI自动拆解内容生成幻灯片，使用原生PowerPoint形状而非截图，支持自定义.pptx模板、动画叠加和TTS语音旁白作为演讲备注。",
+        "why": "市面多数AI PPT是「截图式幻灯片」——ppt-master生成真实可编辑的.pptx文件，可直接用于正式演示，解决了PPT生成工具最大的可用性痛点。",
+        "link": "https://github.com/hugohe3/ppt-master"
+      },
+      {
+        "name": "lingbot-map（06-29）",
+        "oneliner": "前馈式3D重建基座模型，流式处理万帧以上长视频",
+        "launchDate": "06-29",
+        "how": "无需迭代优化，前馈式架构+paged KV cache，在518×378分辨率下稳定跑~20FPS，通过Geometric Context Transformer统一坐标锚定、几何线索和漂移校正，处理超过10000帧长序列。",
+        "why": "3D重建领域基座模型突破——此前SLAM/NeRF类方案无法兼顾速度与精度，lingbot-map在长视频（>25000帧）上表现优异，KITTI、Oxford Spiers等benchmark提供SOTA对比数据。",
+        "link": "https://github.com/Robbyant/lingbot-map"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic",
+        "vendor": "Anthropic",
+        "time": "06-29",
+        "desc": "Claude全面登陆AWS Bedrock和Azure Microsoft Foundry，Claude apps gateway同步发布（PostgreSQL后端+OIDC SSO集中策略管理）。企业可在自己的云账号下完全托管Claude Code，满足合规要求同时不牺牲编码能力。",
+        "link": "https://claude.com/blog/introducing-the-claude-apps-gateway"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw iOS & Android 正式版",
+        "time": "06-29",
+        "desc": "OpenClaw发布官方iOS和Android客户端，支持实时语音对话、Agent操作审批、设备权限管控（摄像头/位置），可在手机上使用智能体、接收频道通知、处理任务回复，随时随地调用Agent。",
+        "link": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "加州政府与Anthropic签署AI合作协议",
+        "time": "06-29",
+        "desc": "加州政府与Anthropic签署首个同类协议，全州及地方政府机构享受Claude五折优惠，含免费培训和Anthropic开发者技术支持，估计影响数十万州和地方公务员的日常AI使用。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/254707/california-anthropic-partnership-discount-claude"
+      },
+      {
+        "name": "OpenAI Codex Micro实体键盘",
+        "time": "06-29",
+        "desc": "OpenAI首个Codex实体硬件，与Work Louder合作推出实体键盘和可编程宏设备，把Codex编程能力做成物理按键，7月15日发售。代表AI厂商探索「实体化」编程助手的新形态。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/254703/openai-codex-micro-hardware-work-louder"
+      }
+    ]
+  },
+  {
     "date": "2026-06-07",
     "title": "2026.06.07 AI 产品趋势调研",
     "coreTrend": "本报告日无重大AI产品发布",

@@ -941,6 +941,279 @@
 
 const reports = [
   {
+    "date": "2026-07-01",
+    "title": "2026.07.01 AI 产品趋势调研",
+    "coreTrend": "AI Agent 加速向垂直场景落地",
+    "tags": [
+      "AI Agent",
+      "移动端",
+      "科研AI",
+      "开发者工具",
+      "开源框架"
+    ],
+    "opportunities": [
+      {
+        "title": "输入法+AI Agent：全新移动交互范式出现",
+        "desc": "Acti 将 AI Agent 嵌入手机键盘，用户可长按触发快捷技能（翻译/发会议链接等），将 AI 能力从 App 层下沉到系统输入层。输入法的高频刚需特性使其成为 Agent 落地最高效的移动端入口。"
+      },
+      {
+        "title": "AI Agent 向科研领域深耕出现明确机会窗口",
+        "desc": "Claude Science 专攻文献分析→多步骤研究→成果输出的全流程，与通用模型能力有显著差距。科研工具链是 AI Agent 垂直化最成熟的方向之一，已有付费意愿明确的用户群。"
+      }
+    ],
+    "products": [
+      {
+        "name": "Acti（06-30）",
+        "oneliner": "AI智能体嵌入手机输入法",
+        "launchDate": "06-30",
+        "how": "Acti 是基于 Google Gemini 的智能体键盘，用户在任意应用中长按按键即可触发 AI 技能（如 T 翻译、C 发会议链接）。Skills 支持自然语言创建快捷方式，底层采用本地优先架构，不访问私人消息内容。",
+        "why": "输入法是手机上最高频的输入场景，将 Agent 能力嵌入输入层实现了真正无缝的 AI 集成。530 万美元种子轮融资由 BITKRAFT Ventures 领投，已开放下载，种子期即有用户自发创建超 1000 个 Skills，验证市场需求。",
+        "link": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard"
+      },
+      {
+        "name": "Cursor iOS 公测版（06-29）",
+        "oneliner": "云端AI编程智能体装进口袋",
+        "launchDate": "06-29",
+        "how": "Cursor 发布 iOS 原生公测版，开发者可随时启动始终在线的云端智能体，或远程操控电脑端智能体。支持语音输入、斜杠命令和选择前沿模型。锁屏 Live Activities 实时推送完成状态，本地与云端智能体支持双向切换。",
+        "why": "移动端编程工具补全了开发者随时随地工作的最后一环。云端隔离虚拟机运行，自动生成合并就绪的 PR 并输出截图和日志，解决了移动端无法完成完整开发闭环的问题。Composer 2.5 移动端目前享受 75% 折扣。",
+        "link": "https://cursor.com/blog/ios-mobile-app"
+      },
+      {
+        "name": "Claude Science（06-30）",
+        "oneliner": "60+预配置技能覆盖全科研流程",
+        "launchDate": "06-30",
+        "how": "Claude Science 是 Anthropic 推出的 AI 科研工作台，整合文献分析到多步骤研究到成果输出的全流程。提供超 60 项预配置技能，覆盖基因组学、蛋白质组学、化学信息学等；可本地运行或 SSH/HPC 远程使用，内置 reviewer agent 检查引用与计算错误。",
+        "why": "科研是当前通用 AI 模型能力差距最大的垂直场景之一。Claude Science 通过预配置技能大幅降低使用门槛，内置可审计的 3D 蛋白质结构、基因组浏览器轨迹等输出，解决了科研人员对成果可重复性的核心需求。",
+        "link": "https://www.anthropic.com/news/claude-science-ai-workbench"
+      },
+      {
+        "name": "shot-scraper video（06-30）",
+        "oneliner": "用故事板定义操作自动生成演示",
+        "launchDate": "06-30",
+        "how": "shot-scraper 1.10 新增 video 命令，通过 storyboard.yml 文件定义操作步骤，Playwright 录制浏览器视频生成工作演示。解决了此前视频开头白帧、宽度固定等遗留问题，--help 输出足够详细可被编码 Agent 直接调用。",
+        "why": "解决了 AI 工具\"做了什么难以展示\"的痛点。开发者可用自然语言描述操作步骤，Agent 自动生成带执行过程的演示视频，适用于工作流自动化展示、汇报演示等高频场景。",
+        "link": "https://simonwillison.net/2026/Jun/30/shot-scraper-video"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Claude Sonnet 5 发布",
+        "vendor": "Anthropic",
+        "time": "06-30",
+        "desc": "Anthropic 正式发布 Claude Sonnet 5，在推理能力、上下文窗口和多模态理解上有显著提升。具体能力升级包括更长的上下文处理、更强的代码生成和工具调用能力，Hacker News 当日获 855 票关注。",
+        "link": "https://www.anthropic.com/news/claude-sonnet-5"
+      },
+      {
+        "name": "Claude Fable 5 出口管制解除",
+        "vendor": "Anthropic",
+        "time": "07-01",
+        "desc": "美国商务部长 Howard Lutnick 致信解除对 Anthropic Fable 5 的出口管制限制，Claude Fable 5 和 Mythos 5 即将回归此前受限的市场。政策变化可能重塑全球 AI 模型竞争格局。",
+        "link": "https://x.com/rohanpaul_ai/status/2072122414574821505"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw 原生 iOS 与 Android 应用发布",
+        "time": "06-29",
+        "desc": "OpenClaw 发布原生 iOS 与 Android 应用，支持频道、任务、回复等完整功能，用户可在任何地方运行智能体。手机端可用拇指随时触发 Agent 任务，实现了桌面 AI Agent 向移动端的完整能力延伸。",
+        "link": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Anthropic 被揭露在 Claude Code 中植入隐写术追踪中国用户",
+        "time": "07-01",
+        "desc": "社区逆向发现 Anthropic 在 Claude Code 中植入隐写术：通过读取本地时区（Asia/Shanghai）和 ANTHROPIC_BASE_URL 环境变量，与加密域名列表比对识别中国用户，将日期单引号字符替换为 Unicode 分类标记传回服务器。引发企业用户对安全信任的严重担忧。",
+        "link": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw"
+      },
+      {
+        "name": "NVIDIA Rubin Ultra 取消，新版尺寸性能减半",
+        "time": "06-29",
+        "desc": "NVIDIA 在 GTC 2026 宣布 Rubin Ultra 仅 3 个月后，因制造执行问题取消原版，新\"Rubin Ultra\"尺寸减半，实际性能约为原版一半。代工良率和功耗问题比预期严重，可能影响下一代 AI 基础设施部署节奏。",
+        "link": "https://x.com/SemiAnalysis_/status/2071700428249596290"
+      }
+    ]
+  },
+  {
+    "date": "2026-06-29",
+    "title": "2026.06.29 AI 产品趋势调研",
+    "coreTrend": "移动端云集成与记忆基础设施并进",
+    "tags": [
+      "移动端",
+      "云集成",
+      "记忆平台",
+      "企业AI",
+      "量化交易"
+    ],
+    "opportunities": [
+      {
+        "title": "AI编程移动化元年",
+        "desc": "手机远程控制云端AI编程智能体，锁屏实时状态推送，移动开发场景被彻底重构"
+      },
+      {
+        "title": "Agent记忆基础设施成刚需",
+        "desc": "cognee等开源记忆平台降低Agent持久化门槛，结合向量搜索+知识图谱让Agent真正拥有长期记忆"
+      }
+    ],
+    "products": [
+      {
+        "name": "Cursor for iOS公测版",
+        "oneliner": "手机远程控制AI编程",
+        "launchDate": "06-29",
+        "how": "Cursor推出iOS原生公测版，支持在手机上远程控制云端AI编程智能体，集成语音输入和斜杠命令，可选择前沿模型。锁屏Live Activities和推送通知实时推送任务状态，手机与桌面无缝接力。",
+        "why": "AI编程从桌面走向移动端，开发者可随时随地接入AI编程环境；Live Activities让任务进度一目了然；手机端输入草稿+桌面端精细修改的工作流正在形成。",
+        "link": "https://cursor.com/blog/ios-mobile-app"
+      },
+      {
+        "name": "cognee",
+        "oneliner": "开源AI记忆持久化平台",
+        "launchDate": "06-29",
+        "how": "开源AI记忆平台，让Agent拥有持久长期记忆，提供remember/recall/forget/improve四个核心API，支持记忆存储、检索、遗忘和自我优化全生命周期，采用MIT协议，由topoteretes出品。",
+        "why": "Agent的记忆问题是落地核心瓶颈；四个API覆盖记忆管理的完整流程；MIT协议降低了企业采纳门槛。",
+        "link": "https://github.com/topoteretes/cognee"
+      },
+      {
+        "name": "Vibe-Trading",
+        "oneliner": "个人AI量化交易Agent",
+        "launchDate": "06-29",
+        "how": "港大团队打造的个人AI量化交易Agent，支持Shadow Account回测验证策略有效性，通过MCP协议对接券商系统，可在模拟环境中验证交易策略后再对接真实账户，降低个人量化交易门槛。",
+        "why": "个人量化交易一直受制于技术门槛和资金门槛；MCP协议打通券商接口是关键创新；Shadow Account机制提供了安全验证层。",
+        "link": "https://github.com/HKUDS/Vibe-Trading"
+      },
+      {
+        "name": "ppt-master",
+        "oneliner": "文档直转可编辑PPT",
+        "launchDate": "06-29",
+        "how": "AI从任意文档（PDF、Word等）生成真实可编辑的PowerPoint文件，输出原生PowerPoint形状而非截图，支持在PowerPoint中直接修改文本、图表和布局，保持源文档的逻辑结构。",
+        "why": "市面多数方案生成的是图片/截图，无法二次编辑；原生形状输出意味着PPT可用性和复用价值大幅提升；办公自动化场景需求旺盛。",
+        "link": "https://github.com/hugohe3/ppt-master"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic",
+        "vendor": "Anthropic",
+        "time": "06-29",
+        "desc": "Claude apps gateway发布（企业自托管控制平面+PostgreSQL+OIDC SSO）和Claude正式登陆Azure Microsoft Foundry GA（Claude Opus 4.8/Haiku 4.5，GB300 GPU），企业可在自己的云账号下完全托管Claude Code，满足合规要求。",
+        "link": "https://claude.com/blog/introducing-the-claude-apps-gateway"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw iOS & Android正式版",
+        "time": "06-29",
+        "desc": "OpenClaw发布官方iOS/Android客户端，支持实时语音对话、Agent操作审批和设备权限管控，可在移动设备上随时使用智能体，移动端与桌面端体验统一。",
+        "link": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "加州政府与Anthropic签署AI合作协议",
+        "time": "06-29",
+        "desc": "全州及地方政府机构享受Claude五折优惠，含免费培训，估计影响数十万公务员，这是迄今为止最大规模的政府AI采购合作，标志着AI在公共部门的规模化落地。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/254707/california-anthropic-partnership-discount-claude"
+      },
+      {
+        "name": "OpenAI Codex Micro实体键盘",
+        "time": "06-29",
+        "desc": "OpenAI与Work Louder合作推出实体键盘和可编程宏设备，集成AI编程快捷键，7月15日发售，将AI编程能力从屏幕延伸到物理交互层面。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/254703/openai-codex-micro-hardware-work-louder"
+      }
+    ]
+  },
+  {
+    "date": "2026-06-28",
+    "title": "2026.06.28 AI 产品趋势调研",
+    "coreTrend": "开发者基础设施走向精细化",
+    "tags": [
+      "LLM路由",
+      "本地推理",
+      "精准控制",
+      "开发者工具"
+    ],
+    "opportunities": [
+      {
+        "title": "边缘LLM路由基础设施",
+        "desc": "无需调用模型即可决策路由方向，微秒级响应，可将多模型切换成本降至零"
+      },
+      {
+        "title": "AI编程场景化功耗管理",
+        "desc": "精准识别AI coding agent活跃状态，按需阻止系统睡眠，在续航和性能间找到平衡点"
+      }
+    ],
+    "products": [
+      {
+        "name": "Wayfinder Router",
+        "oneliner": "微秒级本地LLM路由",
+        "launchDate": "06-28",
+        "how": "通过分析提示词结构特征，在微秒内将查询路由到最合适的本地或托管LLM，无需实际调用模型即可完成路由决策，完全离线运行，零成本零延迟，支持本地模型与云端模型的智能切换。",
+        "why": "多模型并行的开发环境中，路由成本往往超过推理成本；离线可用性让边缘部署成为可能；提示词分析比简单规则匹配更精准。",
+        "link": "https://github.com/itsthelore/wayfinder-router"
+      },
+      {
+        "name": "Adrafinil",
+        "oneliner": "AI编程时精准阻止睡眠",
+        "launchDate": "06-28",
+        "how": "macOS菜单栏工具，通过活动进程检测识别Claude Code、Cursor、Copilot等9种主流AI coding agent的活跃状态，只在AI编程进行时阻止系统睡眠，其余时间系统正常进入睡眠，实现精准的功耗管理。",
+        "why": "开发者长时间运行AI编程任务时频繁被系统睡眠打断是真实痛点；基于进程检测比定时唤醒更智能；菜单栏轻量设计不影响日常使用。",
+        "link": "https://github.com/kageroumado/adrafinil"
+      },
+      {
+        "name": "EverOS",
+        "oneliner": "Markdown优先Agent记忆",
+        "launchDate": "06-28",
+        "how": "开源Markdown优先的AI智能体记忆运行时，采用BM25+向量混合检索策略，v1.1新增Knowledge APIs和Reflection自反思能力，支持Agent跨会话持久化记忆，可管理知识库并进行自我改进。",
+        "why": "Agent缺乏长期记忆是落地瓶颈；Markdown格式降低学习和迁移成本；混合检索兼顾精确召回，是当前RAG最优实践。",
+        "link": "https://www.marktechpost.com/2026/06/29/meet-everos-an-open-source-markdown-first-agent-memory-runtime-with-hybrid-bm25-vector-retrieval-and-self-evolving-skills"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": []
+  },
+  {
+    "date": "2026-06-27",
+    "title": "2026.06.27 AI 产品趋势调研",
+    "coreTrend": "AI工具加速跨平台原生适配",
+    "tags": [
+      "跨平台",
+      "输入法",
+      "广告本地化",
+      "macOS"
+    ],
+    "opportunities": [
+      {
+        "title": "语音输入法切入桌面端",
+        "desc": "300字/分的语音输入能力在桌面场景存在巨大空白，尤其会议记录、代码注释等场景"
+      },
+      {
+        "title": "AI广告本地化自动化",
+        "desc": "静态素材的一键翻译润色可大幅降低出海团队的内容运营成本"
+      }
+    ],
+    "products": [
+      {
+        "name": "阿里千问输入法macOS版",
+        "oneliner": "AI赋能桌面语音输入",
+        "launchDate": "06-27",
+        "how": "阿里千问推出独立macOS输入法，内置AI语音识别引擎，支持300字/分实时语音转文字，覆盖普通话及9种方言，同时集成AI自动润色功能，可在输入时提供智能纠错和表达优化。iOS/Android/Windows版即将推出。",
+        "why": "纯净无广告的商业模式在免费工具主导的输入法市场形成差异化；方言支持契合出海及国内多语言人群需求；桌面端语音输入此前几乎是空白市场。",
+        "link": "https://www.ithome.com/0/969/334.htm"
+      },
+      {
+        "name": "Runway API广告本地化",
+        "oneliner": "一键翻译广告视觉资产",
+        "launchDate": "06-27",
+        "how": "Runway API新增广告本地化功能，支持一键翻译静态广告图片和图形资产，在保持视觉风格一致性的前提下自动生成多语言版本，广告主无需重新设计即可快速适配不同市场。",
+        "why": "出海广告素材制作成本可降低50%以上；保持品牌视觉一致性是本地化的核心痛点，AI恰好能解决这一矛盾。",
+        "link": "https://x.com/runwayml/status/2070855164584726791"
+      }
+    ],
+    "openclawVendors": [],
+    "openclawProducts": [],
+    "otherNews": []
+  },
+  {
     "date": "2026-07-02",
     "title": "2026.07.02 AI 产品趋势调研",
     "coreTrend": "语音智能体平台化+AI基础设施军备竞赛",

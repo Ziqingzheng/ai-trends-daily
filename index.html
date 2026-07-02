@@ -941,6 +941,99 @@
 
 const reports = [
   {
+    "date": "2026-07-02",
+    "title": "2026.07.02 AI 产品趋势调研",
+    "coreTrend": "语音智能体平台化+AI基础设施军备竞赛",
+    "tags": [
+      "语音智能体",
+      "AI基础设施",
+      "平台生态",
+      "云端集成",
+      "开源工具"
+    ],
+    "opportunities": [
+      {
+        "title": "语音智能体成为下一个平台级入口",
+        "desc": "xAI Voice Agent Builder让非技术用户2分钟创建生产级语音代理，Acti把AI智能体装进手机键盘入口；科技大厂纷纷争夺语音代理的产品定义权，平台化窗口正在打开。"
+      },
+      {
+        "title": "AI基础设施军备竞赛：从卖算力到卖落地能力",
+        "desc": "Meta直接卖AI算力对抗AWS，AWS投入10亿美元派驻场工程师帮客户落地；基础设施竞争从芯片转向「芯片+人+服务」捆绑，AI落地服务成为新战场。"
+      }
+    ],
+    "products": [
+      {
+        "name": "xAI Voice Agent Builder（07-01）",
+        "oneliner": "2分钟创建生产级语音智能体",
+        "launchDate": "07-01",
+        "how": "基于Grok Voice的无代码语音智能体构建平台，用户描述需求后2分钟生成生产级代理；内置τ-voice Bench评测基准，API定价每分钟音频$0.05，支持webhook集成。",
+        "why": "xAI把语音代理能力做成普通用户可用的产品，降低了智能体开发门槛；Bench得分67.3%有第三方验证；定价策略直接切入企业通信和客服市场。",
+        "link": "https://x.ai/blog/voice-agent-builder"
+      },
+      {
+        "name": "Claude Code for Chrome（07-01）",
+        "oneliner": "Chrome内置AI编程智能体",
+        "launchDate": "07-01",
+        "how": "Claude Code v2.1.198新增Chrome内置版，Claude直接跑在浏览器里；新增/dataviz技能、Gateway AWS支持，后台智能体自动提交PR，内置Explore智能体支持模型继承。",
+        "why": "把编码智能体从IDE扩展到浏览器，开发者可在任意网页上下文里调用AI编程能力；Gateway AWS支持让企业可在自有云账号下完全托管Claude Code，满足合规要求。",
+        "link": "https://github.com/anthropics/claude-code/releases"
+      },
+      {
+        "name": "NotebookLM Short Video Overviews（06-30）",
+        "oneliner": "复杂资料一键生成60秒讲解视频",
+        "launchDate": "06-30",
+        "how": "将复杂资料（论文、报告、书籍）自动转化为60秒竖屏视频深入讲解任意概念；使用Gemini 2.0生成配乐、脚本和画面；现已向Web英文用户全量开放。",
+        "why": "NotebookLM把「读懂资料」变成「视频消费」，符合移动端习惯；竖屏视频格式适合TikTok/小红书传播；全量开放说明Google对产品成熟度有信心。",
+        "link": "https://notebooklm.google.com"
+      },
+      {
+        "name": "Acti智能体键盘（06-30）",
+        "oneliner": "手机键盘内置AI智能体",
+        "launchDate": "06-30",
+        "how": "新加坡初创公司Acti发布基于Gemini的智能体键盘，用自然语言创建Skills快捷方式；无需切换应用，在任意App中触达AI；两周内用户创建超1000个Skills。",
+        "why": "把AI入口放到最高频系统级位置（键盘），改变了AI调用的交互范式；获530万美元种子轮融资，说明风投认可这个方向。",
+        "link": "https://techcrunch.com/2026/06/30/acti-smartphone-keyboard-ai/"
+      }
+    ],
+    "openclawVendors": [
+      {
+        "name": "Anthropic全面登陆AWS和Azure",
+        "vendor": "Anthropic",
+        "time": "06-29",
+        "desc": "Claude全面登陆AWS Bedrock和Azure Microsoft Foundry，Claude apps gateway同步发布（PostgreSQL后端+OIDC SSO集中策略管理）。企业可在自有云账号下完全托管Claude Code，满足合规要求同时保留编码能力。",
+        "link": "https://claude.com/blog/introducing-the-claude-apps-gateway"
+      }
+    ],
+    "openclawProducts": [
+      {
+        "name": "OpenClaw iOS & Android正式版",
+        "time": "06-29",
+        "desc": "OpenClaw发布官方iOS和Android客户端，支持实时语音对话、Agent操作审批、设备权限管控（摄像头/位置），可在手机上使用智能体、接收频道通知、处理任务回复，随时随地调用Agent。",
+        "link": "https://x.com/openclaw/status/2071688039114342592"
+      },
+      {
+        "name": "Venice AI跃升独角兽",
+        "time": "07-01",
+        "desc": "主打隐私的AI平台Venice AI以65M美元A轮融资晋升独角兽，估值超10亿美元；提供无追踪、无审查的AI生成能力，月活跃用户超百万，正面挑战OpenAI和Google。",
+        "link": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a/"
+      }
+    ],
+    "otherNews": [
+      {
+        "name": "Meta推出云基础设施直接对抗AWS",
+        "time": "07-01",
+        "desc": "Meta计划推出Meta Compute云业务，对外出售AI计算能力和模型访问权限，直接与AWS、Google Cloud竞争；由基础设施主管和超级智能实验室负责人领导，标志着大厂算力竞争进入白热化阶段。",
+        "link": "https://techcrunch.com/2026/07/01/meta-ai-cloud-infrastructure/"
+      },
+      {
+        "name": "AWS掷10亿美元派驻场工程师",
+        "time": "07-01",
+        "desc": "AWS设立新部门，先期投入10亿美元组建前置驻场工程师团队，每批5-6组驻场45天协助客户落地AI软件与智能体应用；首批客户包括NBA和理光，代表AI落地从卖工具向卖服务转型。",
+        "link": "https://www.theverge.com/ai-artificial-intelligence/254709/aws-1-billion-ai-deployment"
+      }
+    ]
+  },
+  {
     "date": "2026-06-30",
     "title": "2026.06.30 AI 产品趋势调研",
     "coreTrend": "Agent记忆+Token压缩+硬件三线并进",
